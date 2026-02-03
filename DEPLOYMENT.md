@@ -80,24 +80,38 @@ npm run preview
 ### Base Path
 
 The site is configured to deploy to a subdirectory matching the repository name:
-- Repository: `Chai-Un/hn-wedding`
-- Base path: `/hn-wedding/`
-- URL: `https://chai-un.github.io/hn-wedding/`
+- Repository: `Chai-Un/wedding`
+- Base path: `/wedding/` (production only)
+- URL: `https://chai-un.github.io/wedding/`
 
-This is configured in `vite.config.ts`:
+The base path is configured dynamically in `vite.config.ts`:
 ```typescript
-export default defineConfig({
-  base: '/hn-wedding/',
+export default defineConfig(({ command }) => ({
+  // Use '/' for dev server, '/wedding/' for production builds
+  base: command === 'serve' ? '/' : '/wedding/',
   // ...
-})
+}))
 ```
+
+This means:
+- **Development** (`npm run dev`): Site runs at `http://localhost:5173/`
+- **Production** (`npm run build`): Site builds with `/wedding/` paths for GitHub Pages
+
+React Router automatically uses the correct base path via `import.meta.env.BASE_URL` in `App.tsx`.
 
 ### Custom Domain (Optional)
 
 To use a custom domain:
 1. Add a `CNAME` file to the `public` directory with your domain
 2. Configure DNS records according to [GitHub's documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
-3. Update the `base` path in `vite.config.ts` to `'/'`
+3. Update the base path logic in `vite.config.ts` to use `'/'` for both dev and production:
+   ```typescript
+   export default defineConfig({
+     base: '/',
+     // ...
+   })
+   ```
+4. Update the `basename` in `App.tsx` if needed, or keep using `import.meta.env.BASE_URL`
 
 ## Troubleshooting
 
