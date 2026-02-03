@@ -1,6 +1,55 @@
 # Deployment Guide
 
-This document explains how to deploy the wedding website to GitHub Pages.
+This document explains how to deploy the wedding website to both **Vercel** and **GitHub Pages**.
+
+## Dual Deployment Support
+
+The project is configured to work on both platforms:
+- **Vercel**: Hosted at root domain (e.g., `wedding.vercel.app`)
+- **GitHub Pages**: Hosted at subdirectory (e.g., `chai-un.github.io/wedding/`)
+
+### How it Works
+
+The `vite.config.ts` automatically detects the platform:
+```typescript
+base: process.env.VERCEL ? '/' : '/wedding/'
+```
+- On Vercel: Uses `/` as base path
+- On GitHub Pages: Uses `/wedding/` as base path
+
+## Vercel Deployment (Recommended)
+
+### Quick Deploy
+
+1. Go to https://vercel.com
+2. Sign up/login with GitHub
+3. Click **"Add New Project"**
+4. Import `Chai-Un/wedding` repository
+5. Click **"Deploy"** (no configuration needed!)
+
+Vercel will automatically:
+- Detect Vite framework
+- Build with `npm run build`
+- Deploy the `dist` folder
+- Auto-deploy on every push to `main`
+
+### CLI Deployment
+
+```bash
+# Install Vercel CLI
+npm install -g vercel
+
+# Login
+vercel login
+
+# Deploy to preview
+vercel
+
+# Deploy to production
+vercel --prod
+```
+
+## GitHub Pages Deployment
 
 ## Prerequisites
 
