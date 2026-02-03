@@ -80,14 +80,14 @@ npm run preview
 ### Base Path
 
 The site is configured to deploy to a subdirectory matching the repository name:
-- Repository: `Chai-Un/hn-wedding`
-- Base path: `/hn-wedding/`
-- URL: `https://chai-un.github.io/hn-wedding/`
+- Repository: `Chai-Un/wedding`
+- Base path: `/wedding/`
+- URL: `https://chai-un.github.io/wedding/`
 
 This is configured in `vite.config.ts`:
 ```typescript
 export default defineConfig({
-  base: '/hn-wedding/',
+  base: '/wedding/',
   // ...
 })
 ```
