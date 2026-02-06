@@ -4,11 +4,17 @@ import { scroller } from 'react-scroll';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-	{ name: 'HOME', href: 'home' },
-	{ name: 'INVITATION | RSVP', href: 'rsvp' },
-	{ name: 'TIMELINE', href: 'schedule' },
-	{ name: 'OUR JOURNEY', href: 'our-story' },
-	{ name: 'GALLERY', href: 'gallery' },
+	{ name: 'Trang chủ', href: 'home' },
+	{ name: 'LỜI MỜI | RSVP', href: 'rsvp' },
+	{ name: 'Chương Trình', href: 'schedule' },
+	{ name: 'Hành trình yêu', href: 'our-story' },
+	{ name: 'Thư viện ảnh', href: 'gallery' },
+
+	// { name: 'HOME', href: 'home' },
+	// { name: 'INVITATION | RSVP', href: 'rsvp' },
+	// { name: 'TIMELINE', href: 'schedule' },
+	// { name: 'OUR JOURNEY', href: 'our-story' },
+	// { name: 'GALLERY', href: 'gallery' },
 ];
 
 interface NavigationProps {
@@ -43,9 +49,9 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		// helper to invoke react-scroll scroller
 		const doScroll = () => {
 			scroller.scrollTo(id, {
-				duration: 600,
+				duration: 100,
 				smooth: true,
-				offset: -90, // account for fixed nav height
+				offset: -70, // account for fixed nav height
 			});
 		};
 
@@ -63,14 +69,14 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 
 	// Conditional styling based on overlay prop
 	const navClasses = overlay
-		? `fixed top-0 left-0 right-0 z-50 p-2 md:py-8 md:px-8 transition-all duration-300 ${
+		? `fixed top-0 left-0 right-0 z-50 p-2 md:py-5 md:px-6 transition-all duration-300 ${
 				isScrolled ? 'bg-black/30 backdrop-blur-md' : ''
 			}`
 		: 'fixed top-0 left-0 right-0 bg-[#e8dcc8]/95 backdrop-blur-sm shadow-sm z-50';
 
 	const buttonClasses = overlay
-		? 'text-2xl font-light text-white hover:text-white/80 transition-colors tracking-wider cursor-pointer'
-		: 'text-xs font-medium text-[#5a6e4a] hover:text-[#4a5e3a] transition-colors tracking-wider cursor-pointer';
+		? 'text-[1em] md:text-[1.125em] lg:text-[1.25em] font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
+		: 'text-[0.625em] md:text-[0.75em] lg:text-[0.875em] font-medium text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase';
 
 	const mobileButtonClasses = overlay
 		? 'text-white hover:bg-white/10 p-2 rounded-md transition-colors'
@@ -81,8 +87,8 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		: 'md:hidden bg-[#e8dcc8] border-t border-[#5a6e4a]/20';
 
 	const mobileItemClasses = overlay
-		? 'block w-full text-left px-3 py-2 text-sm font-light text-white hover:bg-white/10 rounded-md transition-colors'
-		: 'block w-full text-left px-3 py-2 text-base font-medium text-[#5a6e4a] hover:text-[#4a5e3a] hover:bg-[#d4c5ad]/30 rounded-md transition-colors';
+		? 'block w-full text-left px-3 py-2 text-[0.75em] md:text-[0.875em] font-light text-white hover:bg-white/10 rounded-md transition-colors'
+		: 'block w-full text-left px-3 py-2 text-[0.875em] md:text-[1em] font-medium text-[#5a6e4a] hover:text-[#4a5e3a] hover:bg-[#d4c5ad]/30 rounded-md transition-colors';
 
 	return (
 		<nav className={navClasses}>

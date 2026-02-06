@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont1';
+  font-family: 'HoangNgan1';
   src: url('./assets/fonts/font1.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont2';
+  font-family: 'HoangNgan2';
   src: url('./assets/fonts/font2.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont3';
+  font-family: 'HoangNgan3';
   src: url('./assets/fonts/font3.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -33,7 +33,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont4';
+  font-family: 'HoangNgan4';
   src: url('./assets/fonts/font4.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -41,7 +41,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont5';
+  font-family: 'HoangNgan5';
   src: url('./assets/fonts/font5.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont6';
+  font-family: 'HoangNgan6';
   src: url('./assets/fonts/font6.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -57,7 +57,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont7';
+  font-family: 'HoangNgan7';
   src: url('./assets/fonts/font7.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -65,7 +65,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont8';
+  font-family: 'HoangNgan8';
   src: url('./assets/fonts/font8.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -73,7 +73,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont9';
+  font-family: 'HoangNgan9';
   src: url('./assets/fonts/font9.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -81,7 +81,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont10';
+  font-family: 'HoangNgan10';
   src: url('./assets/fonts/font10.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -89,7 +89,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont11';
+  font-family: 'HoangNgan11';
   src: url('./assets/fonts/font11.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
@@ -97,7 +97,7 @@
 }
 
 @font-face {
-  font-family: 'CustomFont12';
+  font-family: 'HoangNgan12';
   src: url('./assets/fonts/font12.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -107,18 +107,18 @@
 @theme inline {
   /* Custom font families */
   --font-family-custom-serif: 'CustomSerif', serif;
-  --font-family-custom-font-1: 'CustomFont1', sans-serif;
-  --font-family-custom-font-2: 'CustomFont2', sans-serif;
-  --font-family-custom-font-3: 'CustomFont3', sans-serif;
-  --font-family-custom-font-4: 'CustomFont4', sans-serif;
-  --font-family-custom-font-5: 'CustomFont5', sans-serif;
-  --font-family-custom-font-6: 'CustomFont6', sans-serif;
-  --font-family-custom-font-7: 'CustomFont7', sans-serif;
-  --font-family-custom-font-8: 'CustomFont8', sans-serif;
-  --font-family-custom-font-9: 'CustomFont9', sans-serif;
-  --font-family-custom-font-10: 'CustomFont10', sans-serif;
-  --font-family-custom-font-11: 'CustomFont11', sans-serif;
-  --font-family-custom-font-12: 'CustomFont12', sans-serif;
+  --font-hoangngan1: 'HoangNgan1', sans-serif;
+  --font-hoangngan2: 'HoangNgan2', sans-serif;
+  --font-hoangngan3: 'HoangNgan3', sans-serif;
+  --font-hoangngan4: 'HoangNgan4', sans-serif;
+  --font-hoangngan5: 'HoangNgan5', sans-serif;
+  --font-hoangngan6: 'HoangNgan6', sans-serif;
+  --font-hoangngan7: 'HoangNgan7', sans-serif;
+  --font-hoangngan8: 'HoangNgan8', sans-serif;
+  --font-hoangngan9: 'HoangNgan9', sans-serif;
+  --font-hoangngan10: 'HoangNgan10', sans-serif;
+  --font-hoangngan11: 'HoangNgan11', sans-serif;
+  --font-hoangngan12: 'HoangNgan12', sans-serif;
   --font-family-dancing: 'Dancing Script', cursive;
   --font-family-inconsolata: 'Inconsolata', monospace;
   --font-family-montserrat: 'Montserrat', sans-serif;
@@ -205,52 +205,52 @@
     font-family: 'CustomSerif', serif;
   }
 
-  .font-custom-font-1 {
-    font-family: 'CustomFont1', sans-serif;
+  .font-hoangngan1 {
+    font-family: 'HoangNgan1', sans-serif;
   }
 
-  .font-custom-font-2 {
-    font-family: 'CustomFont2', sans-serif;
+  .font-hoangngan2 {
+    font-family: 'HoangNgan2', sans-serif;
   }
 
-  .font-custom-font-3 {
-    font-family: 'CustomFont3', sans-serif;
+  .font-hoangngan3 {
+    font-family: 'HoangNgan3', sans-serif;
   }
 
-  .font-custom-font-4 {
-    font-family: 'CustomFont4', sans-serif;
+  .font-hoangngan4 {
+    font-family: 'HoangNgan4', sans-serif;
   }
 
-  .font-custom-font-5 {
-    font-family: 'CustomFont5', sans-serif;
+  .font-hoangngan5 {
+    font-family: 'HoangNgan5', sans-serif;
   }
 
-  .font-custom-font-6 {
-    font-family: 'CustomFont6', sans-serif;
+  .font-hoangngan6 {
+    font-family: 'HoangNgan6', sans-serif;
   }
 
-  .font-custom-font-7 {
-    font-family: 'CustomFont7', sans-serif;
+  .font-hoangngan7 {
+    font-family: 'HoangNgan7', sans-serif;
   }
 
-  .font-custom-font-8 {
-    font-family: 'CustomFont8', sans-serif;
+  .font-hoangngan8 {
+    font-family: 'HoangNgan8', sans-serif;
   }
 
-  .font-custom-font-9 {
-    font-family: 'CustomFont9', sans-serif;
+  .font-hoangngan9 {
+    font-family: 'HoangNgan9', sans-serif;
   }
 
-  .font-custom-font-10 {
-    font-family: 'CustomFont10', sans-serif;
+  .font-hoangngan10 {
+    font-family: 'HoangNgan10', sans-serif;
   }
 
-  .font-custom-font-11 {
-    font-family: 'CustomFont11', sans-serif;
+  .font-hoangngan11 {
+    font-family: 'HoangNgan11', sans-serif;
   }
 
-  .font-custom-font-12 {
-    font-family: 'CustomFont12', sans-serif;
+  .font-hoangngan12 {
+    font-family: 'HoangNgan12', sans-serif;
   }
   
   .font-dancing {
