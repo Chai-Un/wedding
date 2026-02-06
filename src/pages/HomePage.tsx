@@ -1,4 +1,3 @@
-import Navigation from '../components/Navigation'
 import Cover from '../components/sections/Cover'
 import OurStory from '../components/sections/OurStory'
 import CeremonyDetails from '../components/sections/CeremonyDetails'
@@ -12,8 +11,7 @@ import { Mail, Phone } from 'lucide-react'
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      <main className="pt-16">
+      <main>
         <Cover />
         <OurStory />
         <CeremonyDetails />

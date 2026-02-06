@@ -86,3 +86,13 @@ RSVP form submissions are sent to a Google Apps Script webhook URL defined in `s
 ### Section Navigation
 
 The Navigation component uses hash-based anchor links (`#home`, `#our-story`, etc.) to navigate to sections on the home page. Each section in `src/components/sections/` should have a corresponding `id` attribute.
+
+## Skills to Apply
+
+This project has additional skill definitions in `.github/skills/` that should be applied when relevant:
+
+- **`vercel-react-best-practices/`** - React performance optimization patterns (avoid barrel imports, use Promise.all(), minimize waterfalls, optimize bundle size)
+- **`frontend-design/`** - Creative UI/UX guidelines (distinctive typography, bold aesthetics, avoid generic AI patterns like Inter font or purple gradients)
+- **`web-artifacts-builder/`** - Complex React artifact creation workflow with shadcn/ui
+
+**Important:** When making suggestions or modifications, proactively read and apply the relevant skill definitions from `.github/skills/` to ensure best practices are followed.

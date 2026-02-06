@@ -1,3 +1,4 @@
+import Navigation from '@/components/Navigation';
 import coverImage from '@/assets/images/mievatho_NH6514.JPG';
 // import coverMobileImage from '@/assets/images/mievatho_NH1487.JPG';
 
@@ -9,9 +10,12 @@ const WEDDING_INFO = [
 export default function Cover() {
 	return (
 		<section
-				id="home"
-				className="relative h-screen md:min-h-screen flex flex-col items-center justify-center px-4 py-20"
-			>
+			id="home"
+			className="relative h-screen md:min-h-screen flex flex-col items-center justify-center px-4 py-20"
+		>
+			{/* Navigation */}
+			<Navigation overlay={true} />
+			
 				{/* Background with overlay - Portrait/Mobile */}
 				<div
 					className="absolute inset-0 bg-cover md:hidden"
@@ -51,7 +55,7 @@ export default function Cover() {
 				</div>
 
 				{/* Date & Time at bottom */}
-				<div className="absolute bottom-[8%] left-0 right-0 text-center z-10 px-4">
+				<div className="absolute bottom-[2%] left-0 right-0 text-center z-10 px-4">
 					<div
 						className="grid md:grid-cols-2 gap-4 md:gap-12 items-center text-lg md:text-2xl uppercase font-thin font-inconsolata"
 					>

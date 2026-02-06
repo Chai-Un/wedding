@@ -1,109 +1,145 @@
-import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import logo from "@/assets/images/logo.png";
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { scroller } from 'react-scroll';
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { name: "HOME", href: "home" },
-  { name: "SCHEDULE", href: "schedule" },
-  { name: "VENUE", href: "venue" },
-  { name: "GALLERY", href: "gallery" },
-  { name: "RSVP", href: "rsvp" },
-  { name: "FAQs", href: "faqs" },
+	{ name: 'HOME', href: 'home' },
+	{ name: 'INVITATION | RSVP', href: 'rsvp' },
+	{ name: 'TIMELINE', href: 'schedule' },
+	{ name: 'OUR JOURNEY', href: 'our-story' },
+	{ name: 'GALLERY', href: 'gallery' },
 ];
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-  
-  // Check if we're on a gallery detail page
-  const isGalleryDetailPage = location.pathname.startsWith('/gallery/');
+interface NavigationProps {
+	overlay?: boolean; // If true, uses transparent overlay style. If false, uses solid background.
+}
 
-  const handleNavigation = (id: string) => {
-    // If we're on a gallery detail page, navigate home first
-    if (isGalleryDetailPage) {
-      navigate('/');
-      // Wait for navigation, then scroll
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      // Direct scroll on homepage
-      const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
-  };
+export default function Navigation({ overlay = false }: NavigationProps) {
+	const [isOpen, setIsOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const navigate = useNavigate();
+	const location = useLocation();
 
-  const handleLogoClick = () => {
-    if (isGalleryDetailPage) {
-      navigate('/');
-    } else {
-      const element = document.getElementById('home');
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsOpen(false);
-  };
+	// Check if we're on a gallery detail page
+	const isGalleryDetailPage = location.pathname.startsWith('/gallery/');
 
-  return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#e8dcc8]/95 backdrop-blur-sm shadow-sm z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo/Initials */}
-          <button 
-            onClick={handleLogoClick}
-            className="text-2xl font-serif text-[#5a6e4a] hover:text-[#4a5e3a] transition-colors cursor-pointer italic"
-          >
-            <img src={logo} alt="Hoàng & Ngân Wedding" className="h-10 w-10 object-contain inline-block mr-2" />
-          </button>
+	// Track scroll position for background change
+	useEffect(() => {
+		if (!overlay) return;
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => handleNavigation(item.href)}
-                className="text-xs font-medium text-[#5a6e4a] hover:text-[#4a5e3a] transition-colors cursor-pointer tracking-wider"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 50);
+		};
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-              className="text-[#5a6e4a]"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
-        </div>
-      </div>
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [overlay]);
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden bg-[#e8dcc8] border-t border-[#5a6e4a]/20">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => handleNavigation(item.href)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-[#5a6e4a] hover:text-[#4a5e3a] hover:bg-[#d4c5ad]/30 rounded-md transition-colors cursor-pointer"
-              >
-                {item.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-    </nav>
-  );
+	const handleNavigation = (id: string) => {
+		// close mobile menu immediately
+		setIsOpen(false);
+
+		// helper to invoke react-scroll scroller
+		const doScroll = () => {
+			scroller.scrollTo(id, {
+				duration: 600,
+				smooth: true,
+				offset: -90, // account for fixed nav height
+			});
+		};
+
+		// If we're on a gallery detail page, navigate home first then scroll
+		if (isGalleryDetailPage) {
+			navigate('/');
+			// small delay to allow route change / DOM mount
+			setTimeout(doScroll, 150);
+			return;
+		}
+
+		// Direct scroll on homepage
+		doScroll();
+	};
+
+	// Conditional styling based on overlay prop
+	const navClasses = overlay
+		? `fixed top-0 left-0 right-0 z-50 p-2 md:py-8 md:px-8 transition-all duration-300 ${
+				isScrolled ? 'bg-black/30 backdrop-blur-md' : ''
+			}`
+		: 'fixed top-0 left-0 right-0 bg-[#e8dcc8]/95 backdrop-blur-sm shadow-sm z-50';
+
+	const buttonClasses = overlay
+		? 'text-2xl font-light text-white hover:text-white/80 transition-colors tracking-wider cursor-pointer'
+		: 'text-xs font-medium text-[#5a6e4a] hover:text-[#4a5e3a] transition-colors tracking-wider cursor-pointer';
+
+	const mobileButtonClasses = overlay
+		? 'text-white hover:bg-white/10 p-2 rounded-md transition-colors'
+		: 'text-[#5a6e4a] hover:bg-[#5a6e4a]/10 p-2 rounded-md transition-colors';
+
+	const mobileMenuClasses = overlay
+		? 'md:hidden mt-4 bg-black/50 backdrop-blur-sm rounded-lg'
+		: 'md:hidden bg-[#e8dcc8] border-t border-[#5a6e4a]/20';
+
+	const mobileItemClasses = overlay
+		? 'block w-full text-left px-3 py-2 text-sm font-light text-white hover:bg-white/10 rounded-md transition-colors'
+		: 'block w-full text-left px-3 py-2 text-base font-medium text-[#5a6e4a] hover:text-[#4a5e3a] hover:bg-[#d4c5ad]/30 rounded-md transition-colors';
+
+	return (
+		<nav className={navClasses}>
+			<div className="w-full md:w-[80vw] mx-auto">
+				<div
+					className={
+						overlay
+							? 'flex items-center justify-center'
+							: 'flex items-center justify-center h-16'
+					}
+				>
+					{/* Desktop Navigation - Centered */}
+					<div className="hidden md:flex items-center md:space-x-12 lg:space-x-18">
+						{navItems.map((item) => (
+							<button
+								key={item.href}
+								onClick={() => handleNavigation(item.href)}
+								className={buttonClasses}
+							>
+								{item.name}
+							</button>
+						))}
+					</div>
+
+					{/* Mobile menu button */}
+					<div className="md:hidden ml-auto">
+						<button
+							onClick={() => setIsOpen(!isOpen)}
+							aria-label="Toggle menu"
+							className={mobileButtonClasses}
+						>
+							{isOpen ? (
+								<X className="h-6 w-6" />
+							) : (
+								<Menu className="h-6 w-6" />
+							)}
+						</button>
+					</div>
+				</div>
+			</div>
+
+			{/* Mobile Navigation */}
+			{isOpen && (
+				<div className={mobileMenuClasses}>
+					<div className="px-4 py-3 space-y-2">
+						{navItems.map((item) => (
+							<button
+								key={item.href}
+								onClick={() => handleNavigation(item.href)}
+								className={mobileItemClasses}
+							>
+								{item.name}
+							</button>
+						))}
+					</div>
+				</div>
+			)}
+		</nav>
+	);
 }
