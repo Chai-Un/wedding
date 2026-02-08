@@ -17,6 +17,17 @@
     "withLove": "With love,",
     "names": "Hoàng & Ngân"
   },
+  "rsvp": {
+    "title": "Rsvp",
+    "description": "Quý quan khách vui lòng gửi phản hồi việc tham dự tiệc trước ngày 04/04/2026 để gia đình chuẩn bị tiếp đón một cách chu đáo nhất",
+    "nameLabel": "Họ và tên",
+    "namePlaceholder": "Nhập họ và tên của bạn",
+    "attendYes": "Có, tôi sẽ tham dự tiệc :)",
+    "attendNo": "Tiếc quá, tôi không tham dự được :(",
+    "messageLabel": "Gửi lời chúc phúc tới cặp đôi",
+    "messagePlaceholder": "Type here...",
+    "submitButton": "GỬI PHẢN HỒI"
+  },
   "common": {
     "rsvp": "RSVP",
     "viewMore": "Xem thêm",

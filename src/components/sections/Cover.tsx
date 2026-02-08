@@ -40,7 +40,7 @@ export default function Cover() {
 				{/* Couple Names */}
 				<div className="space-y-4">
 					<div
-						className="text-[4.9em] md:text-[7em] lg:text-[8.75em] text-white tracking-normal leading-tight font-hoangngan8"
+						className="text-[3em] md:text-[7em] lg:text-[8.75em] text-white tracking-normal leading-tight font-hoangngan8"
 						// style={{ fontFamily: 'CustomSerif, serif' }}
 					>
 						Hoàng & Ngân

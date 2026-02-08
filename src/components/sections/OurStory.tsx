@@ -11,18 +11,19 @@ export default function OurStory() {
 					<img
 						src={ourStoryImage}
 						alt="Our Story"
-						className="aspect-[3/4] w-full object-cover rounded object-[50%_70%]"
+						className="aspect-3/4 w-full object-cover rounded object-[50%_70%]"
 					/>
 
 					<div className="space-y-6 text-center md:text-left">
-						<div className="text-[3em] font-hoangngan8 text-[rgb(163,104,55)]">
+						<div className="text-[2.5em] lg:text-[3em] font-hoangngan8 text-[rgb(163,104,55)]">
 							{t('ourStory.greeting')}
 						</div>
 
 						<TypingText
 							text={
 								t('ourStory.story') +
-								'\n' + '\n' +
+								'\n' +
+								'\n' +
 								t('ourStory.withLove') +
 								'\n' +
 								t('ourStory.names')
@@ -31,28 +32,6 @@ export default function OurStory() {
 							speed={35}
 							showCursor={false}
 						/>
-
-						{/* <TypingText
-							text={t('ourStory.withLove')}
-							className="text-gray-600 leading-relaxed text-2xl font-dancing whitespace-pre-line"
-							speed={40}
-							showCursor={false}
-						/>
-
-						<TypingText
-							text={t('ourStory.names')}
-							className="text-gray-600 leading-relaxed text-2xl font-dancing whitespace-pre-line"
-							speed={40}
-							showCursor={false}
-						/> */}
-						{/* <div className="text-gray-600 space-y-1">
-							<p className="text-2xl font-dancing">
-								{t('ourStory.withLove')}
-							</p>
-							<p className="text-[28px] font-dancing">
-								{t('ourStory.names')}
-							</p>
-						</div> */}
 					</div>
 				</div>
 			</div>

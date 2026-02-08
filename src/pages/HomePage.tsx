@@ -3,7 +3,7 @@ import OurStory from '../components/sections/OurStory'
 import CeremonyDetails from '../components/sections/CeremonyDetails'
 import Schedule from '../components/sections/Schedule'
 import Venue from '../components/sections/Venue'
-import RSVPForm from '../components/sections/RSVPForm'
+import RSVP from '../components/sections/RSVP'
 import Gallery from '../components/sections/Gallery'
 import GiftRegistry from '../components/sections/GiftRegistry'
 import { Mail, Phone } from 'lucide-react'
@@ -17,7 +17,7 @@ export default function HomePage() {
         <CeremonyDetails />
         <Schedule />
         <Venue />
-        <RSVPForm />
+        <RSVP />
         <Gallery />
         <GiftRegistry />
       </main>

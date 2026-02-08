@@ -17,6 +17,17 @@
     "withLove": "With love,",
     "names": "Hoàng & Ngân"
   },
+  "rsvp": {
+    "title": "Rsvp",
+    "description": "Dear guests, please kindly send your RSVP before April 4th, 2026 so our family can prepare the most thoughtful welcome for you",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "attendYes": "Yes, I will attend :)",
+    "attendNo": "Sorry, I cannot attend :(",
+    "messageLabel": "Send your wishes to the couple",
+    "messagePlaceholder": "Type here...",
+    "submitButton": "SEND RESPONSE"
+  },
   "common": {
     "rsvp": "RSVP",
     "viewMore": "View More",
