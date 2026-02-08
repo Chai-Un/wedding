@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { Heart } from 'lucide-react';
 
 const Timeline = () => {
 	const { t } = useTranslation();
