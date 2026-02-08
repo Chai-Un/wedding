@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "home": "Home",
+    "invitation": "INVITATION | RSVP",
+    "schedule": "Schedule",
+    "ourStory": "Our Journey",
+    "gallery": "Gallery"
+  },
+  "cover": {
+    "saveTheDate": "SAVE THE DATE",
+    "date": "11:00 AM, April 11, 2026",
+    "venue": "NATIONAL CONVENTION CENTER"
+  },
+  "ourStory": {
+    "greeting": "Dear family & friends",
+    "story": "After more than 3 years of sharing love across thousands of miles, the day has finally come for us to be together under one roof.\n\nWe look forward to celebrating our special day and beginning a new journey with our dearest loved ones. Your presence and blessings are the most wonderful gifts we will always treasure!",
+    "withLove": "With love,",
+    "names": "Hoàng & Ngân"
+  },
+  "common": {
+    "rsvp": "RSVP",
+    "viewMore": "View More",
+    "close": "Close"
+  }
+}

@@ -2,19 +2,15 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const navItems = [
-	{ name: 'Trang chủ', href: 'home' },
-	{ name: 'LỜI MỜI | RSVP', href: 'rsvp' },
-	{ name: 'Chương Trình', href: 'schedule' },
-	{ name: 'Hành trình yêu', href: 'our-story' },
-	{ name: 'Thư viện ảnh', href: 'gallery' },
-
-	// { name: 'HOME', href: 'home' },
-	// { name: 'INVITATION | RSVP', href: 'rsvp' },
-	// { name: 'TIMELINE', href: 'schedule' },
-	// { name: 'OUR JOURNEY', href: 'our-story' },
-	// { name: 'GALLERY', href: 'gallery' },
+	{ nameKey: 'nav.home', href: 'home' },
+	{ nameKey: 'nav.invitation', href: 'rsvp' },
+	{ nameKey: 'nav.schedule', href: 'schedule' },
+	{ nameKey: 'nav.ourStory', href: 'our-story' },
+	{ nameKey: 'nav.gallery', href: 'gallery' },
 ];
 
 interface NavigationProps {
@@ -26,6 +22,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const navigate = useNavigate();
 	const location = useLocation();
+	const { t } = useTranslation();
 
 	// Check if we're on a gallery detail page
 	const isGalleryDetailPage = location.pathname.startsWith('/gallery/');
@@ -75,7 +72,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		: 'fixed top-0 left-0 right-0 bg-[#e8dcc8]/95 backdrop-blur-sm shadow-sm z-50';
 
 	const buttonClasses = overlay
-		? 'text-[1em] md:text-[1.125em] lg:text-[1.25em] font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
+		? 'text-[1em] md:text-[1em] lg:text-[1.25em] font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
 		: 'text-[0.625em] md:text-[0.75em] lg:text-[0.875em] font-medium text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase';
 
 	const mobileButtonClasses = overlay
@@ -83,12 +80,12 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		: 'text-[#5a6e4a] hover:bg-[#5a6e4a]/10 p-2 rounded-md transition-colors';
 
 	const mobileMenuClasses = overlay
-		? 'md:hidden mt-4 bg-black/50 backdrop-blur-sm rounded-lg'
+		? 'md:hidden mt-4 bg-[#d6c1a0]/20 backdrop-blur-sm rounded-lg'
 		: 'md:hidden bg-[#e8dcc8] border-t border-[#5a6e4a]/20';
 
 	const mobileItemClasses = overlay
-		? 'block w-full text-left px-3 py-2 text-[0.75em] md:text-[0.875em] font-light text-white hover:bg-white/10 rounded-md transition-colors'
-		: 'block w-full text-left px-3 py-2 text-[0.875em] md:text-[1em] font-medium text-[#5a6e4a] hover:text-[#4a5e3a] hover:bg-[#d4c5ad]/30 rounded-md transition-colors';
+		? 'block w-full text-left px-3 py-2 text-[0.75em] md:text-[0.875em] font-light text-white hover:bg-white/10 rounded-md transition-colors uppercase font-hoangngan7'
+		: 'block w-full text-left px-3 py-2 text-[0.875em] md:text-[1em] font-medium text-[#5a6e4a] hover:text-[#4a5e3a] hover:bg-[#d4c5ad]/30 rounded-md transition-colors uppercase font-hoangngan7';
 
 	return (
 		<nav className={navClasses}>
@@ -101,19 +98,24 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 					}
 				>
 					{/* Desktop Navigation - Centered */}
-					<div className="hidden md:flex items-center md:space-x-12 lg:space-x-18">
+					<div className="hidden md:flex items-center md:space-x-9 lg:space-x-18">
 						{navItems.map((item) => (
 							<button
 								key={item.href}
 								onClick={() => handleNavigation(item.href)}
 								className={buttonClasses}
 							>
-								{item.name}
+								{t(item.nameKey)}
 							</button>
 						))}
 					</div>
 
-					{/* Mobile menu button */}
+					{/* Language Switcher - Left */}
+					<div className="md:absolute md:right-2 top-5.5">
+						<LanguageSwitcher />
+					</div>
+
+					{/* Mobile menu button - Right */}
 					<div className="md:hidden ml-auto">
 						<button
 							onClick={() => setIsOpen(!isOpen)}
@@ -140,7 +142,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 								onClick={() => handleNavigation(item.href)}
 								className={mobileItemClasses}
 							>
-								{item.name}
+								{t(item.nameKey)}
 							</button>
 						))}
 					</div>

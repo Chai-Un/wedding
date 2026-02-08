@@ -1,13 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
 import coverImage from '@/assets/images/mievatho_NH6514.JPG';
 // import coverMobileImage from '@/assets/images/mievatho_NH1487.JPG';
 
-const WEDDING_INFO = [
-	'11:00 ngày 11 tháng 4, 2026',
-	'TRUNG TÂM HỘI NGHỊ QUỐC GIA',
-];
-
 export default function Cover() {
+	const { t } = useTranslation();
 	return (
 		<section
 			id="home"
@@ -49,7 +46,7 @@ export default function Cover() {
 						Hoàng & Ngân
 					</div>
 					<p className="text-[1.25em] md:text-[1.75em] lg:text-[2.5em] text-white/90 tracking-[0.3em] uppercase font-light font-hoangngan7">
-						NGÀY CHUNG ĐÔI
+						{t('cover.saveTheDate')}
 					</p>
 				</div>
 			</div>
@@ -57,11 +54,12 @@ export default function Cover() {
 			{/* Date & Time at bottom */}
 			<div className="absolute bottom-[2%] left-0 right-0 text-center z-10 px-4">
 				<div className="grid md:grid-cols-2 gap-4 md:gap-12 items-center text-[1.125em] md:text-[1.25em] lg:text-[1.5em] uppercase font-thin font-inconsolata">
-					{WEDDING_INFO.map((info, index) => (
-						<div key={index} className="text-white tracking-wider">
-							{info}
-						</div>
-					))}
+					<div className="text-white tracking-wider">
+						{t('cover.date')}
+					</div>
+					<div className="text-white tracking-wider">
+						{t('cover.venue')}
+					</div>
 				</div>
 			</div>
 		</section>

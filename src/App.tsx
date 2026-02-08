@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import GalleryDetailPage from './pages/GalleryDetailPage'
 import { Toaster } from './components/ui/toaster'
+import './i18n/config'
 
 function App() {
   return (
