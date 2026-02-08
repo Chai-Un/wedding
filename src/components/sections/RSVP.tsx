@@ -108,7 +108,7 @@ export default function RSVP() {
           />
 
           {/* Title */}
-          <h2 className="text-[66px] font-custom-serif text-[rgb(163,104,55)] mb-4">
+          <h2 className="text-[66px] font-custom-serif text-[#412d1d] mb-4">
             {t('rsvp.title')}
           </h2>
 

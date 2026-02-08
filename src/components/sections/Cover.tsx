@@ -39,10 +39,7 @@ export default function Cover() {
 			<div className="relative z-10 text-center space-y-8 max-w-4xl">
 				{/* Couple Names */}
 				<div className="space-y-4">
-					<div
-						className="text-[3em] md:text-[7em] lg:text-[8.75em] text-white tracking-normal leading-tight font-hoangngan8"
-						// style={{ fontFamily: 'CustomSerif, serif' }}
-					>
+					<div className="text-[3.5em] md:text-[7em] lg:text-[8.75em] text-white tracking-normal leading-tight font-hoangngan8">
 						Hoàng & Ngân
 					</div>
 					<p className="text-[1.25em] md:text-[1.75em] lg:text-[2.5em] text-white/90 tracking-[0.3em] uppercase font-light font-hoangngan7">
