@@ -28,6 +28,47 @@
     "messagePlaceholder": "Type here...",
     "submitButton": "SEND RESPONSE"
   },
+  "timeline": {
+    "title": "Our Timeline",
+    "items": [
+      {
+        "time": "8:30 AM",
+        "title": "TOGETHER IN JOY",
+        "subtitle": "Engagement ceremony",
+        "description": "For special invited guests to attend the private ceremony"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Guest arrival",
+        "subtitle": "",
+        "description": ""
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Wedding ceremony",
+        "subtitle": "",
+        "description": ""
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Reception begins",
+        "subtitle": "",
+        "description": ""
+      },
+      {
+        "time": "12:00 PM",
+        "title": "First dance",
+        "subtitle": "The first dance of",
+        "description": "Bride and Groom"
+      },
+      {
+        "time": "12:15 PM",
+        "title": "Entertainment",
+        "subtitle": "",
+        "description": ""
+      }
+    ]
+  },
   "common": {
     "rsvp": "RSVP",
     "viewMore": "View More",

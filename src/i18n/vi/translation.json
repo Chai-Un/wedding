@@ -28,6 +28,47 @@
     "messagePlaceholder": "Type here...",
     "submitButton": "GỬI PHẢN HỒI"
   },
+  "timeline": {
+    "title": "Our Timeline",
+    "items": [
+      {
+        "time": "8:30 AM",
+        "title": "CÓ NHAU BÊN ĐÔI BỐNG VUI",
+        "subtitle": "Lễ thán mật",
+        "description": "Dành cho Khách mời nhân được lời mời tham dự riêng"
+      },
+      {
+        "time": "10:30 AM",
+        "title": "Đón khách",
+        "subtitle": "",
+        "description": ""
+      },
+      {
+        "time": "11:00 AM",
+        "title": "Lễ cưới",
+        "subtitle": "",
+        "description": ""
+      },
+      {
+        "time": "11:30 AM",
+        "title": "Khai tiệc",
+        "subtitle": "",
+        "description": ""
+      },
+      {
+        "time": "12:00 PM",
+        "title": "First dance",
+        "subtitle": "Điệu nhảy đầu tiên của",
+        "description": "Cô dâu và Chú rể"
+      },
+      {
+        "time": "12:15 PM",
+        "title": "Giải trí",
+        "subtitle": "",
+        "description": ""
+      }
+    ]
+  },
   "common": {
     "rsvp": "RSVP",
     "viewMore": "Xem thêm",

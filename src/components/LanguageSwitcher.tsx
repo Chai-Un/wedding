@@ -32,12 +32,12 @@ export default function LanguageSwitcher({
 				offHandleColor="#fff"
 				handleDiameter={28}
 				uncheckedIcon={
-					<div className="flex items-center justify-center h-full text-[0.5em] md:text-[0.875em] font-medium text-white font-family-dancing">
+					<div className="flex items-center justify-center h-full text-[1em] md:text-[0.875em] font-medium text-white font-family-dancing">
 						VN
 					</div>
 				}
 				checkedIcon={
-					<div className="flex items-center justify-center h-full text-[0.5em] md:text-[0.875em] font-medium text-white font-family-dancing">
+					<div className="flex items-center justify-center h-full text-[1em] md:text-[0.875em] font-medium text-white font-family-dancing">
 						EN
 					</div>
 				}
