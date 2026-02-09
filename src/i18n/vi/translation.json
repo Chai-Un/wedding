@@ -17,6 +17,15 @@
     "withLove": "With love,",
     "names": "Hoàng & Ngân"
   },
+  "ceremony": {
+    "day": "THỨ BẢY",
+    "time": "11:00 | 11.04.2026",
+    "room": "PHÒNG 318",
+    "venue": "TRUNG TÂM HỘI NGHỊ QUỐC GIA",
+    "address": "Đường Phạm Hùng, Thành phố Hà Nội",
+    "mapButton": "Xem bản đồ",
+    "rsvpButton": "PHẢN HỒI THAM DỰ"
+  },
   "rsvp": {
     "title": "Rsvp",
     "description": "Quý quan khách vui lòng gửi phản hồi việc tham dự tiệc trước ngày 04/04/2026 để gia đình chuẩn bị tiếp đón một cách chu đáo nhất",
@@ -68,6 +77,32 @@
         "description": ""
       }
     ]
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Cùng chúng mình ngắm nhìn tình yêu qua những khung hình!",
+    "concepts": {
+      "ngayNangVe": {
+        "title": "Ngày Nắng Về",
+        "description": "Ký ức mùa hè rực nắng"
+      },
+      "redamncy": {
+        "title": "Redamncy",
+        "description": "Yêu ai đó cũng yêu mình lại"
+      },
+      "becomingOne": {
+        "title": "Becoming One",
+        "description": "Hành trình đến bên nhau"
+      },
+      "heartOfHanoi": {
+        "title": "Heart of Hanoi",
+        "description": "Tình yêu giữa lòng Hà Nội"
+      }
+    }
+  },
+  "contact": {
+    "message": "Câu chuyện tình yêu sẽ thêm phần trọn vẹn khi có sự hiện diện của bạn trong ngày vui của hai chúng mình!\nMọi thắc mắc về thông tin bữa tiệc vui lòng liện hệ trực tiếp Hoàng & Ngân và gia đình.",
+    "phone": "(+84) 978-662-863"
   },
   "common": {
     "rsvp": "RSVP",

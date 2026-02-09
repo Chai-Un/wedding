@@ -84,7 +84,7 @@ export default function RSVP() {
   };
 
   return (
-    <section id="rsvp" className="bg-[#e8dcc8] px-4 py-24">
+    <section id="rsvp" className="bg-[#e8dcc8] px-4 py-16 md:py-24 lg:py-28">
       <div className="max-w-2xl mx-auto">
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Honeypot field - hidden from users, bots will fill it */}
@@ -108,18 +108,18 @@ export default function RSVP() {
           />
 
           {/* Title */}
-          <h2 className="text-[66px] font-custom-serif text-[#412d1d] mb-4">
+          <div className="text-4xl md:text-5xl lg:text-6xl font-custom-serif text-[#412d1d] mb-4">
             {t('rsvp.title')}
-          </h2>
+          </div>
 
           {/* Description */}
-          <p className="text-gray-700 text-lg leading-relaxed font-montserrat">
+          <p className="text-base md:text-lg leading-relaxed font-montserrat text-gray-700">
             {t('rsvp.description')}
           </p>
 
           {/* Name Input */}
           <div className="space-y-2">
-            <label className="block text-gray-700 text-lg font-montserrat">
+            <label className="block text-gray-700 text-base md:text-lg font-montserrat">
               {t('rsvp.nameLabel')}
             </label>
             <input
@@ -144,13 +144,13 @@ export default function RSVP() {
             >
               <div className="flex items-center gap-4">
                 <RadioGroupItem value="yes" id="yes" className="border-gray-600 text-gray-600" />
-                <Label htmlFor="yes" className="text-gray-700 text-lg font-montserrat cursor-pointer">
+                <Label htmlFor="yes" className="text-gray-700 text-base md:text-lg font-montserrat cursor-pointer">
                   {t('rsvp.attendYes')}
                 </Label>
               </div>
               <div className="flex items-center gap-4">
                 <RadioGroupItem value="no" id="no" className="border-gray-600 text-gray-600" />
-                <Label htmlFor="no" className="text-gray-700 text-lg font-montserrat cursor-pointer">
+                <Label htmlFor="no" className="text-gray-700 text-base md:text-lg font-montserrat cursor-pointer">
                   {t('rsvp.attendNo')}
                 </Label>
               </div>

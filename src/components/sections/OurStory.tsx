@@ -4,7 +4,7 @@ import ourStoryImage from '@/assets/images/mievatho_NH1504.JPG';
 export default function OurStory() {
 	const { t } = useTranslation();
 	return (
-		<section className="bg-[#d6c1a0] py-20 px-4">
+		<section className="bg-[#d6c1a0] py-12 md:py-20 lg:py-24 px-4">
 			<div className="max-w-5xl mx-auto">
 				<div className="grid md:grid-cols-2 gap-12">
 					<img
@@ -14,15 +14,15 @@ export default function OurStory() {
 					/>
 
 					<div className="space-y-6 text-center md:text-left">
-						<div className="text-[2.5em] lg:text-[3em] font-hoangngan8 text-[#412d1d]">
+						<div className="text-3xl md:text-4xl lg:text-5xl font-hoangngan8 text-[#412d1d]">
 							{t('ourStory.greeting')}
 						</div>
 
-						<div className="text-[#2d2b25]/80 leading-relaxed text-[1em] font-hoangngan4 whitespace-pre-line">
+						<div className="text-[#2d2b25]/80 leading-relaxed text-base md:text-lg font-hoangngan4 whitespace-pre-line">
 							{t('ourStory.story')}
-							<div className="text-[#2d2b25]/80 text-[1em] font-hoangngan4 whitespace-pre-line">
+							<div className="text-[#2d2b25]/80 text-base md:text-lg font-hoangngan4 whitespace-pre-line">
 								<p>{t('ourStory.withLove')}</p>
-								<p className="font-hoangngan8 text-[2em]">
+								<p className="font-hoangngan8 text-2xl md:text-3xl lg:text-4xl">
 									{t('ourStory.names')}
 								</p>
 							</div>

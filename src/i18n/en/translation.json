@@ -17,6 +17,15 @@
     "withLove": "With love,",
     "names": "Hoàng & Ngân"
   },
+  "ceremony": {
+    "day": "SATURDAY",
+    "time": "11:00 | 11.04.2026",
+    "room": "ROOM 318",
+    "venue": "NATIONAL CONVENTION CENTER",
+    "address": "Pham Hung Street, Hanoi City",
+    "mapButton": "View Map",
+    "rsvpButton": "RSVP HERE"
+  },
   "rsvp": {
     "title": "Rsvp",
     "description": "Dear guests, please kindly send your RSVP before April 4th, 2026 so our family can prepare the most thoughtful welcome for you",
@@ -68,6 +77,32 @@
         "description": ""
       }
     ]
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Let's admire love through these frames together!",
+    "concepts": {
+      "ngayNangVe": {
+        "title": "Sunny Days",
+        "description": "Sunny summer memories"
+      },
+      "redamncy": {
+        "title": "Redamncy",
+        "description": "Loving someone who loves you back"
+      },
+      "becomingOne": {
+        "title": "Becoming One",
+        "description": "Our journey to unity"
+      },
+      "heartOfHanoi": {
+        "title": "Heart of Hanoi",
+        "description": "Love in the city"
+      }
+    }
+  },
+  "contact": {
+    "message": "Our love story will be complete with your presence on our special day!\nFor any questions about the celebration, please contact Hoàng & Ngân and family directly.",
+    "phone": "(+84) 978-662-863"
   },
   "common": {
     "rsvp": "RSVP",

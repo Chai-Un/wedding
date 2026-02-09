@@ -1,10 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { MapPin } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import CircleBeautyImage from '@/assets/images/circle-beauty.png';
 import ceremonyBackgroundImage from '@/assets/images/mievatho_NH6575.JPG';
 import ceremonyMobileBackgroundImage from '@/assets/images/mievatho_NH6575.JPG';
 
 export default function CeremonyDetails() {
+	const { t } = useTranslation();
 	const scrollToSection = (id: string) => {
 		const element = document.getElementById(id);
 		element?.scrollIntoView({ behavior: 'smooth' });
@@ -18,7 +20,7 @@ export default function CeremonyDetails() {
 	};
 
 	return (
-		<section className="relative flex flex-col items-center justify-center px-4 py-20">
+		<section className="relative flex flex-col items-center justify-center px-4 py-16 md:py-24 lg:py-28">
 			{/* Mobile background */}
 			<div
 				className="absolute inset-0 bg-cover bg-center md:hidden"
@@ -75,40 +77,40 @@ export default function CeremonyDetails() {
 				</p> */}
 
 				<h2
-					className="text-3xl md:text-2xl tracking-[0.2em] uppercase"
+					className="text-2xl md:text-3xl lg:text-4xl tracking-[0.2em] uppercase"
 					style={{ fontFamily: 'Inconsolata, monospace' }}
 				>
-					THỨ BẢY
+					{t('ceremony.day')}
 				</h2>
 
 				<div
 					className="text-3xl md:text-4xl lg:text-5xl tracking-wide"
 					style={{ fontFamily: 'Inconsolata, monospace' }}
 				>
-					11:00 | 11.04.2026
+					{t('ceremony.time')}
 				</div>
 
 				<div className="pt-8 space-y-3">
 					<p
-						className="text-xl md:text-3xl tracking-[0.15em] uppercase"
+						className="text-xl md:text-2xl lg:text-3xl tracking-[0.15em] uppercase"
 						style={{
 							fontFamily: 'Inconsolata, monospace',
 							letterSpacing: '0.1em',
 						}}
 					>
-						PHÒNG 318
+						{t('ceremony.room')}
 					</p>
 					<p
-						className="text-xl md:text-2xl lg:text-3xl tracking-[0.1em] uppercase"
+						className="text-xl md:text-2xl lg:text-3xl tracking-widest uppercase"
 						style={{ fontFamily: 'Inconsolata, monospace' }}
 					>
-						TRUNG TÂM HỘI NGHỊ QUỐC GIA
+						{t('ceremony.venue')}
 					</p>
 					<p
-						className="text-lg md:text-base tracking-wide pt-2"
+						className="text-base md:text-lg lg:text-xl tracking-wide pt-2"
 						style={{ fontFamily: 'Inconsolata, monospace' }}
 					>
-						Đường Phạm Hùng, Thành phố Hà Nội
+						{t('ceremony.address')}
 					</p>
 				</div>
 
@@ -121,7 +123,7 @@ export default function CeremonyDetails() {
 						className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#4a3f35] px-12 py-6 text-sm tracking-widest uppercase transition-all"
 					>
 						<MapPin className="w-4 h-4 mr-2" />
-						Xem bản đồ
+						{t('ceremony.mapButton')}
 					</Button>
 					{/* CTA Button */}
 					<div className="pt-8">
@@ -130,7 +132,7 @@ export default function CeremonyDetails() {
 							onClick={() => scrollToSection('rsvp')}
 							className="bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white px-12 py-6 text-sm tracking-widest uppercase"
 						>
-							PHẢN HỒI THAM DỰ
+							{t('ceremony.rsvpButton')}
 						</Button>
 					</div>
 				</div>

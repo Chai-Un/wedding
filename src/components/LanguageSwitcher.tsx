@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import Switch from 'react-switch';
+import vnSvg from '@/assets/images/vn-flag.svg';
+import enSvg from '@/assets/images/uk-flag.svg';
 
 interface LanguageSwitcherProps {
 	className?: string;
@@ -17,10 +19,6 @@ export default function LanguageSwitcher({
 		localStorage.setItem('language', newLanguage);
 	};
 
-	// Flag emojis
-	const vnFlag = '🇻🇳';
-	const enFlag = '🇬🇧';
-
 	return (
 		<div className={className}>
 			<Switch
@@ -33,7 +31,7 @@ export default function LanguageSwitcher({
 				handleDiameter={28}
 				uncheckedIcon={
 					<div className="flex items-center justify-center h-full text-[1em] md:text-[0.875em] font-medium text-white font-family-dancing">
-						VN
+						VI
 					</div>
 				}
 				checkedIcon={
@@ -42,13 +40,13 @@ export default function LanguageSwitcher({
 					</div>
 				}
 				uncheckedHandleIcon={
-					<div className="flex items-center justify-center h-full text-lg">
-						{vnFlag}
+					<div className="flex items-center justify-center h-full">
+						<img src={vnSvg} alt="VN" className="w-5 h-5 object-cover" />
 					</div>
 				}
 				checkedHandleIcon={
-					<div className="flex items-center justify-center h-full text-lg">
-						{enFlag}
+					<div className="flex items-center justify-center h-full">
+						<img src={enSvg} alt="EN" className="w-5 h-5 object-cover" />
 					</div>
 				}
 				height={28}

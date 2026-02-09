@@ -8,7 +8,7 @@ export default function Cover() {
 	return (
 		<section
 			id="home"
-			className="relative h-screen md:min-h-screen flex flex-col items-center justify-center px-4 py-20"
+			className="relative h-screen md:min-h-screen flex flex-col items-center justify-center px-4 py-16 md:py-24 lg:py-32"
 		>
 			{/* Navigation */}
 			<Navigation overlay={true} />
@@ -39,10 +39,10 @@ export default function Cover() {
 			<div className="relative z-10 text-center space-y-8 max-w-4xl">
 				{/* Couple Names */}
 				<div className="space-y-4">
-					<div className="text-[3.5em] md:text-[7em] lg:text-[8.75em] text-white tracking-normal leading-tight font-hoangngan8">
+					<div className="text-5xl md:text-7xl lg:text-8xl text-white tracking-normal leading-tight font-hoangngan8">
 						Hoàng & Ngân
 					</div>
-					<p className="text-[1.25em] md:text-[1.75em] lg:text-[2.5em] text-white/90 tracking-[0.3em] uppercase font-light font-hoangngan7">
+					<p className="text-xl md:text-3xl lg:text-4xl text-white/90 tracking-[0.3em] uppercase font-light font-hoangngan7">
 						{t('cover.saveTheDate')}
 					</p>
 				</div>
@@ -50,7 +50,7 @@ export default function Cover() {
 
 			{/* Date & Time at bottom */}
 			<div className="absolute bottom-[2%] left-0 right-0 text-center z-10 px-4">
-				<div className="grid md:grid-cols-2 gap-4 md:gap-12 items-center text-[1.125em] md:text-[1.25em] lg:text-[1.5em] uppercase font-thin font-inconsolata">
+				<div className="grid md:grid-cols-2 gap-4 md:gap-12 items-center text-xl md:text-2xl uppercase font-thin font-inconsolata">
 					<div className="text-white tracking-wider">
 						{t('cover.date')}
 					</div>

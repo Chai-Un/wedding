@@ -46,7 +46,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		// helper to invoke react-scroll scroller
 		const doScroll = () => {
 			scroller.scrollTo(id, {
-				duration: 100,
+				duration: 500,
 				smooth: true,
 				offset: -70, // account for fixed nav height
 			});
@@ -66,14 +66,14 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 
 	// Conditional styling based on overlay prop
 	const navClasses = overlay
-		? `fixed top-0 left-0 right-0 z-50 p-2 md:py-5 md:px-6 transition-all duration-300 ${
-				isScrolled ? 'bg-black/30 backdrop-blur-md' : ''
+		? `fixed top-0 left-0 right-0 z-50 p-2 md:py-10 md:px-6 transition-all duration-300 ${
+				isScrolled ? 'md:!py-5 bg-black/30 backdrop-blur-md' : ''
 			}`
-		: 'fixed top-0 left-0 right-0 bg-[#e8dcc8]/95 backdrop-blur-sm shadow-sm z-50';
+		: 'fixed top-0 left-0 right-0 bg-[#e8dcc8]/95 backdrop-blur-sm shadow-sm z-50 py-4 md:py-6';
 
 	const buttonClasses = overlay
-		? 'text-[1em] md:text-[1em] lg:text-[1.25em] font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
-		: 'text-[0.625em] md:text-[0.75em] lg:text-[0.875em] font-medium text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase';
+		? 'text-sm md:text-base lg:text-xl font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
+		: 'text-sm md:text-base lg:text-xl font-medium text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase';
 
 	const mobileButtonClasses = overlay
 		? 'text-white hover:bg-white/10 p-2 rounded-md transition-colors'
@@ -89,7 +89,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 
 	return (
 		<nav className={navClasses}>
-			<div className="w-full md:w-[80vw] mx-auto">
+			<div className="w-full md:w-[90vw] mx-auto">
 				<div
 					className={
 						overlay
@@ -98,7 +98,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 					}
 				>
 					{/* Desktop Navigation - Centered */}
-					<div className="hidden md:flex items-center md:space-x-9 lg:space-x-18">
+					<div className="hidden md:flex items-center md:space-x-7 lg:space-x-12">
 						{navItems.map((item) => (
 							<button
 								key={item.href}
@@ -111,7 +111,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 					</div>
 
 					{/* Language Switcher - Left */}
-					<div className="md:absolute md:right-2 top-5.5">
+					<div className="md:absolute md:top-1/2 md:right-2 md:transform md:-translate-y-1/2">
 						<LanguageSwitcher />
 					</div>
 
