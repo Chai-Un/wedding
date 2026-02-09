@@ -50,7 +50,7 @@ export default function Cover() {
 
 			{/* Date & Time at bottom */}
 			<div className="absolute bottom-[2%] left-0 right-0 text-center z-10 px-4">
-				<div className="grid md:grid-cols-2 gap-4 md:gap-12 items-center text-xl md:text-2xl uppercase font-thin font-inconsolata">
+				<div className="grid md:grid-cols-2 gap-4 md:gap-16 items-center text-xl uppercase font-thin font-inconsolata">
 					<div className="text-white tracking-wider">
 						{t('cover.date')}
 					</div>

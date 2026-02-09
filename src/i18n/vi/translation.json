@@ -4,7 +4,7 @@
     "invitation": "LỜI MỜI | RSVP",
     "schedule": "Chương Trình",
     "ourStory": "Hành trình yêu",
-    "gallery": "Thư viện ảnh"
+    "gallery": "Album"
   },
   "cover": {
     "saveTheDate": "NGÀY CHUNG ĐÔI",
@@ -42,9 +42,9 @@
     "items": [
       {
         "time": "8:30 AM",
-        "title": "CÓ NHAU BÊN ĐÔI BỐNG VUI",
-        "subtitle": "Lễ thán mật",
-        "description": "Dành cho Khách mời nhân được lời mời tham dự riêng"
+        "title": "CÓ NHAU BÊN ĐỜI BỖNG VUI",
+        "subtitle": "Lễ thân mật",
+        "description": "Dành cho khách mời nhân được thiệp mời tham dự riêng"
       },
       {
         "time": "10:30 AM",

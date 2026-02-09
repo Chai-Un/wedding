@@ -8,7 +8,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 const navItems = [
 	{ nameKey: 'nav.home', href: 'home' },
 	{ nameKey: 'nav.invitation', href: 'rsvp' },
-	{ nameKey: 'nav.schedule', href: 'schedule' },
+	{ nameKey: 'nav.schedule', href: 'timeline' },
 	{ nameKey: 'nav.ourStory', href: 'our-story' },
 	{ nameKey: 'nav.gallery', href: 'gallery' },
 ];
@@ -46,7 +46,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		// helper to invoke react-scroll scroller
 		const doScroll = () => {
 			scroller.scrollTo(id, {
-				duration: 500,
+				duration: 200,
 				smooth: true,
 				offset: -70, // account for fixed nav height
 			});

@@ -1,3 +1,7 @@
+import thumbnail1 from '@/assets/images/gallery/thumbnails/thumb1.jpg';
+import thumbnail2 from '@/assets/images/gallery/thumbnails/thumb2.jpg';
+import thumbnail3 from '@/assets/images/gallery/thumbnails/thumb3.jpg';
+import thumbnail4 from '@/assets/images/gallery/thumbnails/thumb4.jpg';
 export interface GalleryConcept {
 	id: string;
 	title: string;
@@ -17,7 +21,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'ngayNangVe',
 		path: '/gallery/ngay-nang-ve',
 		bgColor: 'from-rose-300 to-pink-200',
-		bgImage: '/src/assets/images/gallery/thumbnails/mievatho_NH6575.JPG',
+		bgImage: thumbnail1,
 		content: 'Photos from our sunny summer days together...',
 	},
 	{
@@ -27,7 +31,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'redamncy',
 		path: '/gallery/redamncy',
 		bgColor: 'from-amber-300 to-orange-200',
-		bgImage: '/src/assets/images/gallery/thumbnails/mievatho_NH6575.JPG',
+		bgImage: thumbnail2,
 		content: 'The feeling of loving and being loved in return...',
 	},
 	{
@@ -37,7 +41,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'becomingOne',
 		path: '/gallery/becoming-one',
 		bgColor: 'from-emerald-300 to-teal-200',
-		bgImage: '/src/assets/images/gallery/thumbnails/mievatho_NH6575.JPG',
+		bgImage: thumbnail3,
 		content: 'Our journey becoming one together...',
 	},
 	{
@@ -47,7 +51,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'heartOfHanoi',
 		path: '/gallery/heart-of-hanoi',
 		bgColor: 'from-blue-300 to-indigo-200',
-		bgImage: '/src/assets/images/gallery/thumbnails/mievatho_NH6575.JPG',
+		bgImage: thumbnail4,
 		content: 'Exploring the heart of Hanoi together...',
 	},
 ];
