@@ -6,7 +6,7 @@ export default function Gallery() {
 	const { t } = useTranslation();
 
 	return (
-		<section id="gallery" className="bg-[#e8dcc8] px-4 py-12 md:py-20 lg:py-24">
+		<section id="gallery" className="bg-[#eee5d5] px-4 py-12 md:py-20 lg:py-24">
 			<div className="md:max-w-[70%] mx-auto">
 				<div className="text-center mb-8 md:mb-12 lg:mb-16">
 					<div className="text-4xl md:text-5xl lg:text-6xl font-custom-serif text-[#412d1d]">

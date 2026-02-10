@@ -6,7 +6,8 @@ const ContactUs = () => {
 	const { t } = useTranslation();
 	
 	return (
-		<section className="bg-[#6b5739] py-12 md:py-16 lg:py-20 px-4 text-center">
+		<section className="bg-[#412d1d] py-12 md:py-16 lg:py-20 px-4 text-center">
+		{/* <section className="bg-[#6b5739] py-12 md:py-16 lg:py-20 px-4 text-center"> */}
 			<div className="max-w-5xl mx-auto">
 				<div className="grid gap-12 items-center">
 					<div
@@ -21,7 +22,7 @@ const ContactUs = () => {
 							<Phone className="w-4 h-4" />
 							<a
 								href="tel:+84978662863"
-								className="hover:text-[#e8dcc8] transition-colors"
+								className="hover:text-[#eee5d5] transition-colors"
 							>
 								{t('contact.phone')}
 							</a>

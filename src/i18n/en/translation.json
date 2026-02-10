@@ -29,13 +29,21 @@
   "rsvp": {
     "title": "Rsvp",
     "description": "Dear guests, please kindly send your RSVP before April 4th, 2026 so our family can prepare the most thoughtful welcome for you",
+    "hosts": "MR. & MRS.: NGUYEN QUOC HAI & DOAN BICH NGA\nMRS.: DANG THU HUYEN",
+    "invitationText": "We cordially invite you to attend the banquet celebrating\nThe wedding of our children on",
+    "dateTime": "SATURDAY | 11:00 | 11.04.2026",
+    "location": "Location",
+    "venue": "FLOOR 3 - BANQUET HALL 318\nNATIONAL CONVENTION CENTER",
+    "address": "Pham Hung Street, Hanoi City",
+    "viewMap": "VIEW MAP",
     "nameLabel": "Full Name",
     "namePlaceholder": "Enter your full name",
     "attendYes": "Yes, I will attend :)",
     "attendNo": "Sorry, I cannot attend :(",
     "messageLabel": "Send your wishes to the couple",
     "messagePlaceholder": "Type here...",
-    "submitButton": "SEND RESPONSE"
+    "submitButton": "SEND RESPONSE",
+    "characters": "characters"
   },
   "timeline": {
     "title": "Our Timeline",

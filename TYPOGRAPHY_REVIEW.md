@@ -191,22 +191,22 @@ const buttonClasses = overlay
 #### Recommended:
 ```tsx
 {/* Title */}
-<h2 className="text-3xl md:text-4xl lg:text-5xl font-custom-serif text-[#e8dcc8] text-center mb-8 md:mb-12 lg:mb-16">
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-custom-serif text-[#eee5d5] text-center mb-8 md:mb-12 lg:mb-16">
   {t('timeline.title')}
 </h2>
 
 {/* Header event */}
 <div className="text-center space-y-2">
-  <p className="text-[#e8dcc8] text-lg md:text-xl lg:text-2xl font-montserrat">
+  <p className="text-[#eee5d5] text-lg md:text-xl lg:text-2xl font-montserrat">
     {timelineItems[0].time}
   </p>
-  <p className="text-[#e8dcc8] text-base md:text-lg lg:text-xl font-montserrat uppercase tracking-wide">
+  <p className="text-[#eee5d5] text-base md:text-lg lg:text-xl font-montserrat uppercase tracking-wide">
     {timelineItems[0].title}
   </p>
-  <p className="text-[#e8dcc8]/90 text-sm md:text-base font-montserrat italic">
+  <p className="text-[#eee5d5]/90 text-sm md:text-base font-montserrat italic">
     {timelineItems[0].subtitle}
   </p>
-  <p className="text-[#e8dcc8]/80 text-xs md:text-sm font-montserrat italic">
+  <p className="text-[#eee5d5]/80 text-xs md:text-sm font-montserrat italic">
     {timelineItems[0].description}
   </p>
 </div>
@@ -214,22 +214,22 @@ const buttonClasses = overlay
 {/* Grid items */}
 <div key={index} className="flex flex-col items-center text-center space-y-3">
   {/* Time */}
-  <p className="text-[#e8dcc8] text-lg md:text-xl lg:text-2xl font-montserrat font-medium">
+  <p className="text-[#eee5d5] text-lg md:text-xl lg:text-2xl font-montserrat font-medium">
     {item.time}
   </p>
   
   {/* Title */}
-  <p className="text-[#e8dcc8] text-base md:text-lg lg:text-xl font-montserrat">
+  <p className="text-[#eee5d5] text-base md:text-lg lg:text-xl font-montserrat">
     {item.title}
   </p>
   
   {/* Subtitle */}
-  <p className="text-[#e8dcc8]/90 text-xs md:text-sm font-montserrat italic">
+  <p className="text-[#eee5d5]/90 text-xs md:text-sm font-montserrat italic">
     {item.subtitle}
   </p>
   
   {/* Description */}
-  <p className="text-[#e8dcc8]/80 text-[10px] md:text-xs font-montserrat italic">
+  <p className="text-[#eee5d5]/80 text-[10px] md:text-xs font-montserrat italic">
     {item.description}
   </p>
 </div>
