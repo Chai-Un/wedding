@@ -145,12 +145,12 @@ export default function RSVP() {
 					<div className=" p-4 md:p-6 lg:p-8">
 						<form onSubmit={handleSubmit} className="space-y-4">
 							{/* Title */}
-							<div className="text-4xl md:text-5xl font-custom-serif text-[#6b5739] mb-4 text-center md:text-left">
+							<div className="text-4xl md:text-5xl font-custom-serif text-[#6b5739] mb-4 md:text-left">
 								{t('rsvp.title')}
 							</div>
 
 							{/* Description */}
-							<p className="text-xs md:text-base leading-relaxed font-hoangngan3 text-[#6b5739] text-center md:text-left">
+							<p className="text-xs md:text-base leading-relaxed font-hoangngan3 text-[#6b5739] md:text-left">
 								{t('rsvp.description')}
 							</p>
 
