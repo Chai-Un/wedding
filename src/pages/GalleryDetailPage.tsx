@@ -98,7 +98,7 @@ export default function GalleryDetailPage() {
 						<h2 className="text-2xl font-serif text-[#5a6e4a] text-center mb-8 italic">
 							Explore Other Concepts
 						</h2>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 							{otherConcepts.map((concept) => (
 								<Link
 									key={concept.id}

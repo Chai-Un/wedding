@@ -8,7 +8,7 @@ const ContactUs = () => {
 	return (
 		<section className="bg-[#412d1d] py-12 md:py-16 lg:py-20 px-4 text-center">
 		{/* <section className="bg-[#6b5739] py-12 md:py-16 lg:py-20 px-4 text-center"> */}
-			<div className="max-w-5xl mx-auto">
+			<div className="max-w-6xl mx-auto">
 				<div className="grid gap-12 items-center">
 					<div
 						className={`relative inline-flex flex-col items-center justify-center bg-center bg-no-repeat bg-contain w-full h-30`}
