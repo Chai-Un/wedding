@@ -113,10 +113,33 @@ export const galleries = [
 
 ### Styling
 
-Custom colors are defined in the codebase:
-- Primary beige: `#d4c5ad`
-- Lighter beige: `#e8dcc8`
-- Dark brown: `#2a2722`
+The website uses a custom beige/brown color palette:
+
+```css
+/* Primary Colors */
+#fbf7ee  /* Light cream background */
+#412d1d  /* Dark brown text/accents */
+#d6c1a0  /* Primary beige */
+#6b5739  /* Medium brown */
+#eee5d5  /* Light beige */
+```
+
+**Color Usage:**
+- `#fbf7ee` - Light backgrounds, soft sections
+- `#412d1d` - Primary text, headings, dark elements
+- `#d6c1a0` - Accent color, buttons, highlights
+- `#6b5739` - Secondary backgrounds (Timeline, ContactUs)
+- `#eee5d5` - Section backgrounds (Gallery, RSVP)
+
+**Typography:**
+- Custom fonts loaded from `/src/assets/fonts/`
+- Responsive font sizes with Tailwind breakpoints
+- Mobile-first approach: `text-base md:text-lg lg:text-xl`
+
+**Responsive Design:**
+- Mobile: `< 768px`
+- Tablet: `768px - 1024px`
+- Desktop: `> 1024px`
 
 ## Development
 

@@ -1,6 +1,6 @@
 import Cover from '../components/sections/Cover';
 import OurStory from '../components/sections/OurStory';
-import CeremonyDetails from '../components/sections/CeremonyDetails';
+import OurJourney from '../components/sections/OurJourney';
 import RSVP from '../components/sections/RSVP';
 import Gallery from '../components/sections/Gallery';
 import Timeline from '@/components/sections/Timeline';
@@ -12,9 +12,9 @@ export default function HomePage() {
 			<main>
 				<Cover />
 				<OurStory />
-				<CeremonyDetails />
-				<Timeline />
 				<RSVP />
+				<Timeline />
+				<OurJourney />
 				<Gallery />
         <ContactUs />
 			</main>

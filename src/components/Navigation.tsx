@@ -69,7 +69,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		? `fixed top-0 left-0 right-0 z-50 p-2 md:py-10 md:px-6 transition-all duration-300 ${
 				isScrolled ? 'md:!py-5 bg-black/30 backdrop-blur-md' : ''
 			}`
-		: 'fixed top-0 left-0 right-0 bg-[#e8dcc8]/95 backdrop-blur-sm shadow-sm z-50 py-4 md:py-6';
+		: 'fixed top-0 left-0 right-0 bg-[#eee5d5]/95 backdrop-blur-sm shadow-sm z-50 py-4 md:py-6';
 
 	const buttonClasses = overlay
 		? 'text-sm md:text-base lg:text-xl font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
@@ -81,7 +81,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 
 	const mobileMenuClasses = overlay
 		? 'md:hidden mt-4 bg-[#d6c1a0]/20 backdrop-blur-sm rounded-lg'
-		: 'md:hidden bg-[#e8dcc8] border-t border-[#5a6e4a]/20';
+		: 'md:hidden bg-[#eee5d5] border-t border-[#5a6e4a]/20';
 
 	const mobileItemClasses = overlay
 		? 'block w-full text-left px-3 py-2 text-[0.75em] md:text-[0.875em] font-light text-white hover:bg-white/10 rounded-md transition-colors uppercase font-hoangngan7'

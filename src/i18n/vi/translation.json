@@ -17,6 +17,12 @@
     "withLove": "With love,",
     "names": "Hoàng & Ngân"
   },
+  "journey": {
+    "title": "Our Journey",
+    "paragraph1": "Hơn ba năm yêu nhau, cũng là ba năm chúng mình học cách yêu xa. Anh hay nói mình yêu nhau chẳng khác gì ngưu lang chức nữ, một năm chỉ gặp nhau đôi ba lần. Chưa kể mỗi lần gặp nhau là rất nhiều những nỗ lực xuyên lục địa, khi kỉ niệm đươc ghi lại đều bằng những chuyến đi, và nhìn lại thì cũng chẳng có mấy lần mình được bên nhau trong những ngày đặc biệt. Vậy mà chẳng hiểu thế nào, mọi chuyện cứ diễn ra nhẹ nhàng ấm áp như thế ấy.",
+    "paragraph2": "Tình yêu được nuôi dưỡng từ những sẻ chia, thấu hiểu, từ những lần sai và học cách đối diện với lỗi lầm, hay những cuộc chuyện trò tới khuya khi mình luôn lệch múi giờ, và giờ giấc sinh hoạt cũng cứ thế thay đổi vì nhau. Dù cho bao xa cách về địa lý, mình vẫn luôn là nguồn năng lượng, là người mang lại tiếng cười cho nhau sau những ngày dài. Có nhiều khoảnh khắc Em nhận ra, khi gặp đúng người thì mọi chuyện sẽ tự nhiên mà chảy trôi vậy thôi.",
+    "paragraph3": "Có lẽ vì luôn xa, nên lại càng làm chúng mình thêm háo hức và mong chờ những ngày tháng được gần nhau sau này. Tháng 6 năm 2025, Anh cầu hôn Em ở bãi biển Dreamland, Bali, dưới sự chứng kiến của hoàng hôn và những cơn sóng xô bờ. Đúng là vùng đất của những ước mơ đã cho Anh đạt được mơ ước của đời mình, khi nhận được cái gật đầu của người con gái Anh thương."
+  },
   "ceremony": {
     "day": "THỨ BẢY",
     "time": "11:00 | 11.04.2026",
@@ -29,13 +35,21 @@
   "rsvp": {
     "title": "Rsvp",
     "description": "Quý quan khách vui lòng gửi phản hồi việc tham dự tiệc trước ngày 04/04/2026 để gia đình chuẩn bị tiếp đón một cách chu đáo nhất",
+    "hosts": "ÔNG BÀ: NGUYỄN QUỐC HẢI & ĐOÀN BÍCH NGA\nBÀ: ĐẶNG THU HUYỀN",
+    "invitationText": "Thân mời Quý quan khách tham dự bữa tiệc mừng\nLễ thành hôn của các con chúng tôi vào",
+    "dateTime": "THỨ BẢY | 11:00 | 11.04.2026",
+    "location": "Địa điểm",
+    "venue": "TẦNG 3 - PHÒNG TIỆC 318\nTRUNG TÂM HỘI NGHỊ QUỐC GIA",
+    "address": "Đường Phạm Hùng, Thành phố Hà Nội",
+    "viewMap": "XEM BẢN ĐỒ",
     "nameLabel": "Họ và tên",
     "namePlaceholder": "Nhập họ và tên của bạn",
     "attendYes": "Có, tôi sẽ tham dự tiệc :)",
     "attendNo": "Tiếc quá, tôi không tham dự được :(",
     "messageLabel": "Gửi lời chúc phúc tới cặp đôi",
     "messagePlaceholder": "Type here...",
-    "submitButton": "GỬI PHẢN HỒI"
+    "submitButton": "GỬI PHẢN HỒI",
+    "characters": "ký tự"
   },
   "timeline": {
     "title": "Our Timeline",

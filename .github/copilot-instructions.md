@@ -75,7 +75,7 @@ When adding new shadcn components, they should follow this existing configuratio
 - **Tailwind CSS v4** with the Vite plugin
 - Custom brand colors used throughout:
   - Primary beige: `#d4c5ad`
-  - Lighter beige: `#e8dcc8`
+  - Lighter beige: `#eee5d5`
   - Dark brown: `#2a2722`
 - Background images are imported from `@/assets/images/` and used inline with the `style` prop
 

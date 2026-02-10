@@ -94,7 +94,7 @@ const Timeline = () => {
 
 							{/* Description */}
 							{item.description && (
-								<div className="text-[#e8dcc8]/80 text-xs md:text-sm font-hoangngan3">
+								<div className="text-[#eee5d5]/80 text-[10px] md:text-xs font-montserrat italic">
 									{item.description}
 								</div>
 							)}

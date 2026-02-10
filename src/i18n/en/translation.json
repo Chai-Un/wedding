@@ -1,112 +1,126 @@
 {
-  "nav": {
-    "home": "Home",
-    "invitation": "INVITATION | RSVP",
-    "schedule": "Schedule",
-    "ourStory": "Our Journey",
-    "gallery": "Gallery"
-  },
-  "cover": {
-    "saveTheDate": "SAVE THE DATE",
-    "date": "11:00 AM, April 11, 2026",
-    "venue": "NATIONAL CONVENTION CENTER"
-  },
-  "ourStory": {
-    "greeting": "Dear family & friends",
-    "story": "After more than 3 years of sharing love across thousands of miles, the day has finally come for us to be together under one roof.\n\nWe look forward to celebrating our special day and beginning a new journey with our dearest loved ones. Your presence and blessings are the most wonderful gifts we will always treasure!\n\n",
-    "withLove": "With love,",
-    "names": "Hoàng & Ngân"
-  },
-  "ceremony": {
-    "day": "SATURDAY",
-    "time": "11:00 | 11.04.2026",
-    "room": "ROOM 318",
-    "venue": "NATIONAL CONVENTION CENTER",
-    "address": "Pham Hung Street, Hanoi City",
-    "mapButton": "View Map",
-    "rsvpButton": "RSVP HERE"
-  },
-  "rsvp": {
-    "title": "Rsvp",
-    "description": "Dear guests, please kindly send your RSVP before April 4th, 2026 so our family can prepare the most thoughtful welcome for you",
-    "nameLabel": "Full Name",
-    "namePlaceholder": "Enter your full name",
-    "attendYes": "Yes, I will attend :)",
-    "attendNo": "Sorry, I cannot attend :(",
-    "messageLabel": "Send your wishes to the couple",
-    "messagePlaceholder": "Type here...",
-    "submitButton": "SEND RESPONSE"
-  },
-  "timeline": {
-    "title": "Our Timeline",
-    "items": [
-      {
-        "time": "8:30 AM",
-        "title": "Having Each Other in Life is Suddenly Joyful",
-        "subtitle": "Private Ceremony",
-        "description": "For special invited guests to attend the private ceremony"
-      },
-      {
-        "time": "10:30 AM",
-        "title": "Guest arrival",
-        "subtitle": "",
-        "description": ""
-      },
-      {
-        "time": "11:00 AM",
-        "title": "Wedding ceremony",
-        "subtitle": "",
-        "description": ""
-      },
-      {
-        "time": "11:30 AM",
-        "title": "Reception begins",
-        "subtitle": "",
-        "description": ""
-      },
-      {
-        "time": "12:00 PM",
-        "title": "First dance",
-        "subtitle": "The first dance of",
-        "description": "Bride and Groom"
-      },
-      {
-        "time": "12:15 PM",
-        "title": "Entertainment",
-        "subtitle": "",
-        "description": ""
-      }
-    ]
-  },
-  "gallery": {
-    "title": "Gallery",
-    "subtitle": "Let's admire love through these frames together!",
-    "concepts": {
-      "ngayNangVe": {
-        "title": "Sunny Days",
-        "description": "Sunny summer memories"
-      },
-      "redamncy": {
-        "title": "Redamncy",
-        "description": "Loving someone who loves you back"
-      },
-      "becomingOne": {
-        "title": "Becoming One",
-        "description": "Our journey to unity"
-      },
-      "heartOfHanoi": {
-        "title": "Heart of Hanoi",
-        "description": "Love in the city"
-      }
-    }
-  },
-  "contact": {
-    "message": "Our love story will be complete with your presence on our special day!\nFor any questions about the celebration, please contact Hoàng & Ngân and family directly.",
-    "phone": "(+84) 978-662-863"
-  },
-  "common": {
-    "rsvp": "RSVP",
-    "viewMore": "View More",
-    "close": "Close"
-  }
+	"nav": {
+		"home": "Home",
+		"invitation": "INVITATION | RSVP",
+		"schedule": "Schedule",
+		"ourStory": "Our Journey",
+		"gallery": "Gallery"
+	},
+	"cover": {
+		"saveTheDate": "SAVE THE DATE",
+		"date": "11:00 AM, April 11, 2026",
+		"venue": "NATIONAL CONVENTION CENTER"
+	},
+	"ourStory": {
+		"greeting": "Dear family & friends",
+		"story": "After more than 3 years of sharing love across thousands of miles, the day has finally come for us to be together under one roof.\n\nWe look forward to celebrating our special day and beginning a new journey with our dearest loved ones. Your presence and blessings are the most wonderful gifts we will always treasure!\n\n",
+		"withLove": "With love,",
+		"names": "Hoàng & Ngân"
+	},
+  "journey": {
+    "title": "Our Journey",
+    "paragraph1": "For more than three years, we've loved each other across thousands of miles, learning what it means to love from a distance. You often say our love is like the tale of the Weaver and the Cowherd—seeing each other only a few times a year. And each meeting requires so much effort crossing continents, with memories captured through travels. Yet looking back, we've had so few moments together on special days. Somehow, everything unfolded gently and warmly, in ways we couldn't quite understand.",
+    "paragraph2": "Our love has been nurtured through sharing, understanding, and learning from mistakes and challenges. It grew through late-night conversations across time zones, adjusting our schedules for one another. Despite the distance, you've always been my source of strength and the one who brings laughter to my long days. There were many moments when I realized that when you find the right person, everything flows naturally.",
+    "paragraph3": "Perhaps because we're always apart, it makes us even more eager and hopeful for the days when we can be together. In June 2025, you proposed to me on Dreamland Beach in Bali, with the sunset and ocean waves as witnesses. That land of dreams granted me my greatest dream—when you received my yes."
+	},
+	"ceremony": {
+		"day": "SATURDAY",
+		"time": "11:00 | 11.04.2026",
+		"room": "ROOM 318",
+		"venue": "NATIONAL CONVENTION CENTER",
+		"address": "Pham Hung Street, Hanoi City",
+		"mapButton": "View Map",
+		"rsvpButton": "RSVP HERE"
+	},
+	"rsvp": {
+		"title": "Rsvp",
+		"description": "Dear guests, please kindly send your RSVP before April 4th, 2026 so our family can prepare the most thoughtful welcome for you",
+		"hosts": "MR. & MRS.: NGUYEN QUOC HAI & DOAN BICH NGA\nMRS.: DANG THU HUYEN",
+		"invitationText": "We cordially invite you to attend the banquet celebrating\nThe wedding of our children on",
+		"dateTime": "SATURDAY | 11:00 | 11.04.2026",
+		"location": "Location",
+		"venue": "FLOOR 3 - BANQUET HALL 318\nNATIONAL CONVENTION CENTER",
+		"address": "Pham Hung Street, Hanoi City",
+		"viewMap": "VIEW MAP",
+		"nameLabel": "Full Name",
+		"namePlaceholder": "Enter your full name",
+		"attendYes": "Yes, I will attend :)",
+		"attendNo": "Sorry, I cannot attend :(",
+		"messageLabel": "Send your wishes to the couple",
+		"messagePlaceholder": "Type here...",
+		"submitButton": "SEND RESPONSE",
+		"characters": "characters"
+	},
+	"timeline": {
+		"title": "Our Timeline",
+		"items": [
+			{
+				"time": "8:30 AM",
+				"title": "Having Each Other in Life is Suddenly Joyful",
+				"subtitle": "Private Ceremony",
+				"description": "For special invited guests to attend the private ceremony"
+			},
+			{
+				"time": "10:30 AM",
+				"title": "Guest arrival",
+				"subtitle": "",
+				"description": ""
+			},
+			{
+				"time": "11:00 AM",
+				"title": "Wedding ceremony",
+				"subtitle": "",
+				"description": ""
+			},
+			{
+				"time": "11:30 AM",
+				"title": "Reception begins",
+				"subtitle": "",
+				"description": ""
+			},
+			{
+				"time": "12:00 PM",
+				"title": "First dance",
+				"subtitle": "The first dance of",
+				"description": "Bride and Groom"
+			},
+			{
+				"time": "12:15 PM",
+				"title": "Entertainment",
+				"subtitle": "",
+				"description": ""
+			}
+		]
+	},
+	"gallery": {
+		"title": "Gallery",
+		"subtitle": "Let's admire love through these frames together!",
+		"concepts": {
+			"ngayNangVe": {
+				"title": "Sunny Days",
+				"description": "Sunny summer memories"
+			},
+			"redamncy": {
+				"title": "Redamncy",
+				"description": "Loving someone who loves you back"
+			},
+			"becomingOne": {
+				"title": "Becoming One",
+				"description": "Our journey to unity"
+			},
+			"heartOfHanoi": {
+				"title": "Heart of Hanoi",
+				"description": "Love in the city"
+			}
+		}
+	},
+	"contact": {
+		"message": "Our love story will be complete with your presence on our special day!\nFor any questions about the celebration, please contact Hoàng & Ngân and family directly.",
+		"phone": "(+84) 978-662-863"
+	},
+	"common": {
+		"rsvp": "RSVP",
+		"viewMore": "View More",
+		"close": "Close"
+	}
 }
