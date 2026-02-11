@@ -9,7 +9,7 @@ const navItems = [
 	{ nameKey: 'nav.home', href: 'home' },
 	{ nameKey: 'nav.invitation', href: 'rsvp' },
 	{ nameKey: 'nav.schedule', href: 'timeline' },
-	{ nameKey: 'nav.ourStory', href: 'our-story' },
+	{ nameKey: 'nav.ourStory', href: 'our-journey' },
 	{ nameKey: 'nav.gallery', href: 'gallery' },
 ];
 
@@ -43,12 +43,24 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 		// close mobile menu immediately
 		setIsOpen(false);
 
+		// Calculate offset based on device and nav state
+		const isMobile = window.innerWidth < 768;
+		let scrollOffset: number;
+
+		if (overlay) {
+			// Overlay mode (homepage)
+			scrollOffset = isMobile ? -20 : (isScrolled ? -50 : -90);
+		} else {
+			// Solid mode (gallery pages)
+			scrollOffset = isMobile ? -60 : -80;
+		}
+
 		// helper to invoke react-scroll scroller
 		const doScroll = () => {
 			scroller.scrollTo(id, {
 				duration: 200,
 				smooth: true,
-				offset: -70, // account for fixed nav height
+				offset: scrollOffset,
 			});
 		};
 
@@ -66,10 +78,10 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 
 	// Conditional styling based on overlay prop
 	const navClasses = overlay
-		? `fixed top-0 left-0 right-0 z-50 p-2 md:py-10 md:px-6 transition-all duration-300 ${
+		? `fixed top-0 left-0 right-0 z-50 py-2 px-2 md:py-10 md:px-6 transition-all duration-300 ${
 				isScrolled ? 'md:!py-5 bg-black/30 backdrop-blur-md' : ''
 			}`
-		: 'fixed top-0 left-0 right-0 bg-[#eee5d5]/95 backdrop-blur-sm shadow-sm z-50 py-4 md:py-6';
+		: 'fixed top-0 left-0 right-0 bg-[#eee5d5]/95 backdrop-blur-sm shadow-sm z-50 py-3 md:py-6';
 
 	const buttonClasses = overlay
 		? 'text-sm md:text-base lg:text-xl font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
@@ -93,8 +105,8 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 				<div
 					className={
 						overlay
-							? 'flex items-center justify-center'
-							: 'flex items-center justify-center h-16'
+							? 'flex items-center justify-center h-12 md:h-auto'
+							: 'flex items-center justify-center h-12 md:h-auto'
 					}
 				>
 					{/* Desktop Navigation - Centered */}

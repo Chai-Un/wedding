@@ -38,7 +38,7 @@ export default function OurJourney() {
 	const { t } = useTranslation();
 
 	return (
-		<section className="bg-[#fbf7ee] px-0 md:px-4 py-12 md:py-20 lg:py-24">
+		<section id="our-journey" className="bg-[#fbf7ee] px-0 md:px-4 py-12 md:py-20 lg:py-24">
 			<div className="max-w-7xl mx-auto">
 				{/* Title */}
 				<div className="mb-12 md:mb-16 lg:mb-20 px-4 md:px-0">
