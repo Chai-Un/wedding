@@ -123,7 +123,7 @@ export default function RSVP() {
 								{t('rsvp.dateTime')}
 							</div>
 							<div className="text-[#6b5739] text-base lg:text-lg font-hoangngan4 leading-relaxed space-y-2 whitespace-pre-line">
-								<div className="py-3">{t('rsvp.location')}</div>
+								<div className="py-3 m-0">{t('rsvp.location')}</div>
 								<div className="font-bold text-lg lg:text-xl uppercase font-hoangngan5">
 									{t('rsvp.venue')}
 								</div>
@@ -234,7 +234,7 @@ export default function RSVP() {
 									className="w-full bg-[#eee5d5] border-0 rounded-xl px-4 py-3 mb-0 focus:outline-none text-[#6b5739] placeholder-[#6b5739] placeholder-italic font-hoangngan3 disabled:opacity-50 resize-none"
 									maxLength={500}
 								/>
-								<p className="text-gray-500 text-xs md:text-sm italic">
+								<p className="text-[#6b5739] text-sm italic">
 									{formData.message.length}/500{' '}
 									{t('rsvp.characters')}
 								</p>

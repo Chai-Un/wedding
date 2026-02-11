@@ -43,8 +43,8 @@ export default function PolaroidPhoto({
 				alt={`${location}, ${year}`}
 				className={`object-cover ${
 					isVertical
-						? 'w-full md:w-56 lg:w-64 xl:w-72 h-28 md:h-72 lg:h-80 xl:h-96'
-						: 'w-full md:w-72 lg:w-80 xl:w-96 h-20 md:h-56 lg:h-64 xl:h-72'
+						? 'w-full md:w-56 lg:w-64 xl:w-72 h-28 md:h-72 lg:h-80 xl:h-90'
+						: 'w-full md:w-72 lg:w-80 xl:w-90 h-20 md:h-56 lg:h-64 xl:h-72'
 				}`}
 			/>
 			<div className={`mt-2 md:mt-3 lg:mt-4 text-${descriptionPosition} font-hoangngan2`}>
