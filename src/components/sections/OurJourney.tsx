@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import PolaroidPhoto from '@/components/PolaroidPhoto';
+import { StackedCarousel } from '@/components/ui/stacked-carousel';
 
 // Import journey photos - you'll need to add these images to your assets folder
 // import paris2023 from '@/assets/images/journey/paris-2023.jpg';
@@ -47,67 +48,118 @@ export default function OurJourney() {
 				</div>
 
 				{/* First paragraph */}
-				<div className="max-w-5xl md:max-w-6xl mx-auto mb-12 md:mb-16 lg:mb-20 px-4 md:px-0">
+				<div className="max-w-5xl md:max-w-6xl mx-auto mb-8 md:mb-16 lg:mb-20 px-4 md:px-0">
 					<p className="text-[#412d1d]/80 text-base md:text-lg font-hoangngan4 leading-relaxed text-justify md:text-left">
 						{t('journey.paragraph1')}
 					</p>
 				</div>
 
 				{/* First row of photos - 3 photos */}
-				<div className="flex flex-nowrap md:flex-wrap justify-center items-start gap-4 md:gap-8 lg:gap-18 mb-16 md:mb-20 lg:mb-24">
+				{/* Mobile: Stacked Carousel */}
+				<div className="md:hidden mb-8 md:mb-20 lg:mb-24">
+					<StackedCarousel autoplayDelay={3000}>
+						{journeyPhotos.slice(0, 3).map((photo, index) => (
+							<PolaroidPhoto
+								key={`photo-1-${index}`}
+								image={photo.image}
+								location={photo.location}
+								year={photo.year}
+								rotation={photo.rotation}
+								index={index}
+								descriptionPosition="left"
+							/>
+						))}
+					</StackedCarousel>
+				</div>
+				{/* Desktop: Grid */}
+				<div className="hidden md:flex flex-wrap justify-center items-start gap-8 lg:gap-18 mb-16 md:mb-20 lg:mb-24">
 					{journeyPhotos.slice(0, 3).map((photo, index) => (
 						<PolaroidPhoto
-							key={`photo-1-${index}`}
+							key={`photo-1-d-${index}`}
 							image={photo.image}
 							location={photo.location}
 							year={photo.year}
 							rotation={photo.rotation}
 							index={index}
-							descriptionPosition='left'
+							descriptionPosition="left"
 						/>
 					))}
 				</div>
 
 				{/* Second paragraph */}
-				<div className="max-w-5xl md:max-w-6xl mx-auto mb-12 md:mb-16 lg:mb-20 pl-4 text-justify md:text-right md:pl-24 px-4 md:px-0">
+				<div className="max-w-5xl md:max-w-6xl mx-auto mb-8 md:mb-16 lg:mb-20 pl-4 text-justify md:text-right md:pl-24 px-4 md:px-0">
 					<p className="text-[#412d1d]/80 text-base md:text-lg font-hoangngan4 leading-relaxed">
 						{t('journey.paragraph2')}
 					</p>
 				</div>
 
 				{/* Second row of photos - 3 photos */}
-				<div className="flex flex-nowrap md:flex-wrap justify-center items-start gap-4 md:gap-8 lg:gap-16">
+				{/* Mobile: Stacked Carousel */}
+				<div className="md:hidden mb-8 md:mb-20 lg:mb-24">
+					<StackedCarousel autoplayDelay={3000}>
+						{journeyPhotos.slice(3, 6).map((photo, index) => (
+							<PolaroidPhoto
+								key={`photo-2-${index}`}
+								image={photo.image}
+								location={photo.location}
+								year={photo.year}
+								rotation={photo.rotation}
+								index={index}
+								descriptionPosition="center"
+							/>
+						))}
+					</StackedCarousel>
+				</div>
+				{/* Desktop: Grid */}
+				<div className="hidden md:flex flex-wrap justify-center items-start gap-8 lg:gap-16 mb-16 md:mb-20 lg:mb-24">
 					{journeyPhotos.slice(3, 6).map((photo, index) => (
 						<PolaroidPhoto
-							key={`photo-2-${index}`}
+							key={`photo-2-d-${index}`}
 							image={photo.image}
 							location={photo.location}
 							year={photo.year}
 							rotation={photo.rotation}
 							index={index}
-							descriptionPosition='right'
+							descriptionPosition="center"
 						/>
 					))}
 				</div>
 
 				{/* Third paragraph */}
-				<div className="max-w-5xl md:max-w-6xl mx-auto mt-16 md:mt-20 lg:mt-24 mb-12 md:mb-16 lg:mb-20 px-4 md:px-0">
+				<div className="max-w-5xl md:max-w-6xl mx-auto mt-8 md:mt-20 lg:mt-24 mb-8 md:mb-16 lg:mb-20 px-4 md:px-0">
 					<p className="text-[#412d1d]/80 text-base md:text-lg font-hoangngan4 leading-relaxed text-justify md:text-left">
 						{t('journey.paragraph3')}
 					</p>
 				</div>
 
 				{/* Third row of photos - 3 photos from 2025 */}
-				<div className="flex flex-nowrap md:flex-wrap justify-center items-start gap-4 md:gap-8 lg:gap-18">
+				{/* Mobile: Stacked Carousel */}
+				<div className="md:hidden">
+					<StackedCarousel autoplayDelay={3000}>
+						{journeyPhotos.slice(6, 9).map((photo, index) => (
+							<PolaroidPhoto
+								key={`photo-3-${index}`}
+								image={photo.image}
+								location={photo.location}
+								year={photo.year}
+								rotation={photo.rotation}
+								index={index}
+								descriptionPosition="right"
+							/>
+						))}
+					</StackedCarousel>
+				</div>
+				{/* Desktop: Grid */}
+				<div className="hidden md:flex flex-wrap justify-center items-start gap-8 lg:gap-18">
 					{journeyPhotos.slice(6, 9).map((photo, index) => (
 						<PolaroidPhoto
-							key={`photo-3-${index}`}
+							key={`photo-3-d-${index}`}
 							image={photo.image}
 							location={photo.location}
 							year={photo.year}
 							rotation={photo.rotation}
 							index={index}
-							descriptionPosition='left'
+							descriptionPosition="right"
 						/>
 					))}
 				</div>
