@@ -16,9 +16,11 @@ export function StackedCarousel({
 	className = '',
 }: StackedCarouselProps) {
 	const [activeIndex, setActiveIndex] = React.useState(0);
+	const [isDragging, setIsDragging] = React.useState(false);
 	const total = React.Children.count(children);
 	const touchStartX = React.useRef(0);
 	const touchEndX = React.useRef(0);
+	const isDraggingRef = React.useRef(false);
 
 	const [emblaRef, emblaApi] = useEmblaCarousel(
 		{ loop: true },
@@ -48,15 +50,28 @@ export function StackedCarousel({
 
 	const handleTouchStart = (e: React.TouchEvent) => {
 		touchStartX.current = e.touches[0].clientX;
+		touchEndX.current = e.touches[0].clientX;
+		setIsDragging(true);
+		isDraggingRef.current = true;
 	};
 
 	const handleTouchMove = (e: React.TouchEvent) => {
+		if (!isDraggingRef.current) return;
 		touchEndX.current = e.touches[0].clientX;
+		
+		// Prevent vertical scroll while swiping horizontally
+		const diff = Math.abs(touchStartX.current - touchEndX.current);
+		if (diff > 10) {
+			e.preventDefault();
+		}
 	};
 
 	const handleTouchEnd = () => {
+		if (!isDraggingRef.current) return;
+		
 		const diff = touchStartX.current - touchEndX.current;
-		const threshold = 50;
+		// Responsive threshold: smaller on mobile, larger on tablet
+		const threshold = window.innerWidth < 768 ? 50 : 75;
 
 		if (Math.abs(diff) > threshold) {
 			if (diff > 0) {
@@ -65,6 +80,45 @@ export function StackedCarousel({
 				emblaApi?.scrollPrev();
 			}
 		}
+		
+		setIsDragging(false);
+		isDraggingRef.current = false;
+	};
+
+	// Mouse/pointer events for tablet/hybrid devices
+	const handlePointerDown = (e: React.PointerEvent) => {
+		// Only handle touch or pen input, not mouse on desktop
+		if (e.pointerType === 'mouse' && window.innerWidth > 1024) return;
+		
+		touchStartX.current = e.clientX;
+		touchEndX.current = e.clientX;
+		setIsDragging(true);
+		isDraggingRef.current = true;
+		e.currentTarget.setPointerCapture(e.pointerId);
+	};
+
+	const handlePointerMove = (e: React.PointerEvent) => {
+		if (!isDraggingRef.current) return;
+		touchEndX.current = e.clientX;
+	};
+
+	const handlePointerUp = (e: React.PointerEvent) => {
+		if (!isDraggingRef.current) return;
+		
+		const diff = touchStartX.current - touchEndX.current;
+		const threshold = window.innerWidth < 768 ? 50 : 75;
+
+		if (Math.abs(diff) > threshold) {
+			if (diff > 0) {
+				emblaApi?.scrollNext();
+			} else {
+				emblaApi?.scrollPrev();
+			}
+		}
+		
+		setIsDragging(false);
+		isDraggingRef.current = false;
+		e.currentTarget.releasePointerCapture(e.pointerId);
 	};
 
 	return (
@@ -80,10 +134,19 @@ export function StackedCarousel({
 
 			{/* Visible stacked cards with swipe */}
 			<div
-				className="relative h-110 flex items-center justify-center"
+				className={`relative h-110 flex items-center justify-center touch-pan-y ${
+					isDragging ? 'cursor-grabbing' : 'cursor-grab'
+				}`}
 				onTouchStart={handleTouchStart}
 				onTouchMove={handleTouchMove}
 				onTouchEnd={handleTouchEnd}
+				onPointerDown={handlePointerDown}
+				onPointerMove={handlePointerMove}
+				onPointerUp={handlePointerUp}
+				onPointerCancel={() => {
+					setIsDragging(false);
+					isDraggingRef.current = false;
+				}}
 			>
 				{React.Children.map(children, (child, index) => {
 					// Calculate circular distance from active
