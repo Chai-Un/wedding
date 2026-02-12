@@ -17,11 +17,11 @@
 		"withLove": "With love,",
 		"names": "Hoàng & Ngân"
 	},
-  "journey": {
-    "title": "Our Journey",
-    "paragraph1": "For more than three years, we've loved each other across thousands of miles, learning what it means to love from a distance. You often say our love is like the tale of the Weaver and the Cowherd—seeing each other only a few times a year. And each meeting requires so much effort crossing continents, with memories captured through travels. Yet looking back, we've had so few moments together on special days. Somehow, everything unfolded gently and warmly, in ways we couldn't quite understand.",
-    "paragraph2": "Our love has been nurtured through sharing, understanding, and learning from mistakes and challenges. It grew through late-night conversations across time zones, adjusting our schedules for one another. Despite the distance, you've always been my source of strength and the one who brings laughter to my long days. There were many moments when I realized that when you find the right person, everything flows naturally.",
-    "paragraph3": "Perhaps because we're always apart, it makes us even more eager and hopeful for the days when we can be together. In June 2025, you proposed to me on Dreamland Beach in Bali, with the sunset and ocean waves as witnesses. That land of dreams granted me my greatest dream—when you received my yes."
+	"journey": {
+		"title": "Our Journey",
+		"paragraph1": "For more than three years, we've loved each other across thousands of miles, learning what it means to love from a distance. You often say our love is like the tale of the Weaver and the Cowherd—seeing each other only a few times a year. And each meeting requires so much effort crossing continents, with memories captured through travels. Yet looking back, we've had so few moments together on special days. Somehow, everything unfolded gently and warmly, in ways we couldn't quite understand.",
+		"paragraph2": "Our love has been nurtured through sharing, understanding, and learning from mistakes and challenges. It grew through late-night conversations across time zones, adjusting our schedules for one another. Despite the distance, you've always been my source of strength and the one who brings laughter to my long days. There were many moments when I realized that when you find the right person, everything flows naturally.",
+		"paragraph3": "Perhaps because we're always apart, it makes us even more eager and hopeful for the days when we can be together. In June 2025, you proposed to me on Dreamland Beach in Bali, with the sunset and ocean waves as witnesses. That land of dreams granted me my greatest dream—when you received my yes."
 	},
 	"ceremony": {
 		"day": "SATURDAY",
@@ -101,21 +101,26 @@
 				"title": "Sunny Days",
 				"description": "Sunny summer memories",
 				"pageTitle": "Gallery",
-				"pageSubtitle": "NGÀY NẮNG VỀ",
-				"caption1": "Together we visited the Nghia Tan apartment complex on a warm sunny morning. Even small mundane moments together feel special when sunlight shines upon our love.",
-				"caption2": "From mom's cheerful welcoming chatter to the heartfelt wishes from the neighbors here, it makes you love even more the warmth and kindness of the place that nurtured my childhood."
+				"pageSubtitle": "When Sunshine Comes Home",
+				"caption1": "Come with me to Nghĩa Tân on a sunlit dawn—birds trilling, gentle rays filtering through the leaves, softly illuminating our love.",
+				"caption2": "From your mother's warm greetings to the heartfelt blessings of the neighbors, these tender moments make me fall even more in love with the familiar place that cradled your childhood."
 			},
 			"redamancy": {
 				"title": "Redamancy",
-				"description": "Loving someone who loves you back"
+				"description": "Loving someone who loves you back",
+				"caption": "[noun] The act of loving the one who loves you back, a love returned in full."
 			},
 			"becomingOne": {
 				"title": "Becoming One",
-				"description": "Our journey to unity"
+				"description": "Our journey to unity",
+				"caption": "Love, in its very nature, is a miracle. There comes a moment when you love someone — and that someone, wondrously, loves you in return. It is through each other that we are granted the grace of living within that miracle."
 			},
 			"heartOfHanoi": {
 				"title": "Heart of Hanoi",
-				"description": "Love in the city"
+				"description": "Love in the city",
+				"caption1": "Love is a rainbow, woven from a thousand shades of wonder.",
+				"caption2": "The love we once shared may drift through many colors with time — but a change of hue has never meant the love itself has faded.",
+				"caption3": "May our love, no matter how often it transforms, never cease to shine in all its radiant beauty."
 			}
 		}
 	},

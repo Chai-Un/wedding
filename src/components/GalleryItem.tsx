@@ -5,11 +5,13 @@ import type { GalleryConcept } from '@/constants/galleryData';
 interface GalleryItemProps {
 	concept: GalleryConcept;
 	variant?: 'stacked' | 'simple';
+	showDescription?: boolean;
 }
 
 export default function GalleryItem({
 	concept,
 	variant = 'stacked',
+	showDescription = true,
 }: GalleryItemProps) {
 	const { t } = useTranslation();
 
@@ -60,13 +62,23 @@ export default function GalleryItem({
 					)}
 
 					{/* Title - always visible at top with gradient */}
-					<div className="absolute top-0 left-0 right-0 bg-linear-to-b from-black/50 via-black/30 to-transparent p-4 z-10">
-						<div className="text-xl md:text-lg lg:text-2xl font-hoangngan7 text-white text-center leading-tight pt-[10%]">
+					<div className="absolute top-0 left-0 right-0 bg-linear-to-b from-black/50 via-black/30 to-transparent p-4 pb-8 z-10">
+						<div className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-hoangngan7 text-white text-center leading-tight pt-[5%] line-clamp-2">
 							{t(
 								`gallery.concepts.${concept.translationKey}.title`,
 							)}
 						</div>
 					</div>
+
+					{showDescription && (
+						<div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/50 via-black/30 to-transparent p-2 pt-8 z-10">
+							<div className="text-xs md:text-sm lg:text-base xl:text-lg font-hoangngan10 text-white text-center leading-tight line-clamp-3 h-12 md:h-14 lg:h-16">
+								{t(
+									`gallery.concepts.${concept.translationKey}.description`,
+								)}
+							</div>
+						</div>
+					)}
 				</div>
 			</div>
 		</Link>

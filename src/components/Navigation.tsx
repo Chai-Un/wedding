@@ -15,9 +15,13 @@ const navItems = [
 
 interface NavigationProps {
 	overlay?: boolean; // If true, uses transparent overlay style. If false, uses solid background.
+	alwaysShow?: boolean;
 }
 
-export default function Navigation({ overlay = false }: NavigationProps) {
+export default function Navigation({
+	overlay = false,
+	alwaysShow = false,
+}: NavigationProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const navigate = useNavigate();
@@ -49,7 +53,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 
 		if (overlay) {
 			// Overlay mode (homepage)
-			scrollOffset = isMobile ? -20 : (isScrolled ? -50 : -90);
+			scrollOffset = isMobile ? -20 : isScrolled ? -50 : -90;
 		} else {
 			// Solid mode (gallery pages)
 			scrollOffset = isMobile ? -60 : -80;
@@ -79,13 +83,15 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 	// Conditional styling based on overlay prop
 	const navClasses = overlay
 		? `fixed top-0 left-0 right-0 z-50 py-2 px-2 md:py-10 md:px-6 transition-all duration-300 ${
-				isScrolled ? 'md:!py-5 bg-black/30 backdrop-blur-md' : ''
+				isScrolled || alwaysShow
+					? 'md:!py-5 bg-black/30 backdrop-blur-md'
+					: ''
 			}`
 		: 'fixed top-0 left-0 right-0 bg-[#eee5d5]/95 backdrop-blur-sm shadow-sm z-50 py-3 md:py-6';
 
 	const buttonClasses = overlay
-		? 'text-sm md:text-base lg:text-xl font-light text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
-		: 'text-sm md:text-base lg:text-xl font-medium text-white/80 hover:text-white active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase';
+		? 'text-sm md:text-base lg:text-xl font-light text-white hover:scale-105 active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
+		: 'text-sm md:text-base lg:text-xl font-medium text-white hover:scale-105 active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase';
 
 	const mobileButtonClasses = overlay
 		? 'text-white hover:bg-white/10 p-2 rounded-md transition-colors'
@@ -101,7 +107,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 
 	return (
 		<nav className={navClasses}>
-			<div className="w-full md:w-[90vw] mx-auto">
+			<div className="w-full md:w-[90vw] mx-auto md:ml-0 lg:mx-auto">
 				<div
 					className={
 						overlay
@@ -110,7 +116,7 @@ export default function Navigation({ overlay = false }: NavigationProps) {
 					}
 				>
 					{/* Desktop Navigation - Centered */}
-					<div className="hidden md:flex items-center md:space-x-7 lg:space-x-12">
+					<div className="hidden md:flex items-center md:space-x-5 lg:space-x-12">
 						{navItems.map((item) => (
 							<button
 								key={item.href}

@@ -7,6 +7,7 @@ import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 import ourStoryImage from '@/assets/images/mievatho_NH6514.JPG';
 import ourStoryImage2 from '@/assets/images/mievatho_NH1487.JPG';
 import BreakImage from '@/assets/images/break.svg?react';
+import Navigation from '@/components/Navigation';
 
 export default function NgayNangVe() {
 	const galleryId = 'ngay-nang-ve';
@@ -59,8 +60,9 @@ export default function NgayNangVe() {
 	);
 
 	return (
-		<div className="min-h-screen bg-[#fdf8f0]">
-			<main className="pt-24 pb-16 px-4">
+		<div className="min-h-screen bg-[#eee5d5]">
+			<Navigation overlay alwaysShow />
+			<main className="pt-32 pb-16 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Header */}
 					<div className="text-center mb-12">
@@ -363,7 +365,7 @@ export default function NgayNangVe() {
 								}}
 							/>
 						</div>
-						<div className="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-3xl md:max-w-4xl mx-auto">
+						<div className="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-3xl md:max-w-240 mx-auto">
 							{otherConcepts.map((concept) => (
 								<GalleryItem
 									key={concept.id}

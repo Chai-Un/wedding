@@ -102,20 +102,25 @@
         "description": "Ký ức mùa hè rực nắng",
         "pageTitle": "Gallery",
         "pageSubtitle": "NGÀY NẮNG VỀ",
-        "caption1": "Cùng anh ghé thăm khu tập thể Nghĩa Tân vào một sáng bình minh ấm áp, những việc nắng đụng cũng mỗi ta là chuyện nhỏ lẻ, nhỏ khi đức tới đó sẽ chiếu lên tình yêu chung mình.",
-        "caption2": "Từ câu chào hỏi chuyện trò rần rĩt của mẹ, tới những lời chúc phúc chân tình từ các cô bác hàng xóm nơi đây, để anh cùng thêm yêu về đẹp thân thương của nơi đã luôn ấm ấp tuổi thơ em."
+        "caption1": "Cùng anh ghé thăm Khu tập thể Nghĩa Tân vào một sáng bình minh líu lo chim hót, những vệt nắng dịu dàng xuyên qua kẽ lá, khẽ chiếu lên tình yêu chúng mình.",
+        "caption2": "Từ câu chào hỏi chuyện trò ríu rít của mẹ, tới những lời chúc phúc chân tình từ các cô bác hàng xóm nơi đây, để anh cùng thêm yêu vẻ đẹp thân thương của nơi đã luôn ôm ấp tuổi thơ em."
       },
       "redamancy": {
-        "title": "Redamancy",
-        "description": "Yêu ai đó cũng yêu mình lại"
+        "title": "Tình yêu được đáp lại",
+        "description": "Yêu ai đó và được người ấy đáp lại",
+        "caption": "Khi người mình thương ân cần đáp lại tình yêu của mình, là lúc một tình yêu trọn vẹn thành hình."
       },
       "becomingOne": {
         "title": "Becoming One",
-        "description": "Hành trình đến bên nhau"
+        "description": "Hành trình đến bên nhau",
+        "caption": "Tình yêu vốn thật kỳ diệu. Khoảnh khắc ta yêu một người, và người ấy cũng yêu ta. Mình được trải qua điều kỳ diệu ấy nhờ có nhau"
       },
       "heartOfHanoi": {
         "title": "Heart of Hanoi",
-        "description": "Tình yêu giữa lòng Hà Nội"
+        "description": "Tình yêu giữa lòng\nHà Nội",
+        "caption1": "Tình yêu như chiếc cầu vồng muôn sắc.",
+        "caption2": "Tình yêu mà chúng ta từng chia sẻ có thể sẽ thay đổi sang nhiều màu sắc khác nhau theo thời gian. Chỉ vì đổi màu không có nghĩa đó không còn là tình yêu nữa.",
+        "caption3": "Mong rằng dù tình yêu chúng mình có liên tục đổi màu, nhưng sẽ không bao giờ ngừng toả sáng rực rỡ."
       }
     }
   },

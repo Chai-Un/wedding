@@ -6,6 +6,7 @@ import ContactUs from '@/components/sections/ContactUs';
 import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 import ourStoryImage from '@/assets/images/mievatho_NH6514.JPG';
 import BreakImage from '@/assets/images/break.svg?react';
+import Navigation from '@/components/Navigation';
 
 export default function BecomingOne() {
 	const galleryId = 'becoming-one';
@@ -58,13 +59,14 @@ export default function BecomingOne() {
 	);
 
 	return (
-		<div className="min-h-screen bg-[#fdf8f0]">
-			<main className="pt-24 pb-16 px-4">
+		<div className="min-h-screen bg-[#eee5d5]">
+				<Navigation overlay alwaysShow />
+			<main className="pt-32 pb-16 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Header */}
 					<div className="text-center mb-12">
 						<div className="text-3xl md:text-4xl font-hoangngan7 text-[#8b4242] uppercase tracking-wider">
-							{t('pageSubtitle')}
+							{t('title')}
 						</div>
 					</div>
 
@@ -165,7 +167,7 @@ export default function BecomingOne() {
 
 					{/* Caption */}
 					<p className="text-sm md:text-base text-[#8b4242] mb-3 font-hoangngan11 text-center">
-						{t('caption1')}
+						{t('caption')}
 					</p>
 
 					{/* Second Section */}
@@ -355,7 +357,7 @@ export default function BecomingOne() {
 								}}
 							/>
 						</div>
-						<div className="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-3xl md:max-w-4xl mx-auto">
+						<div className="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-3xl md:max-w-240 mx-auto">
 							{otherConcepts.map((concept) => (
 								<GalleryItem
 									key={concept.id}

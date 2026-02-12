@@ -123,6 +123,11 @@
   --font-family-inconsolata: 'Inconsolata', monospace;
   --font-family-montserrat: 'Montserrat', sans-serif;
   --font-family-cinzel: 'Cinzel', serif;
+
+  /* Custom breakpoints for larger devices */
+  --breakpoint-2xl: 96rem;   /* 1536px */
+  --breakpoint-3xl: 120rem;  /* 1920px */
+  --breakpoint-4xl: 160rem;  /* 2560px */
 }
 
 @layer base {
@@ -273,6 +278,10 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+/* Custom breakpoint variants for larger devices */
+@custom-media --3xl (min-width: 120rem);  /* 1920px */
+@custom-media --4xl (min-width: 160rem);  /* 2560px */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
