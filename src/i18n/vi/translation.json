@@ -95,13 +95,18 @@
   "gallery": {
     "title": "Gallery",
     "subtitle": "Cùng chúng mình ngắm nhìn tình yêu qua những khung hình!",
+    "exploreOtherConcepts": "Khám phá các bộ ảnh khác",
     "concepts": {
       "ngayNangVe": {
         "title": "Ngày Nắng Về",
-        "description": "Ký ức mùa hè rực nắng"
+        "description": "Ký ức mùa hè rực nắng",
+        "pageTitle": "Gallery",
+        "pageSubtitle": "NGÀY NẮNG VỀ",
+        "caption1": "Cùng anh ghé thăm khu tập thể Nghĩa Tân vào một sáng bình minh ấm áp, những việc nắng đụng cũng mỗi ta là chuyện nhỏ lẻ, nhỏ khi đức tới đó sẽ chiếu lên tình yêu chung mình.",
+        "caption2": "Từ câu chào hỏi chuyện trò rần rĩt của mẹ, tới những lời chúc phúc chân tình từ các cô bác hàng xóm nơi đây, để anh cùng thêm yêu về đẹp thân thương của nơi đã luôn ấm ấp tuổi thơ em."
       },
-      "redamncy": {
-        "title": "Redamncy",
+      "redamancy": {
+        "title": "Redamancy",
         "description": "Yêu ai đó cũng yêu mình lại"
       },
       "becomingOne": {

@@ -95,13 +95,18 @@
 	"gallery": {
 		"title": "Gallery",
 		"subtitle": "Let's admire love through these frames together!",
+		"exploreOtherConcepts": "Explore Other Concepts",
 		"concepts": {
 			"ngayNangVe": {
 				"title": "Sunny Days",
-				"description": "Sunny summer memories"
+				"description": "Sunny summer memories",
+				"pageTitle": "Gallery",
+				"pageSubtitle": "NGÀY NẮNG VỀ",
+				"caption1": "Together we visited the Nghia Tan apartment complex on a warm sunny morning. Even small mundane moments together feel special when sunlight shines upon our love.",
+				"caption2": "From mom's cheerful welcoming chatter to the heartfelt wishes from the neighbors here, it makes you love even more the warmth and kindness of the place that nurtured my childhood."
 			},
-			"redamncy": {
-				"title": "Redamncy",
+			"redamancy": {
+				"title": "Redamancy",
 				"description": "Loving someone who loves you back"
 			},
 			"becomingOne": {

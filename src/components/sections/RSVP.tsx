@@ -113,9 +113,9 @@ export default function RSVP() {
 					<div className="bg-[#eee5d5] pt-12 pb-6 md:p-6 lg:p-8 flex flex-col justify-center">
 						{/* Invitation Text */}
 						<div className="text-center space-y-4">
-							<div className="text-[#6b5739] text-base lg:text-lg font-hoangngan4 uppercase tracking-wider whitespace-pre-line">
+							{/* <div className="text-[#6b5739] text-base lg:text-lg font-hoangngan4 uppercase tracking-wider whitespace-pre-line">
 								{t('rsvp.hosts')}
-							</div>
+							</div> */}
 							<div className="text-[#6b5739] text-base lg:text-lg font-hoangngan4 leading-relaxed whitespace-pre-line">
 								{t('rsvp.invitationText')}
 							</div>
