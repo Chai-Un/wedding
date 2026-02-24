@@ -70,7 +70,7 @@ export default function Navigation({
 
 		// If we're on a gallery detail page, navigate home first then scroll
 		if (isGalleryDetailPage) {
-			navigate('/');
+			navigate('/home');
 			// small delay to allow route change / DOM mount
 			setTimeout(doScroll, 150);
 			return;

@@ -5,6 +5,7 @@ import {
 	useParams,
 	Navigate,
 } from 'react-router-dom';
+import InvitationPage from './pages/InvitationPage';
 import HomePage from './pages/HomePage';
 import NgayNangVe from './pages/NgayNangVe';
 import Redamancy from './pages/Redamancy';
@@ -27,7 +28,7 @@ function GalleryRouter() {
 		case 'heart-of-hanoi':
 			return <HeartOfHanoi />;
 		default:
-			return <Navigate to="/" replace />;
+			return <Navigate to="/home" replace />;
 	}
 }
 
@@ -35,7 +36,8 @@ function App() {
 	return (
 		<BrowserRouter basename={import.meta.env.BASE_URL}>
 			<Routes>
-				<Route path="/" element={<HomePage />} />
+				<Route path="/" element={<InvitationPage />} />
+				<Route path="/home" element={<HomePage />} />
 				<Route path="/gallery/:galleryId" element={<GalleryRouter />} />
 			</Routes>
 			<Toaster />
