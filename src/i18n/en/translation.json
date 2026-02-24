@@ -128,6 +128,15 @@
 		"message": "Our love story will be complete with your presence on our special day!\nFor any questions about the celebration, please contact Hoàng & Ngân and family directly.",
 		"phone": "(+84) 978-662-863"
 	},
+	"invitation": {
+		"title": "DEAR FAMILY & FRIENDS",
+		"message": "After more than 3 years of sharing love across thousands of miles, the day has finally come for us to be together under one roof.\n\nWe look forward to celebrating our special day and beginning a new journey with our dearest loved ones. Your presence and blessings are the most wonderful gifts we will always treasure.",
+		"withLove": "With love,",
+		"names": "Hoàng & Ngân",
+		"welcome": "Welcome to our forever",
+		"date": "11.04.2026",
+		"openEnvelope": "TAP TO OPEN THE INVITATION"
+	},
 	"common": {
 		"rsvp": "RSVP",
 		"viewMore": "View More",

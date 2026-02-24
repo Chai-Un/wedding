@@ -128,6 +128,15 @@
     "message": "Câu chuyện tình yêu sẽ thêm phần trọn vẹn khi có sự hiện diện của bạn trong ngày vui của hai chúng mình!\nMọi thắc mắc về thông tin bữa tiệc vui lòng liện hệ trực tiếp Hoàng & Ngân và gia đình.",
     "phone": "(+84) 978-662-863"
   },
+  "invitation": {
+    "title": "DEAR FAMILY & FRIENDS",
+    "message": "Sau hơn 3 năm với bao lời yêu thương gửi trao nhau từ cách xa hàng ngàn cây số, cuối cùng cũng sắp tới ngày chúng mình được sát gần nhau, về chung một mái nhà.\n\nChúng mình rất mong được kỉ niệm ngày chung đôi và bắt đầu một hành trình mới bên những người thương yêu nhất. Sự hiện diện và những lời chúc phúc của mọi người là món quà tuyệt vời mà chúng mình luôn trân quý.",
+    "withLove": "With love,",
+    "names": "Hoàng & Ngân",
+    "welcome": "Welcome to our forever",
+    "date": "11.04.2026",
+    "openEnvelope": "CHẠM ĐỂ MỞ THIỆP MỜI"
+  },
   "common": {
     "rsvp": "RSVP",
     "viewMore": "Xem thêm",
