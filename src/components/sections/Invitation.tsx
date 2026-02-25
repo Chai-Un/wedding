@@ -227,7 +227,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							alt=""
 							draggable={false}
 							aria-hidden="true"
-							style={{ width: 'clamp(64px, 6vw, 100px)' }}
+							style={{ width: 'clamp(44px, 6vw, 100px)' }}
 							className="object-contain drop-shadow-md"
 						/>
 					</div>
