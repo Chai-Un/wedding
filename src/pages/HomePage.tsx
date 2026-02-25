@@ -5,8 +5,12 @@ import RSVP from '../components/sections/RSVP';
 import Gallery from '../components/sections/Gallery';
 import Timeline from '@/components/sections/Timeline';
 import ContactUs from '@/components/sections/ContactUs';
+import { useEffect } from 'react';
 
 export default function HomePage() {
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, []);
 	return (
 		<div className="min-h-screen">
 			<main>
@@ -16,7 +20,7 @@ export default function HomePage() {
 				<Timeline />
 				<OurJourney />
 				<Gallery />
-        <ContactUs />
+				<ContactUs />
 			</main>
 		</div>
 	);

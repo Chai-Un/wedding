@@ -130,6 +130,23 @@
   --breakpoint-4xl: 160rem;  /* 2560px */
 }
 
+/* ── Invitation component animations ─────────────────────────────────────── */
+
+@keyframes envelopeBreathe {
+  0%, 100% { transform: translateY(0px)  scale(1);     }
+  50%       { transform: translateY(-7px) scale(1.008); }
+}
+
+@keyframes particleBurst {
+  0%   { transform: translate(calc(-50% + 0px),       calc(-50% + 0px))       scale(1.4); opacity: 0.92; }
+  100% { transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0);   opacity: 0;    }
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4;  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Invitation from '@/components/sections/Invitation';
 
-export default function InvitationPage() {
+export default function EnvelopePage() {
 	const navigate = useNavigate();
 
 	const handleOpen = useCallback(() => {

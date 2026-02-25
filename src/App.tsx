@@ -5,7 +5,7 @@ import {
 	useParams,
 	Navigate,
 } from 'react-router-dom';
-import InvitationPage from './pages/InvitationPage';
+import EnvelopePage from './pages/EnvelopePage';
 import HomePage from './pages/HomePage';
 import NgayNangVe from './pages/NgayNangVe';
 import Redamancy from './pages/Redamancy';
@@ -36,7 +36,7 @@ function App() {
 	return (
 		<BrowserRouter basename={import.meta.env.BASE_URL}>
 			<Routes>
-				<Route path="/" element={<InvitationPage />} />
+				<Route path="/" element={<EnvelopePage />} />
 				<Route path="/home" element={<HomePage />} />
 				<Route path="/gallery/:galleryId" element={<GalleryRouter />} />
 			</Routes>

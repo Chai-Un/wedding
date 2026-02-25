@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import envelopeClosed from '@/assets/images/envelope/envelope.png';
 import waxSealImg from '@/assets/images/envelope/wax_seal.png';
 import flowerImg from '@/assets/images/envelope/flower.png';
+import singleFlowerImg from '@/assets/images/envelope/single_flower.png';
 import eiffelImg from '@/assets/images/envelope/eiffel.png';
 import stampOne from '@/assets/images/envelope/stamp_one.png';
 import stampTwo from '@/assets/images/envelope/stamp_two.png';
@@ -65,49 +66,38 @@ export default function Invitation({ onOpen }: InvitationProps) {
 
 	return (
 		<section
-			className="min-h-screen relative flex items-center justify-center overflow-hidden"
+			className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-white"
 			style={{
-				background: '#fbf7ee',
 				opacity: isDismissing ? 0 : 1,
-				filter: isDismissing ? 'blur(6px)' : 'blur(0px)',
 				pointerEvents: isDismissing ? 'none' : 'auto',
 				transition: 'opacity 500ms ease-out, filter 500ms ease-out',
 			}}
 		>
-			{/* ── CSS Keyframe definitions ── */}
-			<style>{`
-				@keyframes envelopeBreathe {
-					0%, 100% { transform: translateY(0px)  scale(1);     }
-					50%       { transform: translateY(-7px) scale(1.008); }
-				}
-				@keyframes particleBurst {
-					0%   { transform: translate(calc(-50% + 0px), calc(-50% + 0px)) scale(1.4); opacity: 0.92; }
-					100% { transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(0);       opacity: 0;    }
-				}
-				@keyframes softPulse {
-					0%, 100% { opacity: 0.55; }
-					50%       { opacity: 0.2;  }
-				}
-				@keyframes ambientGlow {
-					0%, 100% { opacity: 0.18; }
-					50%       { opacity: 0.28; }
-				}
-			`}</style>
+			{/* ── Letter text above the envelope ── */}
+			<div className="w-full max-w-5xl mx-auto px-6 md:px-12 text-center mb-8 md:mb-10 mt-10">
+				{/* Title */}
+				<div className="font-hoangngan7 tracking-[0.2em] uppercase text-[#3d2b1a] text-base md:text-xl lg:text-2xl mb-4 md:mb-5">
+					{t('invitation.title')}
+				</div>
 
+				{/* Message body */}
+				<div className="font-hoangngan4 text-[#4a3520] leading-relaxed whitespace-pre-line text-sm md:text-base mb-5 md:mb-7">
+					{t('invitation.message')}
+				</div>
 
+				{/* With love */}
+				<div className="font-hoangngan4 italic text-[#6b5739] text-sm md:text-base mb-1">
+					{t('invitation.withLove')}
+				</div>
 
-			{/* ── Decorative flower — fixed bottom-left throughout all stages ── */}
-			<img
-				src={flowerImg}
-				alt=""
-				draggable={false}
-				aria-hidden="true"
-				className="fixed bottom-0 left-0 pointer-events-none z-20 select-none"
-				style={{ width: 'clamp(120px, 18vw, 280px)' }}
-			/>
+				{/* Names signature */}
+				<p className="font-hoangngan8 text-[#3d2b1a] leading-none text-3xl md:text-4xl lg:text-5xl">
+					{t('invitation.names')}
+				</p>
+			</div>
 
 			{/* ── Envelope stage ── */}
-			<div className="w-full max-w-5xl mx-auto px-4 md:px-8 lg:px-12">
+			<div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
 				{/*
 				 * Aspect-ratio wrapper (1599 × 1036 ≈ 1.543)
 				 * Both envelope images sit absolute inside; the wrapper sets the height.
@@ -130,8 +120,6 @@ export default function Invitation({ onOpen }: InvitationProps) {
 						if (e.key === 'Enter' || e.key === ' ') handleClick();
 					}}
 				>
-
-
 					{/* ─ Closed envelope — overlaid; fades out on 'open' ─ */}
 					<img
 						src={envelopeClosed}
@@ -149,12 +137,52 @@ export default function Invitation({ onOpen }: InvitationProps) {
 						}}
 					/>
 
-					{/* ─ Title — upper-left, ~10% top / 18% left ─ */}
-					<p
-						className="absolute pointer-events-none font-hoangngan8 leading-tight text-[#5a3e28]"
+					{/* ── Decorative flowers — grouped, anchored to envelope bottom-left ── */}
+					<div
+						className="absolute pointer-events-none select-none"
 						style={{
-							top: '10%',
-							left: '18%',
+							bottom: '5%',
+							left: 0,
+							zIndex: 20,
+							width: '18%',
+						}}
+					>
+						{/* Large bouquet — rotated, mirrored */}
+						<img
+							src={flowerImg}
+							alt=""
+							draggable={false}
+							aria-hidden="true"
+							className="absolute"
+							style={{
+								bottom: '0%',
+								left: '145%',
+								rotate: '-27deg',
+								transform: 'scale(-1, 1)',
+								transformOrigin: 'bottom left',
+							}}
+						/>
+						{/* Single flower — sits to the right of the bouquet */}
+						<img
+							src={singleFlowerImg}
+							alt=""
+							draggable={false}
+							aria-hidden="true"
+							className="absolute"
+							style={{
+								width: '44%',
+								bottom: '0%',
+								left: '70%',
+							}}
+						/>
+					</div>
+
+					{/* ─ Title — upper-left, ~10% top / 18% left ─ */}
+					<div
+						className="absolute pointer-events-none font-hoangngan8 leading-tight text-[#5a3e28] text-center"
+						style={{
+							top: '20%',
+							left: '10%',
 							right: '8%',
 							fontSize: 'clamp(1rem, 3.4vw, 3rem)',
 							zIndex: 4,
@@ -163,23 +191,23 @@ export default function Invitation({ onOpen }: InvitationProps) {
 						}}
 					>
 						{t('invitation.welcome')}
-					</p>
+					</div>
 
 					{/* ─ Date — centered below title, ~28% top ─ */}
-					<p
-						className="absolute pointer-events-none font-hoangngan7 tracking-[0.26em] text-center text-[#6b5739]/75"
+					<div
+						className="absolute pointer-events-none font-hoangngan4 tracking-[0.26em] text-center text-[#6b5739]/80"
 						style={{
 							top: '28%',
 							left: '18%',
 							right: '18%',
-							fontSize: 'clamp(0.58rem, 1.3vw, 1.05rem)',
+							fontSize: 'clamp(0.8rem, 2vw, 1.5rem)',
 							zIndex: 4,
 							opacity: isLifted ? 0 : 1,
 							transition: 'opacity 350ms ease',
 						}}
 					>
 						{t('invitation.date')}
-					</p>
+					</div>
 
 					{/* ─ Wax seal — ~50% x / ~57% y, spins and dissolves on click ─ */}
 					<div
@@ -199,18 +227,19 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							alt=""
 							draggable={false}
 							aria-hidden="true"
-							style={{ width: 'clamp(44px, 5.8vw, 88px)' }}
+							style={{ width: 'clamp(64px, 6vw, 100px)' }}
 							className="object-contain drop-shadow-md"
 						/>
 					</div>
 
-					{/* ─ Note / CTA text — lower-center-left, pulses when idle ─ */}
-					<p
-						className="absolute pointer-events-none font-hoangngan7 tracking-[0.22em] uppercase text-[#6b5739]"
+					{/* ─ Note / CTA text — centered, pulses when idle ─ */}
+					<div
+						className="absolute pointer-events-none font-hoangngan7 tracking-widest uppercase text-[#6b5739] text-center"
 						style={{
-							top: '76%',
-							left: '34%',
-							fontSize: 'clamp(0.48rem, 0.92vw, 0.78rem)',
+							top: '80%',
+							left: '15%',
+							right: '15%',
+							fontSize: 'clamp(0.45rem, 1.2vw, 0.9rem)',
 							zIndex: 4,
 							opacity: isLifted ? 0 : undefined,
 							animation:
@@ -221,67 +250,91 @@ export default function Invitation({ onOpen }: InvitationProps) {
 						}}
 					>
 						{t('invitation.openEnvelope')}
-					</p>
+					</div>
 
-					{/* ─ 4 Stamps — bottom-right corner ─ */}
 					<div
-						className="absolute flex items-end pointer-events-none"
+						className="absolute pointer-events-none"
 						style={{
-							bottom: '5%',
-							right: '3%',
-							gap: 'clamp(2px, 0.35vw, 5px)',
+							bottom: '12%',
+							right: '13.5%',
 							zIndex: 4,
-							opacity: isLifted ? 0 : 1,
 							transition: 'opacity 380ms ease-out',
 						}}
 					>
-						<img
-							src={eiffelImg}
-							alt=""
-							draggable={false}
-							aria-hidden="true"
-							style={{
-								width: 'clamp(20px, 4.2vw, 56px)',
-								height: 'clamp(26px, 5.4vw, 72px)',
-								objectFit: 'contain',
-							}}
-						/>
-						<img
-							src={stampOne}
-							alt=""
-							draggable={false}
-							aria-hidden="true"
-							style={{
-								width: 'clamp(22px, 4.4vw, 60px)',
-								height: 'clamp(22px, 4.4vw, 60px)',
-								objectFit: 'contain',
-							}}
-						/>
-						<img
-							src={stampTwo}
-							alt=""
-							draggable={false}
-							aria-hidden="true"
-							style={{
-								width: 'clamp(18px, 3.7vw, 50px)',
-								height: 'clamp(24px, 4.8vw, 64px)',
-								objectFit: 'contain',
-							}}
-						/>
-						<img
-							src={stampThree}
-							alt=""
-							draggable={false}
-							aria-hidden="true"
-							style={{
-								width: 'clamp(20px, 4vw, 54px)',
-								height: 'clamp(20px, 4vw, 54px)',
-								objectFit: 'contain',
-							}}
-						/>
+						<div
+							className="flex items-end"
+							style={{ gap: '0.4vw' }}
+						>
+							<div
+								className="relative shrink-0"
+								style={{
+									width: '6vw',
+									maxWidth: 78,
+									minWidth: 30,
+								}}
+							>
+								<img
+									src={eiffelImg}
+									alt=""
+									draggable={false}
+									aria-hidden="true"
+									style={{
+										width: '60%',
+										objectFit: 'contain',
+										display: 'block',
+										zIndex: 10,
+										position: 'relative',
+										float: 'right',
+										marginRight: '-30%',
+									}}
+								/>
+								<img
+									src={stampThree}
+									alt=""
+									draggable={false}
+									aria-hidden="true"
+									style={{
+										position: 'absolute',
+										top: '-18%',
+										left: '50%',
+										width: '72%',
+										objectFit: 'contain',
+										zIndex: 10,
+									}}
+								/>
+							</div>
+
+							{/* London / Big Ben */}
+							<img
+								src={stampOne}
+								alt=""
+								draggable={false}
+								aria-hidden="true"
+								style={{
+									width: '6vw',
+									maxWidth: 78,
+									minWidth: 30,
+									objectFit: 'contain',
+									zIndex: 5,
+								}}
+							/>
+
+							{/* Botanical */}
+							<img
+								src={stampTwo}
+								alt=""
+								draggable={false}
+								aria-hidden="true"
+								style={{
+									width: '6vw',
+									maxWidth: 78,
+									minWidth: 30,
+									objectFit: 'contain',
+									zIndex: 4,
+								}}
+							/>
+						</div>
 					</div>
-
-
 
 					{/* ─ Golden wax seal particle burst — mounts on lift, animates once ─ */}
 					{isLifted &&
