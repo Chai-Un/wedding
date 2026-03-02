@@ -1,19 +1,24 @@
 import { Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import Logo from '@/assets/images/logo_new.png';
-import Photo1 from '@/assets/images/mievatho_NH1487.JPG';
-import Photo2 from '@/assets/images/mievatho_NH1504.JPG';
+import Logo from '@/assets/images/logo.jpg';
+import Photo1 from '@/assets/images/gallery/redamancy/mievatho_NH6309.jpg';
+import Photo2 from '@/assets/images/gallery/redamancy/mievatho_NH6232.jpg';
+import Background from '@/assets/images/gallery/redamancy/mievatho_NH1525.jpg';
 
 const ContactUs = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="bg-[#412d1d] py-12 md:py-16 lg:py-20 px-4 text-center">
+		<section
+			className="relative py-12 md:py-16 lg:py-20 px-4 text-center"
+			style={{ backgroundImage: `url(${Background})` }}
+		>
+			<div className="absolute inset-0 bg-[#3d1700]/65 pointer-events-none" />
 			{/* <section className="bg-[#6b5739] py-12 md:py-16 lg:py-20 px-4 text-center"> */}
-			<div className="max-w-6xl mx-auto">
+			<div className="relative max-w-6xl mx-auto">
 				<div className="grid gap-12 items-center">
 					<div
-						className={`relative inline-flex flex-col items-center justify-center bg-center bg-no-repeat bg-contain w-full h-30`}
+						className={`relative inline-flex flex-col items-center justify-center bg-center bg-no-repeat bg-contain w-full h-40`}
 						style={{ backgroundImage: `url(${Logo})` }}
 					></div>
 					<div className="text-[#d4c5ad] text-[0.8em] md:text-[1em] lg:text-[1.125em] font-hoangngan3">
@@ -32,9 +37,9 @@ const ContactUs = () => {
 					</div>
 				</div>
 			</div>
-			<div className="max-w-4xl mx-auto">
+			<div className="relative max-w-4xl mx-auto">
 				{/* Two-photo grid with "together always" overlay */}
-				<div className="relative mt-12 w-full mb-10">
+				<div className="relative mt-12 w-10/12 lg:w-full mx-auto mb-10">
 					<div className="grid grid-cols-2 gap-3">
 						<img
 							src={Photo1}
@@ -59,7 +64,8 @@ const ContactUs = () => {
 								fontKerning: 'none',
 								textDecorationLine: 'none',
 								display: 'inline-block',
-								transform: 'rotate(-11.551deg) scale(0.858056, 0.858056)',
+								transform:
+									'rotate(-11.551deg) scale(0.858056, 0.858056)',
 								whiteSpace: 'nowrap',
 							}}
 						>
