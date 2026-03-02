@@ -86,12 +86,12 @@ export default function Invitation({ onOpen }: InvitationProps) {
 				</div>
 
 				{/* With love */}
-				<div className="font-hoangngan4 italic text-[#6b5739] text-sm md:text-base mb-1">
+				<div className="font-hoangngan4 text-[#6b5739] text-sm md:text-base mb-1">
 					{t('invitation.withLove')}
 				</div>
 
 				{/* Names signature */}
-				<p className="font-hoangngan8 text-[#3d2b1a] leading-none text-3xl md:text-4xl lg:text-5xl">
+				<p className="font-hoangngan22 text-[#3d2b1a] leading-none text-3xl md:text-[60px] pt-4">
 					{t('invitation.names')}
 				</p>
 			</div>

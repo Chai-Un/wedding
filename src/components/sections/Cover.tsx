@@ -39,8 +39,8 @@ export default function Cover() {
 			<div className="relative z-10 text-center space-y-8 max-w-4xl">
 				{/* Couple Names */}
 				<div className="space-y-4">
-					<div className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white tracking-normal leading-tight font-hoangngan8">
-						Hoàng & Ngân
+					<div className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-white tracking-normal leading-tight font-hoangngan8 m-0">
+					{t('cover.names')}
 					</div>
 					<p className="text-xl md:text-3xl lg:text-4xl text-white/90 tracking-[0.3em] uppercase font-light font-hoangngan7">
 						{t('cover.saveTheDate')}

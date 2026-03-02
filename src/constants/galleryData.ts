@@ -4,55 +4,57 @@ import thumbnail3 from '@/assets/images/gallery/thumbnails/thumb3.jpg';
 import thumbnail4 from '@/assets/images/gallery/thumbnails/thumb4.jpg';
 export interface GalleryConcept {
 	id: string;
-	title: string;
-	description: string;
+	title?: string;
+	description?: string;
 	translationKey: string;
 	path: string;
 	bgColor: string;
 	bgImage?: string;
-	content: string;
+	content?: string;
+	showTitle?: boolean;
 }
 
 export const GALLERY_CONCEPTS: GalleryConcept[] = [
 	{
 		id: 'ngay-nang-ve',
 		title: 'Ngày Nắng Về',
-		description: 'Sunny summer memories',
+		// description: 'Sunny summer memories',
 		translationKey: 'ngayNangVe',
 		path: '/gallery/ngay-nang-ve',
 		bgColor: 'from-rose-300 to-pink-200',
 		bgImage: thumbnail1,
-		content: 'Photos from our sunny summer days together...',
+		// content: 'Photos from our sunny summer days together...',
+		showTitle: true,
 	},
 	{
 		id: 'redamancy',
 		title: 'Redamancy',
-		description: 'Loving someone who loves you back',
+		// description: 'Loving someone who loves you back',
 		translationKey: 'redamancy',
 		path: '/gallery/redamancy',
 		bgColor: 'from-amber-300 to-orange-200',
 		bgImage: thumbnail2,
-		content: 'The feeling of loving and being loved in return...',
+		// content: 'The feeling of loving and being loved in return...',
 	},
 	{
 		id: 'becoming-one',
 		title: 'Becoming One',
-		description: 'Our journey to unity',
+		// description: 'Our journey to unity',
 		translationKey: 'becomingOne',
 		path: '/gallery/becoming-one',
 		bgColor: 'from-emerald-300 to-teal-200',
 		bgImage: thumbnail3,
-		content: 'Our journey becoming one together...',
+		// content: 'Our journey becoming one together...',
 	},
 	{
 		id: 'heart-of-hanoi',
 		title: 'Heart of Hanoi',
-		description: 'Love in the city',
+		// description: 'Love in the city',
 		translationKey: 'heartOfHanoi',
 		path: '/gallery/heart-of-hanoi',
 		bgColor: 'from-blue-300 to-indigo-200',
 		bgImage: thumbnail4,
-		content: 'Exploring the heart of Hanoi together...',
+		// content: 'Exploring the heart of Hanoi together...',
 	},
 ];
 

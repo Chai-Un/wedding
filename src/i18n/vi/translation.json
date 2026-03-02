@@ -1,145 +1,147 @@
 {
-  "nav": {
-    "home": "Trang chủ",
-    "invitation": "LỜI MỜI | RSVP",
-    "schedule": "Chương Trình",
-    "ourStory": "Hành trình yêu",
-    "gallery": "Album"
-  },
-  "cover": {
-    "saveTheDate": "NGÀY CHUNG ĐÔI",
-    "date": "11:00 ngày 11 tháng 4, 2026",
-    "venue": "TRUNG TÂM HỘI NGHỊ QUỐC GIA"
-  },
-  "ourStory": {
-    "greeting": "Dear family & friends",
-    "story": "Sau hơn 3 năm với bao lời yêu thương gửi trao nhau từ cách xa hàng ngàn cây số, cuối cùng cũng sắp tới ngày chúng mình được sát gần nhau, về chung một mái nhà.\n\nChúng mình rất mong được kỉ niệm ngày chung đôi và bắt đầu một hành trình mới bên những người thương yêu nhất. Sự hiện diện và những lời chúc phúc của mọi người là món quà tuyệt vời mà chúng mình luôn trân quý!\n\n",
-    "withLove": "With love,",
-    "names": "Hoàng & Ngân"
-  },
-  "journey": {
-    "title": "Our Journey",
-    "paragraph1": "Hơn ba năm yêu nhau, cũng là ba năm chúng mình học cách yêu xa. Anh hay nói mình yêu nhau chẳng khác gì ngưu lang chức nữ, một năm chỉ gặp nhau đôi ba lần. Chưa kể mỗi lần gặp nhau là rất nhiều những nỗ lực xuyên lục địa, khi kỉ niệm đươc ghi lại đều bằng những chuyến đi, và nhìn lại thì cũng chẳng có mấy lần mình được bên nhau trong những ngày đặc biệt. Vậy mà chẳng hiểu thế nào, mọi chuyện cứ diễn ra nhẹ nhàng ấm áp như thế ấy.",
-    "paragraph2": "Tình yêu được nuôi dưỡng từ những sẻ chia, thấu hiểu, từ những lần sai và học cách đối diện với lỗi lầm, hay những cuộc chuyện trò tới khuya khi mình luôn lệch múi giờ, và giờ giấc sinh hoạt cũng cứ thế thay đổi vì nhau. Dù cho bao xa cách về địa lý, mình vẫn luôn là nguồn năng lượng, là người mang lại tiếng cười cho nhau sau những ngày dài. Có nhiều khoảnh khắc Em nhận ra, khi gặp đúng người thì mọi chuyện sẽ tự nhiên mà chảy trôi vậy thôi.",
-    "paragraph3": "Có lẽ vì luôn xa, nên lại càng làm chúng mình thêm háo hức và mong chờ những ngày tháng được gần nhau sau này. Tháng 6 năm 2025, Anh cầu hôn Em ở bãi biển Dreamland, Bali, dưới sự chứng kiến của hoàng hôn và những cơn sóng xô bờ. Đúng là vùng đất của những ước mơ đã cho Anh đạt được mơ ước của đời mình, khi nhận được cái gật đầu của người con gái Anh thương."
-  },
-  "ceremony": {
-    "day": "THỨ BẢY",
-    "time": "11:00 | 11.04.2026",
-    "room": "PHÒNG 318",
-    "venue": "TRUNG TÂM HỘI NGHỊ QUỐC GIA",
-    "address": "Đường Phạm Hùng, Thành phố Hà Nội",
-    "mapButton": "Xem bản đồ",
-    "rsvpButton": "PHẢN HỒI THAM DỰ"
-  },
-  "rsvp": {
-    "title": "Rsvp",
-    "description": "Quý quan khách vui lòng gửi phản hồi việc tham dự tiệc trước ngày 04/04/2026 để gia đình chuẩn bị tiếp đón một cách chu đáo nhất",
-    "hosts": "ÔNG BÀ: NGUYỄN QUỐC HẢI & ĐOÀN BÍCH NGA\nBÀ: ĐẶNG THU HUYỀN",
-    "invitationText": "Thân mời Quý quan khách tham dự bữa tiệc mừng\nLễ thành hôn của các con chúng tôi vào",
-    "dateTime": "THỨ BẢY | 11:00 | 11.04.2026",
-    "location": "Địa điểm",
-    "venue": "TẦNG 3 - PHÒNG TIỆC 318\nTRUNG TÂM HỘI NGHỊ QUỐC GIA",
-    "address": "Đường Phạm Hùng, Thành phố Hà Nội",
-    "viewMap": "XEM BẢN ĐỒ",
-    "nameLabel": "Họ và tên",
-    "namePlaceholder": "Nhập họ và tên của bạn",
-    "attendYes": "Có, tôi sẽ tham dự tiệc :)",
-    "attendNo": "Tiếc quá, tôi không tham dự được :(",
-    "messageLabel": "Gửi lời chúc phúc tới cặp đôi",
-    "messagePlaceholder": "Type here...",
-    "submitButton": "GỬI PHẢN HỒI",
-    "characters": "ký tự"
-  },
-  "timeline": {
-    "title": "Our Timeline",
-    "items": [
-      {
-        "time": "8:30 AM",
-        "title": "CÓ NHAU BÊN ĐỜI BỖNG VUI",
-        "subtitle": "Lễ thân mật",
-        "description": "Dành cho khách mời nhân được thiệp mời tham dự riêng"
-      },
-      {
-        "time": "10:30 AM",
-        "title": "Đón khách",
-        "subtitle": "",
-        "description": ""
-      },
-      {
-        "time": "11:00 AM",
-        "title": "Lễ cưới",
-        "subtitle": "",
-        "description": ""
-      },
-      {
-        "time": "11:30 AM",
-        "title": "Khai tiệc",
-        "subtitle": "",
-        "description": ""
-      },
-      {
-        "time": "12:00 PM",
-        "title": "First dance",
-        "subtitle": "Điệu nhảy đầu tiên của",
-        "description": "Cô dâu và Chú rể"
-      },
-      {
-        "time": "12:15 PM",
-        "title": "Giải trí",
-        "subtitle": "",
-        "description": ""
-      }
-    ]
-  },
-  "gallery": {
-    "title": "Gallery",
-    "subtitle": "Cùng chúng mình ngắm nhìn tình yêu qua những khung hình!",
-    "exploreOtherConcepts": "Khám phá các bộ ảnh khác",
-    "concepts": {
-      "ngayNangVe": {
-        "title": "Ngày Nắng Về",
-        "description": "Ký ức mùa hè rực nắng",
-        "pageTitle": "Gallery",
-        "pageSubtitle": "NGÀY NẮNG VỀ",
-        "caption1": "Cùng anh ghé thăm Khu tập thể Nghĩa Tân vào một sáng bình minh líu lo chim hót, những vệt nắng dịu dàng xuyên qua kẽ lá, khẽ chiếu lên tình yêu chúng mình.",
-        "caption2": "Từ câu chào hỏi chuyện trò ríu rít của mẹ, tới những lời chúc phúc chân tình từ các cô bác hàng xóm nơi đây, để anh cùng thêm yêu vẻ đẹp thân thương của nơi đã luôn ôm ấp tuổi thơ em."
-      },
-      "redamancy": {
-        "title": "Redamancy",
-        "description": "Yêu ai đó và được người ấy đáp lại",
-        "caption": "Khi người mình thương ân cần đáp lại tình yêu của mình, là lúc một tình yêu trọn vẹn thành hình."
-      },
-      "becomingOne": {
-        "title": "Becoming One",
-        "description": "Hành trình đến bên nhau",
-        "caption": "Tình yêu vốn thật kỳ diệu. Khoảnh khắc ta yêu một người, và người ấy cũng yêu ta. Mình được trải qua điều kỳ diệu ấy nhờ có nhau"
-      },
-      "heartOfHanoi": {
-        "title": "Heart of Hanoi",
-        "description": "Tình yêu giữa lòng\nHà Nội",
-        "caption1": "Tình yêu như chiếc cầu vồng muôn sắc.",
-        "caption2": "Tình yêu mà chúng ta từng chia sẻ có thể sẽ thay đổi sang nhiều màu sắc khác nhau theo thời gian. Chỉ vì đổi màu không có nghĩa đó không còn là tình yêu nữa.",
-        "caption3": "Mong rằng dù tình yêu chúng mình có liên tục đổi màu, nhưng sẽ không bao giờ ngừng toả sáng rực rỡ."
-      }
-    }
-  },
-  "contact": {
-    "message": "Câu chuyện tình yêu sẽ thêm phần trọn vẹn khi có sự hiện diện của bạn trong ngày vui của hai chúng mình!\nMọi thắc mắc về thông tin bữa tiệc vui lòng liện hệ trực tiếp Hoàng & Ngân và gia đình.",
-    "phone": "(+84) 978-662-863"
-  },
-  "invitation": {
-    "title": "DEAR FAMILY & FRIENDS",
-    "message": "Sau hơn 3 năm với bao lời yêu thương gửi trao nhau từ cách xa hàng ngàn cây số, cuối cùng cũng sắp tới ngày chúng mình được sát gần nhau, về chung một mái nhà.\n\nChúng mình rất mong được kỉ niệm ngày chung đôi và bắt đầu một hành trình mới bên những người thương yêu nhất. Sự hiện diện và những lời chúc phúc của mọi người là món quà tuyệt vời mà chúng mình luôn trân quý.",
-    "withLove": "With love,",
-    "names": "Hoàng & Ngân",
-    "welcome": "Welcome to our forever",
-    "date": "11.04.2026",
-    "openEnvelope": "CHẠM ĐỂ MỞ THIỆP MỜI"
-  },
-  "common": {
-    "rsvp": "RSVP",
-    "viewMore": "Xem thêm",
-    "close": "Đóng"
-  }
+	"nav": {
+		"home": "Trang chủ",
+		"invitation": "LỜI MỜI | RSVP",
+		"schedule": "Chương Trình",
+		"ourStory": "Hành trình yêu",
+		"gallery": "Album"
+	},
+	"cover": {
+		"saveTheDate": "NGÀY CHUNG ĐÔI",
+		"date": "11:00 ngày 11 tháng 4, 2026",
+		"venue": "TRUNG TÂM HỘI NGHỊ QUỐC GIA",
+		"names": "Hoàng & Ngân"
+	},
+	"ourStory": {
+		"greeting": "Dear family & friends",
+		"story": "Sau hơn 3 năm với bao lời yêu thương gửi trao nhau từ cách xa hàng ngàn cây số, cuối cùng cũng sắp tới ngày chúng mình được sát gần nhau, về chung một mái nhà.\n\nChúng mình rất mong được kỉ niệm ngày chung đôi và bắt đầu một hành trình mới bên những người thương yêu nhất. Sự hiện diện và những lời chúc phúc của mọi người là món quà tuyệt vời mà chúng mình luôn trân quý!\n\n",
+		"withLove": "With love,",
+		"names": "Hoàng & Ngân"
+	},
+	"journey": {
+		"title": "Our Journey",
+		"paragraph1": "Hơn ba năm yêu nhau, cũng là ba năm chúng mình học cách yêu xa. Anh hay nói mình yêu nhau chẳng khác gì ngưu lang chức nữ, một năm chỉ gặp nhau đôi ba lần. Chưa kể mỗi lần gặp nhau là rất nhiều những nỗ lực xuyên lục địa, khi kỉ niệm đươc ghi lại đều bằng những chuyến đi, và nhìn lại thì cũng chẳng có mấy lần mình được bên nhau trong những ngày đặc biệt. Vậy mà chẳng hiểu thế nào, mọi chuyện cứ diễn ra nhẹ nhàng ấm áp như thế ấy.",
+		"paragraph2": "Tình yêu được nuôi dưỡng từ những sẻ chia, thấu hiểu, từ những lần sai và học cách đối diện với lỗi lầm, hay những cuộc chuyện trò tới khuya khi mình luôn lệch múi giờ, và giờ giấc sinh hoạt cũng cứ thế thay đổi vì nhau. Dù cho bao xa cách về địa lý, mình vẫn luôn là nguồn năng lượng, là người mang lại tiếng cười cho nhau sau những ngày dài. Có nhiều khoảnh khắc Em nhận ra, khi gặp đúng người thì mọi chuyện sẽ tự nhiên mà chảy trôi vậy thôi.",
+		"paragraph3": "Có lẽ vì luôn xa, nên lại càng làm chúng mình thêm háo hức và mong chờ những ngày tháng được gần nhau sau này. Tháng 6 năm 2025, Anh cầu hôn Em ở bãi biển Dreamland, Bali, dưới sự chứng kiến của hoàng hôn và những cơn sóng xô bờ. Đúng là vùng đất của những ước mơ đã cho Anh đạt được mơ ước của đời mình, khi nhận được cái gật đầu của người con gái Anh thương."
+	},
+	"ceremony": {
+		"day": "THỨ BẢY",
+		"time": "11:00 | 11.04.2026",
+		"room": "PHÒNG 318",
+		"venue": "TRUNG TÂM HỘI NGHỊ QUỐC GIA",
+		"address": "Đường Phạm Hùng, Thành phố Hà Nội",
+		"mapButton": "Xem bản đồ",
+		"rsvpButton": "PHẢN HỒI THAM DỰ"
+	},
+	"rsvp": {
+		"title": "Rsvp",
+		"description": "Quý quan khách vui lòng gửi phản hồi việc tham dự tiệc trước ngày 04/04/2026 để gia đình chuẩn bị tiếp đón một cách chu đáo nhất",
+		"hosts": "ÔNG BÀ: NGUYỄN QUỐC HẢI & ĐOÀN BÍCH NGA\nBÀ: ĐẶNG THU HUYỀN",
+		"invitationText": "Thân mời Quý quan khách tham dự bữa tiệc mừng\nLễ thành hôn của các con chúng tôi vào",
+		"dateTime": "THỨ BẢY | 11:00 | 11.04.2026",
+		"location": "Địa điểm",
+		"venue": "TẦNG 3 - PHÒNG TIỆC 318\nTRUNG TÂM HỘI NGHỊ QUỐC GIA",
+		"address": "Đường Phạm Hùng, Thành phố Hà Nội",
+		"viewMap": "XEM BẢN ĐỒ",
+		"nameLabel": "Họ và tên",
+		"namePlaceholder": "Nhập họ và tên của bạn",
+		"attendYes": "Có, tôi sẽ tham dự tiệc :)",
+		"attendNo": "Tiếc quá, tôi không tham dự được :(",
+		"messageLabel": "Gửi lời chúc phúc tới cặp đôi",
+		"messagePlaceholder": "Type here...",
+		"submitButton": "GỬI PHẢN HỒI",
+		"characters": "ký tự"
+	},
+	"timeline": {
+		"title": "Our Timeline",
+		"items": [
+			{
+				"time": "8:30 AM",
+				"title": "CÓ NHAU BÊN ĐỜI BỖNG VUI",
+				"subtitle": "Lễ thân mật",
+				"description": "Dành cho khách mời nhân được thiệp mời tham dự riêng"
+			},
+			{
+				"time": "10:30 AM",
+				"title": "Đón khách",
+				"subtitle": "",
+				"description": ""
+			},
+			{
+				"time": "11:00 AM",
+				"title": "Lễ cưới",
+				"subtitle": "",
+				"description": ""
+			},
+			{
+				"time": "11:30 AM",
+				"title": "Khai tiệc",
+				"subtitle": "",
+				"description": ""
+			},
+			{
+				"time": "12:00 PM",
+				"title": "First dance",
+				"subtitle": "Điệu nhảy đầu tiên của",
+				"description": "Cô dâu và Chú rể"
+			},
+			{
+				"time": "12:15 PM",
+				"title": "Giải trí",
+				"subtitle": "",
+				"description": ""
+			}
+		]
+	},
+	"gallery": {
+		"title": "Gallery",
+		"subtitle": "Cùng chúng mình ngắm nhìn tình yêu qua những khung hình!",
+		"exploreOtherConcepts": "Khám phá các bộ ảnh khác",
+		"concepts": {
+			"ngayNangVe": {
+				"title": "Ngày Nắng Về",
+				"description": "Ký ức mùa hè rực nắng",
+				"pageTitle": "Gallery",
+				"pageSubtitle": "NGÀY NẮNG VỀ",
+				"caption1": "Cùng anh ghé thăm Khu tập thể Nghĩa Tân vào một sáng bình minh líu lo chim hót, những vệt nắng dịu dàng xuyên qua kẽ lá, khẽ chiếu lên tình yêu chúng mình.",
+				"caption2": "Từ câu chào hỏi chuyện trò ríu rít của mẹ, tới những lời chúc phúc chân tình từ các cô bác hàng xóm nơi đây, để anh cùng thêm yêu vẻ đẹp thân thương của nơi đã luôn ôm ấp tuổi thơ em."
+			},
+			"redamancy": {
+				"title": "Redamancy",
+				"description": "Yêu ai đó và được người ấy đáp lại",
+				"caption": "Khi người mình thương ân cần đáp lại tình yêu của mình, là lúc một tình yêu trọn vẹn thành hình."
+			},
+			"becomingOne": {
+				"title": "Becoming One",
+				"description": "Hành trình đến bên nhau",
+				"caption": "Tình yêu vốn thật kỳ diệu. Khoảnh khắc ta yêu một người, và người ấy cũng yêu ta. Mình được trải qua điều kỳ diệu ấy nhờ có nhau"
+			},
+			"heartOfHanoi": {
+				"title": "Heart of Hanoi",
+				"description": "Tình yêu giữa lòng\nHà Nội",
+				"caption1": "Tình yêu như chiếc cầu vồng muôn sắc.",
+				"caption2": "Tình yêu mà chúng ta từng chia sẻ có thể sẽ thay đổi sang nhiều màu sắc khác nhau theo thời gian. Chỉ vì đổi màu không có nghĩa đó không còn là tình yêu nữa.",
+				"caption3": "Mong rằng dù tình yêu chúng mình có liên tục đổi màu, nhưng sẽ không bao giờ ngừng toả sáng rực rỡ."
+			}
+		}
+	},
+	"contact": {
+		"message": "Câu chuyện tình yêu sẽ thêm phần trọn vẹn khi có sự hiện diện của bạn trong ngày vui của hai chúng mình!\nMọi thắc mắc về thông tin bữa tiệc vui lòng liện hệ trực tiếp Hoàng & Ngân và gia đình.",
+		"phone": "(+84) 978-662-863",
+    "togetherAlways": "Together always"
+	},
+	"invitation": {
+		"title": "DEAR FAMILY & FRIENDS",
+		"message": "Sau hơn 3 năm với bao lời yêu thương gửi trao nhau từ cách xa hàng ngàn cây số, cuối cùng cũng sắp tới ngày chúng mình được sát gần nhau, về chung một mái nhà.\n\nChúng mình rất mong được kỉ niệm ngày chung đôi và bắt đầu một hành trình mới bên những người thương yêu nhất. Sự hiện diện và những lời chúc phúc của mọi người là món quà tuyệt vời mà chúng mình luôn trân quý.",
+		"withLove": "With love,",
+		"names": "Hoàng & Ngân",
+		"welcome": "Welcome to our forever",
+		"date": "11.04.2026",
+		"openEnvelope": "CHẠM ĐỂ MỞ THIỆP MỜI"
+	},
+	"common": {
+		"rsvp": "RSVP",
+		"viewMore": "Xem thêm",
+		"close": "Đóng"
+	}
 }

@@ -104,6 +104,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'HoangNgan13';
+  src: url('./assets/fonts/font13.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HoangNgan22';
+  src: url('./assets/fonts/font22.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   /* Custom font families */
   --font-family-custom-serif: 'CustomSerif', serif;
@@ -119,6 +135,8 @@
   --font-hoangngan10: 'HoangNgan10', sans-serif;
   --font-hoangngan11: 'HoangNgan11', sans-serif;
   --font-hoangngan12: 'HoangNgan12', sans-serif;
+  --font-hoangngan13: 'HoangNgan13', sans-serif;
+  --font-hoangngan22: 'HoangNgan22', sans-serif;
   --font-family-dancing: 'Dancing Script', cursive;
   --font-family-inconsolata: 'Inconsolata', monospace;
   --font-family-montserrat: 'Montserrat', sans-serif;
@@ -274,7 +292,15 @@
   .font-hoangngan12 {
     font-family: 'HoangNgan12', sans-serif;
   }
-  
+
+  .font-hoangngan13 {
+    font-family: 'HoangNgan13', sans-serif;
+  }
+
+  .font-hoangngan22 {
+    font-family: 'HoangNgan22', sans-serif;
+  }
+
   .font-dancing {
     font-family: 'Dancing Script', cursive;
   }

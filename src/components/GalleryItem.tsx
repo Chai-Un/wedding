@@ -11,7 +11,7 @@ interface GalleryItemProps {
 export default function GalleryItem({
 	concept,
 	variant = 'stacked',
-	showDescription = true,
+	showDescription = false,
 }: GalleryItemProps) {
 	const { t } = useTranslation();
 
@@ -58,16 +58,22 @@ export default function GalleryItem({
 				>
 					{/* Dark overlay on hover */}
 					{concept.bgImage && (
-						<div className="absolute inset-0 bg-black/0 transition-colors duration-300"></div>
+						<div className="absolute inset-0 bg-black/15 transition-colors duration-300"></div>
 					)}
 
-					{/* Title - always visible at top with gradient */}
-					<div className="absolute top-0 left-0 right-0 bg-linear-to-b from-black/50 via-black/30 to-transparent p-4 pb-8 z-10">
-						<div className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-hoangngan7 text-white text-center leading-tight pt-[5%] line-clamp-2">
-							{t(
-								`gallery.concepts.${concept.translationKey}.title`,
-							)}
-						</div>
+					<div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
+						{concept.showTitle && (
+							<>
+								<div className="text-base lg:text-lg xl:text-xl 2xl:text-xl font-hoangngan7 text-white text-center leading-tight line-clamp-2 mb-2">
+									{t(
+										`gallery.concepts.${concept.translationKey}.title`,
+									)}
+								</div>
+								<div className="text-sm md:text-sm lg:text-base font-hoangngan3 text-white/90 text-center underline">
+									Xem album
+								</div>
+							</>
+						)}
 					</div>
 
 					{showDescription && (

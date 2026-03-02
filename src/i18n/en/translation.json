@@ -9,7 +9,8 @@
 	"cover": {
 		"saveTheDate": "SAVE THE DATE",
 		"date": "11:00 AM, April 11, 2026",
-		"venue": "NATIONAL CONVENTION CENTER"
+		"venue": "NATIONAL CONVENTION CENTER",
+		"names": "Hoàng & Ngân"
 	},
 	"ourStory": {
 		"greeting": "Dear family & friends",
@@ -126,7 +127,8 @@
 	},
 	"contact": {
 		"message": "Our love story will be complete with your presence on our special day!\nFor any questions about the celebration, please contact Hoàng & Ngân and family directly.",
-		"phone": "(+84) 978-662-863"
+		"phone": "(+84) 978-662-863",
+		"togetherAlways": "Together always"
 	},
 	"invitation": {
 		"title": "DEAR FAMILY & FRIENDS",
