@@ -160,7 +160,7 @@ export function StackedCarousel({
 
 			{/* Visible stacked cards with swipe */}
 			<div
-				className={`relative h-110 flex items-center justify-center touch-pan-y ${
+				className={`relative h-110 flex items-center justify-center touch-pan-y overflow-hidden ${
 					isDragging ? 'cursor-grabbing' : 'cursor-grab'
 				}`}
 				onTouchStart={handleTouchStart}
