@@ -263,7 +263,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							top: '80%',
 							left: '15%',
 							right: '15%',
-							fontSize: 'clamp(0.6rem, 1.2vw, 0.9rem)',
+							fontSize: 'clamp(0.6rem, 1.5vw, 2.3rem)',
 							zIndex: 4,
 							opacity: isLifted ? 0 : undefined,
 							animation:
