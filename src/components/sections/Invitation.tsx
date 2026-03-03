@@ -60,7 +60,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 
 	return (
 		<section
-			className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-white pt-0 md:pt-20"
+			className="relative flex flex-col items-center justify-center overflow-hidden bg-white pt-10 md:pt-20"
 			style={{
 				opacity: isDismissing ? 0 : 1,
 				pointerEvents: isDismissing ? 'none' : 'auto',
@@ -222,7 +222,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							top: '28%',
 							left: '18%',
 							right: '18%',
-							fontSize: 'clamp(0.8rem, 2vw, 1.5rem)',
+							fontSize: 'clamp(0.7rem, 2vw, 1.5rem)',
 							zIndex: 4,
 							opacity: isLifted ? 0 : 1,
 							transition: 'opacity 350ms ease',
