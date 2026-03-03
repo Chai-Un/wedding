@@ -60,7 +60,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 
 	return (
 		<section
-			className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-white pt-20"
+			className="min-h-screen relative flex flex-col items-center justify-center overflow-hidden bg-white pt-0 md:pt-20"
 			style={{
 				opacity: isDismissing ? 0 : 1,
 				pointerEvents: isDismissing ? 'none' : 'auto',
@@ -81,18 +81,18 @@ export default function Invitation({ onOpen }: InvitationProps) {
 
 			{/* Content layer */}
 			<div className="relative z-10 flex flex-col items-center w-full">
-			<div className='w-45 h-45'>
+			<div className='w-36 h-36 md:w-45 md:h-45'>
 				<ResponsiveImage src="logo.jpg" alt="" className='w-full h-full' loading="eager" />
 			</div>
 			{/* ── Letter text above the envelope ── */}
-			<div className="w-full max-w-5xl mx-auto px-6 md:px-12 text-center mb-8 md:mb-10 mt-10">
+			<div className="w-full max-w-5xl mx-auto px-6 md:px-12 text-center md:mb-8 md:my-10 mt-4 mb-4">
 				{/* Title */}
 				<div className="font-hoangngan7 tracking-[0.2em] uppercase text-[#3d2b1a] text-base md:text-xl lg:text-2xl mb-6 md:mb-10">
 					{t('invitation.title')}
 				</div>
 
 				{/* Message body */}
-				<div className="font-hoangngan4 text-[#4a3520] leading-relaxed whitespace-pre-line text-sm md:text-base mb-5 md:mb-7 text-center">
+				<div className="font-hoangngan4 text-[#4a3520] leading-relaxed whitespace-pre-line text-xs md:text-base mb-5 md:mb-7 text-center">
 					{t('invitation.message')}
 				</div>
 
@@ -263,7 +263,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							top: '80%',
 							left: '15%',
 							right: '15%',
-							fontSize: 'clamp(0.45rem, 1.2vw, 0.9rem)',
+							fontSize: 'clamp(0.6rem, 1.2vw, 0.9rem)',
 							zIndex: 4,
 							opacity: isLifted ? 0 : undefined,
 							animation:
