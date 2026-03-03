@@ -21,9 +21,32 @@ export function OverlapCarousel({
 	const [emblaRef, emblaApi] = useEmblaCarousel(
 		{ loop: true },
 		autoPlay
-			? [Autoplay({ delay: autoplayDelay, stopOnInteraction: true, stopOnMouseEnter: true })]
+			? [Autoplay({ delay: autoplayDelay, stopOnInteraction: false, stopOnMouseEnter: false })]
 			: [],
 	);
+
+	const resumeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+	/** Stop autoplay and restart it after 5 seconds of inactivity */
+	const pauseAndScheduleResume = React.useCallback(() => {
+		const autoplay = emblaApi?.plugins()?.autoplay as
+			| { stop: () => void; play: () => void }
+			| undefined;
+		if (!autoplay) return;
+
+		autoplay.stop();
+
+		if (resumeTimer.current) clearTimeout(resumeTimer.current);
+		resumeTimer.current = setTimeout(() => {
+			autoplay.play();
+		}, 5000);
+	}, [emblaApi]);
+
+	React.useEffect(() => {
+		return () => {
+			if (resumeTimer.current) clearTimeout(resumeTimer.current);
+		};
+	}, []);
 
 	React.useEffect(() => {
 		if (!emblaApi) return;
@@ -42,14 +65,17 @@ export function OverlapCarousel({
 
 	const handleDotClick = (index: number) => {
 		emblaApi?.scrollTo(index);
+		pauseAndScheduleResume();
 	};
 
 	const handlePrev = () => {
 		emblaApi?.scrollPrev();
+		pauseAndScheduleResume();
 	};
 
 	const handleNext = () => {
 		emblaApi?.scrollNext();
+		pauseAndScheduleResume();
 	};
 
 	/** Get circular offset from activeIndex */
@@ -76,7 +102,7 @@ export function OverlapCarousel({
 			</div>
 
 			{/* Visible 3-card overlap stack */}
-			<div className="relative w-full flex items-center justify-center" style={{ height: '520px' }}>
+			<div className="relative w-full flex items-center justify-center overflow-hidden" style={{ height: '520px' }}>
 				{/* Prev / Next click zones */}
 				<button
 					onClick={handlePrev}
@@ -104,10 +130,10 @@ export function OverlapCarousel({
 							style={{
 								transform: isActive
 									? 'translateX(0) scale(1)'
-									: `translateX(${offset * 50}%) scale(0.85)`,
+									: `translateX(${offset * 80}%) scale(0.9)`,
 								zIndex: isActive ? 3 : 2,
-								opacity: isActive ? 1 : 0.6,
-								filter: isActive ? 'none' : 'blur(3px)',
+								opacity: isActive ? 1 : 0.5,
+								filter: isActive ? 'none' : 'blur(2px)',
 								pointerEvents: isActive ? 'auto' : 'none',
 							}}
 						>

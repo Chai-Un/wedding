@@ -35,7 +35,7 @@ export default function PolaroidPhoto({
 			className={`bg-[#fbf7ee] p-2 md:p-4 pb-1 md:pb-2 transition-all duration-300 inline-block hover:z-50 ${
 				isVertical
 					? 'h-95 w-auto md:h-auto md:w-auto'
-					: 'w-[calc(100vw-32px)] md:w-auto'
+					: 'w-[calc(100vw-45px)] md:w-auto'
 			}`}
 			style={{
 				transform: `rotate(${rotation}deg)`,

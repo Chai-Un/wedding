@@ -25,9 +25,32 @@ export function StackedCarousel({
 	const [emblaRef, emblaApi] = useEmblaCarousel(
 		{ loop: true },
 		autoPlay
-			? [Autoplay({ delay: autoplayDelay, stopOnInteraction: true, stopOnMouseEnter: true })]
+			? [Autoplay({ delay: autoplayDelay, stopOnInteraction: false, stopOnMouseEnter: false })]
 			: []
 	);
+
+	const resumeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+	/** Stop autoplay and restart it after 5 seconds of inactivity */
+	const pauseAndScheduleResume = React.useCallback(() => {
+		const autoplay = emblaApi?.plugins()?.autoplay as
+			| { stop: () => void; play: () => void }
+			| undefined;
+		if (!autoplay) return;
+
+		autoplay.stop();
+
+		if (resumeTimer.current) clearTimeout(resumeTimer.current);
+		resumeTimer.current = setTimeout(() => {
+			autoplay.play();
+		}, 5000);
+	}, [emblaApi]);
+
+	React.useEffect(() => {
+		return () => {
+			if (resumeTimer.current) clearTimeout(resumeTimer.current);
+		};
+	}, []);
 
 	React.useEffect(() => {
 		if (!emblaApi) return;
@@ -46,6 +69,7 @@ export function StackedCarousel({
 
 	const handleDotClick = (index: number) => {
 		emblaApi?.scrollTo(index);
+		pauseAndScheduleResume();
 	};
 
 	const handleTouchStart = (e: React.TouchEvent) => {
@@ -83,6 +107,7 @@ export function StackedCarousel({
 		
 		setIsDragging(false);
 		isDraggingRef.current = false;
+		pauseAndScheduleResume();
 	};
 
 	// Mouse/pointer events for tablet/hybrid devices
@@ -119,6 +144,7 @@ export function StackedCarousel({
 		setIsDragging(false);
 		isDraggingRef.current = false;
 		e.currentTarget.releasePointerCapture(e.pointerId);
+		pauseAndScheduleResume();
 	};
 
 	return (
