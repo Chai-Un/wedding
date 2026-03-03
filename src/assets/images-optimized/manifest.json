@@ -1,0 +1,3393 @@
+[
+  {
+    "original": "envelope/eiffel.png",
+    "orientation": "portrait",
+    "preset": "decorative",
+    "originalSize": "518×800",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "130×200",
+        "webp": "envelope/eiffel-sm.webp",
+        "png": "envelope/eiffel-sm.png",
+        "webpKB": 18,
+        "pngKB": 24
+      },
+      {
+        "size": "md",
+        "dimensions": "259×400",
+        "webp": "envelope/eiffel-md.webp",
+        "png": "envelope/eiffel-md.png",
+        "webpKB": 51,
+        "pngKB": 72
+      },
+      {
+        "size": "lg",
+        "dimensions": "518×800",
+        "webp": "envelope/eiffel-lg.webp",
+        "png": "envelope/eiffel-lg.png",
+        "webpKB": 59,
+        "pngKB": 83
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope.png",
+    "orientation": "landscape",
+    "preset": "decorative",
+    "originalSize": "1228×819",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×133",
+        "webp": "envelope/envelope-sm.webp",
+        "png": "envelope/envelope-sm.png",
+        "webpKB": 2,
+        "pngKB": 21
+      },
+      {
+        "size": "md",
+        "dimensions": "400×267",
+        "webp": "envelope/envelope-md.webp",
+        "png": "envelope/envelope-md.png",
+        "webpKB": 4,
+        "pngKB": 80
+      },
+      {
+        "size": "lg",
+        "dimensions": "800×534",
+        "webp": "envelope/envelope-lg.webp",
+        "png": "envelope/envelope-lg.png",
+        "webpKB": 11,
+        "pngKB": 341
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope_open.png",
+    "orientation": "landscape",
+    "preset": "decorative",
+    "originalSize": "1536×1024",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×133",
+        "webp": "envelope/envelope_open-sm.webp",
+        "png": "envelope/envelope_open-sm.png",
+        "webpKB": 4,
+        "pngKB": 26
+      },
+      {
+        "size": "md",
+        "dimensions": "400×267",
+        "webp": "envelope/envelope_open-md.webp",
+        "png": "envelope/envelope_open-md.png",
+        "webpKB": 10,
+        "pngKB": 94
+      },
+      {
+        "size": "lg",
+        "dimensions": "800×533",
+        "webp": "envelope/envelope_open-lg.webp",
+        "png": "envelope/envelope_open-lg.png",
+        "webpKB": 28,
+        "pngKB": 375
+      }
+    ]
+  },
+  {
+    "original": "envelope/flower.png",
+    "orientation": "portrait",
+    "preset": "decorative",
+    "originalSize": "525×800",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "131×200",
+        "webp": "envelope/flower-sm.webp",
+        "png": "envelope/flower-sm.png",
+        "webpKB": 11,
+        "pngKB": 29
+      },
+      {
+        "size": "md",
+        "dimensions": "263×400",
+        "webp": "envelope/flower-md.webp",
+        "png": "envelope/flower-md.png",
+        "webpKB": 27,
+        "pngKB": 98
+      },
+      {
+        "size": "lg",
+        "dimensions": "525×800",
+        "webp": "envelope/flower-lg.webp",
+        "png": "envelope/flower-lg.png",
+        "webpKB": 70,
+        "pngKB": 354
+      }
+    ]
+  },
+  {
+    "original": "envelope/single_flower.png",
+    "orientation": "portrait",
+    "preset": "decorative",
+    "originalSize": "320×799",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "80×200",
+        "webp": "envelope/single_flower-sm.webp",
+        "png": "envelope/single_flower-sm.png",
+        "webpKB": 5,
+        "pngKB": 15
+      },
+      {
+        "size": "md",
+        "dimensions": "160×400",
+        "webp": "envelope/single_flower-md.webp",
+        "png": "envelope/single_flower-md.png",
+        "webpKB": 12,
+        "pngKB": 51
+      },
+      {
+        "size": "lg",
+        "dimensions": "320×799",
+        "webp": "envelope/single_flower-lg.webp",
+        "png": "envelope/single_flower-lg.png",
+        "webpKB": 32,
+        "pngKB": 209
+      }
+    ]
+  },
+  {
+    "original": "envelope/stamp_one.png",
+    "orientation": "portrait",
+    "preset": "decorative",
+    "originalSize": "592×799",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "148×200",
+        "webp": "envelope/stamp_one-sm.webp",
+        "png": "envelope/stamp_one-sm.png",
+        "webpKB": 7,
+        "pngKB": 44
+      },
+      {
+        "size": "md",
+        "dimensions": "296×400",
+        "webp": "envelope/stamp_one-md.webp",
+        "png": "envelope/stamp_one-md.png",
+        "webpKB": 16,
+        "pngKB": 163
+      },
+      {
+        "size": "lg",
+        "dimensions": "592×799",
+        "webp": "envelope/stamp_one-lg.webp",
+        "png": "envelope/stamp_one-lg.png",
+        "webpKB": 42,
+        "pngKB": 644
+      }
+    ]
+  },
+  {
+    "original": "envelope/stamp_three.png",
+    "orientation": "landscape",
+    "preset": "decorative",
+    "originalSize": "800×322",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×81",
+        "webp": "envelope/stamp_three-sm.webp",
+        "png": "envelope/stamp_three-sm.png",
+        "webpKB": 12,
+        "pngKB": 14
+      },
+      {
+        "size": "md",
+        "dimensions": "400×161",
+        "webp": "envelope/stamp_three-md.webp",
+        "png": "envelope/stamp_three-md.png",
+        "webpKB": 32,
+        "pngKB": 46
+      },
+      {
+        "size": "lg",
+        "dimensions": "800×322",
+        "webp": "envelope/stamp_three-lg.webp",
+        "png": "envelope/stamp_three-lg.png",
+        "webpKB": 30,
+        "pngKB": 44
+      }
+    ]
+  },
+  {
+    "original": "envelope/stamp_two.png",
+    "orientation": "portrait",
+    "preset": "decorative",
+    "originalSize": "557×800",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "139×200",
+        "webp": "envelope/stamp_two-sm.webp",
+        "png": "envelope/stamp_two-sm.png",
+        "webpKB": 7,
+        "pngKB": 40
+      },
+      {
+        "size": "md",
+        "dimensions": "279×400",
+        "webp": "envelope/stamp_two-md.webp",
+        "png": "envelope/stamp_two-md.png",
+        "webpKB": 23,
+        "pngKB": 130
+      },
+      {
+        "size": "lg",
+        "dimensions": "557×800",
+        "webp": "envelope/stamp_two-lg.webp",
+        "png": "envelope/stamp_two-lg.png",
+        "webpKB": 66,
+        "pngKB": 185
+      }
+    ]
+  },
+  {
+    "original": "envelope/wax_seal.png",
+    "orientation": "square",
+    "preset": "decorative",
+    "originalSize": "798×800",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×200",
+        "webp": "envelope/wax_seal-sm.webp",
+        "png": "envelope/wax_seal-sm.png",
+        "webpKB": 9,
+        "pngKB": 68
+      },
+      {
+        "size": "md",
+        "dimensions": "399×400",
+        "webp": "envelope/wax_seal-md.webp",
+        "png": "envelope/wax_seal-md.png",
+        "webpKB": 22,
+        "pngKB": 230
+      },
+      {
+        "size": "lg",
+        "dimensions": "798×800",
+        "webp": "envelope/wax_seal-lg.webp",
+        "png": "envelope/wax_seal-lg.png",
+        "webpKB": 57,
+        "pngKB": 785
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1550.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4359×6539",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1550-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1550-sm.jpg",
+        "webpKB": 9,
+        "jpgKB": 16
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1550-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1550-md.jpg",
+        "webpKB": 16,
+        "jpgKB": 28
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1550-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1550-lg.jpg",
+        "webpKB": 31,
+        "jpgKB": 57
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1579.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3840×5760",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1579-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1579-sm.jpg",
+        "webpKB": 13,
+        "jpgKB": 21
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1579-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1579-md.jpg",
+        "webpKB": 22,
+        "jpgKB": 38
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1579-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1579-lg.jpg",
+        "webpKB": 41,
+        "jpgKB": 75
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1583.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3840×5760",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1583-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1583-sm.jpg",
+        "webpKB": 13,
+        "jpgKB": 22
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1583-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1583-md.jpg",
+        "webpKB": 22,
+        "jpgKB": 39
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1583-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1583-lg.jpg",
+        "webpKB": 43,
+        "jpgKB": 78
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1622.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3840×5760",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1622-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1622-sm.jpg",
+        "webpKB": 10,
+        "jpgKB": 17
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1622-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1622-md.jpg",
+        "webpKB": 19,
+        "jpgKB": 31
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1622-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1622-lg.jpg",
+        "webpKB": 37,
+        "jpgKB": 63
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1628b.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3856×5784",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1628b-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1628b-sm.jpg",
+        "webpKB": 13,
+        "jpgKB": 22
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1628b-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1628b-md.jpg",
+        "webpKB": 22,
+        "jpgKB": 39
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1628b-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1628b-lg.jpg",
+        "webpKB": 43,
+        "jpgKB": 78
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1670.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3856×5784",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1670-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1670-sm.jpg",
+        "webpKB": 12,
+        "jpgKB": 20
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1670-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1670-md.jpg",
+        "webpKB": 21,
+        "jpgKB": 36
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1670-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1670-lg.jpg",
+        "webpKB": 39,
+        "jpgKB": 71
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1682.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3624×5436",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1682-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1682-sm.jpg",
+        "webpKB": 13,
+        "jpgKB": 22
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1682-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1682-md.jpg",
+        "webpKB": 22,
+        "jpgKB": 40
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1682-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1682-lg.jpg",
+        "webpKB": 42,
+        "jpgKB": 79
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1734.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4000×6000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1734-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1734-sm.jpg",
+        "webpKB": 14,
+        "jpgKB": 22
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1734-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1734-md.jpg",
+        "webpKB": 23,
+        "jpgKB": 40
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1734-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1734-lg.jpg",
+        "webpKB": 47,
+        "jpgKB": 83
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1752.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "5761×3841",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/becomeone/mievatho_NH1752-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1752-sm.jpg",
+        "webpKB": 13,
+        "jpgKB": 20
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/becomeone/mievatho_NH1752-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1752-md.jpg",
+        "webpKB": 22,
+        "jpgKB": 37
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/becomeone/mievatho_NH1752-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1752-lg.jpg",
+        "webpKB": 46,
+        "jpgKB": 76
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1764.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "5983×3989",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/becomeone/mievatho_NH1764-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1764-sm.jpg",
+        "webpKB": 11,
+        "jpgKB": 19
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/becomeone/mievatho_NH1764-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1764-md.jpg",
+        "webpKB": 20,
+        "jpgKB": 34
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/becomeone/mievatho_NH1764-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1764-lg.jpg",
+        "webpKB": 47,
+        "jpgKB": 74
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1787.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "5983×3989",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/becomeone/mievatho_NH1787-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1787-sm.jpg",
+        "webpKB": 12,
+        "jpgKB": 20
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/becomeone/mievatho_NH1787-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1787-md.jpg",
+        "webpKB": 20,
+        "jpgKB": 35
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/becomeone/mievatho_NH1787-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1787-lg.jpg",
+        "webpKB": 38,
+        "jpgKB": 69
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1832.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3989×5983",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1832-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1832-sm.jpg",
+        "webpKB": 16,
+        "jpgKB": 26
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1832-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1832-md.jpg",
+        "webpKB": 28,
+        "jpgKB": 46
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1832-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1832-lg.jpg",
+        "webpKB": 57,
+        "jpgKB": 93
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1866.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3857×5786",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1866-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1866-sm.jpg",
+        "webpKB": 17,
+        "jpgKB": 28
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1866-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1866-md.jpg",
+        "webpKB": 41,
+        "jpgKB": 54
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1866-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1866-lg.jpg",
+        "webpKB": 163,
+        "jpgKB": 167
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1904b.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4519×6779",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1904b-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1904b-sm.jpg",
+        "webpKB": 11,
+        "jpgKB": 19
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1904b-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1904b-md.jpg",
+        "webpKB": 19,
+        "jpgKB": 35
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1904b-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1904b-lg.jpg",
+        "webpKB": 40,
+        "jpgKB": 72
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1974.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3906×5859",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1974-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1974-sm.jpg",
+        "webpKB": 17,
+        "jpgKB": 26
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1974-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1974-md.jpg",
+        "webpKB": 29,
+        "jpgKB": 47
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1974-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1974-lg.jpg",
+        "webpKB": 101,
+        "jpgKB": 106
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH1998.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3906×5859",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH1998-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1998-sm.jpg",
+        "webpKB": 18,
+        "jpgKB": 30
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH1998-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1998-md.jpg",
+        "webpKB": 47,
+        "jpgKB": 59
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH1998-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH1998-lg.jpg",
+        "webpKB": 138,
+        "jpgKB": 157
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH2053.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3906×5859",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH2053-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH2053-sm.jpg",
+        "webpKB": 22,
+        "jpgKB": 20
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH2053-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH2053-md.jpg",
+        "webpKB": 85,
+        "jpgKB": 74
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH2053-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH2053-lg.jpg",
+        "webpKB": 210,
+        "jpgKB": 203
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH6645.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4429×6644",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH6645-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6645-sm.jpg",
+        "webpKB": 8,
+        "jpgKB": 15
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH6645-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6645-md.jpg",
+        "webpKB": 14,
+        "jpgKB": 27
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH6645-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6645-lg.jpg",
+        "webpKB": 27,
+        "jpgKB": 54
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH6801.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4434×6651",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH6801-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6801-sm.jpg",
+        "webpKB": 6,
+        "jpgKB": 11
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH6801-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6801-md.jpg",
+        "webpKB": 11,
+        "jpgKB": 20
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH6801-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6801-lg.jpg",
+        "webpKB": 23,
+        "jpgKB": 39
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH6968.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4816×7224",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH6968-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6968-sm.jpg",
+        "webpKB": 7,
+        "jpgKB": 13
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH6968-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6968-md.jpg",
+        "webpKB": 13,
+        "jpgKB": 24
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH6968-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6968-lg.jpg",
+        "webpKB": 25,
+        "jpgKB": 49
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH6977.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4672×7008",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH6977-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6977-sm.jpg",
+        "webpKB": 9,
+        "jpgKB": 18
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH6977-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6977-md.jpg",
+        "webpKB": 14,
+        "jpgKB": 32
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH6977-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH6977-lg.jpg",
+        "webpKB": 27,
+        "jpgKB": 65
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH7023.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4478×6717",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH7023-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7023-sm.jpg",
+        "webpKB": 8,
+        "jpgKB": 14
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH7023-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7023-md.jpg",
+        "webpKB": 14,
+        "jpgKB": 24
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH7023-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7023-lg.jpg",
+        "webpKB": 29,
+        "jpgKB": 50
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH7192.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4386×6579",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH7192-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7192-sm.jpg",
+        "webpKB": 10,
+        "jpgKB": 17
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH7192-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7192-md.jpg",
+        "webpKB": 17,
+        "jpgKB": 29
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH7192-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7192-lg.jpg",
+        "webpKB": 34,
+        "jpgKB": 60
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH7315.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4592×6888",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH7315-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7315-sm.jpg",
+        "webpKB": 10,
+        "jpgKB": 17
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH7315-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7315-md.jpg",
+        "webpKB": 18,
+        "jpgKB": 29
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH7315-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7315-lg.jpg",
+        "webpKB": 35,
+        "jpgKB": 61
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH7479.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3868×5802",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH7479-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7479-sm.jpg",
+        "webpKB": 18,
+        "jpgKB": 24
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH7479-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7479-md.jpg",
+        "webpKB": 33,
+        "jpgKB": 46
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH7479-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7479-lg.jpg",
+        "webpKB": 66,
+        "jpgKB": 95
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH7492.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4427×6641",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH7492-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7492-sm.jpg",
+        "webpKB": 16,
+        "jpgKB": 22
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH7492-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7492-md.jpg",
+        "webpKB": 27,
+        "jpgKB": 41
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH7492-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7492-lg.jpg",
+        "webpKB": 54,
+        "jpgKB": 84
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH7776.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6792×4528",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/becomeone/mievatho_NH7776-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7776-sm.jpg",
+        "webpKB": 16,
+        "jpgKB": 24
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/becomeone/mievatho_NH7776-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7776-md.jpg",
+        "webpKB": 29,
+        "jpgKB": 43
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/becomeone/mievatho_NH7776-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7776-lg.jpg",
+        "webpKB": 60,
+        "jpgKB": 92
+      }
+    ]
+  },
+  {
+    "original": "gallery/becomeone/mievatho_NH7920.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4443×6665",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/becomeone/mievatho_NH7920-sm.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7920-sm.jpg",
+        "webpKB": 10,
+        "jpgKB": 15
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/becomeone/mievatho_NH7920-md.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7920-md.jpg",
+        "webpKB": 19,
+        "jpgKB": 28
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/becomeone/mievatho_NH7920-lg.webp",
+        "jpg": "gallery/becomeone/mievatho_NH7920-lg.jpg",
+        "webpKB": 38,
+        "jpgKB": 58
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH4222.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "7008×4672",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/heartofhanoi/mievatho_NH4222-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4222-sm.jpg",
+        "webpKB": 64,
+        "jpgKB": 78
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH4222-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4222-md.jpg",
+        "webpKB": 102,
+        "jpgKB": 140
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/heartofhanoi/mievatho_NH4222-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4222-lg.jpg",
+        "webpKB": 193,
+        "jpgKB": 279
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH4259.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4573×6860",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH4259-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4259-sm.jpg",
+        "webpKB": 99,
+        "jpgKB": 105
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/heartofhanoi/mievatho_NH4259-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4259-md.jpg",
+        "webpKB": 173,
+        "jpgKB": 199
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/heartofhanoi/mievatho_NH4259-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4259-lg.jpg",
+        "webpKB": 340,
+        "jpgKB": 415
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH4407.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4573×6860",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH4407-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4407-sm.jpg",
+        "webpKB": 62,
+        "jpgKB": 75
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/heartofhanoi/mievatho_NH4407-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4407-md.jpg",
+        "webpKB": 115,
+        "jpgKB": 146
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/heartofhanoi/mievatho_NH4407-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4407-lg.jpg",
+        "webpKB": 260,
+        "jpgKB": 332
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH4427.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6654×4436",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/heartofhanoi/mievatho_NH4427-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4427-sm.jpg",
+        "webpKB": 49,
+        "jpgKB": 64
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH4427-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4427-md.jpg",
+        "webpKB": 89,
+        "jpgKB": 125
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/heartofhanoi/mievatho_NH4427-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4427-lg.jpg",
+        "webpKB": 198,
+        "jpgKB": 281
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH4539.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4534×6801",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH4539-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4539-sm.jpg",
+        "webpKB": 46,
+        "jpgKB": 61
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/heartofhanoi/mievatho_NH4539-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4539-md.jpg",
+        "webpKB": 82,
+        "jpgKB": 114
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/heartofhanoi/mievatho_NH4539-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4539-lg.jpg",
+        "webpKB": 170,
+        "jpgKB": 243
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH4567.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4277×6416",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH4567-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4567-sm.jpg",
+        "webpKB": 55,
+        "jpgKB": 72
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/heartofhanoi/mievatho_NH4567-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4567-md.jpg",
+        "webpKB": 107,
+        "jpgKB": 143
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/heartofhanoi/mievatho_NH4567-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4567-lg.jpg",
+        "webpKB": 253,
+        "jpgKB": 333
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH4910.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3721×5582",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH4910-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4910-sm.jpg",
+        "webpKB": 32,
+        "jpgKB": 42
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/heartofhanoi/mievatho_NH4910-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4910-md.jpg",
+        "webpKB": 64,
+        "jpgKB": 84
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/heartofhanoi/mievatho_NH4910-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH4910-lg.jpg",
+        "webpKB": 148,
+        "jpgKB": 192
+      }
+    ]
+  },
+  {
+    "original": "gallery/heartofhanoi/mievatho_NH5038.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4449×6673",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/heartofhanoi/mievatho_NH5038-sm.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH5038-sm.jpg",
+        "webpKB": 45,
+        "jpgKB": 57
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/heartofhanoi/mievatho_NH5038-md.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH5038-md.jpg",
+        "webpKB": 80,
+        "jpgKB": 106
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/heartofhanoi/mievatho_NH5038-lg.webp",
+        "jpg": "gallery/heartofhanoi/mievatho_NH5038-lg.jpg",
+        "webpKB": 154,
+        "jpgKB": 219
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0014.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3903×5854",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0014-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0014-sm.jpg",
+        "webpKB": 45,
+        "jpgKB": 60
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0014-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0014-md.jpg",
+        "webpKB": 82,
+        "jpgKB": 111
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0014-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0014-lg.jpg",
+        "webpKB": 162,
+        "jpgKB": 228
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0056.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3270×4905",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0056-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0056-sm.jpg",
+        "webpKB": 65,
+        "jpgKB": 76
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0056-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0056-md.jpg",
+        "webpKB": 122,
+        "jpgKB": 148
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0056-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0056-lg.jpg",
+        "webpKB": 258,
+        "jpgKB": 320
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0203.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3846×5769",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0203-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0203-sm.jpg",
+        "webpKB": 41,
+        "jpgKB": 52
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0203-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0203-md.jpg",
+        "webpKB": 76,
+        "jpgKB": 99
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0203-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0203-lg.jpg",
+        "webpKB": 159,
+        "jpgKB": 211
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0214.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3900×5850",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0214-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0214-sm.jpg",
+        "webpKB": 38,
+        "jpgKB": 51
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0214-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0214-md.jpg",
+        "webpKB": 68,
+        "jpgKB": 95
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0214-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0214-lg.jpg",
+        "webpKB": 132,
+        "jpgKB": 196
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0359.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3825×5737",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0359-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0359-sm.jpg",
+        "webpKB": 59,
+        "jpgKB": 71
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0359-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0359-md.jpg",
+        "webpKB": 110,
+        "jpgKB": 138
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0359-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0359-lg.jpg",
+        "webpKB": 234,
+        "jpgKB": 301
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0428.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3900×5850",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0428-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0428-sm.jpg",
+        "webpKB": 22,
+        "jpgKB": 34
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0428-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0428-md.jpg",
+        "webpKB": 43,
+        "jpgKB": 65
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0428-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0428-lg.jpg",
+        "webpKB": 94,
+        "jpgKB": 141
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0532.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3764×5647",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0532-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0532-sm.jpg",
+        "webpKB": 67,
+        "jpgKB": 75
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0532-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0532-md.jpg",
+        "webpKB": 135,
+        "jpgKB": 151
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0532-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0532-lg.jpg",
+        "webpKB": 322,
+        "jpgKB": 352
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0545.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3669×5503",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0545-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0545-sm.jpg",
+        "webpKB": 33,
+        "jpgKB": 47
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0545-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0545-md.jpg",
+        "webpKB": 57,
+        "jpgKB": 86
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0545-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0545-lg.jpg",
+        "webpKB": 106,
+        "jpgKB": 175
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH0592.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3924×5886",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH0592-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0592-sm.jpg",
+        "webpKB": 28,
+        "jpgKB": 43
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH0592-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0592-md.jpg",
+        "webpKB": 47,
+        "jpgKB": 76
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH0592-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH0592-lg.jpg",
+        "webpKB": 88,
+        "jpgKB": 151
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2421.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4672×7008",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2421-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2421-sm.jpg",
+        "webpKB": 51,
+        "jpgKB": 65
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH2421-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2421-md.jpg",
+        "webpKB": 88,
+        "jpgKB": 119
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH2421-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2421-lg.jpg",
+        "webpKB": 175,
+        "jpgKB": 246
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2468.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6444×4296",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH2468-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2468-sm.jpg",
+        "webpKB": 98,
+        "jpgKB": 98
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2468-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2468-md.jpg",
+        "webpKB": 181,
+        "jpgKB": 193
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH2468-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2468-lg.jpg",
+        "webpKB": 384,
+        "jpgKB": 427
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2572.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4618×6927",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2572-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2572-sm.jpg",
+        "webpKB": 105,
+        "jpgKB": 106
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH2572-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2572-md.jpg",
+        "webpKB": 198,
+        "jpgKB": 213
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH2572-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2572-lg.jpg",
+        "webpKB": 404,
+        "jpgKB": 468
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2714.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4380×6570",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2714-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2714-sm.jpg",
+        "webpKB": 121,
+        "jpgKB": 116
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH2714-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2714-md.jpg",
+        "webpKB": 227,
+        "jpgKB": 231
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH2714-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2714-lg.jpg",
+        "webpKB": 472,
+        "jpgKB": 514
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2760.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6809×4539",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH2760-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2760-sm.jpg",
+        "webpKB": 100,
+        "jpgKB": 104
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2760-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2760-md.jpg",
+        "webpKB": 190,
+        "jpgKB": 205
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH2760-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2760-lg.jpg",
+        "webpKB": 424,
+        "jpgKB": 469
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2814.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6570×4380",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH2814-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2814-sm.jpg",
+        "webpKB": 99,
+        "jpgKB": 103
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2814-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2814-md.jpg",
+        "webpKB": 182,
+        "jpgKB": 200
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH2814-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2814-lg.jpg",
+        "webpKB": 384,
+        "jpgKB": 440
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2930.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4380×6570",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2930-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2930-sm.jpg",
+        "webpKB": 33,
+        "jpgKB": 47
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH2930-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2930-md.jpg",
+        "webpKB": 58,
+        "jpgKB": 86
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH2930-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2930-lg.jpg",
+        "webpKB": 129,
+        "jpgKB": 183
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH2984.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4272×6408",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH2984-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2984-sm.jpg",
+        "webpKB": 122,
+        "jpgKB": 117
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH2984-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2984-md.jpg",
+        "webpKB": 235,
+        "jpgKB": 235
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH2984-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH2984-lg.jpg",
+        "webpKB": 506,
+        "jpgKB": 533
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3135.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6934×4623",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH3135-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3135-sm.jpg",
+        "webpKB": 64,
+        "jpgKB": 74
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3135-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3135-md.jpg",
+        "webpKB": 124,
+        "jpgKB": 146
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH3135-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3135-lg.jpg",
+        "webpKB": 285,
+        "jpgKB": 334
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3236.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6223×4149",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH3236-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3236-sm.jpg",
+        "webpKB": 72,
+        "jpgKB": 85
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3236-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3236-md.jpg",
+        "webpKB": 122,
+        "jpgKB": 158
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH3236-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3236-lg.jpg",
+        "webpKB": 229,
+        "jpgKB": 326
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3279.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4115×6173",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3279-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3279-sm.jpg",
+        "webpKB": 72,
+        "jpgKB": 84
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH3279-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3279-md.jpg",
+        "webpKB": 128,
+        "jpgKB": 156
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH3279-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3279-lg.jpg",
+        "webpKB": 251,
+        "jpgKB": 328
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3312.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4672×7008",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3312-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3312-sm.jpg",
+        "webpKB": 64,
+        "jpgKB": 78
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH3312-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3312-md.jpg",
+        "webpKB": 106,
+        "jpgKB": 141
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH3312-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3312-lg.jpg",
+        "webpKB": 204,
+        "jpgKB": 288
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3341.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4589×6884",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3341-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3341-sm.jpg",
+        "webpKB": 68,
+        "jpgKB": 82
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH3341-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3341-md.jpg",
+        "webpKB": 115,
+        "jpgKB": 150
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH3341-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3341-lg.jpg",
+        "webpKB": 224,
+        "jpgKB": 310
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3466.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6974×4649",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH3466-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3466-sm.jpg",
+        "webpKB": 51,
+        "jpgKB": 62
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3466-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3466-md.jpg",
+        "webpKB": 87,
+        "jpgKB": 115
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH3466-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3466-lg.jpg",
+        "webpKB": 172,
+        "jpgKB": 241
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3549.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4320×6480",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3549-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3549-sm.jpg",
+        "webpKB": 84,
+        "jpgKB": 93
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH3549-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3549-md.jpg",
+        "webpKB": 147,
+        "jpgKB": 174
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH3549-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3549-lg.jpg",
+        "webpKB": 286,
+        "jpgKB": 367
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3644.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "7008×4672",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH3644-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3644-sm.jpg",
+        "webpKB": 26,
+        "jpgKB": 40
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3644-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3644-md.jpg",
+        "webpKB": 46,
+        "jpgKB": 75
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH3644-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3644-lg.jpg",
+        "webpKB": 96,
+        "jpgKB": 160
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3736.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4458×6686",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3736-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3736-sm.jpg",
+        "webpKB": 40,
+        "jpgKB": 56
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH3736-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3736-md.jpg",
+        "webpKB": 71,
+        "jpgKB": 104
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH3736-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3736-lg.jpg",
+        "webpKB": 144,
+        "jpgKB": 222
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3792.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "7008×4672",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH3792-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3792-sm.jpg",
+        "webpKB": 31,
+        "jpgKB": 47
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3792-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3792-md.jpg",
+        "webpKB": 59,
+        "jpgKB": 91
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH3792-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3792-lg.jpg",
+        "webpKB": 128,
+        "jpgKB": 210
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3872.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "7008×4672",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH3872-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3872-sm.jpg",
+        "webpKB": 28,
+        "jpgKB": 42
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3872-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3872-md.jpg",
+        "webpKB": 49,
+        "jpgKB": 77
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH3872-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3872-lg.jpg",
+        "webpKB": 93,
+        "jpgKB": 157
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3917.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6612×4384",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×530",
+        "webp": "gallery/ngaynangve/mievatho_NH3917-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3917-sm.jpg",
+        "webpKB": 69,
+        "jpgKB": 76
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×796",
+        "webp": "gallery/ngaynangve/mievatho_NH3917-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3917-md.jpg",
+        "webpKB": 129,
+        "jpgKB": 147
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1273",
+        "webp": "gallery/ngaynangve/mievatho_NH3917-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3917-lg.jpg",
+        "webpKB": 279,
+        "jpgKB": 325
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH3982.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4638×6957",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH3982-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3982-sm.jpg",
+        "webpKB": 71,
+        "jpgKB": 82
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH3982-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3982-md.jpg",
+        "webpKB": 121,
+        "jpgKB": 150
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH3982-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH3982-lg.jpg",
+        "webpKB": 231,
+        "jpgKB": 310
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH4065.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "6677×4451",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/ngaynangve/mievatho_NH4065-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH4065-sm.jpg",
+        "webpKB": 124,
+        "jpgKB": 118
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/ngaynangve/mievatho_NH4065-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH4065-md.jpg",
+        "webpKB": 246,
+        "jpgKB": 242
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/ngaynangve/mievatho_NH4065-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH4065-lg.jpg",
+        "webpKB": 566,
+        "jpgKB": 563
+      }
+    ]
+  },
+  {
+    "original": "gallery/ngaynangve/mievatho_NH4172.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4451×6677",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/ngaynangve/mievatho_NH4172-sm.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH4172-sm.jpg",
+        "webpKB": 70,
+        "jpgKB": 80
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/ngaynangve/mievatho_NH4172-md.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH4172-md.jpg",
+        "webpKB": 120,
+        "jpgKB": 148
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/ngaynangve/mievatho_NH4172-lg.webp",
+        "jpg": "gallery/ngaynangve/mievatho_NH4172-lg.jpg",
+        "webpKB": 242,
+        "jpgKB": 312
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH0954.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4000×6000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH0954-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH0954-sm.jpg",
+        "webpKB": 41,
+        "jpgKB": 54
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH0954-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH0954-md.jpg",
+        "webpKB": 73,
+        "jpgKB": 99
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH0954-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH0954-lg.jpg",
+        "webpKB": 155,
+        "jpgKB": 213
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH1048.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4000×6000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH1048-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1048-sm.jpg",
+        "webpKB": 79,
+        "jpgKB": 84
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH1048-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1048-md.jpg",
+        "webpKB": 146,
+        "jpgKB": 163
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH1048-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1048-lg.jpg",
+        "webpKB": 303,
+        "jpgKB": 356
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH1116.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "3487×5229",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH1116-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1116-sm.jpg",
+        "webpKB": 82,
+        "jpgKB": 89
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH1116-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1116-md.jpg",
+        "webpKB": 152,
+        "jpgKB": 174
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH1116-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1116-lg.jpg",
+        "webpKB": 300,
+        "jpgKB": 364
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH1381.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4000×6000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH1381-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1381-sm.jpg",
+        "webpKB": 95,
+        "jpgKB": 96
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH1381-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1381-md.jpg",
+        "webpKB": 182,
+        "jpgKB": 191
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH1381-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1381-lg.jpg",
+        "webpKB": 400,
+        "jpgKB": 439
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH1487.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4000×6000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH1487-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1487-sm.jpg",
+        "webpKB": 20,
+        "jpgKB": 32
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH1487-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1487-md.jpg",
+        "webpKB": 36,
+        "jpgKB": 59
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH1487-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1487-lg.jpg",
+        "webpKB": 81,
+        "jpgKB": 128
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH1504.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4000×6000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH1504-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1504-sm.jpg",
+        "webpKB": 66,
+        "jpgKB": 74
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH1504-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1504-md.jpg",
+        "webpKB": 124,
+        "jpgKB": 144
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH1504-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1504-lg.jpg",
+        "webpKB": 273,
+        "jpgKB": 325
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH1525.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4000×6000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH1525-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1525-sm.jpg",
+        "webpKB": 17,
+        "jpgKB": 29
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH1525-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1525-md.jpg",
+        "webpKB": 30,
+        "jpgKB": 49
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH1525-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH1525-lg.jpg",
+        "webpKB": 57,
+        "jpgKB": 96
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH5150.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4229×6343",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH5150-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH5150-sm.jpg",
+        "webpKB": 109,
+        "jpgKB": 108
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH5150-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH5150-md.jpg",
+        "webpKB": 198,
+        "jpgKB": 209
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH5150-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH5150-lg.jpg",
+        "webpKB": 409,
+        "jpgKB": 455
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH5455.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4600×6532",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "563×800",
+        "webp": "gallery/redamancy/mievatho_NH5455-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH5455-sm.jpg",
+        "webpKB": 101,
+        "jpgKB": 100
+      },
+      {
+        "size": "md",
+        "dimensions": "845×1200",
+        "webp": "gallery/redamancy/mievatho_NH5455-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH5455-md.jpg",
+        "webpKB": 183,
+        "jpgKB": 195
+      },
+      {
+        "size": "lg",
+        "dimensions": "1352×1920",
+        "webp": "gallery/redamancy/mievatho_NH5455-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH5455-lg.jpg",
+        "webpKB": 364,
+        "jpgKB": 418
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH6232.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "7008×4672",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/redamancy/mievatho_NH6232-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6232-sm.jpg",
+        "webpKB": 110,
+        "jpgKB": 105
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/redamancy/mievatho_NH6232-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6232-md.jpg",
+        "webpKB": 210,
+        "jpgKB": 211
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/redamancy/mievatho_NH6232-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6232-lg.jpg",
+        "webpKB": 449,
+        "jpgKB": 477
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH6309.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "5806×3871",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/redamancy/mievatho_NH6309-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6309-sm.jpg",
+        "webpKB": 111,
+        "jpgKB": 105
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/redamancy/mievatho_NH6309-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6309-md.jpg",
+        "webpKB": 224,
+        "jpgKB": 221
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/redamancy/mievatho_NH6309-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6309-lg.jpg",
+        "webpKB": 485,
+        "jpgKB": 501
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH6389.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4556×6834",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH6389-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6389-sm.jpg",
+        "webpKB": 76,
+        "jpgKB": 81
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH6389-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6389-md.jpg",
+        "webpKB": 135,
+        "jpgKB": 156
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH6389-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6389-lg.jpg",
+        "webpKB": 276,
+        "jpgKB": 333
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH6514.jpg",
+    "orientation": "landscape",
+    "preset": "gallery",
+    "originalSize": "7008×4672",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "800×533",
+        "webp": "gallery/redamancy/mievatho_NH6514-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6514-sm.jpg",
+        "webpKB": 52,
+        "jpgKB": 65
+      },
+      {
+        "size": "md",
+        "dimensions": "1200×800",
+        "webp": "gallery/redamancy/mievatho_NH6514-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6514-md.jpg",
+        "webpKB": 93,
+        "jpgKB": 123
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1280",
+        "webp": "gallery/redamancy/mievatho_NH6514-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6514-lg.jpg",
+        "webpKB": 201,
+        "jpgKB": 266
+      }
+    ]
+  },
+  {
+    "original": "gallery/redamancy/mievatho_NH6575.jpg",
+    "orientation": "portrait",
+    "preset": "gallery",
+    "originalSize": "4672×7008",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "533×800",
+        "webp": "gallery/redamancy/mievatho_NH6575-sm.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6575-sm.jpg",
+        "webpKB": 25,
+        "jpgKB": 39
+      },
+      {
+        "size": "md",
+        "dimensions": "800×1200",
+        "webp": "gallery/redamancy/mievatho_NH6575-md.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6575-md.jpg",
+        "webpKB": 41,
+        "jpgKB": 70
+      },
+      {
+        "size": "lg",
+        "dimensions": "1280×1920",
+        "webp": "gallery/redamancy/mievatho_NH6575-lg.webp",
+        "jpg": "gallery/redamancy/mievatho_NH6575-lg.jpg",
+        "webpKB": 81,
+        "jpgKB": 143
+      }
+    ]
+  },
+  {
+    "original": "gallery/thumbnails/thumb1.jpg",
+    "orientation": "portrait",
+    "preset": "thumbnail",
+    "originalSize": "3924×5886",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "267×400",
+        "webp": "gallery/thumbnails/thumb1-sm.webp",
+        "jpg": "gallery/thumbnails/thumb1-sm.jpg",
+        "webpKB": 12,
+        "jpgKB": 16
+      },
+      {
+        "size": "md",
+        "dimensions": "400×600",
+        "webp": "gallery/thumbnails/thumb1-md.webp",
+        "jpg": "gallery/thumbnails/thumb1-md.jpg",
+        "webpKB": 20,
+        "jpgKB": 28
+      },
+      {
+        "size": "lg",
+        "dimensions": "600×900",
+        "webp": "gallery/thumbnails/thumb1-lg.webp",
+        "jpg": "gallery/thumbnails/thumb1-lg.jpg",
+        "webpKB": 33,
+        "jpgKB": 51
+      }
+    ]
+  },
+  {
+    "original": "gallery/thumbnails/thumb2.jpg",
+    "orientation": "portrait",
+    "preset": "thumbnail",
+    "originalSize": "1200×1800",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "267×400",
+        "webp": "gallery/thumbnails/thumb2-sm.webp",
+        "jpg": "gallery/thumbnails/thumb2-sm.jpg",
+        "webpKB": 9,
+        "jpgKB": 13
+      },
+      {
+        "size": "md",
+        "dimensions": "400×600",
+        "webp": "gallery/thumbnails/thumb2-md.webp",
+        "jpg": "gallery/thumbnails/thumb2-md.jpg",
+        "webpKB": 14,
+        "jpgKB": 22
+      },
+      {
+        "size": "lg",
+        "dimensions": "600×900",
+        "webp": "gallery/thumbnails/thumb2-lg.webp",
+        "jpg": "gallery/thumbnails/thumb2-lg.jpg",
+        "webpKB": 24,
+        "jpgKB": 40
+      }
+    ]
+  },
+  {
+    "original": "gallery/thumbnails/thumb3.jpg",
+    "orientation": "portrait",
+    "preset": "thumbnail",
+    "originalSize": "1200×1800",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "267×400",
+        "webp": "gallery/thumbnails/thumb3-sm.webp",
+        "jpg": "gallery/thumbnails/thumb3-sm.jpg",
+        "webpKB": 6,
+        "jpgKB": 9
+      },
+      {
+        "size": "md",
+        "dimensions": "400×600",
+        "webp": "gallery/thumbnails/thumb3-md.webp",
+        "jpg": "gallery/thumbnails/thumb3-md.jpg",
+        "webpKB": 11,
+        "jpgKB": 17
+      },
+      {
+        "size": "lg",
+        "dimensions": "600×900",
+        "webp": "gallery/thumbnails/thumb3-lg.webp",
+        "jpg": "gallery/thumbnails/thumb3-lg.jpg",
+        "webpKB": 19,
+        "jpgKB": 30
+      }
+    ]
+  },
+  {
+    "original": "gallery/thumbnails/thumb4.jpg",
+    "orientation": "portrait",
+    "preset": "thumbnail",
+    "originalSize": "1200×1800",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "267×400",
+        "webp": "gallery/thumbnails/thumb4-sm.webp",
+        "jpg": "gallery/thumbnails/thumb4-sm.jpg",
+        "webpKB": 16,
+        "jpgKB": 19
+      },
+      {
+        "size": "md",
+        "dimensions": "400×600",
+        "webp": "gallery/thumbnails/thumb4-md.webp",
+        "jpg": "gallery/thumbnails/thumb4-md.jpg",
+        "webpKB": 29,
+        "jpgKB": 35
+      },
+      {
+        "size": "lg",
+        "dimensions": "600×900",
+        "webp": "gallery/thumbnails/thumb4-lg.webp",
+        "jpg": "gallery/thumbnails/thumb4-lg.jpg",
+        "webpKB": 54,
+        "jpgKB": 68
+      }
+    ]
+  },
+  {
+    "original": "journey/demo.jpg",
+    "orientation": "portrait",
+    "preset": "content",
+    "originalSize": "2666×4000",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "427×640",
+        "webp": "journey/demo-sm.webp",
+        "jpg": "journey/demo-sm.jpg",
+        "webpKB": 15,
+        "jpgKB": 24
+      },
+      {
+        "size": "md",
+        "dimensions": "682×1024",
+        "webp": "journey/demo-md.webp",
+        "jpg": "journey/demo-md.jpg",
+        "webpKB": 30,
+        "jpgKB": 49
+      },
+      {
+        "size": "lg",
+        "dimensions": "1066×1600",
+        "webp": "journey/demo-lg.webp",
+        "jpg": "journey/demo-lg.jpg",
+        "webpKB": 64,
+        "jpgKB": 98
+      }
+    ]
+  },
+  {
+    "original": "journey/demo2.jpg",
+    "orientation": "landscape",
+    "preset": "content",
+    "originalSize": "4000×2666",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "640×427",
+        "webp": "journey/demo2-sm.webp",
+        "jpg": "journey/demo2-sm.jpg",
+        "webpKB": 35,
+        "jpgKB": 44
+      },
+      {
+        "size": "md",
+        "dimensions": "1024×682",
+        "webp": "journey/demo2-md.webp",
+        "jpg": "journey/demo2-md.jpg",
+        "webpKB": 71,
+        "jpgKB": 93
+      },
+      {
+        "size": "lg",
+        "dimensions": "1600×1066",
+        "webp": "journey/demo2-lg.webp",
+        "jpg": "journey/demo2-lg.jpg",
+        "webpKB": 140,
+        "jpgKB": 190
+      }
+    ]
+  },
+  {
+    "original": "journey/flower.png",
+    "orientation": "portrait",
+    "preset": "decorative",
+    "originalSize": "1050×1600",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "131×200",
+        "webp": "journey/flower-sm.webp",
+        "png": "journey/flower-sm.png",
+        "webpKB": 11,
+        "pngKB": 29
+      },
+      {
+        "size": "md",
+        "dimensions": "263×400",
+        "webp": "journey/flower-md.webp",
+        "png": "journey/flower-md.png",
+        "webpKB": 28,
+        "pngKB": 98
+      },
+      {
+        "size": "lg",
+        "dimensions": "525×800",
+        "webp": "journey/flower-lg.webp",
+        "png": "journey/flower-lg.png",
+        "webpKB": 71,
+        "pngKB": 354
+      }
+    ]
+  },
+  {
+    "original": "journey/flower_top.png",
+    "orientation": "landscape",
+    "preset": "decorative",
+    "originalSize": "800×722",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×181",
+        "webp": "journey/flower_top-sm.webp",
+        "png": "journey/flower_top-sm.png",
+        "webpKB": 8,
+        "pngKB": 56
+      },
+      {
+        "size": "md",
+        "dimensions": "400×361",
+        "webp": "journey/flower_top-md.webp",
+        "png": "journey/flower_top-md.png",
+        "webpKB": 23,
+        "pngKB": 223
+      },
+      {
+        "size": "lg",
+        "dimensions": "800×722",
+        "webp": "journey/flower_top-lg.webp",
+        "png": "journey/flower_top-lg.png",
+        "webpKB": 76,
+        "pngKB": 962
+      }
+    ]
+  },
+  {
+    "original": "journey/paper_base.png",
+    "orientation": "portrait",
+    "preset": "decorative",
+    "originalSize": "1838×2400",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "153×200",
+        "webp": "journey/paper_base-sm.webp",
+        "png": "journey/paper_base-sm.png",
+        "webpKB": 2,
+        "pngKB": 46
+      },
+      {
+        "size": "md",
+        "dimensions": "306×400",
+        "webp": "journey/paper_base-md.webp",
+        "png": "journey/paper_base-md.png",
+        "webpKB": 11,
+        "pngKB": 208
+      },
+      {
+        "size": "lg",
+        "dimensions": "613×800",
+        "webp": "journey/paper_base-lg.webp",
+        "png": "journey/paper_base-lg.png",
+        "webpKB": 83,
+        "pngKB": 934
+      }
+    ]
+  },
+  {
+    "original": "journey/stamp.png",
+    "orientation": "landscape",
+    "preset": "decorative",
+    "originalSize": "1500×244",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×33",
+        "webp": "journey/stamp-sm.webp",
+        "png": "journey/stamp-sm.png",
+        "webpKB": 2,
+        "pngKB": 10
+      },
+      {
+        "size": "md",
+        "dimensions": "400×65",
+        "webp": "journey/stamp-md.webp",
+        "png": "journey/stamp-md.png",
+        "webpKB": 4,
+        "pngKB": 35
+      },
+      {
+        "size": "lg",
+        "dimensions": "800×130",
+        "webp": "journey/stamp-lg.webp",
+        "png": "journey/stamp-lg.png",
+        "webpKB": 10,
+        "pngKB": 132
+      }
+    ]
+  },
+  {
+    "original": "journey/wax_seal.png",
+    "orientation": "square",
+    "preset": "decorative",
+    "originalSize": "798×800",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×200",
+        "webp": "journey/wax_seal-sm.webp",
+        "png": "journey/wax_seal-sm.png",
+        "webpKB": 9,
+        "pngKB": 68
+      },
+      {
+        "size": "md",
+        "dimensions": "399×400",
+        "webp": "journey/wax_seal-md.webp",
+        "png": "journey/wax_seal-md.png",
+        "webpKB": 22,
+        "pngKB": 230
+      },
+      {
+        "size": "lg",
+        "dimensions": "798×800",
+        "webp": "journey/wax_seal-lg.webp",
+        "png": "journey/wax_seal-lg.png",
+        "webpKB": 57,
+        "pngKB": 785
+      }
+    ]
+  },
+  {
+    "original": "logo.jpg",
+    "orientation": "square",
+    "preset": "content",
+    "originalSize": "960×988",
+    "hasAlpha": false,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "622×640",
+        "webp": "logo-sm.webp",
+        "jpg": "logo-sm.jpg",
+        "webpKB": 98,
+        "jpgKB": 36
+      },
+      {
+        "size": "lg",
+        "dimensions": "960×988",
+        "webp": "logo-lg.webp",
+        "jpg": "logo-lg.jpg",
+        "webpKB": 60,
+        "jpgKB": 71
+      }
+    ]
+  }
+]

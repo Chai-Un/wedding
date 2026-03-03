@@ -1,17 +1,16 @@
 import { Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import Logo from '@/assets/images/logo.jpg';
-import Photo1 from '@/assets/images/gallery/redamancy/mievatho_NH6309.jpg';
-import Photo2 from '@/assets/images/gallery/redamancy/mievatho_NH6232.jpg';
-import Background from '@/assets/images/gallery/redamancy/mievatho_NH1525.jpg';
+import ResponsiveImage from '@/components/ResponsiveImage';
+import ResponsiveBackground from '@/components/ResponsiveBackground';
+import { getOptimizedUrl } from '@/lib/responsive-image';
 
 const ContactUs = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section
-			className="relative py-12 md:py-16 lg:py-20 px-4 text-center"
-			style={{ backgroundImage: `url(${Background})` }}
+		<ResponsiveBackground
+			imagePath="gallery/redamancy/mievatho_NH1525.jpg"
+			className="relative py-12 md:py-16 lg:py-20 px-4 text-center bg-cover"
 		>
 			<div className="absolute inset-0 bg-[#3d1700]/65 pointer-events-none" />
 			{/* <section className="bg-[#6b5739] py-12 md:py-16 lg:py-20 px-4 text-center"> */}
@@ -19,7 +18,7 @@ const ContactUs = () => {
 				<div className="grid gap-12 items-center">
 					<div
 						className={`relative inline-flex flex-col items-center justify-center bg-center bg-no-repeat bg-contain w-full h-40`}
-						style={{ backgroundImage: `url(${Logo})` }}
+						style={{ backgroundImage: `url(${getOptimizedUrl('logo.jpg', 'sm') || ''})` }}
 					></div>
 					<div className="text-[#d4c5ad] text-[0.8em] md:text-[1em] lg:text-[1.125em] font-hoangngan3">
 						<div className="whitespace-pre-line">
@@ -40,16 +39,18 @@ const ContactUs = () => {
 			<div className="relative max-w-4xl mx-auto">
 				{/* Two-photo grid with "together always" overlay */}
 				<div className="relative mt-12 w-10/12 lg:w-full mx-auto mb-10">
-					<div className="grid grid-cols-2 gap-3">
-						<img
-							src={Photo1}
+					<div className="grid grid-cols-2 gap-2 md:gap-3 lg:gap-4">
+						<ResponsiveImage
+							src="gallery/redamancy/mievatho_NH6309.jpg"
 							alt="Together always – photo 1"
 							className="w-full object-cover aspect-4/3"
+							sizes="(max-width: 768px) 45vw, 40vw"
 						/>
-						<img
-							src={Photo2}
+						<ResponsiveImage
+							src="gallery/redamancy/mievatho_NH6232.jpg"
 							alt="Together always – photo 2"
 							className="w-full object-cover aspect-4/3"
+							sizes="(max-width: 768px) 45vw, 40vw"
 						/>
 					</div>
 					{/* Overlay text spanning across both photos */}
@@ -74,7 +75,7 @@ const ContactUs = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</ResponsiveBackground>
 	);
 };
 

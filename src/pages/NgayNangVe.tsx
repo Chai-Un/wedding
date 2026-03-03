@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GalleryItem from '@/components/GalleryItem';
 import GalleryDialog from '@/components/GalleryDialog';
+import ResponsiveImage from '@/components/ResponsiveImage';
 import ContactUs from '@/components/sections/ContactUs';
 import { GALLERY_CONCEPTS } from '@/constants/galleryData';
-import ourStoryImage from '@/assets/images/mievatho_NH6514.JPG';
-import ourStoryImage2 from '@/assets/images/mievatho_NH1487.JPG';
 import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
 
@@ -18,32 +17,32 @@ export default function NgayNangVe() {
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
-	// Define all photos for the gallery
+	// Define all photos for the gallery — use relative paths for responsive image lookup
 	const photos = [
-		{ id: '1', src: ourStoryImage, alt: 'Photo 1' },
-		{ id: '2', src: ourStoryImage2, alt: 'Photo 2' },
-		{ id: '3', src: ourStoryImage, alt: 'Photo 3' },
-		{ id: '4', src: ourStoryImage, alt: 'Photo 4' },
-		{ id: '5', src: ourStoryImage, alt: 'Photo 5' },
-		{ id: '6', src: ourStoryImage, alt: 'Photo 6' },
-		{ id: '7', src: ourStoryImage, alt: 'Photo 7' },
-		{ id: '8', src: ourStoryImage, alt: 'Photo 8' },
-		{ id: '9', src: ourStoryImage, alt: 'Photo 9' },
-		{ id: '10', src: ourStoryImage, alt: 'Photo 10' },
-		{ id: '11', src: ourStoryImage, alt: 'Photo 11' },
-		{ id: '12', src: ourStoryImage, alt: 'Photo 12' },
-		{ id: '13', src: ourStoryImage, alt: 'Photo 13' },
-		{ id: '14', src: ourStoryImage, alt: 'Photo 14' },
-		{ id: '15', src: ourStoryImage, alt: 'Photo 15' },
-		{ id: '16', src: ourStoryImage, alt: 'Photo 16' },
-		{ id: '17', src: ourStoryImage, alt: 'Photo 17' },
-		{ id: '18', src: ourStoryImage, alt: 'Photo 18' },
-		{ id: '19', src: ourStoryImage, alt: 'Photo 19' },
-		{ id: '20', src: ourStoryImage, alt: 'Photo 20' },
-		{ id: '21', src: ourStoryImage, alt: 'Photo 21' },
-		{ id: '22', src: ourStoryImage, alt: 'Photo 22' },
-		{ id: '23', src: ourStoryImage, alt: 'Photo 23' },
-		{ id: '24', src: ourStoryImage, alt: 'Photo 24' },
+		{ id: '1', src: 'gallery/ngaynangve/mievatho_NH0014.jpg', alt: 'Photo 1' },
+		{ id: '2', src: 'gallery/ngaynangve/mievatho_NH0056.jpg', alt: 'Photo 2' },
+		{ id: '3', src: 'gallery/ngaynangve/mievatho_NH0203.jpg', alt: 'Photo 3' },
+		{ id: '4', src: 'gallery/ngaynangve/mievatho_NH0214.jpg', alt: 'Photo 4' },
+		{ id: '5', src: 'gallery/ngaynangve/mievatho_NH0359.jpg', alt: 'Photo 5' },
+		{ id: '6', src: 'gallery/ngaynangve/mievatho_NH0428.jpg', alt: 'Photo 6' },
+		{ id: '7', src: 'gallery/ngaynangve/mievatho_NH0532.jpg', alt: 'Photo 7' },
+		{ id: '8', src: 'gallery/ngaynangve/mievatho_NH0545.jpg', alt: 'Photo 8' },
+		{ id: '9', src: 'gallery/ngaynangve/mievatho_NH0592.jpg', alt: 'Photo 9' },
+		{ id: '10', src: 'gallery/ngaynangve/mievatho_NH2421.jpg', alt: 'Photo 10' },
+		{ id: '11', src: 'gallery/ngaynangve/mievatho_NH2468.jpg', alt: 'Photo 11' },
+		{ id: '12', src: 'gallery/ngaynangve/mievatho_NH2572.jpg', alt: 'Photo 12' },
+		{ id: '13', src: 'gallery/ngaynangve/mievatho_NH2714.jpg', alt: 'Photo 13' },
+		{ id: '14', src: 'gallery/ngaynangve/mievatho_NH2760.jpg', alt: 'Photo 14' },
+		{ id: '15', src: 'gallery/ngaynangve/mievatho_NH2814.jpg', alt: 'Photo 15' },
+		{ id: '16', src: 'gallery/ngaynangve/mievatho_NH2930.jpg', alt: 'Photo 16' },
+		{ id: '17', src: 'gallery/ngaynangve/mievatho_NH2984.jpg', alt: 'Photo 17' },
+		{ id: '18', src: 'gallery/ngaynangve/mievatho_NH3135.jpg', alt: 'Photo 18' },
+		{ id: '19', src: 'gallery/ngaynangve/mievatho_NH3236.jpg', alt: 'Photo 19' },
+		{ id: '20', src: 'gallery/ngaynangve/mievatho_NH3279.jpg', alt: 'Photo 20' },
+		{ id: '21', src: 'gallery/ngaynangve/mievatho_NH3312.jpg', alt: 'Photo 21' },
+		{ id: '22', src: 'gallery/ngaynangve/mievatho_NH3341.jpg', alt: 'Photo 22' },
+		{ id: '23', src: 'gallery/ngaynangve/mievatho_NH3466.jpg', alt: 'Photo 23' },
+		{ id: '24', src: 'gallery/ngaynangve/mievatho_NH3549.jpg', alt: 'Photo 24' },
 	];
 
 	const handlePhotoClick = (index: number) => {
@@ -83,10 +82,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage2}
-										alt="Our Story"
-										className="w-full h-full object-cover object-[50%_80%]"
+									<ResponsiveImage
+										src={photos[0].src}
+										alt="Photo 1"
+										className="w-full h-full object-cover"
+										objectPosition="50% 80%"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -96,10 +97,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
-										alt="Our Story"
-										className="w-full h-full object-cover object-[50%_80%]"
+									<ResponsiveImage
+										src={photos[1].src}
+										alt="Photo 2"
+										className="w-full h-full object-cover"
+										objectPosition="50% 80%"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -109,10 +112,11 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
-										alt="Our Story"
+									<ResponsiveImage
+										src={photos[2].src}
+										alt="Photo 3"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -122,7 +126,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 4
+									<ResponsiveImage
+										src={photos[3].src}
+										alt="Photo 4"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -140,7 +149,12 @@ export default function NgayNangVe() {
 								className="aspect-16/10 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 5 (Large)
+									<ResponsiveImage
+										src={photos[4].src}
+										alt="Photo 5"
+										className="w-full h-full object-cover"
+										sizes="100vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -153,7 +167,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 6
+									<ResponsiveImage
+										src={photos[5].src}
+										alt="Photo 6"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -162,7 +181,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 7
+									<ResponsiveImage
+										src={photos[6].src}
+										alt="Photo 7"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -171,7 +195,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 8
+									<ResponsiveImage
+										src={photos[7].src}
+										alt="Photo 8"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -184,7 +213,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 9
+									<ResponsiveImage
+										src={photos[8].src}
+										alt="Photo 9"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -193,7 +227,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 10
+									<ResponsiveImage
+										src={photos[9].src}
+										alt="Photo 10"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -202,7 +241,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 11
+									<ResponsiveImage
+										src={photos[10].src}
+										alt="Photo 11"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -223,7 +267,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 12
+									<ResponsiveImage
+										src={photos[11].src}
+										alt="Photo 12"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -232,7 +281,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 13
+									<ResponsiveImage
+										src={photos[12].src}
+										alt="Photo 13"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -241,7 +295,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 14
+									<ResponsiveImage
+										src={photos[13].src}
+										alt="Photo 14"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -254,7 +313,12 @@ export default function NgayNangVe() {
 								className="aspect-16/10 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 15 (Large)
+									<ResponsiveImage
+										src={photos[14].src}
+										alt="Photo 15"
+										className="w-full h-full object-cover"
+										sizes="100vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -267,7 +331,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 16
+									<ResponsiveImage
+										src={photos[15].src}
+										alt="Photo 16"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -276,7 +345,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 17
+									<ResponsiveImage
+										src={photos[16].src}
+										alt="Photo 17"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -285,7 +359,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 18
+									<ResponsiveImage
+										src={photos[17].src}
+										alt="Photo 18"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -298,7 +377,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 19
+									<ResponsiveImage
+										src={photos[18].src}
+										alt="Photo 19"
+										className="w-full h-full object-cover"
+										sizes="50vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -307,7 +391,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 20
+									<ResponsiveImage
+										src={photos[19].src}
+										alt="Photo 20"
+										className="w-full h-full object-cover"
+										sizes="50vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -320,7 +409,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 21
+									<ResponsiveImage
+										src={photos[20].src}
+										alt="Photo 21"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -329,7 +423,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 22
+									<ResponsiveImage
+										src={photos[21].src}
+										alt="Photo 22"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -338,7 +437,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 23
+									<ResponsiveImage
+										src={photos[22].src}
+										alt="Photo 23"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -347,7 +451,12 @@ export default function NgayNangVe() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 24
+									<ResponsiveImage
+										src={photos[23].src}
+										alt="Photo 24"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>

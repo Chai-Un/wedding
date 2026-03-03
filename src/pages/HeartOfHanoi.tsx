@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GalleryItem from '@/components/GalleryItem';
 import GalleryDialog from '@/components/GalleryDialog';
+import ResponsiveImage from '@/components/ResponsiveImage';
 import ContactUs from '@/components/sections/ContactUs';
 import { GALLERY_CONCEPTS } from '@/constants/galleryData';
-import ourStoryImage from '@/assets/images/mievatho_NH6514.JPG';
 import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
 
@@ -17,16 +17,16 @@ export default function HeartOfHanoi() {
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
-	// Define all photos for the gallery
+	// Define all photos for the gallery — use relative paths for responsive image lookup
 	const photos = [
-		{ id: '1', src: ourStoryImage, alt: 'Photo 1' },
-		{ id: '2', src: ourStoryImage, alt: 'Photo 2' },
-		{ id: '3', src: ourStoryImage, alt: 'Photo 3' },
-		{ id: '4', src: ourStoryImage, alt: 'Photo 4' },
-		{ id: '5', src: ourStoryImage, alt: 'Photo 5' },
-		{ id: '6', src: ourStoryImage, alt: 'Photo 6' },
-		{ id: '7', src: ourStoryImage, alt: 'Photo 7' },
-		{ id: '8', src: ourStoryImage, alt: 'Photo 8' },
+		{ id: '1', src: 'gallery/heartofhanoi/mievatho_NH4222.jpg', alt: 'Photo 1' },
+		{ id: '2', src: 'gallery/heartofhanoi/mievatho_NH4259.jpg', alt: 'Photo 2' },
+		{ id: '3', src: 'gallery/heartofhanoi/mievatho_NH4407.jpg', alt: 'Photo 3' },
+		{ id: '4', src: 'gallery/heartofhanoi/mievatho_NH4427.jpg', alt: 'Photo 4' },
+		{ id: '5', src: 'gallery/heartofhanoi/mievatho_NH4539.jpg', alt: 'Photo 5' },
+		{ id: '6', src: 'gallery/heartofhanoi/mievatho_NH4567.jpg', alt: 'Photo 6' },
+		{ id: '7', src: 'gallery/heartofhanoi/mievatho_NH4910.jpg', alt: 'Photo 7' },
+		{ id: '8', src: 'gallery/heartofhanoi/mievatho_NH5038.jpg', alt: 'Photo 8' },
 	];
 
 	const handlePhotoClick = (index: number) => {
@@ -70,10 +70,11 @@ export default function HeartOfHanoi() {
 								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[0].src}
 										alt="Photo 1"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 100vw, 33vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -85,10 +86,11 @@ export default function HeartOfHanoi() {
 								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[1].src}
 										alt="Photo 2"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 100vw, 33vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -117,10 +119,11 @@ export default function HeartOfHanoi() {
 									className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 								>
 									<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-										<img
-											src={ourStoryImage}
+										<ResponsiveImage
+											src={photos[2].src}
 											alt="Photo 3"
 											className="w-full h-full object-cover"
+											sizes="50vw"
 										/>
 									</div>
 									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -130,10 +133,11 @@ export default function HeartOfHanoi() {
 									className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 								>
 									<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-										<img
-											src={ourStoryImage}
+										<ResponsiveImage
+											src={photos[3].src}
 											alt="Photo 4"
 											className="w-full h-full object-cover"
+											sizes="50vw"
 										/>
 									</div>
 									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -148,10 +152,11 @@ export default function HeartOfHanoi() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[4].src}
 										alt="Photo 5"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -161,10 +166,11 @@ export default function HeartOfHanoi() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[5].src}
 										alt="Photo 6"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -174,10 +180,11 @@ export default function HeartOfHanoi() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[6].src}
 										alt="Photo 7"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -187,10 +194,11 @@ export default function HeartOfHanoi() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[7].src}
 										alt="Photo 8"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />

@@ -1,14 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import envelopeClosed from '@/assets/images/envelope/envelope.png';
-import waxSealImg from '@/assets/images/envelope/wax_seal.png';
-import flowerImg from '@/assets/images/envelope/flower.png';
-import singleFlowerImg from '@/assets/images/envelope/single_flower.png';
-import eiffelImg from '@/assets/images/envelope/eiffel.png';
-import stampOne from '@/assets/images/envelope/stamp_one.png';
-import stampTwo from '@/assets/images/envelope/stamp_two.png';
-import stampThree from '@/assets/images/envelope/stamp_three.png';
-import logo from '@/assets/images/logo.jpg'
+import ResponsiveImage from '@/components/ResponsiveImage';
+import videoBg from '@/assets/videos/demo.mp4';
 
 interface InvitationProps {
 	onOpen: () => void;
@@ -74,8 +67,22 @@ export default function Invitation({ onOpen }: InvitationProps) {
 				transition: 'opacity 500ms ease-out, filter 500ms ease-out',
 			}}
 		>
+			{/* Background video */}
+			<video
+				className="absolute inset-0 w-full h-full object-cover"
+				src={videoBg}
+				autoPlay
+				loop
+				muted
+				playsInline
+			/>
+			{/* Overlay to keep content readable */}
+			<div className="absolute inset-0 bg-white/60" />
+
+			{/* Content layer */}
+			<div className="relative z-10 flex flex-col items-center w-full">
 			<div className='w-45 h-45'>
-				<img src={logo} alt="" className='w-full h-full' />
+				<ResponsiveImage src="logo.jpg" alt="" className='w-full h-full' loading="eager" />
 			</div>
 			{/* ── Letter text above the envelope ── */}
 			<div className="w-full max-w-5xl mx-auto px-6 md:px-12 text-center mb-8 md:mb-10 mt-10">
@@ -125,11 +132,8 @@ export default function Invitation({ onOpen }: InvitationProps) {
 					}}
 				>
 					{/* ─ Closed envelope — overlaid; fades out on 'open' ─ */}
-					<img
-						src={envelopeClosed}
-						alt="Wedding invitation envelope"
-						draggable={false}
-						className="absolute inset-0 w-full h-full object-contain"
+					<div
+						className="absolute inset-0 w-full h-full"
 						style={{
 							opacity: 1,
 							transform: isLifted
@@ -139,7 +143,17 @@ export default function Invitation({ onOpen }: InvitationProps) {
 								'opacity 700ms ease, transform 600ms cubic-bezier(.22,1,.36,1)',
 							zIndex: 3,
 						}}
-					/>
+					>
+						<ResponsiveImage
+							src="envelope/envelope.png"
+							alt="Wedding invitation envelope"
+							alpha
+							draggable={false}
+							className="w-full h-full object-contain"
+							sizes="(max-width: 768px) 100vw, 80vw"
+							loading="eager"
+						/>
+					</div>
 
 					{/* ── Decorative flowers — grouped, anchored to envelope bottom-left ── */}
 					<div
@@ -152,12 +166,14 @@ export default function Invitation({ onOpen }: InvitationProps) {
 						}}
 					>
 						{/* Large bouquet — rotated, mirrored */}
-						<img
-							src={flowerImg}
+						<ResponsiveImage
+							src="envelope/flower.png"
 							alt=""
+							alpha
 							draggable={false}
-							aria-hidden="true"
+							aria-hidden={true}
 							className="absolute"
+							sizes="60vw"
 							style={{
 								bottom: '0%',
 								left: '145%',
@@ -167,12 +183,14 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							}}
 						/>
 						{/* Single flower — sits to the right of the bouquet */}
-						<img
-							src={singleFlowerImg}
+						<ResponsiveImage
+							src="envelope/single_flower.png"
 							alt=""
+							alpha
 							draggable={false}
-							aria-hidden="true"
+							aria-hidden={true}
 							className="absolute"
+							sizes="8vw"
 							style={{
 								width: '44%',
 								bottom: '0%',
@@ -226,11 +244,13 @@ export default function Invitation({ onOpen }: InvitationProps) {
 								'transform 480ms cubic-bezier(.4,0,.2,1), opacity 380ms ease-out',
 						}}
 					>
-						<img
-							src={waxSealImg}
+						<ResponsiveImage
+							src="envelope/wax_seal.png"
 							alt=""
+							alpha
 							draggable={false}
-							aria-hidden="true"
+							aria-hidden={true}
+							sizes="6vw"
 							style={{ width: 'clamp(44px, 6vw, 100px)' }}
 							className="object-contain drop-shadow-md"
 						/>
@@ -277,11 +297,13 @@ export default function Invitation({ onOpen }: InvitationProps) {
 									minWidth: 30,
 								}}
 							>
-								<img
-									src={eiffelImg}
+								<ResponsiveImage
+									src="envelope/eiffel.png"
 									alt=""
+									alpha
 									draggable={false}
-									aria-hidden="true"
+									aria-hidden={true}
+									sizes="4vw"
 									style={{
 										width: '60%',
 										objectFit: 'contain',
@@ -292,11 +314,13 @@ export default function Invitation({ onOpen }: InvitationProps) {
 										marginRight: '-30%',
 									}}
 								/>
-								<img
-									src={stampThree}
+								<ResponsiveImage
+									src="envelope/stamp_three.png"
 									alt=""
+									alpha
 									draggable={false}
-									aria-hidden="true"
+									aria-hidden={true}
+									sizes="4vw"
 									style={{
 										position: 'absolute',
 										top: '-18%',
@@ -309,11 +333,13 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							</div>
 
 							{/* London / Big Ben */}
-							<img
-								src={stampOne}
+							<ResponsiveImage
+								src="envelope/stamp_one.png"
 								alt=""
+								alpha
 								draggable={false}
-								aria-hidden="true"
+								aria-hidden={true}
+								sizes="6vw"
 								style={{
 									width: '6vw',
 									maxWidth: 78,
@@ -324,11 +350,13 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							/>
 
 							{/* Botanical */}
-							<img
-								src={stampTwo}
+							<ResponsiveImage
+								src="envelope/stamp_two.png"
 								alt=""
+								alpha
 								draggable={false}
-								aria-hidden="true"
+								aria-hidden={true}
+								sizes="6vw"
 								style={{
 									width: '6vw',
 									maxWidth: 78,
@@ -362,7 +390,8 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							/>
 						))}
 				</div>
-			</div>
+			</div>{/* /envelope stage */}
+			</div>{/* /content layer */}
 		</section>
 	);
 }

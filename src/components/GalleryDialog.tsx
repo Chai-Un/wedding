@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import ResponsiveImage from '@/components/ResponsiveImage';
 
 interface Photo {
 	id: string;
@@ -91,13 +92,15 @@ export default function GalleryDialog({
 								{photos.map((photo, index) => (
 									<CarouselItem key={photo.id}>
 										<div className="flex items-center justify-center h-[calc(92vh-200px)] sm:h-[calc(88vh-180px)] md:h-[calc(85vh-160px)]">
-											<img
+											<ResponsiveImage
 												src={photo.src}
 												alt={
 													photo.alt ||
 													`Photo ${index + 1}`
 												}
 												className="max-w-full max-h-full object-contain"
+												sizes="90vw"
+												loading={Math.abs(index - selectedIndex) <= 1 ? 'eager' : 'lazy'}
 											/>
 										</div>
 									</CarouselItem>
@@ -146,13 +149,14 @@ export default function GalleryDialog({
 													: 'border-transparent opacity-60 hover:opacity-100',
 											)}
 										>
-											<img
+											<ResponsiveImage
 												src={photo.src}
 												alt={
 													photo.alt ||
 													`Thumbnail ${index + 1}`
 												}
 												className="w-full h-full object-cover cursor-pointer"
+												sizes="(max-width: 768px) 25vw, 12vw"
 											/>
 										</button>
 									</CarouselItem>

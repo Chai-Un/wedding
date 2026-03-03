@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import GalleryItem from '@/components/GalleryItem';
 import GalleryDialog from '@/components/GalleryDialog';
+import ResponsiveImage from '@/components/ResponsiveImage';
 import ContactUs from '@/components/sections/ContactUs';
 import { GALLERY_CONCEPTS } from '@/constants/galleryData';
-import ourStoryImage from '@/assets/images/mievatho_NH6514.JPG';
 import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
 
@@ -17,32 +17,32 @@ export default function BecomingOne() {
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
-	// Define all photos for the gallery
+	// Define all photos for the gallery — use relative paths for responsive image lookup
 	const photos = [
-		{ id: '1', src: ourStoryImage, alt: 'Photo 1' },
-		{ id: '2', src: ourStoryImage, alt: 'Photo 2' },
-		{ id: '3', src: ourStoryImage, alt: 'Photo 3' },
-		{ id: '4', src: ourStoryImage, alt: 'Photo 4' },
-		{ id: '5', src: ourStoryImage, alt: 'Photo 5' },
-		{ id: '6', src: ourStoryImage, alt: 'Photo 6' },
-		{ id: '7', src: ourStoryImage, alt: 'Photo 7' },
-		{ id: '8', src: ourStoryImage, alt: 'Photo 8' },
-		{ id: '9', src: ourStoryImage, alt: 'Photo 9' },
-		{ id: '10', src: ourStoryImage, alt: 'Photo 10' },
-		{ id: '11', src: ourStoryImage, alt: 'Photo 11' },
-		{ id: '12', src: ourStoryImage, alt: 'Photo 12' },
-		{ id: '13', src: ourStoryImage, alt: 'Photo 13' },
-		{ id: '14', src: ourStoryImage, alt: 'Photo 14' },
-		{ id: '15', src: ourStoryImage, alt: 'Photo 15' },
-		{ id: '16', src: ourStoryImage, alt: 'Photo 16' },
-		{ id: '17', src: ourStoryImage, alt: 'Photo 17' },
-		{ id: '18', src: ourStoryImage, alt: 'Photo 18' },
-		{ id: '19', src: ourStoryImage, alt: 'Photo 19' },
-		{ id: '20', src: ourStoryImage, alt: 'Photo 20' },
-		{ id: '21', src: ourStoryImage, alt: 'Photo 21' },
-		{ id: '22', src: ourStoryImage, alt: 'Photo 22' },
-		{ id: '23', src: ourStoryImage, alt: 'Photo 23' },
-		{ id: '24', src: ourStoryImage, alt: 'Photo 24' },
+		{ id: '1', src: 'gallery/becomeone/mievatho_NH1550.jpg', alt: 'Photo 1' },
+		{ id: '2', src: 'gallery/becomeone/mievatho_NH1579.jpg', alt: 'Photo 2' },
+		{ id: '3', src: 'gallery/becomeone/mievatho_NH1583.jpg', alt: 'Photo 3' },
+		{ id: '4', src: 'gallery/becomeone/mievatho_NH1622.jpg', alt: 'Photo 4' },
+		{ id: '5', src: 'gallery/becomeone/mievatho_NH1628b.jpg', alt: 'Photo 5' },
+		{ id: '6', src: 'gallery/becomeone/mievatho_NH1670.jpg', alt: 'Photo 6' },
+		{ id: '7', src: 'gallery/becomeone/mievatho_NH1682.jpg', alt: 'Photo 7' },
+		{ id: '8', src: 'gallery/becomeone/mievatho_NH1734.jpg', alt: 'Photo 8' },
+		{ id: '9', src: 'gallery/becomeone/mievatho_NH1752.jpg', alt: 'Photo 9' },
+		{ id: '10', src: 'gallery/becomeone/mievatho_NH1764.jpg', alt: 'Photo 10' },
+		{ id: '11', src: 'gallery/becomeone/mievatho_NH1787.jpg', alt: 'Photo 11' },
+		{ id: '12', src: 'gallery/becomeone/mievatho_NH1832.jpg', alt: 'Photo 12' },
+		{ id: '13', src: 'gallery/becomeone/mievatho_NH1866.jpg', alt: 'Photo 13' },
+		{ id: '14', src: 'gallery/becomeone/mievatho_NH1904b.jpg', alt: 'Photo 14' },
+		{ id: '15', src: 'gallery/becomeone/mievatho_NH1974.jpg', alt: 'Photo 15' },
+		{ id: '16', src: 'gallery/becomeone/mievatho_NH1998.jpg', alt: 'Photo 16' },
+		{ id: '17', src: 'gallery/becomeone/mievatho_NH2053.jpg', alt: 'Photo 17' },
+		{ id: '18', src: 'gallery/becomeone/mievatho_NH6645.jpg', alt: 'Photo 18' },
+		{ id: '19', src: 'gallery/becomeone/mievatho_NH6801.jpg', alt: 'Photo 19' },
+		{ id: '20', src: 'gallery/becomeone/mievatho_NH6968.jpg', alt: 'Photo 20' },
+		{ id: '21', src: 'gallery/becomeone/mievatho_NH6977.jpg', alt: 'Photo 21' },
+		{ id: '22', src: 'gallery/becomeone/mievatho_NH7023.jpg', alt: 'Photo 22' },
+		{ id: '23', src: 'gallery/becomeone/mievatho_NH7192.jpg', alt: 'Photo 23' },
+		{ id: '24', src: 'gallery/becomeone/mievatho_NH7315.jpg', alt: 'Photo 24' },
 	];
 
 	const handlePhotoClick = (index: number) => {
@@ -79,10 +79,11 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[0].src}
 										alt="Photo 1"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -92,10 +93,11 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[1].src}
 										alt="Photo 2"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -105,10 +107,11 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<img
-										src={ourStoryImage}
+									<ResponsiveImage
+										src={photos[2].src}
 										alt="Photo 3"
 										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
 									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -118,7 +121,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 4
+									<ResponsiveImage
+										src={photos[3].src}
+										alt="Photo 4"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -131,7 +139,12 @@ export default function BecomingOne() {
 								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 5
+									<ResponsiveImage
+										src={photos[4].src}
+										alt="Photo 5"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -140,7 +153,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 6
+									<ResponsiveImage
+										src={photos[5].src}
+										alt="Photo 6"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -149,7 +167,12 @@ export default function BecomingOne() {
 								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 7
+									<ResponsiveImage
+										src={photos[6].src}
+										alt="Photo 7"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -158,7 +181,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 8
+									<ResponsiveImage
+										src={photos[7].src}
+										alt="Photo 8"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -179,7 +207,12 @@ export default function BecomingOne() {
 								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 9
+									<ResponsiveImage
+										src={photos[8].src}
+										alt="Photo 9"
+										className="w-full h-full object-cover"
+										sizes="50vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -188,7 +221,12 @@ export default function BecomingOne() {
 								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 10
+									<ResponsiveImage
+										src={photos[9].src}
+										alt="Photo 10"
+										className="w-full h-full object-cover"
+										sizes="50vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -201,7 +239,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 11
+									<ResponsiveImage
+										src={photos[10].src}
+										alt="Photo 11"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -210,7 +253,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 12
+									<ResponsiveImage
+										src={photos[11].src}
+										alt="Photo 12"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -219,7 +267,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 13
+									<ResponsiveImage
+										src={photos[12].src}
+										alt="Photo 13"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -228,7 +281,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 14
+									<ResponsiveImage
+										src={photos[13].src}
+										alt="Photo 14"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -241,7 +299,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 15
+									<ResponsiveImage
+										src={photos[14].src}
+										alt="Photo 15"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -250,7 +313,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 16
+									<ResponsiveImage
+										src={photos[15].src}
+										alt="Photo 16"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -259,7 +327,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 17
+									<ResponsiveImage
+										src={photos[16].src}
+										alt="Photo 17"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -268,7 +341,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 18
+									<ResponsiveImage
+										src={photos[17].src}
+										alt="Photo 18"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -281,7 +359,12 @@ export default function BecomingOne() {
 								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 19
+									<ResponsiveImage
+										src={photos[18].src}
+										alt="Photo 19"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -290,7 +373,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 20
+									<ResponsiveImage
+										src={photos[19].src}
+										alt="Photo 20"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -299,20 +387,30 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 21
+									<ResponsiveImage
+										src={photos[20].src}
+										alt="Photo 21"
+										className="w-full h-full object-cover"
+										sizes="33vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 						</div>
 
-						{/* Row 5: 4 portrait photos */}
+						{/* Row 5: 3 portrait photos */}
 						<div className="grid grid-cols-2 md:grid-cols-4 gap-3">
 							<div
 								onClick={() => handlePhotoClick(21)}
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 22
+									<ResponsiveImage
+										src={photos[21].src}
+										alt="Photo 22"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -321,7 +419,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 23
+									<ResponsiveImage
+										src={photos[22].src}
+										alt="Photo 23"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
@@ -330,16 +433,12 @@ export default function BecomingOne() {
 								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
 							>
 								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 24
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(24)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									Photo 25
+									<ResponsiveImage
+										src={photos[23].src}
+										alt="Photo 24"
+										className="w-full h-full object-cover"
+										sizes="(max-width: 768px) 50vw, 25vw"
+									/>
 								</div>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>

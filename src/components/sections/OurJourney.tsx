@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import PolaroidPhoto from '@/components/PolaroidPhoto';
+import ResponsiveImage from '@/components/ResponsiveImage';
+import { getOptimizedUrl } from '@/lib/responsive-image';
 import { StackedCarousel } from '@/components/ui/stacked-carousel';
 import { OverlapCarousel } from '@/components/ui/overlap-carousel';
 
@@ -13,13 +15,9 @@ import { OverlapCarousel } from '@/components/ui/overlap-carousel';
 // import dreamland2025 from '@/assets/images/journey/dreamland-2025.jpg';
 // import bali2025 from '@/assets/images/journey/bali-2025.jpg';
 // import saigon2025 from '@/assets/images/journey/saigon-2025.jpg';
-import demoImg from '@/assets/images/journey/demo.jpg';
-import demoImg2 from '@/assets/images/journey/demo2.jpg';
-import flower from '@/assets/images/journey/flower.png';
-import flowerTop from '@/assets/images/journey/flower_top.png';
-import paper from '@/assets/images/journey/paper_base.png';
-import stamp from '@/assets/images/journey/stamp.png';
-import wax_seal from '@/assets/images/journey/wax_seal.png';
+
+// Paper texture for torn-paper background — use optimized variant
+const paperUrl = getOptimizedUrl('journey/paper_base.png', 'lg') || '';
 
 interface JourneyPhoto {
 	image: string;
@@ -29,15 +27,15 @@ interface JourneyPhoto {
 }
 
 const journeyPhotos: JourneyPhoto[] = [
-	{ image: demoImg, location: 'Paris', year: '2023', rotation: -10 },
-	{ image: demoImg2, location: 'Madrid', year: '2023', rotation: 5 },
-	{ image: demoImg, location: 'Nice', year: '2023', rotation: 12 },
-	{ image: demoImg2, location: 'London', year: '2024', rotation: 5 },
-	{ image: demoImg, location: 'Nottingham', year: '2024', rotation: 10 },
-	{ image: demoImg2, location: 'Edinburgh', year: '2024', rotation: -4 },
-	{ image: demoImg, location: 'Dreamland', year: '2025', rotation: -10 },
-	{ image: demoImg, location: 'Bali', year: '2025', rotation: 2 },
-	{ image: demoImg2, location: 'Sài Gòn', year: '2025', rotation: -4 },
+	{ image: 'journey/demo.jpg', location: 'Paris', year: '2023', rotation: -10 },
+	{ image: 'journey/demo2.jpg', location: 'Madrid', year: '2023', rotation: 5 },
+	{ image: 'journey/demo.jpg', location: 'Nice', year: '2023', rotation: 12 },
+	{ image: 'journey/demo2.jpg', location: 'London', year: '2024', rotation: 5 },
+	{ image: 'journey/demo.jpg', location: 'Nottingham', year: '2024', rotation: 10 },
+	{ image: 'journey/demo2.jpg', location: 'Edinburgh', year: '2024', rotation: -4 },
+	{ image: 'journey/demo.jpg', location: 'Dreamland', year: '2025', rotation: -10 },
+	{ image: 'journey/demo.jpg', location: 'Bali', year: '2025', rotation: 2 },
+	{ image: 'journey/demo2.jpg', location: 'Sài Gòn', year: '2025', rotation: -4 },
 ];
 
 export default function OurJourney() {
@@ -59,13 +57,13 @@ export default function OurJourney() {
 				{/* Single paragraph block with all journey text */}
 				<div className="relative max-w-3xl md:max-w-4xl mx-auto mb-12 md:mb-16 lg:mb-20 px-4 md:px-0">
 					{/* Decorative: flowerTop + stamp — top-left */}
-					<img
-						src={flowerTop}
+					<ResponsiveImage
+						src="journey/flower_top.png"
 						alt=""
 						className="absolute left-[10%] top-[-3%] -md:top-[8%] md:left-[5%] w-16 md:w-24 z-16 pointer-events-none select-none"
 					/>
-					<img
-						src={stamp}
+					<ResponsiveImage
+						src="journey/stamp.png"
 						alt=""
 						className="absolute left-[-1%] top-[-2%] md:left-[-2%] md:top-[-2%] lg:left-[-8%] lg:top-[2%] w-40 md:w-64 lg:w-81 h-10 md:h-16 lg:h-20 z-15 pointer-events-none select-none opacity-70 rotate-140"
 					/>
@@ -162,7 +160,7 @@ export default function OurJourney() {
 							<div
 								className="w-full"
 								style={{
-									backgroundImage: `url(${paper})`,
+									backgroundImage: `url(${paperUrl})`,
 									backgroundSize: 'cover',
 									backgroundPosition: 'bottom',
 									clipPath: 'url(#torn-paper)',
@@ -185,13 +183,13 @@ export default function OurJourney() {
 					</div>
 
 					{/* Decorative: flower + wax_seal — bottom-right */}
-					<img
-						src={flower}
+					<ResponsiveImage
+						src="journey/flower.png"
 						alt=""
 						className="absolute right-[7%] bottom-[-2%] md:right-8 md:bottom-[-10%] lg:right-0 w-20 md:w-40 z-10 pointer-events-none select-none rotate-40 overflow-hidden"
 					/>
-					<img
-						src={wax_seal}
+					<ResponsiveImage
+						src="journey/wax_seal.png"
 						alt=""
 						className="absolute bottom-4 right-16 md:bottom-5 md:right-20 lg:right-16 w-10 md:w-16 lg:w-20 z-10 pointer-events-none select-none"
 					/>

@@ -1,7 +1,5 @@
-import thumbnail1 from '@/assets/images/gallery/thumbnails/thumb1.jpg';
-import thumbnail2 from '@/assets/images/gallery/thumbnails/thumb2.jpg';
-import thumbnail3 from '@/assets/images/gallery/thumbnails/thumb3.jpg';
-import thumbnail4 from '@/assets/images/gallery/thumbnails/thumb4.jpg';
+import { getOptimizedUrl } from '@/lib/responsive-image';
+
 export interface GalleryConcept {
 	id: string;
 	title?: string;
@@ -14,6 +12,12 @@ export interface GalleryConcept {
 	showTitle?: boolean;
 }
 
+// Use optimized thumbnails — fallback to md size for gallery cards
+const thumb1 = getOptimizedUrl('gallery/thumbnails/thumb1.jpg', 'md') || '';
+const thumb2 = getOptimizedUrl('gallery/thumbnails/thumb2.jpg', 'md') || '';
+const thumb3 = getOptimizedUrl('gallery/thumbnails/thumb3.jpg', 'md') || '';
+const thumb4 = getOptimizedUrl('gallery/thumbnails/thumb4.jpg', 'md') || '';
+
 export const GALLERY_CONCEPTS: GalleryConcept[] = [
 	{
 		id: 'ngay-nang-ve',
@@ -22,7 +26,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'ngayNangVe',
 		path: '/gallery/ngay-nang-ve',
 		bgColor: 'from-rose-300 to-pink-200',
-		bgImage: thumbnail1,
+		bgImage: thumb1,
 		// content: 'Photos from our sunny summer days together...',
 		showTitle: true,
 	},
@@ -33,7 +37,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'redamancy',
 		path: '/gallery/redamancy',
 		bgColor: 'from-amber-300 to-orange-200',
-		bgImage: thumbnail2,
+		bgImage: thumb2,
 		// content: 'The feeling of loving and being loved in return...',
 	},
 	{
@@ -43,7 +47,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'becomingOne',
 		path: '/gallery/becoming-one',
 		bgColor: 'from-emerald-300 to-teal-200',
-		bgImage: thumbnail3,
+		bgImage: thumb3,
 		// content: 'Our journey becoming one together...',
 	},
 	{
@@ -53,7 +57,7 @@ export const GALLERY_CONCEPTS: GalleryConcept[] = [
 		translationKey: 'heartOfHanoi',
 		path: '/gallery/heart-of-hanoi',
 		bgColor: 'from-blue-300 to-indigo-200',
-		bgImage: thumbnail4,
+		bgImage: thumb4,
 		// content: 'Exploring the heart of Hanoi together...',
 	},
 ];

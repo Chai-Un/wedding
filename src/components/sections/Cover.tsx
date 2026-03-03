@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import Navigation from '@/components/Navigation';
-import coverImage from '@/assets/images/mievatho_NH6514.JPG';
-// import coverMobileImage from '@/assets/images/mievatho_NH1487.JPG';
+import ResponsiveBackground from '@/components/ResponsiveBackground';
 
 export default function Cover() {
 	const { t } = useTranslation();
@@ -14,26 +13,22 @@ export default function Cover() {
 			<Navigation overlay={true} />
 
 			{/* Background with overlay - Portrait/Mobile */}
-			<div
+			<ResponsiveBackground
+				imagePath="gallery/redamancy/mievatho_NH6514.jpg"
 				className="absolute inset-0 bg-cover md:hidden"
-				style={{
-					backgroundImage: `url(${coverImage})`,
-					backgroundPosition: '60% 30%',
-				}}
+				backgroundPosition="60% 30%"
 			>
 				<div className="absolute inset-0 bg-black/50"></div>
-			</div>
+			</ResponsiveBackground>
 
 			{/* Background with overlay - Landscape/Desktop */}
-			<div
+			<ResponsiveBackground
+				imagePath="gallery/redamancy/mievatho_NH6514.jpg"
 				className="absolute inset-0 bg-cover hidden md:block"
-				style={{
-					backgroundImage: `url(${coverImage})`,
-					backgroundPosition: '50% 10%',
-				}}
+				backgroundPosition="50% 10%"
 			>
 				<div className="absolute inset-0 bg-black/50"></div>
-			</div>
+			</ResponsiveBackground>
 
 			{/* Content */}
 			<div className="relative z-10 text-center space-y-8 max-w-4xl">

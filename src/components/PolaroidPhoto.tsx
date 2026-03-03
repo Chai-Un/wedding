@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ResponsiveImage from '@/components/ResponsiveImage';
 
 type DescriptionPosition = 'left' | 'center' | 'right';
 
@@ -49,7 +50,7 @@ export default function PolaroidPhoto({
 					? 'h-[calc(100%-2rem)] md:h-auto'
 					: ''
 			}`}>
-				<img
+				<ResponsiveImage
 					src={image}
 					alt={`${location}, ${year}`}
 					className={`object-cover ${
@@ -57,6 +58,7 @@ export default function PolaroidPhoto({
 							? 'h-full w-auto md:w-56 md:h-72 lg:w-64 lg:h-80 xl:w-72 xl:h-90'
 							: 'w-full aspect-4/3 md:w-72 md:h-56 lg:w-80 lg:h-64 xl:w-90 xl:h-72'
 					}`}
+					sizes="(max-width: 768px) 100vw, 400px"
 				/>
 			</div>
 			<div className={`mt-2 md:mt-3 lg:mt-4 font-hoangngan2 ${
