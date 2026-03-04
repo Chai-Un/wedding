@@ -3389,5 +3389,54 @@
         "jpgKB": 71
       }
     ]
+  },
+  {
+    "src": "lg.png",
+    "preset": "decorative",
+    "alpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "format": "webp",
+        "file": "lg.sm.webp",
+        "width": 194,
+        "height": 200
+      },
+      {
+        "size": "sm",
+        "format": "png",
+        "file": "lg.sm.png",
+        "width": 194,
+        "height": 200
+      },
+      {
+        "size": "md",
+        "format": "webp",
+        "file": "lg.md.webp",
+        "width": 389,
+        "height": 400
+      },
+      {
+        "size": "md",
+        "format": "png",
+        "file": "lg.md.png",
+        "width": 389,
+        "height": 400
+      },
+      {
+        "size": "lg",
+        "format": "webp",
+        "file": "lg.lg.webp",
+        "width": 777,
+        "height": 800
+      },
+      {
+        "size": "lg",
+        "format": "png",
+        "file": "lg.lg.png",
+        "width": 777,
+        "height": 800
+      }
+    ]
   }
 ]
