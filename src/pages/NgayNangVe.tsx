@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import GalleryItem from '@/components/GalleryItem';
 import GalleryDialog from '@/components/GalleryDialog';
 import ResponsiveImage from '@/components/ResponsiveImage';
@@ -10,9 +9,6 @@ import Navigation from '@/components/Navigation';
 
 export default function NgayNangVe() {
 	const galleryId = 'ngay-nang-ve';
-	const { t } = useTranslation('translation', {
-		keyPrefix: `gallery.concepts.ngayNangVe`,
-	});
 
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
@@ -43,6 +39,8 @@ export default function NgayNangVe() {
 		{ id: '22', src: 'gallery/ngaynangve/mievatho_NH3341.jpg', alt: 'Photo 22' },
 		{ id: '23', src: 'gallery/ngaynangve/mievatho_NH3466.jpg', alt: 'Photo 23' },
 		{ id: '24', src: 'gallery/ngaynangve/mievatho_NH3549.jpg', alt: 'Photo 24' },
+		{ id: '25', src: 'gallery/ngaynangve/mievatho_NH3644.jpg', alt: 'Photo 25' },
+		{ id: '26', src: 'gallery/ngaynangve/mievatho_NH3736.jpg', alt: 'Photo 26' },
 	];
 
 	const handlePhotoClick = (index: number) => {
@@ -64,400 +62,165 @@ export default function NgayNangVe() {
 			<main className="pt-32 pb-16 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Header */}
-					<div className="text-center mb-12">
-						{/* <h1 className="text-5xl md:text-6xl font-hoangngan8 text-[#8b4242] italic mb-2">
-							{t('pageTitle')}
-						</h1> */}
-						<div className="text-3xl md:text-4xl font-hoangngan7 text-[#8b4242] uppercase tracking-wider">
-							{t('pageSubtitle')}
+					<div className="text-center mb-8 md:mb-12">
+						<h1 className="text-6xl md:text-7xl lg:text-8xl font-hoangngan8 text-[#8b4242] italic mb-2 leading-tight">
+							Eat the Memories
+						</h1>
+						<div className="text-xl md:text-2xl font-hoangngan7 text-[#8b4242] uppercase tracking-widest font-bold">
+							Not the Calories
 						</div>
 					</div>
 
-					{/* Photo Grid - Matching Reference Layout */}
-					<div className="mb-3">
-						{/* Row 1: 4 photos */}
-						<div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
-							<div
-								onClick={() => handlePhotoClick(0)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[0].src}
-										alt="Photo 1"
-										className="w-full h-full object-cover"
-										objectPosition="50% 80%"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
+					{/* ── SECTION 1 ── */}
+					<div className="mb-3 md:mb-3">
+						{/* Row 1: 3 equal portraits */}
+						<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
+							{[0, 1, 2].map((i) => (
+								<div
+									key={i}
+									onClick={() => handlePhotoClick(i)}
+									className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								>
+									<ResponsiveImage src={photos[i].src} alt={photos[i].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
+									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(1)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[1].src}
-										alt="Photo 2"
-										className="w-full h-full object-cover"
-										objectPosition="50% 80%"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(2)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[2].src}
-										alt="Photo 3"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(3)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[3].src}
-										alt="Photo 4"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
+							))}
+						</div>
+
+						{/* Row 2: full-width landscape */}
+						<div className="mb-1 md:mb-2">
+							<div onClick={() => handlePhotoClick(3)} className="aspect-video overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[3].src} alt={photos[3].alt} className="absolute inset-0 w-full h-full object-cover" sizes="100vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 						</div>
 
-						{/* Caption */}
-						<p className="text-sm md:text-base text-[#8b4242] mb-3 font-hoangngan11">
-							{t('caption1')}
-						</p>
-
-						{/* Row 2: 1 large full-width photo */}
-						<div className="mb-3">
-							<div
-								onClick={() => handlePhotoClick(4)}
-								className="aspect-16/10 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[4].src}
-										alt="Photo 5"
-										className="w-full h-full object-cover"
-										sizes="100vw"
-									/>
+						{/* Row 3: 3 equal portraits */}
+						<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
+							{[4, 5, 6].map((i) => (
+								<div
+									key={i}
+									onClick={() => handlePhotoClick(i)}
+									className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								>
+									<ResponsiveImage src={photos[i].src} alt={photos[i].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
+									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
+							))}
 						</div>
 
-						{/* Row 3: 3 photos */}
-						<div className="grid grid-cols-3 gap-3 mb-3">
-							<div
-								onClick={() => handlePhotoClick(5)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[5].src}
-										alt="Photo 6"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(6)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[6].src}
-										alt="Photo 7"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
+						{/* Row 4: wide (2/3) + portrait (1/3) — portrait drives height, wide stretches */}
+						<div className="grid grid-cols-3 gap-1 md:gap-2">
 							<div
 								onClick={() => handlePhotoClick(7)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
+								className="col-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[7].src}
-										alt="Photo 8"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
+								<ResponsiveImage src={photos[7].src} alt={photos[7].alt} className="absolute inset-0 w-full h-full object-cover" sizes="66vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div
+								onClick={() => handlePhotoClick(8)}
+								className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+							>
+								<ResponsiveImage src={photos[8].src} alt={photos[8].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 						</div>
+					</div>
 
-						{/* Row 4: 3 photos */}
-						<div className="grid grid-cols-3 gap-3">
-							<div
-								onClick={() => handlePhotoClick(8)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[8].src}
-										alt="Photo 9"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
+					{/* ── SECTION 2 ── */}
+					<div className="mb-3 md:mb-3">
+						{/* Row 1: portrait (1/3) + wide (2/3) — portrait drives height, wide stretches */}
+						<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
 							<div
 								onClick={() => handlePhotoClick(9)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
+								className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[9].src}
-										alt="Photo 10"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
+								<ResponsiveImage src={photos[9].src} alt={photos[9].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 							<div
 								onClick={() => handlePhotoClick(10)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
+								className="col-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[10].src}
-										alt="Photo 11"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
+								<ResponsiveImage src={photos[10].src} alt={photos[10].alt} className="absolute inset-0 w-full h-full object-cover" sizes="66vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
+						</div>
+
+						{/* Row 2: 4-col mosaic — corners stacked, centers tall spanning 2 rows */}
+						<div className="grid grid-cols-4 gap-1 md:gap-2 mb-1 md:mb-2">
+							<div onClick={() => handlePhotoClick(11)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[11].src} alt={photos[11].alt} className="absolute inset-0 w-full h-full object-cover" sizes="25vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div onClick={() => handlePhotoClick(12)} className="row-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[12].src} alt={photos[12].alt} className="absolute inset-0 w-full h-full object-cover" sizes="25vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div onClick={() => handlePhotoClick(13)} className="row-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[13].src} alt={photos[13].alt} className="absolute inset-0 w-full h-full object-cover" sizes="25vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div onClick={() => handlePhotoClick(14)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[14].src} alt={photos[14].alt} className="absolute inset-0 w-full h-full object-cover" sizes="25vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div onClick={() => handlePhotoClick(15)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[15].src} alt={photos[15].alt} className="absolute inset-0 w-full h-full object-cover" sizes="25vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div onClick={() => handlePhotoClick(16)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[16].src} alt={photos[16].alt} className="absolute inset-0 w-full h-full object-cover" sizes="25vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+						</div>
+
+						{/* Row 3: full-width landscape */}
+						<div onClick={() => handlePhotoClick(17)} className="aspect-video overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+							<ResponsiveImage src={photos[17].src} alt={photos[17].alt} className="absolute inset-0 w-full h-full object-cover" sizes="100vw" />
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 						</div>
 					</div>
 
-					{/* Second Section */}
-					<div className="mb-0">
-						{/* Caption */}
-						<p className="text-sm md:text-base text-[#8b4242] mb-3 font-hoangngan11">
-							{t('caption2')}
-						</p>
-
-						{/* Row 1: 3 photos */}
-						<div className="grid grid-cols-3 gap-3 mb-3">
-							<div
-								onClick={() => handlePhotoClick(11)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[11].src}
-										alt="Photo 12"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
+					{/* ── SECTION 3 ── */}
+					<div className="mb-3 md:mb-3">
+						{/* Mosaic: 3-col, center tall spanning 2 rows */}
+						<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
+							<div onClick={() => handlePhotoClick(18)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[18].src} alt={photos[18].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							<div
-								onClick={() => handlePhotoClick(12)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[12].src}
-										alt="Photo 13"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
+							<div onClick={() => handlePhotoClick(20)} className="row-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[20].src} alt={photos[20].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							<div
-								onClick={() => handlePhotoClick(13)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[13].src}
-										alt="Photo 14"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
+							<div onClick={() => handlePhotoClick(22)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[22].src} alt={photos[22].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div onClick={() => handlePhotoClick(19)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[19].src} alt={photos[19].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+							</div>
+							<div onClick={() => handlePhotoClick(23)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[23].src} alt={photos[23].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 						</div>
 
-						{/* Row 2: 1 large full-width photo */}
-						<div className="mb-3">
-							<div
-								onClick={() => handlePhotoClick(14)}
-								className="aspect-16/10 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[14].src}
-										alt="Photo 15"
-										className="w-full h-full object-cover"
-										sizes="100vw"
-									/>
-								</div>
+						{/* Bottom: wide col-span-2 row-span-2 + 2 portraits stacked right — portraits drive row height */}
+						<div className="grid grid-cols-3 gap-1 md:gap-2">
+							<div onClick={() => handlePhotoClick(21)} className="col-span-2 row-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[21].src} alt={photos[21].alt} className="absolute inset-0 w-full h-full object-cover" sizes="66vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-						</div>
-
-						{/* Row 3: 3 photos */}
-						<div className="grid grid-cols-3 gap-3 mb-3">
-							<div
-								onClick={() => handlePhotoClick(15)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[15].src}
-										alt="Photo 16"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
+							<div onClick={() => handlePhotoClick(24)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[24].src} alt={photos[24].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							<div
-								onClick={() => handlePhotoClick(16)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[16].src}
-										alt="Photo 17"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(17)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[17].src}
-										alt="Photo 18"
-										className="w-full h-full object-cover"
-										sizes="33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-						</div>
-
-						{/* Row 4: 2 photos */}
-						<div className="grid grid-cols-2 gap-3 mb-3">
-							<div
-								onClick={() => handlePhotoClick(18)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[18].src}
-										alt="Photo 19"
-										className="w-full h-full object-cover"
-										sizes="50vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(19)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[19].src}
-										alt="Photo 20"
-										className="w-full h-full object-cover"
-										sizes="50vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-						</div>
-
-						{/* Row 5: 4 photos */}
-						<div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-							<div
-								onClick={() => handlePhotoClick(20)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[20].src}
-										alt="Photo 21"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(21)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[21].src}
-										alt="Photo 22"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(22)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[22].src}
-										alt="Photo 23"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(23)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[23].src}
-										alt="Photo 24"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
+							<div onClick={() => handlePhotoClick(25)} className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer">
+								<ResponsiveImage src={photos[25].src} alt={photos[25].alt} className="absolute inset-0 w-full h-full object-cover" sizes="33vw" />
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 						</div>
@@ -466,21 +229,11 @@ export default function NgayNangVe() {
 					{/* Other Concepts Navigation */}
 					<div>
 						<div className="w-full md:py-20 lg:py-24 py-12">
-							<BreakImage
-								style={{
-									fill: '#6b5739',
-									margin: '0 auto',
-									maxWidth: '100%',
-								}}
-							/>
+							<BreakImage style={{ fill: '#6b5739', margin: '0 auto', maxWidth: '100%' }} />
 						</div>
-						<div className="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-3xl md:max-w-240 mx-auto">
+						<div className="grid grid-cols-3 gap-6 max-w-3xl md:max-w-240 mx-auto">
 							{otherConcepts.map((concept) => (
-								<GalleryItem
-									key={concept.id}
-									concept={concept}
-									variant="simple"
-								/>
+								<GalleryItem key={concept.id} concept={concept} variant="simple" />
 							))}
 						</div>
 					</div>
@@ -489,7 +242,6 @@ export default function NgayNangVe() {
 
 			<ContactUs />
 
-			{/* Gallery Dialog */}
 			<GalleryDialog
 				photos={photos}
 				open={dialogOpen}
