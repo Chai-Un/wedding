@@ -60,61 +60,69 @@ export default function Invitation({ onOpen }: InvitationProps) {
 
 	return (
 		<section
-			className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white md:pt-20"
+			className="relative max-md:h-screen md:min-h-screen flex flex-col max-md:overflow-hidden"
 			style={{
 				opacity: isDismissing ? 0 : 1,
 				pointerEvents: isDismissing ? 'none' : 'auto',
 				transition: 'opacity 500ms ease-out, filter 500ms ease-out',
 			}}
 		>
-			{/* Background video */}
+			{/* Background video — fixed on desktop so it covers viewport while scrolling */}
 			<video
-				className="absolute inset-0 w-full h-full object-cover"
+				className="absolute max-md:inset-0 max-md:w-full max-md:h-full md:fixed md:inset-0 md:w-screen md:h-screen object-cover -z-10"
 				src={videoBg}
 				autoPlay
 				loop
 				muted
 				playsInline
 			/>
-			{/* Overlay to keep content readable */}
-			<div className="absolute inset-0 bg-white/60" />
+			{/* Overlay — same fixed behaviour on desktop */}
+			<div className="absolute max-md:inset-0 md:fixed md:inset-0 md:w-screen md:h-screen bg-white/60 -z-10" />
 
 			{/* Content layer */}
-			<div className="relative z-10 flex flex-col items-center w-full">
-			<div className='w-36 h-36 md:w-45 md:h-45'>
-				<ResponsiveImage src="logo.jpg" alt="" className='w-full h-full' loading="eager" />
-			</div>
+			<div className="relative z-10 flex flex-col items-center w-full flex-1 max-md:min-h-0">
+				{/* Spacer above logo — vh-based on mobile so it scales with screen height */}
+				<div className="h-[5vh] md:h-10 lg:h-14 shrink-0" />
+
+				<div className='w-28 h-28 md:w-36 md:h-36 lg:w-45 lg:h-45 shrink-0'>
+					<ResponsiveImage src="logo.jpg" alt="" className='w-full h-full' loading="eager" />
+				</div>
+
+				{/* Equal spacer between logo and title */}
+				<div className="h-[5vh] md:h-10 lg:h-14 shrink-0" />
+
 			{/* ── Letter text above the envelope ── */}
-			<div className="w-full max-w-5xl mx-auto px-6 md:px-12 text-center md:mb-8 md:my-10 mt-4 mb-4">
+			<div className="w-full max-w-5xl mx-auto px-6 md:px-12 text-center mb-3 md:mb-8 shrink-0">
 				{/* Title */}
-				<div className="font-hoangngan7 tracking-[0.2em] uppercase text-[#3d2b1a] text-base md:text-xl lg:text-2xl mb-6 md:mb-10">
+				<div className="font-hoangngan7 tracking-[0.2em] uppercase text-[#3d2b1a] text-sm md:text-xl lg:text-2xl mb-3 md:mb-10">
 					{t('invitation.title')}
 				</div>
 
 				{/* Message body */}
-				<div className="font-hoangngan4 text-[#4a3520] leading-relaxed whitespace-pre-line text-xs md:text-base mb-5 md:mb-7 text-center">
+				<div className="font-hoangngan4 text-[#4a3520] leading-relaxed whitespace-pre-line text-xs md:text-base mb-3 md:mb-7 text-center">
 					{t('invitation.message')}
 				</div>
 
 				{/* With love */}
-				<div className="font-hoangngan4 text-[#6b5739] text-sm md:text-base mb-1">
+				<div className="font-hoangngan4 text-[#6b5739] text-xs md:text-base mb-0.5 md:mb-1">
 					{t('invitation.withLove')}
 				</div>
 
 				{/* Names signature */}
-				<p className="font-hoangngan22 text-[#3d2b1a] leading-none text-3xl md:text-[60px] pt-4">
+				<p className="font-hoangngan22 text-[#3d2b1a] leading-none text-2xl md:text-[60px] pt-2 md:pt-4">
 					{t('invitation.names')}
 				</p>
 			</div>
 
 			{/* ── Envelope stage ── */}
-			<div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+			<div className="w-full max-w-7xl mx-auto px-2 md:px-8 lg:px-12 min-h-0 shrink">
 				{/*
 				 * Aspect-ratio wrapper (1599 × 1036 ≈ 1.543)
 				 * Both envelope images sit absolute inside; the wrapper sets the height.
+				 * On mobile we cap the height so everything fits in one screen.
 				 */}
 				<div
-					className="relative w-full"
+					className="relative w-full max-h-[42vh] md:max-h-none"
 					style={{
 						aspectRatio: '1599 / 1036',
 						cursor: stage === 'idle' ? 'pointer' : 'default',
