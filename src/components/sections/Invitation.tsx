@@ -60,7 +60,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 
 	return (
 		<section
-			className="relative max-md:h-screen md:min-h-screen flex flex-col max-md:overflow-hidden"
+			className="relative max-md:h-dvh md:min-h-screen flex flex-col max-md:overflow-hidden"
 			style={{
 				opacity: isDismissing ? 0 : 1,
 				pointerEvents: isDismissing ? 'none' : 'auto',
