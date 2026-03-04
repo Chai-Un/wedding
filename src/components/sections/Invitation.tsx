@@ -115,7 +115,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 			</div>
 
 			{/* ── Envelope stage ── */}
-			<div className="w-full max-w-7xl mx-auto px-2 md:px-8 lg:px-12 min-h-0 shrink">
+			<div className="w-full max-w-7xl mx-auto px-2 md:px-8 lg:px-12 min-h-0 shrink pb-5">
 				{/*
 				 * Aspect-ratio wrapper (1599 × 1036 ≈ 1.543)
 				 * Both envelope images sit absolute inside; the wrapper sets the height.
@@ -180,11 +180,9 @@ export default function Invitation({ onOpen }: InvitationProps) {
 							alpha
 							draggable={false}
 							aria-hidden={true}
-							className="absolute"
+							className="absolute bottom-2.5 left-[125%] md:bottom-0 md:left-[145%]"
 							sizes="60vw"
 							style={{
-								bottom: '0%',
-								left: '145%',
 								rotate: '-27deg',
 								transform: 'scale(-1, 1)',
 								transformOrigin: 'bottom left',
