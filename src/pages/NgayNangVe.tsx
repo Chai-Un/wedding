@@ -62,11 +62,32 @@ export default function NgayNangVe() {
 			<main className="pt-32 pb-16 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Header */}
-					<div className="text-center mb-8 md:mb-12">
-						<h1 className="text-6xl md:text-7xl lg:text-8xl font-hoangngan8 text-[#8b4242] italic mb-2 leading-tight">
-							Eat the Memories
+					<div className="mb-8 md:mb-12">
+						<h1
+							className="text-6xl md:text-7xl lg:text-8xl font-hoangngan13 text-[#8b4242] leading-none mb-4 flex justify-center items-end"
+							aria-label="Eat the Memories"
+						>
+							{'Eat the Memories'.split('').map((char, i, arr) => {
+								const mid = (arr.length - 1) / 2;
+								const normalized = (i - mid) / mid;
+								const lift = (1 - normalized * normalized) * 32;
+								const rotation = normalized * 18;
+								return (
+									<span
+										key={i}
+										aria-hidden="true"
+										style={{
+											display: 'inline-block',
+											transform: `translateY(${-lift}px) rotate(${rotation}deg)`,
+											transformOrigin: '50% 100%',
+										}}
+									>
+										{char === ' ' ? '\u00a0' : char}
+									</span>
+								);
+							})}
 						</h1>
-						<div className="text-xl md:text-2xl font-hoangngan7 text-[#8b4242] uppercase tracking-widest font-bold">
+						<div className="text-center text-xl md:text-2xl font-hoangngan7 text-[#8b4242] uppercase tracking-widest font-bold">
 							Not the Calories
 						</div>
 					</div>
