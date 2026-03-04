@@ -55,7 +55,7 @@ export default function OurJourney() {
 				</div>
 
 				{/* Single paragraph block with all journey text */}
-				<div className="relative max-w-3xl md:max-w-4xl mx-auto mb-12 md:mb-16 lg:mb-20 px-4 md:px-0">
+				<div className="relative max-w-3xl md:max-w-4xl mx-auto mb-12 md:mb-16 lg:mb-20 px-4 md:px-0 md:overflow-hidden">
 					{/* Decorative: flowerTop + stamp — top-left */}
 					<ResponsiveImage
 						src="journey/flower_top.png"
@@ -186,7 +186,7 @@ export default function OurJourney() {
 					<ResponsiveImage
 						src="journey/flower.png"
 						alt=""
-						className="absolute right-[7%] bottom-[-2%] md:right-8 md:bottom-[-10%] lg:right-0 w-20 md:w-40 z-10 pointer-events-none select-none rotate-40 overflow-hidden"
+						className="absolute right-[7%] bottom-[-2%] md:right-6 md:bottom-[-7%] lg:bottom-[-10%] lg:right-0 w-20 md:w-32 lg:w-40 z-10 pointer-events-none select-none rotate-40 overflow-hidden"
 					/>
 					<ResponsiveImage
 						src="journey/wax_seal.png"

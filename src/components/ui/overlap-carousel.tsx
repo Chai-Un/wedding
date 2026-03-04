@@ -1,6 +1,7 @@
 import * as React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface OverlapCarouselProps {
 	children: React.ReactNode[];
@@ -101,39 +102,71 @@ export function OverlapCarousel({
 				</div>
 			</div>
 
-			{/* Visible 3-card overlap stack */}
+			{/* Visible 5-card overlap stack */}
 			<div className="relative w-full flex items-center justify-center overflow-hidden" style={{ height: '520px' }}>
 				{/* Prev / Next click zones */}
 				<button
 					onClick={handlePrev}
-					className="absolute left-0 top-0 h-full w-1/4 z-20 cursor-pointer opacity-0"
+					className="absolute left-0 top-0 h-full w-1/6 z-20 cursor-pointer flex items-center justify-start pl-2 group"
 					aria-label="Previous slide"
-				/>
+				>
+					<span className="flex items-center justify-center w-10 h-10 rounded-full bg-white/40 hover:bg-white transition-all duration-200">
+						<ChevronLeft className="w-5 h-5 text-[#412d1d]/50 group-hover:text-[#412d1d]/90 transition-colors duration-200" strokeWidth={1.5} />
+					</span>
+				</button>
 				<button
 					onClick={handleNext}
-					className="absolute right-0 top-0 h-full w-1/4 z-20 cursor-pointer opacity-0"
+					className="absolute right-0 top-0 h-full w-1/6 z-20 cursor-pointer flex items-center justify-end pr-2 group"
 					aria-label="Next slide"
-				/>
+				>
+					<span className="flex items-center justify-center w-10 h-10 rounded-full bg-white/40 hover:bg-white transition-all duration-200">
+						<ChevronRight className="w-5 h-5 text-[#412d1d]/50 group-hover:text-[#412d1d]/90 transition-colors duration-200" strokeWidth={1.5} />
+					</span>
+				</button>
 
 				{React.Children.map(children, (child, index) => {
 					const offset = getOffset(index);
 					const absOffset = Math.abs(offset);
 					const isActive = offset === 0;
 
-					// Only render the 3 visible slides (center, left, right)
-					if (absOffset > 1) return null;
+					// Only render the 5 visible slides
+					if (absOffset > 2) return null;
+
+					let transform: string;
+					let scale: number;
+					let opacity: number;
+					let blur: string;
+					let zIndex: number;
+
+					if (isActive) {
+						transform = 'translateX(0)';
+						scale = 1;
+						opacity = 1;
+						blur = 'none';
+						zIndex = 5;
+					} else if (absOffset === 1) {
+						transform = `translateX(${offset * 52}%)`;
+						scale = 0.82;
+						opacity = 0.55;
+						blur = 'blur(2px)';
+						zIndex = 4;
+					} else {
+						transform = `translateX(${offset * 62}%)`;
+						scale = 0.65;
+						opacity = 0.3;
+						blur = 'blur(4px)';
+						zIndex = 3;
+					}
 
 					return (
 						<div
 							key={index}
 							className="absolute transition-all duration-500 ease-out"
 							style={{
-								transform: isActive
-									? 'translateX(0) scale(1)'
-									: `translateX(${offset * 80}%) scale(0.9)`,
-								zIndex: isActive ? 3 : 2,
-								opacity: isActive ? 1 : 0.5,
-								filter: isActive ? 'none' : 'blur(2px)',
+								transform: `${transform} scale(${scale})`,
+								zIndex,
+								opacity,
+								filter: blur,
 								pointerEvents: isActive ? 'auto' : 'none',
 							}}
 						>
