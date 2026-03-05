@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import GalleryItem from '@/components/GalleryItem';
 import GalleryDialog from '@/components/GalleryDialog';
 import ResponsiveImage from '@/components/ResponsiveImage';
@@ -8,25 +7,55 @@ import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
 
+// Photo orientations: 0:L 1:P 2:P 3:L 4:P 5:P 6:P 7:P
+
 export default function HeartOfHanoi() {
 	const galleryId = 'heart-of-hanoi';
-	const { t } = useTranslation('translation', {
-		keyPrefix: `gallery.concepts.heartOfHanoi`,
-	});
 
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
-	// Define all photos for the gallery — use relative paths for responsive image lookup
 	const photos = [
-		{ id: '1', src: 'gallery/heartofhanoi/mievatho_NH4222.jpg', alt: 'Photo 1' },
-		{ id: '2', src: 'gallery/heartofhanoi/mievatho_NH4259.jpg', alt: 'Photo 2' },
-		{ id: '3', src: 'gallery/heartofhanoi/mievatho_NH4407.jpg', alt: 'Photo 3' },
-		{ id: '4', src: 'gallery/heartofhanoi/mievatho_NH4427.jpg', alt: 'Photo 4' },
-		{ id: '5', src: 'gallery/heartofhanoi/mievatho_NH4539.jpg', alt: 'Photo 5' },
-		{ id: '6', src: 'gallery/heartofhanoi/mievatho_NH4567.jpg', alt: 'Photo 6' },
-		{ id: '7', src: 'gallery/heartofhanoi/mievatho_NH4910.jpg', alt: 'Photo 7' },
-		{ id: '8', src: 'gallery/heartofhanoi/mievatho_NH5038.jpg', alt: 'Photo 8' },
+		{
+			id: '1',
+			src: 'gallery/heartofhanoi/mievatho_NH4222.jpg',
+			alt: 'Photo 1',
+		},
+		{
+			id: '2',
+			src: 'gallery/heartofhanoi/mievatho_NH4259.jpg',
+			alt: 'Photo 2',
+		},
+		{
+			id: '3',
+			src: 'gallery/heartofhanoi/mievatho_NH4407.jpg',
+			alt: 'Photo 3',
+		},
+		{
+			id: '4',
+			src: 'gallery/heartofhanoi/mievatho_NH4427.jpg',
+			alt: 'Photo 4',
+		},
+		{
+			id: '5',
+			src: 'gallery/heartofhanoi/mievatho_NH4539.jpg',
+			alt: 'Photo 5',
+		},
+		{
+			id: '6',
+			src: 'gallery/heartofhanoi/mievatho_NH4567.jpg',
+			alt: 'Photo 6',
+		},
+		{
+			id: '7',
+			src: 'gallery/heartofhanoi/mievatho_NH4910.jpg',
+			alt: 'Photo 7',
+		},
+		{
+			id: '8',
+			src: 'gallery/heartofhanoi/mievatho_NH5038.jpg',
+			alt: 'Photo 8',
+		},
 	];
 
 	const handlePhotoClick = (index: number) => {
@@ -42,168 +71,88 @@ export default function HeartOfHanoi() {
 		(concept) => concept.id !== galleryId,
 	);
 
+	const photo = (i: number, aspect: string, sizes: string) => (
+		<div
+			key={i}
+			onClick={() => handlePhotoClick(i)}
+			className={`${aspect} bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer`}
+		>
+			<ResponsiveImage
+				src={photos[i].src}
+				alt={photos[i].alt}
+				className="w-full h-full object-cover"
+				sizes={sizes}
+			/>
+			<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+		</div>
+	);
+
 	return (
 		<div className="min-h-screen bg-[#eee5d5]">
 			<Navigation overlay alwaysShow />
 			<main className="pt-32 pb-16 px-4">
-				<div className="max-w-7xl mx-auto">
-					{/* Photo Grid - Matching Reference Layout */}
-					<div className="mb-3">
-						{/* Row 1: Title + 2 large landscape photos */}
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
-							{/* Title Section */}
-							<div className="flex flex-col justify-center items-start p-8 md:p-4">
-								<h1 className="text-5xl md:text-6xl font-hoangngan8 text-[#8b4242] mb-4">
-									Heart
-								</h1>
-								<h1 className="text-5xl md:text-6xl font-hoangngan8 text-[#a8c5dd] mb-4">
-									of
-								</h1>
-								<h1 className="text-5xl md:text-6xl font-hoangngan8 text-[#d4af37] mb-4">
-									Hanoi
-								</h1>
-							</div>
-
-							{/* Photo 1 */}
-							<div
-								onClick={() => handlePhotoClick(0)}
-								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[0].src}
-										alt="Photo 1"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 100vw, 33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-
-							{/* Photo 2 */}
-							<div
-								onClick={() => handlePhotoClick(1)}
-								className="aspect-4/3 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[1].src}
-										alt="Photo 2"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 100vw, 33vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
+				<div className="max-w-7xl mx-auto space-y-3">
+					{/* Row 1: portrait (1) | landscape (2 cols) — ratio 1:2 — photos 1,0 */}
+					<div className="flex gap-3" style={{ height: '40vw' }}>
+						<div
+							onClick={() => handlePhotoClick(1)}
+							className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+						>
+							<ResponsiveImage
+								src={photos[1].src}
+								alt={photos[1].alt}
+								className="w-full h-full object-cover"
+								sizes="25vw"
+							/>
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 						</div>
-
-						{/* Row 2: Text section + 2 portrait photos */}
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-							{/* Text Section */}
-							<div className="flex flex-col justify-center items-start p-8 md:p-12 text-[#8b4242]">
-								<p className="text-sm md:text-base font-hoangngan11 mb-4 text-center md:text-left">
-									{t('caption1')}
-								</p>
-								<p className="text-sm md:text-base font-hoangngan11 mb-4 text-center md:text-left">
-									{t('caption2')}
-								</p>
-								<p className="text-sm md:text-base font-hoangngan11 text-center md:text-left">
-									{t('caption3')}
-								</p>
-							</div>
-
-							{/* 2 Portrait Photos */}
-							<div className="grid grid-cols-2 gap-3">
-								<div
-									onClick={() => handlePhotoClick(2)}
-									className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-								>
-									<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-										<ResponsiveImage
-											src={photos[2].src}
-											alt="Photo 3"
-											className="w-full h-full object-cover"
-											sizes="50vw"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-								</div>
-								<div
-									onClick={() => handlePhotoClick(3)}
-									className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-								>
-									<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-										<ResponsiveImage
-											src={photos[3].src}
-											alt="Photo 4"
-											className="w-full h-full object-cover"
-											sizes="50vw"
-										/>
-									</div>
-									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-								</div>
-							</div>
+						<div
+							onClick={() => handlePhotoClick(0)}
+							className="flex-2 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+						>
+							<ResponsiveImage
+								src={photos[0].src}
+								alt={photos[0].alt}
+								className="w-full h-full object-cover"
+								sizes="50vw"
+							/>
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 						</div>
+					</div>
 
-						{/* Row 3: 4 photos - varied sizes */}
-						<div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-							<div
-								onClick={() => handlePhotoClick(4)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[4].src}
-										alt="Photo 5"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(5)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[5].src}
-										alt="Photo 6"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(6)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[6].src}
-										alt="Photo 7"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							<div
-								onClick={() => handlePhotoClick(7)}
-								className="aspect-3/4 bg-linear-to-br from-stone-200 to-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group"
-							>
-								<div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm cursor-pointer">
-									<ResponsiveImage
-										src={photos[7].src}
-										alt="Photo 8"
-										className="w-full h-full object-cover"
-										sizes="(max-width: 768px) 50vw, 25vw"
-									/>
-								</div>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
+					{/* Row 2: 2 equal columns, same height — photos 2,3 */}
+					<div className="flex gap-3" style={{ height: '50vw' }}>
+						<div
+							onClick={() => handlePhotoClick(2)}
+							className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+						>
+							<ResponsiveImage
+								src={photos[2].src}
+								alt={photos[2].alt}
+								className="w-full h-full object-cover"
+								sizes="50vw"
+							/>
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 						</div>
+						<div
+							onClick={() => handlePhotoClick(3)}
+							className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+						>
+							<ResponsiveImage
+								src={photos[3].src}
+								alt={photos[3].alt}
+								className="w-full h-full object-cover"
+								sizes="50vw"
+							/>
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+						</div>
+					</div>
+
+					{/* Row 3: 4 equal columns — photos 4,5,6,7 */}
+					<div className="grid grid-cols-4 gap-3">
+						{[4, 5, 6, 7].map((i) =>
+							photo(i, 'aspect-2/3', '25vw'),
+						)}
 					</div>
 
 					{/* Other Concepts Navigation */}
@@ -217,7 +166,7 @@ export default function HeartOfHanoi() {
 								}}
 							/>
 						</div>
-						<div className="grid grid-cols-3 md:grid-cols-3 gap-6 max-w-3xl md:max-w-240 mx-auto">
+						<div className="grid grid-cols-3 gap-6 max-w-3xl md:max-w-240 mx-auto">
 							{otherConcepts.map((concept) => (
 								<GalleryItem
 									key={concept.id}
@@ -232,7 +181,6 @@ export default function HeartOfHanoi() {
 
 			<ContactUs />
 
-			{/* Gallery Dialog */}
 			<GalleryDialog
 				photos={photos}
 				open={dialogOpen}

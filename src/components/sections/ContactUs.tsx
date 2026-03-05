@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import ResponsiveBackground from '@/components/ResponsiveBackground';
 import { getOptimizedUrl } from '@/lib/responsive-image';
-import LogoSvg from '@/assets/images/logo.svg';
 
 const ContactUs = () => {
 	const { t } = useTranslation();
@@ -18,9 +17,9 @@ const ContactUs = () => {
 			<div className="relative max-w-6xl mx-auto">
 				<div className="grid gap-12 items-center">
 					<div
-						className={`relative inline-flex flex-col items-center justify-center bg-center bg-no-repeat bg-contain w-full h-40`}
-						// style={{ backgroundImage: `url(${getOptimizedUrl('logo.jpg', 'sm') || ''})` }}
-						style={{ backgroundImage: `url(${LogoSvg})` }}
+						className={`relative inline-flex flex-col items-center justify-center bg-center bg-no-repeat bg-contain w-full h-32 md:h-40`}
+						style={{ backgroundImage: `url(${getOptimizedUrl('logo.jpg', 'sm') || ''})` }}
+						// style={{ backgroundImage: `url(${LogoSvg})` }}
 					></div>
 					<div className="text-[#d4c5ad] text-[0.8em] md:text-[1em] lg:text-[1.125em] font-hoangngan3">
 						<div className="whitespace-pre-line">
