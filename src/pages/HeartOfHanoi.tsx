@@ -93,7 +93,7 @@ export default function HeartOfHanoi() {
 			<main className="pt-32 pb-16 px-4">
 				<div className="max-w-7xl mx-auto space-y-3">
 					{/* Row 1: portrait (1) | landscape (2 cols) — ratio 1:2 — photos 1,0 */}
-					<div className="flex gap-3" style={{ height: '40vw' }}>
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '40vw' }}>
 						<div
 							onClick={() => handlePhotoClick(1)}
 							className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
@@ -121,7 +121,7 @@ export default function HeartOfHanoi() {
 					</div>
 
 					{/* Row 2: 2 equal columns, same height — photos 2,3 */}
-					<div className="flex gap-3" style={{ height: '50vw' }}>
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '50vw' }}>
 						<div
 							onClick={() => handlePhotoClick(2)}
 							className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
@@ -149,7 +149,7 @@ export default function HeartOfHanoi() {
 					</div>
 
 					{/* Row 3: 4 equal columns — photos 4,5,6,7 */}
-					<div className="grid grid-cols-4 gap-3">
+					<div className="grid grid-cols-4 gap-1 md:gap-2 mb-1 md:mb-2">
 						{[4, 5, 6, 7].map((i) =>
 							photo(i, 'aspect-2/3', '25vw'),
 						)}

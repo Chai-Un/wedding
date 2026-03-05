@@ -200,7 +200,7 @@ export default function NgayNangVe() {
 					</div>
 
 					{/* ── SECTION 1 ── */}
-					<div className="mb-3 md:mb-3">
+					<div className="mb-1 md:mb-2">
 						{/* Row 1: 3 equal portraits */}
 						<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
 							{[0, 1, 2].map((i) => (
@@ -309,7 +309,7 @@ export default function NgayNangVe() {
 					</div>
 
 					{/* ── SECTION 2 ── */}
-					<div className="mb-3 md:mb-3">
+					<div className="mb-1 md:mb-2">
 						{/* Row 1: portrait (1/3) + wide (2/3) — portrait drives height, wide stretches */}
 						<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
 							<div
@@ -430,7 +430,7 @@ export default function NgayNangVe() {
 					</div>
 
 					{/* ── SECTION 3 ── */}
-					<div className="mb-3 md:mb-3">
+					<div className="mb-1 md:mb-2">
 						{/*
 							3-col × 3-row grid
 							Col 1: 3 landscapes (equal height, each 1 row)

@@ -40,7 +40,7 @@ const ContactUs = () => {
 			<div className="relative max-w-4xl mx-auto">
 				{/* Two-photo grid with "together always" overlay */}
 				<div className="relative mt-12 w-10/12 lg:w-full mx-auto mb-10">
-					<div className="grid grid-cols-2 gap-2 md:gap-3 lg:gap-4">
+					<div className="grid grid-cols-2 gap-1 md:gap-2">
 						<ResponsiveImage
 							src="gallery/redamancy/mievatho_NH6309.jpg"
 							alt="Together always – photo 1"

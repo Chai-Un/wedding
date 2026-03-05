@@ -68,9 +68,9 @@ export default function Redamancy() {
 				<div className="max-w-7xl mx-auto space-y-3">
 
 					{/* Row 1: 1fr | 2fr — left: 2 portraits stacked, right: 1 tall portrait */}
-					<div className="flex gap-3" style={{ height: '70vw' }}>
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '70vw' }}>
 						{/* Left 1fr: two portraits stacked, each 50% height */}
-						<div className="flex-1 flex flex-col gap-3">
+						<div className="flex-1 flex flex-col gap-1 md:gap-2">
 							{imgDiv(0, '25vw')}
 							{imgDiv(1, '25vw')}
 						</div>
@@ -81,12 +81,12 @@ export default function Redamancy() {
 					</div>
 
 					{/* Row 2: full-width landscape — photo 9 */}
-					<div className="aspect-video">
+					<div className="aspect-video mb-1 md:mb-2">
 						{imgDiv(9, '100vw')}
 					</div>
 
 					{/* Row 3: 1fr | 2fr — portrait left, landscape right — photos 3, 10 */}
-					<div className="flex gap-3" style={{ height: '40vw' }}>
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '40vw' }}>
 						<div className="flex-1">
 							{imgDiv(3, '25vw')}
 						</div>
@@ -96,20 +96,20 @@ export default function Redamancy() {
 					</div>
 
 					{/* Row 4: 2fr | 1fr — left: 1 large portrait, right: 2 portraits stacked — photos 4, 5, 6 */}
-					<div className="flex gap-3" style={{ height: '70vw' }}>
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '70vw' }}>
 						{/* Left 2fr: one large portrait */}
 						<div className="flex-2">
 							{imgDiv(4, '50vw')}
 						</div>
 						{/* Right 1fr: two portraits stacked */}
-						<div className="flex-1 flex flex-col gap-3">
+						<div className="flex-1 flex flex-col gap-1 md:gap-2">
 							{imgDiv(5, '25vw')}
 							{imgDiv(6, '25vw')}
 						</div>
 					</div>
 
 					{/* Row 5: 3 equal columns — landscape images — photos 7, 12, 13 */}
-					<div className="grid grid-cols-3 gap-3">
+					<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
 						{[7, 12, 13].map((i) => (
 							<div
 								key={i}
