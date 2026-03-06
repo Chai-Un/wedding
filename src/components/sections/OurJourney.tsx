@@ -46,7 +46,7 @@ export default function OurJourney() {
 			id="our-journey"
 			className="bg-[#fbf7ee] px-0 md:px-4 py-12 md:py-20 lg:py-24"
 		>
-			<div className="max-w-5xl mx-auto">
+			<div className="max-w-7xl mx-auto">
 				{/* Title */}
 				<div className="mb-12 md:mb-16 lg:mb-20 px-4 md:px-0">
 					<div className="text-[64px] lg:text-[80px] font-hoangngan8 text-[#412d1d] mb-4 text-center">
