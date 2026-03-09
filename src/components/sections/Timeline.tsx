@@ -30,11 +30,11 @@ const Timeline = () => {
 	return (
 		<section
 			id="timeline"
-			className="bg-[#6b5739] py-12 md:py-20 lg:py-24 px-4"
+			className="bg-[#412d1d] py-12 md:py-20 lg:py-24 px-4"
 		>
 			<div className="max-w-6xl mx-auto">
 				{/* Title */}
-				<h2 className="text-[64px] lg:text-[80px] font-custom-serif text-[#e8dcc8] text-center mb-8 md:mb-12">
+				<h2 className="text-[64px] lg:text-[80px] font-custom-serif text-[#fffcf7] text-center mb-8 md:mb-12">
 					{t('timeline.title')}
 				</h2>
 
@@ -44,16 +44,16 @@ const Timeline = () => {
 						<img src={swanWhite} alt="Swan" className="w-35 h-25" />
 					</div>
 					<div className="text-center space-y-2">
-						<p className="text-[#e8dcc8] text-lg md:text-xl lg:text-2xl font-hoangngan5 uppercase tracking-wide font-bold">
+						<p className="text-[#fbf7ee] text-lg md:text-xl lg:text-2xl font-hoangngan5 uppercase tracking-wide font-bold">
 							{timelineItems[0].time}
 						</p>
-						<p className="text-[#e8dcc8] text-base md:text-lg lg:text-xl font-hoangngan3 uppercase tracking-wide">
+						<p className="text-[#fbf7ee] text-base md:text-lg lg:text-xl font-hoangngan3 uppercase tracking-wide">
 							{timelineItems[0].title}
 						</p>
-						<p className="text-[#e8dcc8]/90 text-base md:text-lg lg:text-xl font-hoangngan3 italic">
+						<p className="text-[#fbf7ee] text-base md:text-lg lg:text-xl font-hoangngan3 italic">
 							{timelineItems[0].subtitle}
 						</p>
-						<p className="text-[#e8dcc8]/80 text-xs md:text-sm font-hoangngan3 italic">
+						<p className="text-[#fbf7ee] text-xs md:text-sm font-hoangngan3 italic">
 							{timelineItems[0].description}
 						</p>
 					</div>
@@ -76,25 +76,25 @@ const Timeline = () => {
 							</div>
 
 							{/* Time */}
-							<div className="text-[#e8dcc8] text-lg md:text-xl lg:text-2xl font-hoangngan5 font-medium mb-0 md:mb-2">
+							<div className="text-[#fbf7ee] text-lg md:text-xl lg:text-2xl font-hoangngan5 font-medium mb-0 md:mb-2">
 								{item.time}
 							</div>
 
 							{/* Title */}
-							<div className="text-[#e8dcc8] text-base md:text-lg lg:text-xl font-hoangngan3">
+							<div className="text-[#fbf7ee] text-base md:text-lg lg:text-xl font-hoangngan3">
 								{item.title}
 							</div>
 
 							{/* Subtitle */}
 							{item.subtitle && (
-								<div className="text-[#e8dcc8]/90 text-xs md:text-sm font-hoangngan3 mb-0">
+								<div className="text-[#fbf7ee]/90 text-xs md:text-sm font-hoangngan3 mb-0">
 									{item.subtitle}
 								</div>
 							)}
 
 							{/* Description */}
 							{item.description && (
-								<div className="text-[#eee5d5]/80 text-[10px] md:text-xs font-montserrat italic">
+								<div className="text-[#fbf7ee]/90 text-xs md:text-sm font-hoangngan3 mb-0">
 									{item.description}
 								</div>
 							)}

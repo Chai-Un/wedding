@@ -177,7 +177,7 @@ export default function NgayNangVe() {
 					{/* Header */}
 					<div className="mb-8 md:mb-12">
 						<div
-							className="text-[40px] md:text-5xl font-hoangngan13 text-[#8b4242] leading-none flex justify-center items-end"
+							className="text-[40px] md:text-[54px] font-hoangngan13 text-[#9f000e] leading-none flex justify-center items-end"
 							aria-label="Eat the Memories"
 						>
 							{'Eat the Memories'
@@ -203,7 +203,7 @@ export default function NgayNangVe() {
 									);
 								})}
 						</div>
-						<div className="text-center text-3xl md:text-4xl font-hoangngan14 text-[#8b4242] uppercase tracking-widest font-bold">
+						<div className="text-center text-3xl md:text-[46px] font-hoangngan14 text-[#9f000e] uppercase md:mt-3 tracking-normal font-normal" aria-label="Not the Calories">
 							Not the Calories
 						</div>
 					</div>
@@ -347,7 +347,7 @@ export default function NgayNangVe() {
 							</div>
 						</div>
 						{/* Row 2: 4-col mosaic — corners stacked, centers tall spanning 2 rows */}
-						<div className="grid grid-cols-4 gap-1 md:gap-2 mb-1 md:mb-2">
+						<div className="grid gap-1 md:gap-2 mb-1 md:mb-2" style={{ gridTemplateColumns: '1fr 2fr 2fr 1fr' }}>
 							<div
 								onClick={() => handlePhotoClick(11)}
 								className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
@@ -355,7 +355,7 @@ export default function NgayNangVe() {
 								<ResponsiveImage
 									src={photos[11].src}
 									alt={photos[11].alt}
-									className="absolute inset-0 w-full h-full object-cover"
+									className="absolute inset-0 w-full h-full object-cover object-top"
 									sizes="25vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -364,6 +364,7 @@ export default function NgayNangVe() {
 								onClick={() => handlePhotoClick(12)}
 								className="row-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
+								
 								<ResponsiveImage
 									src={photos[12].src}
 									alt={photos[12].alt}
@@ -391,7 +392,7 @@ export default function NgayNangVe() {
 								<ResponsiveImage
 									src={photos[14].src}
 									alt={photos[14].alt}
-									className="absolute inset-0 w-full h-full object-cover"
+									className="absolute inset-0 w-full h-full object-cover object-bottom"
 									sizes="25vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -415,7 +416,7 @@ export default function NgayNangVe() {
 								<ResponsiveImage
 									src={photos[16].src}
 									alt={photos[16].alt}
-									className="absolute inset-0 w-full h-full object-cover"
+									className="absolute inset-0 w-full h-full object-cover object-bottom"
 									sizes="25vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -429,7 +430,7 @@ export default function NgayNangVe() {
 							<ResponsiveImage
 								src={photos[17].src}
 								alt={photos[17].alt}
-								className="absolute inset-0 w-full h-full object-cover"
+								className="absolute inset-0 w-full h-full object-cover object-bottom"
 								sizes="100vw"
 							/>
 							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
@@ -438,37 +439,36 @@ export default function NgayNangVe() {
 					{/* ── SECTION 3 ── */}
 					<div className="mb-1 md:mb-2">
 						{/*
-							3-col × 3-row grid
-							Col 1: 3 landscapes (equal height, each 1 row)
-							Col 2: 1 portrait spanning rows 1-2, then row 3 = 2 portraits side-by-side
-							Col 3: 1 portrait spanning rows 1-2 (1.5 rows), 1 landscape in row 3
+							3-col grid: 5fr 4fr 3fr
+							Col 1 (widest): 3 equal landscape items, each 1 row
+							Col 2: tall portrait spanning rows 1-2, then 2 portraits side-by-side in row 3
+							Col 3: portrait spanning rows 1-2, landscape in row 3
 						*/}
 						<div
 							className="grid gap-1 md:gap-2"
 							style={{
-								gridTemplateColumns: '1fr 1fr 1fr',
-								gridTemplateRows: '15vw 15vw 15vw 15vw 20vw',
+								gridTemplateColumns: '5fr 4fr 3fr',
 							}}
 						>
-							{/* Col 1, Row 1+2 */}
+							{/* Col 1, Row 1: landscape */}
 							<div
 								onClick={() => handlePhotoClick(18)}
-								className="overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-								style={{ gridColumn: '1', gridRow: '1 / 3' }}
+								className="aspect-3/2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								style={{ gridColumn: '1', gridRow: '1' }}
 							>
 								<ResponsiveImage
 									src={photos[18].src}
 									alt={photos[18].alt}
 									className="absolute inset-0 w-full h-full object-cover"
-									sizes="33vw"
+									sizes="42vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							{/* Col 2, Row 1+2+3+4: tall portrait */}
+							{/* Col 2, Row 1+2: tall portrait */}
 							<div
 								onClick={() => handlePhotoClick(20)}
 								className="overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-								style={{ gridColumn: '2', gridRow: '1 / 5' }}
+								style={{ gridColumn: '2', gridRow: '1 / 3' }}
 							>
 								<ResponsiveImage
 									src={photos[20].src}
@@ -478,66 +478,52 @@ export default function NgayNangVe() {
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							{/* Col 3, Row 1+2+3: portrait 1 (1.5fr) */}
+							{/* Col 3, Row 1+2: portrait */}
 							<div
 								onClick={() => handlePhotoClick(21)}
 								className="overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-								style={{ gridColumn: '3', gridRow: '1 / 4' }}
+								style={{ gridColumn: '3', gridRow: '1 / 3' }}
 							>
 								<ResponsiveImage
 									src={photos[21].src}
 									alt={photos[21].alt}
 									className="absolute inset-0 w-full h-full object-cover"
-									sizes="33vw"
+									sizes="25vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							{/* Col 1, Row 3+4 */}
+							{/* Col 1, Row 2: landscape */}
 							<div
 								onClick={() => handlePhotoClick(19)}
-								className="overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-								style={{ gridColumn: '1', gridRow: '3 / 5' }}
+								className="aspect-3/2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								style={{ gridColumn: '1', gridRow: '2' }}
 							>
 								<ResponsiveImage
 									src={photos[19].src}
 									alt={photos[19].alt}
 									className="absolute inset-0 w-full h-full object-cover"
-									sizes="33vw"
+									sizes="42vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							{/* Col 3, Row 4+5: portrait 2 (1.5fr) */}
-							<div
-								onClick={() => handlePhotoClick(25)}
-								className="overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-								style={{ gridColumn: '3', gridRow: '4 / 6' }}
-							>
-								<ResponsiveImage
-									src={photos[25].src}
-									alt={photos[25].alt}
-									className="absolute inset-0 w-full h-full object-cover"
-									sizes="33vw"
-								/>
-								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-							</div>
-							{/* Col 1, Row 5: landscape */}
+							{/* Col 1, Row 3: landscape */}
 							<div
 								onClick={() => handlePhotoClick(22)}
-								className="overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-								style={{ gridColumn: '1', gridRow: '5' }}
+								className="aspect-3/2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								style={{ gridColumn: '1', gridRow: '3' }}
 							>
 								<ResponsiveImage
 									src={photos[22].src}
 									alt={photos[22].alt}
 									className="absolute inset-0 w-full h-full object-cover"
-									sizes="33vw"
+									sizes="42vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
-							{/* Col 2, Row 5: 2 portraits side-by-side */}
+							{/* Col 2, Row 3: 2 portraits side-by-side */}
 							<div
 								className="flex gap-1 md:gap-2"
-								style={{ gridColumn: '2', gridRow: '5' }}
+								style={{ gridColumn: '2', gridRow: '3' }}
 							>
 								<div
 									onClick={() => handlePhotoClick(23)}
@@ -547,7 +533,7 @@ export default function NgayNangVe() {
 										src={photos[23].src}
 										alt={photos[23].alt}
 										className="absolute inset-0 w-full h-full object-cover"
-										sizes="16vw"
+										sizes="17vw"
 									/>
 									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 								</div>
@@ -559,10 +545,24 @@ export default function NgayNangVe() {
 										src={photos[24].src}
 										alt={photos[24].alt}
 										className="absolute inset-0 w-full h-full object-cover"
-										sizes="16vw"
+										sizes="17vw"
 									/>
 									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 								</div>
+							</div>
+							{/* Col 3, Row 3: portrait */}
+							<div
+								onClick={() => handlePhotoClick(25)}
+								className="overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								style={{ gridColumn: '3', gridRow: '3' }}
+							>
+								<ResponsiveImage
+									src={photos[25].src}
+									alt={photos[25].alt}
+									className="absolute inset-0 w-full h-full object-cover"
+									sizes="25vw"
+								/>
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 						</div>
 					</div>

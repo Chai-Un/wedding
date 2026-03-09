@@ -21,7 +21,7 @@ const ContactUs = () => {
 						style={{ backgroundImage: `url(${getOptimizedUrl('logo.jpg', 'sm') || ''})` }}
 						// style={{ backgroundImage: `url(${LogoSvg})` }}
 					></div>
-					<div className="text-[#d4c5ad] text-[0.8em] md:text-[1em] lg:text-[1.125em] font-hoangngan3">
+					<div className="text-[#fffcf7] text-[0.8em] md:text-[0.8em] lg:text-[1em] font-hoangngan3">
 						<div className="whitespace-pre-line">
 							{t('contact.message')}
 						</div>
@@ -39,7 +39,7 @@ const ContactUs = () => {
 			</div>
 			<div className="relative max-w-4xl mx-auto">
 				{/* Two-photo grid with "together always" overlay */}
-				<div className="relative mt-12 w-10/12 lg:w-full mx-auto mb-10">
+				<div className="relative mt-12 w-8/12 mx-auto mb-10">
 					<div className="grid grid-cols-2 gap-1 md:gap-2">
 						<ResponsiveImage
 							src="gallery/redamancy/mievatho_NH6309.jpg"
@@ -55,11 +55,11 @@ const ContactUs = () => {
 						/>
 					</div>
 					{/* Overlay text spanning across both photos */}
-					<div className="absolute bottom-4.5 left-1/2 -translate-x-1/2 translate-y-1/2 pointer-events-none select-none z-10">
+					<div className="absolute bottom-3.5 left-1/2 -translate-x-1/2 translate-y-1/2 pointer-events-none select-none z-10">
 						<span
 							className="font-hoangngan13 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]"
 							style={{
-								fontSize: 'clamp(1.25rem, 3vw, 3rem)',
+								fontSize: 'clamp(0.85rem, 2vw, 2rem)',
 								fontWeight: 400,
 								fontStyle: 'normal',
 								color: 'rgb(255, 255, 255)',

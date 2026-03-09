@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ResponsiveImage from '@/components/ResponsiveImage';
 import videoBg from '@/assets/videos/demo.mp4';
+import logoEnvelope from '@/assets/images-optimized/logo_envelope.jpg';
 
 interface InvitationProps {
 	onOpen: () => void;
@@ -85,7 +86,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 				<div className="h-[5vh] md:h-10 lg:h-14 shrink-0" />
 
 				<div className='w-28 h-28 md:w-36 md:h-36 lg:w-45 lg:h-45 shrink-0'>
-					<ResponsiveImage src="logo.jpg" alt="" className='w-full h-full' loading="eager" />
+					<img src={logoEnvelope} alt="" className='w-full h-full' loading="eager" />
 				</div>
 
 				{/* Equal spacer between logo and title */}

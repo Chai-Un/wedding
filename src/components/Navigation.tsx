@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 
 const navItems = [
 	{ nameKey: 'nav.home', href: 'home' },
@@ -24,6 +25,9 @@ export default function Navigation({
 }: NavigationProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
+	const [galleryOpen, setGalleryOpen] = useState(false);
+	const [mobileGalleryOpen, setMobileGalleryOpen] = useState(false);
+	const galleryRef = useRef<HTMLDivElement>(null);
 	const navigate = useNavigate();
 	const location = useLocation();
 	const { t } = useTranslation();
@@ -42,6 +46,28 @@ export default function Navigation({
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [overlay]);
+
+	// Auto-open mobile gallery submenu when on a gallery page
+	useEffect(() => {
+		if (location.pathname.startsWith('/gallery/')) {
+			setMobileGalleryOpen(true);
+		}
+	}, [location.pathname]);
+
+	// Close gallery dropdown when clicking outside
+	useEffect(() => {
+		const handleClickOutside = (e: MouseEvent) => {
+			if (
+				galleryRef.current &&
+				!galleryRef.current.contains(e.target as Node)
+			) {
+				setGalleryOpen(false);
+			}
+		};
+		document.addEventListener('mousedown', handleClickOutside);
+		return () =>
+			document.removeEventListener('mousedown', handleClickOutside);
+	}, []);
 
 	const handleNavigation = (id: string) => {
 		// close mobile menu immediately
@@ -117,15 +143,60 @@ export default function Navigation({
 				>
 					{/* Desktop Navigation - Centered */}
 					<div className="hidden md:flex items-center md:space-x-5 lg:space-x-12">
-						{navItems.map((item) => (
-							<button
-								key={item.href}
-								onClick={() => handleNavigation(item.href)}
-								className={buttonClasses}
-							>
-								{t(item.nameKey)}
-							</button>
-						))}
+						{navItems.map((item) =>
+							item.href === 'gallery' ? (
+								<div
+									key="gallery"
+									className="relative"
+									ref={galleryRef}
+								>
+									<button
+										onClick={() =>
+											setGalleryOpen((v) => !v)
+										}
+										className={`${buttonClasses} flex items-center gap-1`}
+									>
+										{t(item.nameKey)}
+										<ChevronDown
+											className={`w-3.5 h-3.5 transition-transform duration-200 ${galleryOpen ? 'rotate-180' : ''}`}
+										/>
+									</button>
+									{galleryOpen && (
+										<div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 py-1 bg-black/60 backdrop-blur-md rounded-lg shadow-lg min-w-45 z-50">
+											{GALLERY_CONCEPTS.map((concept) => {
+												const isActive =
+													location.pathname ===
+													concept.path;
+												return (
+													<button
+														key={concept.id}
+														onClick={() => {
+															setGalleryOpen(
+																false,
+															);
+															navigate(
+																concept.path,
+															);
+														}}
+														className={`block w-full text-left px-4 py-2.5 text-sm lg:text-base hover:bg-white/10 transition-colors font-hoangngan7 uppercase tracking-wider whitespace-nowrap cursor-pointer ${isActive ? 'text-white' : 'text-white/60 hover:text-white'}`}
+													>
+														{concept.title}
+													</button>
+												);
+											})}
+										</div>
+									)}
+								</div>
+							) : (
+								<button
+									key={item.href}
+									onClick={() => handleNavigation(item.href)}
+									className={buttonClasses}
+								>
+									{t(item.nameKey)}
+								</button>
+							),
+						)}
 					</div>
 
 					{/* Language Switcher - Left */}
@@ -154,15 +225,57 @@ export default function Navigation({
 			{isOpen && (
 				<div className={mobileMenuClasses}>
 					<div className="px-4 py-3 space-y-2">
-						{navItems.map((item) => (
-							<button
-								key={item.href}
-								onClick={() => handleNavigation(item.href)}
-								className={mobileItemClasses}
-							>
-								{t(item.nameKey)}
-							</button>
-						))}
+						{navItems.map((item) =>
+							item.href === 'gallery' ? (
+								<div key="gallery">
+									<button
+										onClick={() =>
+											setMobileGalleryOpen((v) => !v)
+										}
+										className={`${mobileItemClasses} flex items-center justify-between`}
+									>
+										{t(item.nameKey)}
+										<ChevronDown
+											className={`w-3.5 h-3.5 transition-transform duration-200 ${mobileGalleryOpen ? 'rotate-180' : ''}`}
+										/>
+									</button>
+									{mobileGalleryOpen && (
+										<div className="pl-4 mt-1 space-y-1">
+											{GALLERY_CONCEPTS.map((concept) => {
+												const isActive =
+													location.pathname ===
+													concept.path;
+												return (
+													<button
+														key={concept.id}
+														onClick={() => {
+															setIsOpen(false);
+															setMobileGalleryOpen(
+																false,
+															);
+															navigate(
+																concept.path,
+															);
+														}}
+														className={`${mobileItemClasses} text-[0.7em] ${isActive ? 'opacity-100 bg-white/10' : 'opacity-80'}`}
+													>
+														{concept.title}
+													</button>
+												);
+											})}
+										</div>
+									)}
+								</div>
+							) : (
+								<button
+									key={item.href}
+									onClick={() => handleNavigation(item.href)}
+									className={mobileItemClasses}
+								>
+									{t(item.nameKey)}
+								</button>
+							),
+						)}
 					</div>
 				</div>
 			)}
