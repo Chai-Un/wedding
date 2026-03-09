@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
+// import LanguageSwitcher from './LanguageSwitcher';
 import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 
 const navItems = [
@@ -17,11 +17,14 @@ const navItems = [
 interface NavigationProps {
 	overlay?: boolean; // If true, uses transparent overlay style. If false, uses solid background.
 	alwaysShow?: boolean;
+	/** 'bar' = always-visible toggle bar on mobile (default). 'button' = floating icon-only toggle button, no bar. */
+	mobileNav?: 'bar' | 'button';
 }
 
 export default function Navigation({
 	overlay = false,
 	alwaysShow = false,
+	mobileNav = 'button',
 }: NavigationProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -50,6 +53,7 @@ export default function Navigation({
 	// Auto-open mobile gallery submenu when on a gallery page
 	useEffect(() => {
 		if (location.pathname.startsWith('/gallery/')) {
+			// eslint-disable-next-line react-hooks/set-state-in-effect
 			setMobileGalleryOpen(true);
 		}
 	}, [location.pathname]);
@@ -108,12 +112,12 @@ export default function Navigation({
 
 	// Conditional styling based on overlay prop
 	const navClasses = overlay
-		? `fixed top-0 left-0 right-0 z-50 py-2 px-2 md:py-10 md:px-6 transition-all duration-300 ${
+		? `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${mobileNav === 'button' ? '' : 'py-2 px-2'} md:py-10 md:px-6 ${
 				isScrolled || alwaysShow
 					? 'md:!py-5 bg-black/30 backdrop-blur-md'
 					: ''
 			}`
-		: 'fixed top-0 left-0 right-0 bg-[#eee5d5]/95 backdrop-blur-sm shadow-sm z-50 py-3 md:py-6';
+		: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${mobileNav === 'button' ? 'md:bg-[#eee5d5]/95 md:backdrop-blur-sm md:shadow-sm md:py-6' : 'bg-[#eee5d5]/95 backdrop-blur-sm shadow-sm py-3 md:py-6'}`;
 
 	const buttonClasses = overlay
 		? 'text-sm md:text-base lg:text-xl font-light text-white hover:scale-105 active:text-white transition-colors tracking-wider cursor-pointer font-hoangngan7 uppercase'
@@ -132,12 +136,13 @@ export default function Navigation({
 		: 'block w-full text-left px-3 py-2 text-[0.875em] md:text-[1em] font-medium text-[#5a6e4a] hover:text-[#4a5e3a] hover:bg-[#d4c5ad]/30 rounded-md transition-colors uppercase font-hoangngan7';
 
 	return (
+		<>
 		<nav className={navClasses}>
 			<div className="w-full md:w-[90vw] mx-auto md:ml-0 lg:mx-auto">
 				<div
 					className={
-						overlay
-							? 'flex items-center justify-center h-12 md:h-auto'
+						mobileNav === 'button'
+							? 'md:flex md:items-center md:justify-center md:h-auto'
 							: 'flex items-center justify-center h-12 md:h-auto'
 					}
 				>
@@ -200,29 +205,31 @@ export default function Navigation({
 					</div>
 
 					{/* Language Switcher - Left */}
-					<div className="md:absolute md:top-1/2 md:right-2 md:transform md:-translate-y-1/2">
+					{/* <div className="md:absolute md:top-1/2 md:right-2 md:transform md:-translate-y-1/2">
 						<LanguageSwitcher />
-					</div>
+					</div> */}
 
-					{/* Mobile menu button - Right */}
-					<div className="md:hidden ml-auto">
-						<button
-							onClick={() => setIsOpen(!isOpen)}
-							aria-label="Toggle menu"
-							className={mobileButtonClasses}
-						>
-							{isOpen ? (
-								<X className="h-6 w-6" />
-							) : (
-								<Menu className="h-6 w-6" />
-							)}
-						</button>
-					</div>
+					{/* Mobile menu button - Right (bar mode only) */}
+					{mobileNav === 'bar' && (
+						<div className="md:hidden ml-auto">
+							<button
+								onClick={() => setIsOpen(!isOpen)}
+								aria-label="Toggle menu"
+								className={mobileButtonClasses}
+							>
+								{isOpen ? (
+									<X className="h-6 w-6" />
+								) : (
+									<Menu className="h-6 w-6" />
+								)}
+							</button>
+						</div>
+					)}
 				</div>
 			</div>
 
-			{/* Mobile Navigation */}
-			{isOpen && (
+			{/* Mobile Navigation (bar mode) */}
+			{mobileNav === 'bar' && isOpen && (
 				<div className={mobileMenuClasses}>
 					<div className="px-4 py-3 space-y-2">
 						{navItems.map((item) =>
@@ -280,5 +287,77 @@ export default function Navigation({
 				</div>
 			)}
 		</nav>
+
+		{/* Floating toggle button — button mode only */}
+		{mobileNav === 'button' && (
+			<div className="fixed top-4 right-4 z-51 md:hidden">
+				<button
+					onClick={() => setIsOpen(!isOpen)}
+					aria-label="Toggle menu"
+					className="bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 p-2.5 rounded-full transition-colors shadow-lg"
+				>
+					{isOpen ? (
+						<X className="h-5 w-5" />
+					) : (
+						<Menu className="h-5 w-5" />
+					)}
+				</button>
+			</div>
+		)}
+
+		{/* Floating menu panel — button mode only */}
+		{mobileNav === 'button' && isOpen && (
+			<div className="fixed top-14 right-4 z-50 md:hidden bg-black/70 backdrop-blur-md rounded-xl shadow-xl overflow-hidden w-[92vw] mt-1">
+				<div className="px-4 py-3 space-y-2 min-w-45">
+					{navItems.map((item) =>
+						item.href === 'gallery' ? (
+							<div key="gallery">
+								<button
+									onClick={() =>
+										setMobileGalleryOpen((v) => !v)
+									}
+									className={`${mobileItemClasses} flex items-center justify-between`}
+								>
+									{t(item.nameKey)}
+									<ChevronDown
+										className={`w-3.5 h-3.5 transition-transform duration-200 ${mobileGalleryOpen ? 'rotate-180' : ''}`}
+									/>
+								</button>
+								{mobileGalleryOpen && (
+									<div className="pl-4 mt-1 space-y-1">
+										{GALLERY_CONCEPTS.map((concept) => {
+											const isActive =
+												location.pathname === concept.path;
+											return (
+												<button
+													key={concept.id}
+													onClick={() => {
+														setIsOpen(false);
+														setMobileGalleryOpen(false);
+														navigate(concept.path);
+													}}
+													className={`${mobileItemClasses} text-[0.7em] ${isActive ? 'opacity-100 bg-white/10' : 'opacity-80'}`}
+												>
+													{concept.title}
+												</button>
+											);
+										})}
+									</div>
+								)}
+							</div>
+						) : (
+							<button
+								key={item.href}
+								onClick={() => handleNavigation(item.href)}
+								className={mobileItemClasses}
+							>
+								{t(item.nameKey)}
+							</button>
+						),
+					)}
+				</div>
+			</div>
+		)}
+		</>
 	);
 }

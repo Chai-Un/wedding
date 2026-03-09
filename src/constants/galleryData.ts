@@ -20,11 +20,11 @@ const thumb4 = getOptimizedUrl('gallery/thumbnails/thumb4.jpg', 'md') || '';
 
 export const GALLERY_CONCEPTS: GalleryConcept[] = [
 	{
-		id: 'ngay-nang-ve',
-		title: 'Ngày Nắng Về',
+		id: 'eat-the-memories',
+		title: 'Eat The Memories',
 		// description: 'Sunny summer memories',
-		translationKey: 'ngayNangVe',
-		path: '/gallery/ngay-nang-ve',
+		translationKey: 'eatTheMemories',
+		path: '/gallery/eat-the-memories',
 		bgColor: 'from-rose-300 to-pink-200',
 		bgImage: thumb1,
 		// content: 'Photos from our sunny summer days together...',

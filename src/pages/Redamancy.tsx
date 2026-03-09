@@ -7,7 +7,7 @@ import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
 
-// Photo orientations: 0-8:P  9:L  10:L  11:P  12:L  13:P
+// Photo orientations: 0-8:P  9:L  10:L  11:P
 
 export default function Redamancy() {
 	const galleryId = 'redamancy';
@@ -15,21 +15,68 @@ export default function Redamancy() {
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
+	const coverPhoto = 'gallery/redamancy/mievatho_NH6514.jpg';
 	const photos = [
-		{ id: '1',  src: 'gallery/redamancy/mievatho_NH0954.jpg', alt: 'Photo 1' },
-		{ id: '2',  src: 'gallery/redamancy/mievatho_NH1048.jpg', alt: 'Photo 2' },
-		{ id: '3',  src: 'gallery/redamancy/mievatho_NH1116.jpg', alt: 'Photo 3' },
-		{ id: '4',  src: 'gallery/redamancy/mievatho_NH1381.jpg', alt: 'Photo 4' },
-		{ id: '5',  src: 'gallery/redamancy/mievatho_NH1487.jpg', alt: 'Photo 5' },
-		{ id: '6',  src: 'gallery/redamancy/mievatho_NH1504.jpg', alt: 'Photo 6' },
-		{ id: '7',  src: 'gallery/redamancy/mievatho_NH1525.jpg', alt: 'Photo 7' },
-		{ id: '8',  src: 'gallery/redamancy/mievatho_NH5150.jpg', alt: 'Photo 8' },
-		{ id: '9',  src: 'gallery/redamancy/mievatho_NH5455.jpg', alt: 'Photo 9' },
-		{ id: '10', src: 'gallery/redamancy/mievatho_NH6232.jpg', alt: 'Photo 10' },
-		{ id: '11', src: 'gallery/redamancy/mievatho_NH6309.jpg', alt: 'Photo 11' },
-		{ id: '12', src: 'gallery/redamancy/mievatho_NH6389.jpg', alt: 'Photo 12' },
-		{ id: '13', src: 'gallery/redamancy/mievatho_NH6514.jpg', alt: 'Photo 13' },
-		{ id: '14', src: 'gallery/redamancy/mievatho_NH6575.jpg', alt: 'Photo 14' },
+		{
+			id: '1',
+			src: 'gallery/redamancy/mievatho_NH1487.jpg',
+			alt: 'Photo 1',
+		},
+		{
+			id: '2',
+			src: 'gallery/redamancy/mievatho_NH1525.jpg',
+			alt: 'Photo 2',
+		},
+		{
+			id: '3',
+			src: 'gallery/redamancy/mievatho_NH1504.jpg',
+			alt: 'Photo 3',
+		},
+		{
+			id: '4',
+			src: 'gallery/redamancy/mievatho_NH6309.jpg',
+			alt: 'Photo 4',
+		},
+		{
+			id: '5',
+			src: 'gallery/redamancy/mievatho_NH6389.jpg',
+			alt: 'Photo 5',
+		},
+		{
+			id: '6',
+			src: 'gallery/redamancy/mievatho_NH6232.jpg',
+			alt: 'Photo 6',
+		},
+		{
+			id: '7',
+			src: 'gallery/redamancy/mievatho_NH5150.jpg',
+			alt: 'Photo 7',
+		},
+		{
+			id: '8',
+			src: 'gallery/redamancy/mievatho_NH6575.jpg',
+			alt: 'Photo 8',
+		},
+		{
+			id: '9',
+			src: 'gallery/redamancy/mievatho_NH0954.jpg',
+			alt: 'Photo 9',
+		},
+		{
+			id: '10',
+			src: 'gallery/redamancy/mievatho_NH1048.jpg',
+			alt: 'Photo 10',
+		},
+		{
+			id: '11',
+			src: 'gallery/redamancy/mievatho_NH1116.jpg',
+			alt: 'Photo 11',
+		},
+		{
+			id: '12',
+			src: 'gallery/redamancy/mievatho_NH5455.jpg',
+			alt: 'Photo 12',
+		},
 	];
 
 	const handlePhotoClick = (index: number) => {
@@ -64,53 +111,62 @@ export default function Redamancy() {
 	return (
 		<div className="min-h-screen bg-[#eee5d5]">
 			<Navigation overlay alwaysShow />
-			<main className="pt-32 pb-16 px-4">
+			<div className="w-full h-[15em] md:h-[20em] lg:h-[30em] block relative">
+				<ResponsiveImage
+					src={coverPhoto}
+					alt="Cover Photo"
+					className="absolute inset-0 w-full h-full object-cover"
+					style={{ objectPosition: ' 0 5%' }}
+					sizes="100vw"
+				/>
+			</div>
+			<main className="pt-20 pb-16 px-4">
 				<div className="max-w-7xl mx-auto space-y-3">
-
 					{/* Row 1: 1fr | 2fr — left: 2 portraits stacked, right: 1 tall portrait */}
-					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '70vw' }}>
+					<div
+						className="flex gap-1 md:gap-2 mb-1 md:mb-2"
+						style={{ height: '70vw' }}
+					>
 						{/* Left 1fr: two portraits stacked, each 50% height */}
 						<div className="flex-1 flex flex-col gap-1 md:gap-2">
 							{imgDiv(0, '25vw')}
 							{imgDiv(1, '25vw')}
 						</div>
 						{/* Right 2fr: one tall portrait */}
-						<div className="flex-2">
-							{imgDiv(2, '50vw')}
-						</div>
+						<div className="flex-2">{imgDiv(2, '50vw')}</div>
 					</div>
 
-					{/* Row 2: full-width landscape — photo 9 */}
+					{/* Row 2: full-width — photo 3 */}
 					<div className="aspect-video mb-1 md:mb-2">
-						{imgDiv(9, '100vw')}
+						{imgDiv(3, '100vw')}
 					</div>
 
-					{/* Row 3: 1fr | 2fr — portrait left, landscape right — photos 3, 10 */}
-					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '40vw' }}>
-						<div className="flex-1">
-							{imgDiv(3, '25vw')}
-						</div>
-						<div className="flex-2">
-							{imgDiv(10, '50vw')}
-						</div>
+					{/* Row 3: 1fr | 2fr — photos 4, 5 */}
+					<div
+						className="flex gap-1 md:gap-2 mb-1 md:mb-2"
+						style={{ height: '40vw' }}
+					>
+						<div className="flex-1">{imgDiv(4, '25vw')}</div>
+						<div className="flex-2">{imgDiv(5, '50vw')}</div>
 					</div>
 
-					{/* Row 4: 2fr | 1fr — left: 1 large portrait, right: 2 portraits stacked — photos 4, 5, 6 */}
-					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '70vw' }}>
+					{/* Row 4: 2fr | 1fr — photos 6, 7, 8 */}
+					<div
+						className="flex gap-1 md:gap-2 mb-1 md:mb-2"
+						style={{ height: '70vw' }}
+					>
 						{/* Left 2fr: one large portrait */}
-						<div className="flex-2">
-							{imgDiv(4, '50vw')}
-						</div>
+						<div className="flex-2">{imgDiv(6, '50vw')}</div>
 						{/* Right 1fr: two portraits stacked */}
 						<div className="flex-1 flex flex-col gap-1 md:gap-2">
-							{imgDiv(5, '25vw')}
-							{imgDiv(6, '25vw')}
+							{imgDiv(7, '25vw')}
+							{imgDiv(8, '25vw')}
 						</div>
 					</div>
 
-					{/* Row 5: 3 equal columns — landscape images — photos 7, 12, 13 */}
+					{/* Row 5: 3 equal columns — photos 9, 10, 11 */}
 					<div className="grid grid-cols-3 gap-1 md:gap-2 mb-1 md:mb-2">
-						{[7, 12, 13].map((i) => (
+						{[9, 10, 11].map((i) => (
 							<div
 								key={i}
 								onClick={() => handlePhotoClick(i)}
@@ -162,4 +218,3 @@ export default function Redamancy() {
 		</div>
 	);
 }
-

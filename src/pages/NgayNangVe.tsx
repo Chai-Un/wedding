@@ -8,7 +8,7 @@ import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
 
 export default function NgayNangVe() {
-	const galleryId = 'ngay-nang-ve';
+	const galleryId = 'eat-the-memories';
 
 	const [dialogOpen, setDialogOpen] = useState(false);
 	const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
@@ -163,21 +163,20 @@ export default function NgayNangVe() {
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation overlay alwaysShow />
-			<div className="w-full h-72 block relative">
+			<div className="w-full h-[10em] md:h-[10em] lg:h-[15em] block relative">
 				<ResponsiveImage
 					src="gallery/ngaynangve/mievatho_NH2814.jpg"
 					alt="mievatho_NH2814"
-					className="absolute inset-0 w-full h-full object-cover"
-					style={{ objectPosition: ' 0 5%' }}
+					className="absolute inset-0 w-full h-full object-cover object-[0px_-20%] md:object-[0_15%]"
 					sizes="100vw"
 				/>
 			</div>
-			<main className="pt-32 pb-16 px-4">
+			<main className="pt-20 pb-16 px-4">
 				<div className="max-w-7xl mx-auto">
 					{/* Header */}
 					<div className="mb-8 md:mb-12">
 						<div
-							className="text-[40px] md:text-[54px] font-hoangngan13 text-[#9f000e] leading-none flex justify-center items-end"
+							className="text-[30px] md:text-[54px] font-hoangngan13 text-[#9f000e] leading-none flex justify-center items-end"
 							aria-label="Eat the Memories"
 						>
 							{'Eat the Memories'

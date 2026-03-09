@@ -19,7 +19,7 @@ function GalleryRouter() {
 	const { galleryId } = useParams<{ galleryId: string }>();
 
 	switch (galleryId) {
-		case 'ngay-nang-ve':
+		case 'eat-the-memories':
 			return <NgayNangVe />;
 		case 'redamancy':
 			return <Redamancy />;
