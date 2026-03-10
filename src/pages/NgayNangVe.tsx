@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import GalleryItem from '@/components/GalleryItem';
 import GalleryDialog from '@/components/GalleryDialog';
 import ResponsiveImage from '@/components/ResponsiveImage';
-import ContactUs from '@/components/sections/ContactUs';
+import ResponsiveBackground from '@/components/ResponsiveBackground';
+// import ContactUs from '@/components/sections/ContactUs';
 import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
@@ -145,6 +146,21 @@ export default function NgayNangVe() {
 			src: 'gallery/ngaynangve/mievatho_NH0532.jpg',
 			alt: 'Photo 26',
 		},
+		{
+			id: '27',
+			src: 'gallery/ngaynangve/mievatho_NH3917.jpg',
+			alt: 'Photo 27',
+		},
+		{
+			id: '28',
+			src: 'gallery/ngaynangve/mievatho_NH0359.jpg',
+			alt: 'Photo 28',
+		},
+		{
+			id: '29',
+			src: 'gallery/ngaynangve/mievatho_NH2984.jpg',
+			alt: 'Photo 29',
+		},
 	];
 
 	const handlePhotoClick = (index: number) => {
@@ -163,15 +179,15 @@ export default function NgayNangVe() {
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation overlay alwaysShow />
-			<div className="w-full h-[10em] md:h-[10em] lg:h-[15em] block relative">
+			<div className="w-full h-[12em] md:h-[15em] lg:h-[20em] block relative overflow-hidden">
 				<ResponsiveImage
 					src="gallery/ngaynangve/mievatho_NH2814.jpg"
 					alt="mievatho_NH2814"
-					className="absolute inset-0 w-full h-full object-cover object-[0px_-20%] md:object-[0_15%]"
+					className="absolute inset-0 w-full h-full object-cover object-[0px_-10%] md:object-[0_10%] transform-[scale(2.5)] md:transform-[scale(1.8)] lg:transform-[scale(1)]"
 					sizes="100vw"
 				/>
 			</div>
-			<main className="pt-20 pb-16 px-4">
+			<main className="pt-20 pb-16 px-4 md:pt-24 lg:pt-32">
 				<div className="max-w-7xl mx-auto">
 					{/* Header */}
 					<div className="mb-8 md:mb-12">
@@ -202,7 +218,10 @@ export default function NgayNangVe() {
 									);
 								})}
 						</div>
-						<div className="text-center text-3xl md:text-[46px] font-hoangngan14 text-[#9f000e] uppercase md:mt-3 tracking-normal font-normal" aria-label="Not the Calories">
+						<div
+							className="text-center text-3xl md:text-[46px] font-hoangngan14 text-[#9f000e] uppercase md:mt-3 tracking-normal font-normal"
+							aria-label="Not the Calories"
+						>
 							Not the Calories
 						</div>
 					</div>
@@ -346,7 +365,10 @@ export default function NgayNangVe() {
 							</div>
 						</div>
 						{/* Row 2: 4-col mosaic — corners stacked, centers tall spanning 2 rows */}
-						<div className="grid gap-1 md:gap-2 mb-1 md:mb-2" style={{ gridTemplateColumns: '1fr 2fr 2fr 1fr' }}>
+						<div
+							className="grid gap-1 md:gap-2 mb-1 md:mb-2"
+							style={{ gridTemplateColumns: '1fr 2fr 2fr 1fr' }}
+						>
 							<div
 								onClick={() => handlePhotoClick(11)}
 								className="aspect-3/4 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
@@ -363,7 +385,6 @@ export default function NgayNangVe() {
 								onClick={() => handlePhotoClick(12)}
 								className="row-span-2 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
-								
 								<ResponsiveImage
 									src={photos[12].src}
 									alt={photos[12].alt}
@@ -565,7 +586,134 @@ export default function NgayNangVe() {
 							</div>
 						</div>
 					</div>
+					{/* ── SECTION 4: Landscape background with overlapping portraits ── */}
+					<div className="mb-1 md:mb-2 mt-14">
+						<div className="relative overflow-hidden aspect-video">
+							{/* Background: photo 27 (index 26) */}
+							<ResponsiveBackground
+								imagePath={photos[26].src}
+								backgroundPosition="140% 50%"
+								className="absolute inset-0"
+								style={{ backgroundSize: 'cover' }}
+							/>
 
+							{/* 15-col grid overlay */}
+							<div
+								className="absolute inset-0 grid"
+								style={{
+									gridTemplateColumns: 'repeat(15, 1fr)',
+								}}
+							>
+								{/* Content area: col 2 to 7 */}
+								<div
+									className="relative"
+									style={{ gridColumn: '2 / 8' }}
+								>
+									{/* Blur layer behind content */}
+									<div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] rounded-sm" />
+
+									{/* Photo 28 (index 27) — first portrait, using background-image for position control */}
+									<div
+										onClick={(e) => {
+											e.stopPropagation();
+											handlePhotoClick(27);
+										}}
+										className="absolute cursor-pointer shadow-lg group/p1"
+										style={{
+											width: '50%',
+											top: '8%',
+											left: '4%',
+											zIndex: 3,
+										}}
+									>
+										<ResponsiveBackground
+											imagePath={photos[27].src}
+											backgroundPosition="center bottom"
+											className="aspect-3/4 relative overflow-hidden"
+											style={{ backgroundSize: 'cover' }}
+										>
+											<div className="absolute inset-0 bg-black/0 group-hover/p1:bg-black/10 transition-colors" />
+										</ResponsiveBackground>
+									</div>
+
+									{/* Script text — absolute, above photo 29 */}
+									<div
+										className="absolute text-white pointer-events-none select-none md:right-[-10%]!" 
+										style={{
+											right: '0%',
+											width: '55%',
+											zIndex: 4,
+											top: '25%',
+										}}
+									>
+										<p
+											className="font-hoangngan13 italic leading-normal pl-6"
+											style={{
+												fontSize:
+													'clamp(0.6rem, 2vw, 2.6rem)',
+											}}
+										>
+											timeless
+											<br />
+											treasure
+											<br />
+											of the heart
+										</p>
+									</div>
+
+									{/* Photo 29 block — MEMORIES left, photo right */}
+									<div
+										className="absolute flex flex-col"
+										style={{
+											top: '50%',
+											right: '20%',
+											width: '55%',
+											zIndex: 2,
+										}}
+									>
+										{/* Row: MEMORIES vertical + photo 29 */}
+										<div className="flex items-stretch">
+											{/* MEMORIES vertical text on the left */}
+											<div
+												className="flex items-center justify-center shrink-0"
+												style={{ width: '1.4rem' }}
+											>
+												<span
+													className="text-white font-bold uppercase tracking-widest text-[0.5rem] md:text-[1.55rem] lg:text-[2rem] select-none font-hoangngan15 pb-2 lg:pl-10"
+													style={{
+														writingMode:
+															'vertical-rl',
+														transform:
+															'rotate(180deg)',
+													}}
+												>
+													MEMORIES
+												</span>
+											</div>
+											{/* Photo 29 */}
+											<div
+												onClick={(e) => {
+													e.stopPropagation();
+													handlePhotoClick(28);
+												}}
+												className="flex-1 cursor-pointer shadow-lg group/p2"
+											>
+												<div className="aspect-3/4 relative overflow-hidden">
+													<ResponsiveImage
+														src={photos[28].src}
+														alt={photos[28].alt}
+														className="absolute inset-0 w-full h-full object-cover object-bottom"
+														sizes="14vw"
+													/>
+													<div className="absolute inset-0 bg-black/0 group-hover/p2:bg-black/10 transition-colors" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					{/* Other Concepts Navigation */}
 					<div>
 						<div className="w-full md:py-20 lg:py-24 py-12">
@@ -590,7 +738,7 @@ export default function NgayNangVe() {
 				</div>
 			</main>
 
-			<ContactUs />
+			{/* <ContactUs /> */}
 
 			<GalleryDialog
 				photos={photos}
