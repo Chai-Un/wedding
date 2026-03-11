@@ -92,20 +92,8 @@ export default function HeartOfHanoi() {
 			<Navigation overlay alwaysShow />
 			<main className="pt-32 pb-16 px-4">
 				<div className="max-w-7xl mx-auto space-y-3">
-					{/* Row 1: portrait (1) | landscape (2 cols) — ratio 1:2 — photos 1,0 */}
+					{/* Row 1: landscape (2 cols) | portrait — ratio 2:1 — photos 0,1 */}
 					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2" style={{ height: '40vw' }}>
-						<div
-							onClick={() => handlePhotoClick(1)}
-							className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-						>
-							<ResponsiveImage
-								src={photos[1].src}
-								alt={photos[1].alt}
-								className="w-full h-full object-cover"
-								sizes="25vw"
-							/>
-							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-						</div>
 						<div
 							onClick={() => handlePhotoClick(0)}
 							className="flex-2 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
@@ -115,6 +103,18 @@ export default function HeartOfHanoi() {
 								alt={photos[0].alt}
 								className="w-full h-full object-cover"
 								sizes="50vw"
+							/>
+							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+						</div>
+						<div
+							onClick={() => handlePhotoClick(1)}
+							className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+						>
+							<ResponsiveImage
+								src={photos[1].src}
+								alt={photos[1].alt}
+								className="w-full h-full object-cover"
+								sizes="25vw"
 							/>
 							<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 						</div>

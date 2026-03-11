@@ -26,138 +26,108 @@ export default function BecomingOne() {
 		},
 		{
 			id: '2',
-			src: 'gallery/becomeone/mievatho_NH1579.jpg',
+			src: 'gallery/becomeone/mievatho_NH1622.jpg',
 			alt: 'Photo 2',
 		},
 		{
 			id: '3',
-			src: 'gallery/becomeone/mievatho_NH1583.jpg',
+			src: 'gallery/becomeone/mievatho_NH1682.jpg',
 			alt: 'Photo 3',
 		},
 		{
 			id: '4',
-			src: 'gallery/becomeone/mievatho_NH1622.jpg',
+			src: 'gallery/becomeone/mievatho_NH6968.jpg',
 			alt: 'Photo 4',
 		},
 		{
 			id: '5',
-			src: 'gallery/becomeone/mievatho_NH1628b.jpg',
+			src: 'gallery/becomeone/mievatho_NH1752.jpg',
 			alt: 'Photo 5',
 		},
 		{
 			id: '6',
-			src: 'gallery/becomeone/mievatho_NH1670.jpg',
+			src: 'gallery/becomeone/mievatho_NH7023.jpg',
 			alt: 'Photo 6',
 		},
 		{
 			id: '7',
-			src: 'gallery/becomeone/mievatho_NH1682.jpg',
+			src: 'gallery/becomeone/mievatho_NH1998.jpg',
 			alt: 'Photo 7',
 		},
 		{
 			id: '8',
-			src: 'gallery/becomeone/mievatho_NH1734.jpg',
+			src: 'gallery/becomeone/mievatho_NH6801.jpg',
 			alt: 'Photo 8',
 		},
 		{
 			id: '9',
-			src: 'gallery/becomeone/mievatho_NH1752.jpg',
+			src: 'gallery/becomeone/mievatho_NH7492.jpg',
 			alt: 'Photo 9',
 		},
 		{
 			id: '10',
-			src: 'gallery/becomeone/mievatho_NH1764.jpg',
+			src: 'gallery/becomeone/mievatho_NH7192.jpg',
 			alt: 'Photo 10',
 		},
 		{
 			id: '11',
-			src: 'gallery/becomeone/mievatho_NH1787.jpg',
+			src: 'gallery/becomeone/mievatho_NH1764.jpg',
 			alt: 'Photo 11',
 		},
 		{
 			id: '12',
-			src: 'gallery/becomeone/mievatho_NH1832.jpg',
+			src: 'gallery/becomeone/mievatho_NH1787.jpg',
 			alt: 'Photo 12',
 		},
 		{
 			id: '13',
-			src: 'gallery/becomeone/mievatho_NH1866.jpg',
+			src: 'gallery/becomeone/mievatho_NH1974.jpg',
 			alt: 'Photo 13',
 		},
 		{
 			id: '14',
-			src: 'gallery/becomeone/mievatho_NH1904b.jpg',
+			src: 'gallery/becomeone/mievatho_NH1832.jpg',
 			alt: 'Photo 14',
 		},
 		{
 			id: '15',
-			src: 'gallery/becomeone/mievatho_NH1974.jpg',
+			src: 'gallery/becomeone/mievatho_NH1583.jpg',
 			alt: 'Photo 15',
 		},
 		{
 			id: '16',
-			src: 'gallery/becomeone/mievatho_NH1998.jpg',
+			src: 'gallery/becomeone/mievatho_NH7776.jpg',
 			alt: 'Photo 16',
 		},
 		{
 			id: '17',
-			src: 'gallery/becomeone/mievatho_NH2053.jpg',
+			src: 'gallery/becomeone/mievatho_NH1579.jpg',
 			alt: 'Photo 17',
 		},
 		{
 			id: '18',
-			src: 'gallery/becomeone/mievatho_NH6645.jpg',
+			src: 'gallery/becomeone/mievatho_NH1734.jpg',
 			alt: 'Photo 18',
 		},
 		{
 			id: '19',
-			src: 'gallery/becomeone/mievatho_NH6801.jpg',
+			src: 'gallery/becomeone/mievatho_NH6977.jpg',
 			alt: 'Photo 19',
 		},
 		{
 			id: '20',
-			src: 'gallery/becomeone/mievatho_NH6968.jpg',
+			src: 'gallery/becomeone/mievatho_NH1866.jpg',
 			alt: 'Photo 20',
 		},
 		{
 			id: '21',
-			src: 'gallery/becomeone/mievatho_NH6977.jpg',
+			src: 'gallery/becomeone/mievatho_NH7315.jpg',
 			alt: 'Photo 21',
 		},
 		{
 			id: '22',
-			src: 'gallery/becomeone/mievatho_NH7023.jpg',
+			src: 'gallery/becomeone/mievatho_NH1904b.jpg',
 			alt: 'Photo 22',
-		},
-		{
-			id: '23',
-			src: 'gallery/becomeone/mievatho_NH7192.jpg',
-			alt: 'Photo 23',
-		},
-		{
-			id: '24',
-			src: 'gallery/becomeone/mievatho_NH7315.jpg',
-			alt: 'Photo 24',
-		},
-		{
-			id: '25',
-			src: 'gallery/becomeone/mievatho_NH7479.jpg',
-			alt: 'Photo 25',
-		},
-		{
-			id: '26',
-			src: 'gallery/becomeone/mievatho_NH7492.jpg',
-			alt: 'Photo 26',
-		},
-		{
-			id: '27',
-			src: 'gallery/becomeone/mievatho_NH7776.jpg',
-			alt: 'Photo 27',
-		},
-		{
-			id: '28',
-			src: 'gallery/becomeone/mievatho_NH7920.jpg',
-			alt: 'Photo 28',
 		},
 	];
 
@@ -191,7 +161,7 @@ export default function BecomingOne() {
 	);
 
 	return (
-		<div className="min-h-screen bg-[#eee5d5]">
+		<div className="min-h-screen bg-white">
 			<Navigation overlay alwaysShow />
 			<main className="pt-32 pb-16 px-4">
 				<div className="max-w-7xl mx-auto">
@@ -204,25 +174,25 @@ export default function BecomingOne() {
 							)}
 						</div>
 
-						{/* Row 2: portrait | landscape (2 cols) | portrait — photos 3,4,5 — same height */}
+						{/* Row 2: portrait | wide | portrait — photos 3,4,5 */}
 						<div
 							className="flex gap-1 md:gap-2 mb-1 md:mb-2"
 							style={{ height: '40vw' }}
 						>
 							<div
-								onClick={() => handlePhotoClick(3)}
+								onClick={() => handlePhotoClick(12)}
 								className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
 								<ResponsiveImage
-									src={photos[3].src}
-									alt={photos[3].alt}
+									src={photos[12].src}
+									alt={photos[12].alt}
 									className="w-full h-full object-cover"
-									sizes="25vw"
+									sizes="50vw"
 								/>
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 							<div
-								onClick={() => handlePhotoClick(4)}
+								onClick={() => handlePhotoClick(15)}
 								className="flex-2 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
 								<ResponsiveImage
@@ -247,9 +217,9 @@ export default function BecomingOne() {
 							</div>
 						</div>
 
-						{/* Row 3: 4 portraits — photos 6,7,11,12 */}
+						{/* Row 3: 4 portraits — photos 6,7,8,9 */}
 						<div className="grid grid-cols-4 gap-1 md:gap-2 mb-1 md:mb-2">
-							{[6, 7, 11, 12].map((i) =>
+							{[6, 7, 8, 9].map((i) =>
 								photo(i, 'aspect-2/3', '25vw'),
 							)}
 						</div>
@@ -257,45 +227,73 @@ export default function BecomingOne() {
 
 					{/* === SECTION 2 === */}
 					<div className="space-y-3">
-						{/* Row 4: 2 landscape photos — photos 8,9 */}
+						{/* Row 4: 2 landscape photos — photos 10,11 */}
 						<div className="grid grid-cols-2 gap-1 md:gap-2 mb-1 md:mb-2">
-							{[8, 9].map((i) => photo(i, 'aspect-3/2', '50vw'))}
+							{[10, 11].map((i) =>
+								photo(i, 'aspect-3/2', '50vw'),
+							)}
 						</div>
 
-						{/* Rows 5+6: photos 13,16 stacked on left; photos 14,15,17,18 in 2 columns on right — equal total height */}
+						{/* Rows 5+6: left col: 12(large),15(small); right: col1 13,16 | col2 14,17 */}
 						<div
 							className="flex gap-1 md:gap-2 mb-1 md:mb-2"
 							style={{ height: '80vw' }}
 						>
-							{/* Left: 2 portraits stacked, filling height */}
+							{/* Left: 2 portraits stacked */}
 							<div className="w-1/2 flex flex-col gap-1 md:gap-2">
 								<div
-									onClick={() => handlePhotoClick(13)}
+									onClick={() => handlePhotoClick(12)}
 									className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 								>
 									<ResponsiveImage
-										src={photos[13].src}
-										alt={photos[13].alt}
+										src={photos[12].src}
+										alt={photos[12].alt}
 										className="w-full h-full object-cover"
 										sizes="50vw"
 									/>
 									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 								</div>
 								<div
-									onClick={() => handlePhotoClick(16)}
+									onClick={() => handlePhotoClick(15)}
 									className="flex-[0.5] bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 								>
 									<ResponsiveImage
-										src={photos[16].src}
-										alt={photos[16].alt}
+										src={photos[15].src}
+										alt={photos[15].alt}
 										className="w-full h-full object-cover"
 										sizes="50vw"
 									/>
 									<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 								</div>
 							</div>
-							{/* Right: 2 columns — 14,15 stacked | 17,18 stacked, filling same height */}
+							{/* Right: 2 columns — col1: 13,16 | col2: 14,17 */}
 							<div className="w-1/2 grid grid-cols-2 gap-1 md:gap-2">
+								<div className="flex flex-col gap-1 md:gap-2">
+									<div
+										onClick={() => handlePhotoClick(13)}
+										className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+									>
+										<ResponsiveImage
+											src={photos[13].src}
+											alt={photos[13].alt}
+											className="w-full h-full object-cover"
+											sizes="25vw"
+										/>
+										<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+									</div>
+									<div
+										onClick={() => handlePhotoClick(16)}
+										className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+									>
+										<ResponsiveImage
+											src={photos[16].src}
+											alt={photos[16].alt}
+											className="w-full h-full object-cover"
+											sizes="25vw"
+										/>
+										<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
+									</div>
+								</div>
 								<div className="flex flex-col gap-1 md:gap-2">
 									<div
 										onClick={() => handlePhotoClick(14)}
@@ -310,38 +308,12 @@ export default function BecomingOne() {
 										<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 									</div>
 									<div
-										onClick={() => handlePhotoClick(15)}
-										className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-									>
-										<ResponsiveImage
-											src={photos[15].src}
-											alt={photos[15].alt}
-											className="w-full h-full object-cover"
-											sizes="25vw"
-										/>
-										<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-									</div>
-								</div>
-								<div className="flex flex-col gap-1 md:gap-2">
-									<div
 										onClick={() => handlePhotoClick(17)}
 										className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 									>
 										<ResponsiveImage
 											src={photos[17].src}
 											alt={photos[17].alt}
-											className="w-full h-full object-cover"
-											sizes="25vw"
-										/>
-										<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
-									</div>
-									<div
-										onClick={() => handlePhotoClick(18)}
-										className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-									>
-										<ResponsiveImage
-											src={photos[18].src}
-											alt={photos[18].alt}
 											className="w-full h-full object-cover"
 											sizes="25vw"
 										/>
@@ -354,9 +326,9 @@ export default function BecomingOne() {
 
 					{/* === SECTION 3 === */}
 					<div className="space-y-3">
-						{/* Row 7: 3 portraits no gap — photos 19,20,21 */}
+						{/* Row 7: 3 portraits no gap — photos 18,19,20 */}
 						<div className="grid grid-cols-3">
-							{[19, 20, 21].map((i) =>
+							{[18, 19, 20].map((i) =>
 								photo(i, 'aspect-2/3', '33vw'),
 							)}
 						</div>

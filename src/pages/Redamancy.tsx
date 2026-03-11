@@ -109,16 +109,28 @@ export default function Redamancy() {
 	);
 
 	return (
-		<div className="min-h-screen bg-[#eee5d5]">
+		<div className="min-h-screen bg-white">
 			<Navigation overlay alwaysShow />
 			<div className="w-full h-[15em] md:h-[20em] lg:h-[30em] block relative">
 				<ResponsiveImage
 					src={coverPhoto}
 					alt="Cover Photo"
-					className="absolute inset-0 w-full h-full object-cover"
-					style={{ objectPosition: ' 0 5%' }}
+					className="absolute inset-0 w-full h-full object-cover object-[0_15%] lg:object-[50%_40%]"
 					sizes="100vw"
 				/>
+				{/* Gradient overlay */}
+				<div className="absolute inset-0 bg-linear-to-t from-black/30 via-black/10 to-transparent px-4" />
+				{/* Text overlay */}
+				<div className="absolute bottom-0 left-0 right-0 pb-6 md:pb-10">
+					<div className="max-w-7xl mx-auto px-4 md:px-4 xl:px-0 text-white">
+						<div className="font-normal uppercase tracking-wider text-3xl md:text-5xl lg:text-6xl leading-none mb-4 md:mb-8 font-hoangngan15 whitespace-nowrap">
+							REDAMANCY
+						</div>
+						<p className="text-xs md:text-base lg:text-xl font-light opacity-90">
+							[noun] the act of loving the one who loves you back, a love returned in full
+						</p>
+					</div>
+				</div>
 			</div>
 			<main className="pt-20 pb-16 px-4">
 				<div className="max-w-7xl mx-auto space-y-3">

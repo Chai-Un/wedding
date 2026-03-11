@@ -70,7 +70,7 @@ export default function GalleryDialog({
 		<Dialog open={open} onOpenChange={onOpenChange}>
 			<DialogContent
 				showCloseButton={false}
-				className="w-[90vw] max-w-7xl h-[60vh] md:h-[85vh] p-0 bg-[#fdf8f0] border-none overflow-visible sm:max-w-none"
+				className="w-[90vw] max-w-7xl h-[60vh] md:h-[85vh] p-0 bg-white border-none overflow-visible sm:max-w-none"
 			>
 				<DialogTitle className="sr-only">Photo Gallery</DialogTitle>
 
