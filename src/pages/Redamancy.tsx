@@ -92,7 +92,7 @@ export default function Redamancy() {
 		(concept) => concept.id !== galleryId,
 	);
 
-	const imgDiv = (i: number, sizes: string) => (
+	const imgDiv = (i: number, sizes: string, imgClassName: string = '') => (
 		<div
 			key={i}
 			onClick={() => handlePhotoClick(i)}
@@ -101,7 +101,7 @@ export default function Redamancy() {
 			<ResponsiveImage
 				src={photos[i].src}
 				alt={photos[i].alt}
-				className="w-full h-full object-cover"
+				className={`w-full h-full object-cover ${imgClassName}`}
 				sizes={sizes}
 			/>
 			<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
@@ -145,7 +145,7 @@ export default function Redamancy() {
 							{imgDiv(1, '25vw')}
 						</div>
 						{/* Right 2fr: one tall portrait */}
-						<div className="flex-2">{imgDiv(2, '50vw')}</div>
+						<div className="flex-2">{imgDiv(2, '50vw', 'object-bottom')}</div>
 					</div>
 
 					{/* Row 2: full-width — photo 3 */}

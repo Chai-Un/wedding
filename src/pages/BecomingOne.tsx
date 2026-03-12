@@ -162,7 +162,26 @@ export default function BecomingOne() {
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation overlay alwaysShow />
-			<main className="pt-32 pb-16 px-4">
+			<div className="w-full h-[15em] md:h-[25em] lg:h-[30em] block relative overflow-hidden">
+				<ResponsiveImage
+					src={photos[21].src}
+					alt="Cover Photo"
+					className="absolute inset-0 w-full h-full object-cover object-[0_25%] lg:object-[50%_34%] transform-[scale(1.5)] md:transform-[scale(1)]"
+					sizes="100vw"
+				/>
+				{/* Gradient overlay */}
+				<div className="absolute inset-0 flex items-center justify-center">
+					<div className="text-center text-white absolute top-1/2 xl:top-auto">
+						<div className="font-normal tracking-wider text-4xl md:text-5xl lg:text-[100px] leading-none font-hoangngan8 whitespace-nowrap">
+							Mr & Mrs
+						</div>
+						<p className="text-base lg:text-[40px] font-light font-hoangngan7">
+							BECOMING ONE
+						</p>
+					</div>
+				</div>
+			</div>
+			<main className="pt-14 pb-16 px-4 md:pt-24 lg:pt-32">
 				<div className="max-w-7xl mx-auto">
 					{/* === SECTION 1 === */}
 					<div className="space-y-3">
@@ -179,12 +198,12 @@ export default function BecomingOne() {
 							style={{ height: '40vw' }}
 						>
 							<div
-								onClick={() => handlePhotoClick(12)}
+								onClick={() => handlePhotoClick(3)}
 								className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
 								<ResponsiveImage
-									src={photos[12].src}
-									alt={photos[12].alt}
+									src={photos[3].src}
+									alt={photos[3].alt}
 									className="w-full h-full object-cover"
 									sizes="50vw"
 								/>
@@ -239,7 +258,7 @@ export default function BecomingOne() {
 							style={{ height: '80vw' }}
 						>
 							{/* Left: 2 portraits stacked */}
-							<div className="w-1/2 flex flex-col gap-1 md:gap-2">
+							<div className="w-2/5 flex flex-col gap-1 md:gap-2">
 								<div
 									onClick={() => handlePhotoClick(12)}
 									className="flex-1 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
@@ -266,7 +285,7 @@ export default function BecomingOne() {
 								</div>
 							</div>
 							{/* Right: 2 columns — col1: 13,16 | col2: 14,17 */}
-							<div className="w-1/2 grid grid-cols-2 gap-1 md:gap-2">
+							<div className="w-3/5 grid grid-cols-2 gap-1 md:gap-2">
 								<div className="flex flex-col gap-1 md:gap-2">
 									<div
 										onClick={() => handlePhotoClick(13)}
@@ -324,12 +343,34 @@ export default function BecomingOne() {
 					</div>
 
 					{/* === SECTION 3 === */}
-					<div className="space-y-3">
+					<div className="space-y-3 mb-1 md:mb-2 mt-14">
 						{/* Row 7: 3 portraits no gap — photos 18,19,20 */}
-						<div className="grid grid-cols-3">
-							{[18, 19, 20].map((i) =>
-								photo(i, 'aspect-2/3', '33vw'),
-							)}
+						<div className="grid grid-cols-3 relative">
+							{photo(18, 'aspect-2/3', '33vw')}
+							{/* Photo 19 — custom with gradient overlay for text legibility */}
+							<div
+								onClick={() => handlePhotoClick(19)}
+								className="aspect-2/3 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+							>
+								<ResponsiveImage
+									src={photos[19].src}
+									alt={photos[19].alt}
+									className="w-full h-full object-cover"
+									sizes="33vw"
+								/>
+								<div className="absolute inset-0 bg-linear-to-b from-black/20 via-black/40 to-black/20" />
+								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+							</div>
+							{photo(20, 'aspect-2/3', '33vw')}
+							{/* Centered overlay text */}
+							<div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+								<p className="text-white text-[10px] md:text-base lg:text-2xl font-light tracking-widest uppercase mb-4 font-hoangngan3">
+									The Beginning Of
+								</p>
+								<p className="text-white text-2xl md:text-4xl lg:text-6xl font-hoangngan13 leading-none">
+									forever
+								</p>
+							</div>
 						</div>
 					</div>
 
@@ -356,7 +397,6 @@ export default function BecomingOne() {
 					</div>
 				</div>
 			</main>
-
 
 			{/* Gallery Dialog */}
 			<GalleryDialog
