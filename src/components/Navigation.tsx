@@ -307,7 +307,7 @@ export default function Navigation({
 
 		{/* Floating menu panel — button mode only */}
 		{mobileNav === 'button' && isOpen && (
-			<div className="fixed top-14 right-4 z-50 md:hidden bg-black/70 backdrop-blur-md rounded-xl shadow-xl overflow-hidden w-[92vw] mt-1">
+			<div className="fixed top-14 right-2 z-50 md:hidden bg-black/70 backdrop-blur-md rounded-xl shadow-xl overflow-hidden w-[96vw] mt-1">
 				<div className="px-4 py-3 space-y-2 min-w-45">
 					{navItems.map((item) =>
 						item.href === 'gallery' ? (

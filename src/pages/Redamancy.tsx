@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import GalleryItem from '@/components/GalleryItem';
 import GalleryDialog from '@/components/GalleryDialog';
 import ResponsiveImage from '@/components/ResponsiveImage';
-import ContactUs from '@/components/sections/ContactUs';
 import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 import BreakImage from '@/assets/images/break.svg?react';
 import Navigation from '@/components/Navigation';
@@ -218,8 +217,6 @@ export default function Redamancy() {
 					</div>
 				</div>
 			</main>
-
-			<ContactUs />
 
 			<GalleryDialog
 				photos={photos}

@@ -177,7 +177,7 @@ export default function HeartOfHanoi() {
 					</div>
 
 					{/* Row 4: 1 landscape photo — photo 7 */}
-					<div className="flex justify-center space-y-3 mb-1 md:mb-2 mt-14 -mx-4 lg:mx-0">
+					<div className="justify-center mb-1 md:mb-2 mt-14 -mx-4 md:-mx-2 lg:mx-0">
 						{photo(7, 'aspect-16/9', '100vw')}
 					</div>
 
