@@ -64,12 +64,12 @@ export default function GalleryItem({
 					<div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
 						{concept.showTitle && (
 							<>
-								<div className="text-sm lg:text-lg xl:text-xl 2xl:text-xl font-hoangngan7 text-white text-center leading-tight line-clamp-2 mb-2">
+								<div className="text-xs lg:text-lg xl:text-xl 2xl:text-xl font-hoangngan7 text-white text-center leading-tight line-clamp-2 mb-2">
 									{t(
 										`gallery.concepts.${concept.translationKey}.title`,
 									)}
 								</div>
-								<div className="text-xs md:text-sm lg:text-base font-hoangngan3 text-white/90 text-center underline">
+								<div className="text-[10px] md:text-sm lg:text-base font-hoangngan3 text-white/90 text-center underline">
 									Xem album
 								</div>
 							</>
