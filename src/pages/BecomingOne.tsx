@@ -255,7 +255,7 @@ export default function BecomingOne() {
 						{/* Rows 5+6: left col: 12(large),15(small); right: col1 13,16 | col2 14,17 */}
 						<div
 							className="flex gap-1 md:gap-2 mb-1 md:mb-2"
-							style={{ height: '80vw' }}
+							// style={{ height: '80vw' }}
 						>
 							{/* Left: 2 portraits stacked */}
 							<div className="w-2/5 flex flex-col gap-1 md:gap-2">
@@ -343,7 +343,7 @@ export default function BecomingOne() {
 					</div>
 
 					{/* === SECTION 3 === */}
-					<div className="space-y-3 mb-1 md:mb-2 mt-14">
+					<div className="space-y-3 mb-1 md:mb-2 mt-14 -mx-4 lg:mx-0">
 						{/* Row 7: 3 portraits no gap — photos 18,19,20 */}
 						<div className="grid grid-cols-3 relative">
 							{photo(18, 'aspect-2/3', '33vw')}

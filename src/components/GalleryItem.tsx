@@ -58,7 +58,7 @@ export default function GalleryItem({
 				>
 					{/* Dark overlay on hover */}
 					{concept.bgImage && (
-						<div className="absolute inset-0 bg-black/15 transition-colors duration-300"></div>
+						<div className="absolute inset-0 bg-black/18 transition-colors duration-300"></div>
 					)}
 
 					<div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">

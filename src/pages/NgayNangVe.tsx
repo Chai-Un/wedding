@@ -587,7 +587,7 @@ export default function NgayNangVe() {
 						</div>
 					</div>
 					{/* ── SECTION 4: Landscape background with overlapping portraits ── */}
-					<div className="mb-1 md:mb-2 mt-14">
+					<div className="mb-1 md:mb-2 mt-14 -mx-4 lg:mx-0">
 						<div className="relative overflow-hidden aspect-video">
 							{/* Background: photo 27 (index 26) */}
 							<ResponsiveBackground
@@ -610,7 +610,13 @@ export default function NgayNangVe() {
 									style={{ gridColumn: '2 / 8' }}
 								>
 									{/* Blur layer behind content */}
-									<div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] rounded-sm" />
+									<div 
+										className="absolute inset-0" 
+										style={{
+											background: 'radial-gradient(circle at 50% 50%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 70%, rgba(0,0,0,0.04) 100%)',
+											backdropFilter: 'blur(1px)',
+										}}
+									/>
 
 									{/* Photo 28 (index 27) — first portrait, using background-image for position control */}
 									<div
