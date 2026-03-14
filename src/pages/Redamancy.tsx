@@ -125,7 +125,7 @@ export default function Redamancy() {
 						<div className="font-normal uppercase tracking-wider text-3xl md:text-5xl lg:text-6xl leading-none mb-4 md:mb-8 font-hoangngan15 whitespace-nowrap">
 							REDAMANCY
 						</div>
-						<p className="text-xs md:text-base lg:text-xl font-light opacity-90">
+						<p className="text-[10px] md:text-base lg:text-xl font-light opacity-90">
 							[noun] the act of loving the one who loves you back, a love returned in full
 						</p>
 					</div>
