@@ -4,7 +4,6 @@ import RSVPForm from './RSVPForm';
 import {
 	Dialog,
 	DialogContent,
-	DialogTrigger,
 	DialogClose,
 	DialogTitle,
 } from '@/components/ui/dialog';
