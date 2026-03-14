@@ -12,7 +12,7 @@ export default function Gallery() {
 		>
 			<div className="md:max-w-[90%] lg:max-w-[80%] 3xl:max-w-[50%] mx-auto">
 				<div className="text-center mb-8 md:mb-12 lg:mb-16">
-					<div className="text-[64px] lg:text-[80px] font-custom-serif text-[#412d1d]">
+					<div className="text-[56px] lg:text-[80px] font-custom-serif text-[#412d1d]">
 						{t('gallery.title')}
 					</div>
 					<p className="text-[#412d1d] text-base md:text-lg mt-4 font-hoangngan4">

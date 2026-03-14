@@ -107,27 +107,21 @@
     "variants": [
       {
         "size": "sm",
-        "dimensions": "200×133",
+        "dimensions": "828×828",
         "webp": "envelope/envelope_open-sm.webp",
-        "png": "envelope/envelope_open-sm.png",
-        "webpKB": 4,
-        "pngKB": 26
+        "webpKB": 44
       },
       {
         "size": "md",
-        "dimensions": "400×267",
+        "dimensions": "1536×1536",
         "webp": "envelope/envelope_open-md.webp",
-        "png": "envelope/envelope_open-md.png",
-        "webpKB": 10,
-        "pngKB": 94
+        "webpKB": 94
       },
       {
         "size": "lg",
-        "dimensions": "800×533",
+        "dimensions": "1920×1920",
         "webp": "envelope/envelope_open-lg.webp",
-        "png": "envelope/envelope_open-lg.png",
-        "webpKB": 28,
-        "pngKB": 375
+        "webpKB": 119
       }
     ]
   },
@@ -3601,6 +3595,60 @@
         "file": "lg.lg.png",
         "width": 777,
         "height": 800
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope_flower_open_1.png",
+    "orientation": "square",
+    "preset": "background",
+    "originalSize": "2646×2646",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "828×828",
+        "webp": "envelope/envelope_flower_open_1-sm.webp",
+        "webpKB": 53
+      },
+      {
+        "size": "md",
+        "dimensions": "1536×1536",
+        "webp": "envelope/envelope_flower_open_1-md.webp",
+        "webpKB": 118
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1920",
+        "webp": "envelope/envelope_flower_open_1-lg.webp",
+        "webpKB": 158
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope_flower_open.png",
+    "orientation": "square",
+    "preset": "background",
+    "originalSize": "2646×2646",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "828×828",
+        "webp": "envelope/envelope_flower_open-sm.webp",
+        "webpKB": 54
+      },
+      {
+        "size": "md",
+        "dimensions": "1536×1536",
+        "webp": "envelope/envelope_flower_open-md.webp",
+        "webpKB": 121
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1920",
+        "webp": "envelope/envelope_flower_open-lg.webp",
+        "webpKB": 162
       }
     ]
   }

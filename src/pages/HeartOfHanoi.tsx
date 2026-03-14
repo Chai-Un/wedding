@@ -97,10 +97,10 @@ export default function HeartOfHanoi() {
 					sizes="100vw"
 				/>
 			</div>
-			<main className="pt-14 pb-16 px-4 md:pt-24 lg:pt-32">
+			<main className="pt-14 pb-16 px-4 md:pt-24 lg:pt-25">
 				<div className="mb-8 md:mb-16">
 					<div
-						className="text-[30px] md:text-[64px] font-hoangngan16 leading-none flex justify-center items-end"
+						className="text-[30px] md:text-[56px] font-hoangngan16 leading-none flex justify-center items-end"
 						aria-label="Heart of Hanoi"
 					>
 						{'Heart of Hanoi'.split('').map((char, i, arr) => {

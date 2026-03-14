@@ -179,11 +179,11 @@ export default function NgayNangVe() {
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation overlay alwaysShow />
-			<div className="w-full h-[12em] md:h-[15em] lg:h-[20em] block relative overflow-hidden">
+			<div className="w-full h-[10em] md:h-[15em] lg:h-[20em] block relative overflow-hidden">
 				<ResponsiveImage
 					src="gallery/ngaynangve/mievatho_NH2814.jpg"
 					alt="mievatho_NH2814"
-					className="absolute inset-0 w-full h-full object-cover object-[0px_-10%] md:object-[0_10%] transform-[scale(2.5)] md:transform-[scale(1.8)] lg:transform-[scale(1)]"
+					className="absolute inset-0 w-full h-full object-cover object-[0px_-11%] md:object-[0_10%] transform-[scale(1.6)] md:transform-[scale(1.8)] lg:transform-[scale(1)]"
 					sizes="100vw"
 				/>
 			</div>

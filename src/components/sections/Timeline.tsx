@@ -34,7 +34,7 @@ const Timeline = () => {
 		>
 			<div className="max-w-6xl mx-auto">
 				{/* Title */}
-				<h2 className="text-[64px] lg:text-[80px] font-custom-serif text-[#fffcf7] text-center mb-8 md:mb-12">
+				<h2 className="text-[56px] lg:text-[80px] font-custom-serif text-[#fffcf7] text-center mb-8 md:mb-12">
 					{t('timeline.title')}
 				</h2>
 
@@ -50,10 +50,10 @@ const Timeline = () => {
 						<p className="text-[#fbf7ee] text-base md:text-lg lg:text-xl font-hoangngan3 uppercase tracking-wide">
 							{timelineItems[0].title}
 						</p>
-						<p className="text-[#fbf7ee] text-base md:text-lg lg:text-xl font-hoangngan3 italic">
+						<p className="text-[#fbf7ee] text-base md:text-lg lg:text-xl font-hoangngan3">
 							{timelineItems[0].subtitle}
 						</p>
-						<p className="text-[#fbf7ee] text-xs md:text-sm font-hoangngan3 italic">
+						<p className="text-[#fbf7ee] text-xs md:text-sm font-hoangngan3">
 							{timelineItems[0].description}
 						</p>
 					</div>

@@ -64,7 +64,7 @@ export default function GalleryItem({
 					<div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-4">
 						{concept.showTitle && (
 							<>
-								<div className="text-xs lg:text-lg xl:text-xl 2xl:text-xl font-hoangngan7 text-white text-center leading-tight line-clamp-2 mb-2">
+								<div className="text-[10px] lg:text-lg xl:text-xl 2xl:text-xl font-hoangngan7 text-white text-center leading-tight line-clamp-2 mb-2 whitespace-break-spaces">
 									{t(
 										`gallery.concepts.${concept.translationKey}.title`,
 									)}

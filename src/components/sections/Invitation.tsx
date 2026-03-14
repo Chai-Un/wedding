@@ -90,7 +90,7 @@ export default function Invitation({ onOpen }: InvitationProps) {
 				</div>
 
 				{/* Equal spacer between logo and title */}
-				<div className="h-[5vh] md:h-10 lg:h-14 shrink-0" />
+				<div className="h-[4vh] md:h-10 lg:h-14 shrink-0" />
 
 			{/* ── Letter text above the envelope ── */}
 			<div className="w-full max-w-5xl mx-auto px-6 md:px-12 text-center mb-3 md:mb-8 shrink-0">

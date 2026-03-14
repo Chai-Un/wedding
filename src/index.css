@@ -137,6 +137,14 @@
 }
 
 @font-face {
+	font-family: 'HoangNgan17';
+	src: url('./assets/fonts/font17.woff2') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: 'HoangNgan22';
 	src: url('./assets/fonts/font22.woff2') format('woff2');
 	font-weight: normal;
@@ -163,6 +171,7 @@
 	--font-hoangngan14: 'HoangNgan14', sans-serif;
 	--font-hoangngan15: 'HoangNgan15', sans-serif;
 	--font-hoangngan16: 'HoangNgan16', sans-serif;
+	--font-hoangngan17: 'HoangNgan17', sans-serif;
 	--font-hoangngan22: 'HoangNgan22', sans-serif;
 	--font-family-dancing: 'Dancing Script', cursive;
 	--font-family-inconsolata: 'Inconsolata', monospace;
@@ -352,6 +361,10 @@
 
   .font-hoangngan16 {
 		font-family: 'HoangNgan16', sans-serif;
+	}
+
+  .font-hoangngan17 {
+		font-family: 'HoangNgan17', sans-serif;
 	}
 
 	.font-hoangngan22 {

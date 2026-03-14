@@ -91,6 +91,22 @@ export default function Redamancy() {
 		(concept) => concept.id !== galleryId,
 	);
 
+	// Photo aspect ratios (w/h)
+	const aspectRatios = [
+		0.64, // Photo 1
+		0.6871, // Photo 2
+		0.6916, // Photo 3
+		1.4564, // Photo 4
+		0.6678, // Photo 5
+		1.432, // Photo 6
+		0.7605, // Photo 7
+		0.6626, // Photo 8
+		0.7287, // Photo 9
+		0.6712, // Photo 10
+		0.6951, // Photo 11
+		0.6917, // Photo 12
+	];
+
 	const imgDiv = (i: number, sizes: string, imgClassName: string = '') => (
 		<div
 			key={i}
@@ -125,7 +141,7 @@ export default function Redamancy() {
 						<div className="font-normal uppercase tracking-wider text-3xl md:text-5xl lg:text-6xl leading-none mb-4 md:mb-8 font-hoangngan15 whitespace-nowrap">
 							REDAMANCY
 						</div>
-						<p className="text-[10px] md:text-base lg:text-xl font-light opacity-90">
+						<p className="text-[10px] md:text-base lg:text-xl font-light opacity-90 font-hoangngan17">
 							[noun] the act of loving the one who loves you back, a love returned in full
 						</p>
 					</div>
@@ -133,45 +149,65 @@ export default function Redamancy() {
 			</div>
 			<main className="pt-20 pb-16 px-4">
 				<div className="max-w-7xl mx-auto space-y-3">
-					{/* Row 1: 1fr | 2fr — left: 2 portraits stacked, right: 1 tall portrait */}
-					<div
-						className="flex gap-1 md:gap-2 mb-1 md:mb-2"
-						style={{ height: '70vw' }}
-					>
-						{/* Left 1fr: two portraits stacked, each 50% height */}
-						<div className="flex-1 flex flex-col gap-1 md:gap-2">
-							{imgDiv(0, '25vw')}
-							{imgDiv(1, '25vw')}
+					{/* Row 1: 1fr | 2fr — left: 2 portraits stacked (0,1), right: 1 tall portrait (2) */}
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2">
+						{/* Left 1fr: two portraits stacked */}
+						<div
+							className="flex-1 flex flex-col gap-1 md:gap-2"
+							style={{ aspectRatio: `${aspectRatios[0]}` }}
+						>
+							<div style={{ flex: 1 }}>{imgDiv(0, '25vw')}</div>
+							<div style={{ flex: 1 }}>{imgDiv(1, '25vw')}</div>
 						</div>
-						{/* Right 2fr: one tall portrait */}
-						<div className="flex-2">{imgDiv(2, '50vw', 'object-bottom')}</div>
+						{/* Right 2fr: one tall portrait - ratio determines height */}
+						<div
+							className="flex-2"
+							style={{ aspectRatio: `${aspectRatios[2]}` }}
+						>
+							{imgDiv(2, '50vw', 'object-bottom')}
+						</div>
 					</div>
 
-					{/* Row 2: full-width — photo 3 */}
-					<div className="aspect-video mb-1 md:mb-2">
+					{/* Row 2: full-width landscape — photo 3 */}
+					<div
+						className="mb-1 md:mb-2"
+						style={{ aspectRatio: `${aspectRatios[3]}` }}
+					>
 						{imgDiv(3, '100vw')}
 					</div>
 
 					{/* Row 3: 1fr | 2fr — photos 4, 5 */}
-					<div
-						className="flex gap-1 md:gap-2 mb-1 md:mb-2"
-						style={{ height: '40vw' }}
-					>
-						<div className="flex-1">{imgDiv(4, '25vw')}</div>
-						<div className="flex-2">{imgDiv(5, '50vw')}</div>
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2">
+						<div
+							className="flex-1"
+							style={{ aspectRatio: `${aspectRatios[4]}` }}
+						>
+							{imgDiv(4, '25vw')}
+						</div>
+						<div
+							className="flex-2"
+							style={{ aspectRatio: `${aspectRatios[5]}` }}
+						>
+							{imgDiv(5, '50vw')}
+						</div>
 					</div>
 
 					{/* Row 4: 2fr | 1fr — photos 6, 7, 8 */}
-					<div
-						className="flex gap-1 md:gap-2 mb-1 md:mb-2"
-						style={{ height: '70vw' }}
-					>
+					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2">
 						{/* Left 2fr: one large portrait */}
-						<div className="flex-2">{imgDiv(6, '50vw')}</div>
+						<div
+							className="flex-2"
+							style={{ aspectRatio: `${aspectRatios[6]}` }}
+						>
+							{imgDiv(6, '50vw')}
+						</div>
 						{/* Right 1fr: two portraits stacked */}
-						<div className="flex-1 flex flex-col gap-1 md:gap-2">
-							{imgDiv(7, '25vw')}
-							{imgDiv(8, '25vw')}
+						<div
+							className="flex-1 flex flex-col gap-1 md:gap-2"
+							style={{ aspectRatio: `${aspectRatios[7]}` }}
+						>
+							<div style={{ flex: 1 }}>{imgDiv(7, '25vw')}</div>
+							<div style={{ flex: 1 }}>{imgDiv(8, '25vw')}</div>
 						</div>
 					</div>
 
@@ -181,7 +217,8 @@ export default function Redamancy() {
 							<div
 								key={i}
 								onClick={() => handlePhotoClick(i)}
-								className="aspect-2/3 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								className="bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
+								style={{ aspectRatio: `${aspectRatios[i]}` }}
 							>
 								<ResponsiveImage
 									src={photos[i].src}
