@@ -166,7 +166,7 @@ export default function BecomingOne() {
 				<ResponsiveImage
 					src={photos[21].src}
 					alt="Cover Photo"
-					className="absolute inset-0 w-full h-full object-cover object-[0_25%] lg:object-[50%_34%] transform-[scale(1.5)] md:transform-[scale(1)]"
+					className="absolute inset-0 w-full h-full object-cover object-[0_35%] lg:object-[50%_34%] transform-[scale(1.5)] md:transform-[scale(1)]"
 					sizes="100vw"
 				/>
 				{/* Gradient overlay */}

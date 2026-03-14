@@ -33,6 +33,39 @@
     ]
   },
   {
+    "original": "envelope/heart.png",
+    "orientation": "square",
+    "preset": "decorative",
+    "originalSize": "4320×4320",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×192",
+        "webp": "envelope/heart-sm.webp",
+        "png": "envelope/heart-sm.png",
+        "webpKB": 7,
+        "pngKB": 35
+      },
+      {
+        "size": "md",
+        "dimensions": "400×384",
+        "webp": "envelope/heart-md.webp",
+        "png": "envelope/heart-md.png",
+        "webpKB": 14,
+        "pngKB": 107
+      },
+      {
+        "size": "lg",
+        "dimensions": "800×768",
+        "webp": "envelope/heart-lg.webp",
+        "png": "envelope/heart-lg.png",
+        "webpKB": 32,
+        "pngKB": 368
+      }
+    ]
+  },
+  {
     "original": "envelope/envelope.png",
     "orientation": "landscape",
     "preset": "decorative",
@@ -95,6 +128,138 @@
         "png": "envelope/envelope_open-lg.png",
         "webpKB": 28,
         "pngKB": 375
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope_online.png",
+    "orientation": "portrait",
+    "preset": "content",
+    "originalSize": "3368×3936",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "548×640",
+        "webp": "envelope/envelope_online-sm.webp",
+        "png": "envelope/envelope_online-sm.png",
+        "webpKB": 23,
+        "pngKB": 163
+      },
+      {
+        "size": "md",
+        "dimensions": "876×1024",
+        "webp": "envelope/envelope_online-md.webp",
+        "png": "envelope/envelope_online-md.png",
+        "webpKB": 46,
+        "pngKB": 352
+      },
+      {
+        "size": "lg",
+        "dimensions": "1369×1600",
+        "webp": "envelope/envelope_online-lg.webp",
+        "png": "envelope/envelope_online-lg.png",
+        "webpKB": 81,
+        "pngKB": 806
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope_opened.png",
+    "orientation": "square",
+    "preset": "background",
+    "originalSize": "3464×3464",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "828×828",
+        "webp": "envelope/envelope_opened-sm.webp",
+        "png": "envelope/envelope_opened-sm.png",
+        "webpKB": 58,
+        "pngKB": 904
+      },
+      {
+        "size": "md",
+        "dimensions": "1536×1536",
+        "webp": "envelope/envelope_opened-md.webp",
+        "png": "envelope/envelope_opened-md.png",
+        "webpKB": 135,
+        "pngKB": 2938
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1920",
+        "webp": "envelope/envelope_opened-lg.webp",
+        "png": "envelope/envelope_opened-lg.png",
+        "webpKB": 177,
+        "pngKB": 4405
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope_opened_1.png",
+    "orientation": "square",
+    "preset": "background",
+    "originalSize": "3464×3464",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "828×828",
+        "webp": "envelope/envelope_opened_1-sm.webp",
+        "png": "envelope/envelope_opened_1-sm.png",
+        "webpKB": 56,
+        "pngKB": 786
+      },
+      {
+        "size": "md",
+        "dimensions": "1536×1536",
+        "webp": "envelope/envelope_opened_1-md.webp",
+        "png": "envelope/envelope_opened_1-md.png",
+        "webpKB": 126,
+        "pngKB": 2512
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1920",
+        "webp": "envelope/envelope_opened_1-lg.webp",
+        "png": "envelope/envelope_opened_1-lg.png",
+        "webpKB": 168,
+        "pngKB": 3742
+      }
+    ]
+  },
+  {
+    "original": "envelope/heart.png",
+    "orientation": "square",
+    "preset": "decorative",
+    "originalSize": "4320×4320",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "200×200",
+        "webp": "envelope/heart-sm.webp",
+        "png": "envelope/heart-sm.png",
+        "webpKB": 7,
+        "pngKB": 37
+      },
+      {
+        "size": "md",
+        "dimensions": "400×400",
+        "webp": "envelope/heart-md.webp",
+        "png": "envelope/heart-md.png",
+        "webpKB": 15,
+        "pngKB": 116
+      },
+      {
+        "size": "lg",
+        "dimensions": "800×800",
+        "webp": "envelope/heart-lg.webp",
+        "png": "envelope/heart-lg.png",
+        "webpKB": 33,
+        "pngKB": 398
       }
     ]
   },
