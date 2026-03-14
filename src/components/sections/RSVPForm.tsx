@@ -10,6 +10,7 @@ type SubmissionState = 'idle' | 'loading';
 interface FormData {
 	guestName: string;
 	attending: 'yes' | 'no' | '';
+	guestCount: string | number;
 	message: string;
 	website: string; // Honeypot field
 }
@@ -18,7 +19,8 @@ const RSVPForm = () => {
 	const { t } = useTranslation();
 	const [formData, setFormData] = useState<FormData>({
 		guestName: '',
-		attending: '',
+		attending: 'yes',
+		guestCount: '',
 		message: '',
 		website: '', // Honeypot field - should remain empty
 	});
@@ -38,6 +40,9 @@ const RSVPForm = () => {
 		}
 		if (!formData.attending) {
 			return 'Please select your attendance';
+		}
+		if (formData.attending === 'yes' && !formData.guestCount) {
+			return 'Please select number of guests';
 		}
 		if (formData.message.length > 500) {
 			return 'Message must be less than 500 characters';
@@ -60,6 +65,14 @@ const RSVPForm = () => {
 		setSubmissionState('loading');
 
 		try {
+			// Convert guestCount to number if it's a string
+			const submitData = {
+				...formData,
+				guestCount: formData.guestCount
+					? Number(formData.guestCount)
+					: '',
+			};
+
 			// Use no-cors mode to bypass CORS issues with Google Apps Script
 			await fetch(RSVP_WEBHOOK_URL, {
 				method: 'POST',
@@ -67,7 +80,7 @@ const RSVPForm = () => {
 				headers: {
 					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify(formData),
+				body: JSON.stringify(submitData),
 			});
 
 			// With no-cors mode, we can't read the response
@@ -75,12 +88,13 @@ const RSVPForm = () => {
 			setSubmissionState('idle');
 			setFormData({
 				guestName: '',
-				attending: '',
+				attending: 'yes',
+				guestCount: '',
 				message: '',
 				website: '',
 			});
 			toast.success(
-				'Thank you! Your RSVP has been received. We look forward to celebrating with you!',
+				'Cảm ơn bạn đã gửi xác nhận tham dự! Chúng mình rất mong được gặp bạn tại ngày vui của chúng mình!',
 				{
 					duration: 5000,
 				},
@@ -95,17 +109,12 @@ const RSVPForm = () => {
 	};
 
 	return (
-		<div className=" p-4 md:p-6 lg:p-8">
+		<div>
 			<form onSubmit={handleSubmit} className="space-y-4">
 				{/* Title */}
-				<div className="text-4xl md:text-5xl font-custom-serif text-[#6b5739] mb-4 md:text-left">
+				<div className="text-3xl md:text-4xl font-hoangngan7 text-[#6b5739] mb-4 text-center">
 					{t('rsvp.title')}
 				</div>
-
-				{/* Description */}
-				<p className="text-xs md:text-base leading-relaxed font-hoangngan3 text-[#6b5739] md:text-left">
-					{t('rsvp.description')}
-				</p>
 
 				{/* Name Input */}
 				<div className="space-y-2">
@@ -120,7 +129,7 @@ const RSVPForm = () => {
 						}
 						placeholder={t('rsvp.nameLabel')}
 						disabled={submissionState === 'loading'}
-						className="w-full border-b-[1.5px] border-[#412d1d] bg-transparent py-2 focus:outline-none focus:border-[#412d1d] text-[#6b5739] font-hoangngan3 disabled:opacity-50 placeholder-[#6b5739]"
+						className="w-full border-b-[1.5px] border-[#412d1d] bg-transparent py-2 focus:outline-none focus:border-[#412d1d] text-[#6b5739] font-hoangngan4 disabled:opacity-50 placeholder-[#6b5739]"
 						required
 						maxLength={100}
 					/>
@@ -130,12 +139,17 @@ const RSVPForm = () => {
 				<div className="space-y-3">
 					<RadioGroup
 						value={formData.attending}
-						onValueChange={(value) =>
+						onValueChange={(value) => {
+							const attending = value as 'yes' | 'no';
 							setFormData({
 								...formData,
-								attending: value as 'yes' | 'no',
-							})
-						}
+								attending,
+								guestCount:
+									attending === 'no'
+										? ''
+										: formData.guestCount,
+							});
+						}}
 						disabled={submissionState === 'loading'}
 						required
 					>
@@ -168,6 +182,34 @@ const RSVPForm = () => {
 					</RadioGroup>
 				</div>
 
+				{/* Guest Count Dropdown */}
+				<div className="space-y-2 text-[#6b5739] text-hoangngan4">
+					{/* <label className="block text-base font-hoangngan4">
+						{t('rsvp.guestCountLabel')}
+					</label> */}
+					<select
+						value={formData.guestCount}
+						onChange={(e) =>
+							setFormData({
+								...formData,
+								guestCount: e.target.value
+									? Number(e.target.value)
+									: '',
+							})
+						}
+						disabled={
+							formData.attending !== 'yes' ||
+							submissionState === 'loading'
+						}
+						className="w-full border-b-[1.5px] border-[#412d1d] bg-transparent py-2 focus:outline-none focus:border-[#412d1d] font-hoangngan4 disabled:opacity-50 disabled:cursor-not-allowed"
+					>
+						<option value="">Số lượng khách tham dự</option>
+						<option value="1">1 khách</option>
+						<option value="2">2 khách</option>
+						<option value="3">3 khách</option>
+					</select>
+				</div>
+
 				{/* Message Textarea */}
 				<div className="space-y-2">
 					<label className="block text-[#6b5739] text-base font-hoangngan4">
@@ -187,7 +229,7 @@ const RSVPForm = () => {
 						className="w-full bg-[#eee5d5] border-0 rounded-xl px-4 py-3 mb-0 focus:outline-none text-[#6b5739] placeholder-[#6b5739] placeholder-italic font-hoangngan3 disabled:opacity-50 resize-none"
 						maxLength={500}
 					/>
-					<p className="text-[#6b5739] text-sm italic">
+					<p className="text-[#6b5739] text-sm italic font-hoangngan4">
 						{formData.message.length}/500 {t('rsvp.characters')}
 					</p>
 				</div>
@@ -196,7 +238,7 @@ const RSVPForm = () => {
 				<button
 					type="submit"
 					disabled={submissionState === 'loading'}
-					className="w-auto bg-[#6b5739] text-white px-8 py-3 rounded font-semibold transition-colors uppercase tracking-wider font-hoangngan4 disabled:opacity-50 flex items-center gap-2 justify-center cursor-pointer m-auto md:m-0"
+					className="w-auto bg-[#6b5739] text-white px-8 py-3 rounded-full font-semibold transition-colors uppercase tracking-wider font-hoangngan4 disabled:opacity-50 flex items-center gap-2 justify-center cursor-pointer m-auto md:m-0 w-full"
 				>
 					{submissionState === 'loading' ? (
 						<>
@@ -207,6 +249,11 @@ const RSVPForm = () => {
 						t('rsvp.submitButton')
 					)}
 				</button>
+
+				{/* Description */}
+				<p className="text-xs md:text-base leading-relaxed font-hoangngan4 text-[#6b5739] md:text-left mt-4">
+					{t('rsvp.description')}
+				</p>
 			</form>
 		</div>
 	);

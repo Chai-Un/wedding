@@ -35,6 +35,7 @@
 	},
 	"rsvp": {
 		"title": "Rsvp",
+		"invitedMessage": "You are invited!",
 		"description": "Dear guests, please kindly send your RSVP before April 4th, 2026 so our family can prepare the most thoughtful welcome for you",
 		"hosts": "MR. & MRS.: NGUYEN QUOC HAI & DOAN BICH NGA\nMRS.: DANG THU HUYEN",
 		"invitationText": "We cordially invite you to attend the banquet celebrating\nThe wedding of our children on",
@@ -45,6 +46,7 @@
 		"viewMap": "VIEW MAP",
 		"nameLabel": "Full Name",
 		"namePlaceholder": "Enter your full name",
+		"guestCountLabel": "Number of Guests",
 		"attendYes": "Yes, I will attend :)",
 		"attendNo": "Sorry, I cannot attend :(",
 		"messageLabel": "Send your wishes to the couple",

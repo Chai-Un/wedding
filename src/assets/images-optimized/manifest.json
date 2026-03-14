@@ -3651,5 +3651,59 @@
         "webpKB": 162
       }
     ]
+  },
+  {
+    "original": "envelope/envelope_with_paper.png",
+    "orientation": "square",
+    "preset": "background",
+    "originalSize": "3464×3464",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "828×828",
+        "webp": "envelope/envelope_with_paper-sm.webp",
+        "webpKB": 41
+      },
+      {
+        "size": "md",
+        "dimensions": "1536×1536",
+        "webp": "envelope/envelope_with_paper-md.webp",
+        "webpKB": 93
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×1920",
+        "webp": "envelope/envelope_with_paper-lg.webp",
+        "webpKB": 122
+      }
+    ]
+  },
+  {
+    "original": "envelope/envelope_with_paper_1.png",
+    "orientation": "portrait",
+    "preset": "background",
+    "originalSize": "2731×4096",
+    "hasAlpha": true,
+    "variants": [
+      {
+        "size": "sm",
+        "dimensions": "828×1242",
+        "webp": "envelope/envelope_with_paper_1-sm.webp",
+        "webpKB": 70
+      },
+      {
+        "size": "md",
+        "dimensions": "1536×2304",
+        "webp": "envelope/envelope_with_paper_1-md.webp",
+        "webpKB": 144
+      },
+      {
+        "size": "lg",
+        "dimensions": "1920×2880",
+        "webp": "envelope/envelope_with_paper_1-lg.webp",
+        "webpKB": 183
+      }
+    ]
   }
 ]

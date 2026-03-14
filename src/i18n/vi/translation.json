@@ -34,7 +34,8 @@
 		"rsvpButton": "PHẢN HỒI THAM DỰ"
 	},
 	"rsvp": {
-		"title": "Rsvp",
+		"title": "Phản hồi tham dự",
+		"invitedMessage": "You are invited!",
 		"description": "Quý quan khách vui lòng gửi phản hồi việc tham dự tiệc trước ngày 04/04/2026 để gia đình chuẩn bị tiếp đón một cách chu đáo nhất",
 		"hosts": "ÔNG BÀ: NGUYỄN QUỐC HẢI & ĐOÀN BÍCH NGA\nBÀ: ĐẶNG THU HUYỀN",
 		"invitationText": "Thân mời Quý quan khách tham dự bữa tiệc mừng\nLễ thành hôn của các con chúng tôi vào",
@@ -42,13 +43,14 @@
 		"location": "Địa điểm",
 		"venue": "TẦNG 3 - PHÒNG TIỆC 318\nTRUNG TÂM HỘI NGHỊ QUỐC GIA",
 		"address": "Đường Phạm Hùng, Thành phố Hà Nội",
-		"viewMap": "XEM BẢN ĐỒ",
+		"viewMap": "Chỉ đường",
 		"nameLabel": "Họ và tên",
 		"namePlaceholder": "Nhập họ và tên của bạn",
+		"guestCountLabel": "Số lượng khách",
 		"attendYes": "Có, tôi sẽ tham dự tiệc :)",
 		"attendNo": "Tiếc quá, tôi không tham dự được :(",
 		"messageLabel": "Gửi lời chúc phúc tới cặp đôi",
-		"messagePlaceholder": "Type here...",
+		"messagePlaceholder": "Nhập lời chúc phúc của bạn...",
 		"submitButton": "GỬI PHẢN HỒI",
 		"characters": "ký tự"
 	},

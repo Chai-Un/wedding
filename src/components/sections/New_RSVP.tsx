@@ -7,57 +7,69 @@ import {
 	DialogClose,
 	DialogTitle,
 } from '@/components/ui/dialog';
-import { X } from 'lucide-react';
+import { MapPin, X } from 'lucide-react';
+import { Button } from '../ui/button';
+import { useTranslation } from 'react-i18next';
 
 const New_RSVP = () => {
 	const [open, setOpen] = useState(false);
+	const { t } = useTranslation();
+
+	const openMap = () => {
+		window.open(
+			'https://maps.google.com/?q=Trung+Tâm+Hội+Nghị+Quốc+Gia+Phạm+Hùng',
+			'_blank',
+		);
+	};
 
 	return (
-		<section className="relative w-full py-8 md:py-12 lg:py-16 flex items-center justify-center px-4 bg-[#fffcf7]">
-			{/* Content container with envelope_opened as background - Larger sizes for better readability */}
-			<div className="relative w-full max-w-[95vw] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1000px]">
-				{/* Background: envelope_opened - sized to match content */}
-				<div className="relative w-full aspect-square">
-					<ResponsiveImage
-						src="envelope/envelope_opened_1.png"
-						alt="Envelope"
-						className="w-full h-full object-contain"
-						sizes="(max-width: 768px) 95vw, (max-width: 1024px) 700px, (max-width: 1280px) 900px, 1000px"
-					/>
+		<section className="bg-[#fffcf7] px-4 md:px-8 lg:px-12 xl:px-16 py-12 md:py-16 lg:py-20">
+			{/* Title */}
+			<div className="text-[56px] lg:text-[64px] font-hoangngan8 text-[#412d1d] text-center">
+				{t('rsvp.invitedMessage')}
+			</div>
 
-					{/* Centered envelope_online - positioned inside envelope - LARGER, moved up */}
-					<div className="absolute inset-0 flex items-center justify-center p-4 md:p-6 lg:p-8 xl:p-10 pb-8 md:pb-12 lg:pb-16 xl:pb-20">
-						<ResponsiveImage
-							src="envelope/envelope_online.png"
-							alt="Wedding Invitation"
-							className="w-full h-auto drop-shadow-2xl"
-							sizes="(max-width: 768px) 90vw, (max-width: 1024px) 650px, (max-width: 1280px) 820px, 900px"
-						/>
+			{/* Two-column layout on desktop */}
+			<div className="mx-auto w-full max-w-7xl">
+				<div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12 xl:gap-16">
+					{/* Left Column: Envelope and Map Button */}
+					<div className="w-full lg:w-3/5">
+						<div className="relative w-full">
+							{/* Envelope with invitation card - portrait orientation */}
+							<ResponsiveImage
+								src="envelope/envelope_with_paper_1.png"
+								alt="Wedding Invitation Envelope"
+								className="w-full h-auto object-contain"
+								sizes="(max-width: 1024px) 100vw, 50vw"
+							/>
+						</div>
+
+						{/* View Map Button */}
+						<div className="flex justify-center mt-0 md:-mt-10">
+							<Button
+								size="lg"
+								onClick={openMap}
+								variant={null}
+								className="font-hoangngan5 bg-[#d4c5ad] hover:bg-[#c4b59d] text-[#412d1d] px-8 py-3 md:px-12 md:py-6 text-base tracking-widest uppercase cursor-pointer rounded-full shadow-md hover:shadow-lg transition-colors"
+							>
+								<MapPin className="w-5 h-5 md:w-6 md:h-6" />
+								{t('rsvp.viewMap')}
+							</Button>
+						</div>
 					</div>
 
-					{/* Heart with RSVP text - ROTATED 120deg, left-bottom overlapping envelope_online */}
-					<button
-						onClick={() => setOpen(true)}
-						className="absolute left-1 bottom-12 md:left-8 md:bottom-16 lg:left-12 lg:bottom-20 xl:left-16 xl:bottom-24 w-[120px] md:w-[160px] lg:w-[200px] xl:w-[240px] cursor-pointer group z-20 bg-transparent border-0 p-0"
-					>
-						<div className="relative transition-transform duration-300 group-hover:scale-110 rotate-[-30deg]">
-							<ResponsiveImage
-								src="envelope/heart.png"
-								alt="RSVP"
-								className="w-full h-auto drop-shadow-xl"
-								sizes="(max-width: 768px) 120px, (max-width: 1024px) 160px, (max-width: 1280px) 200px, 240px"
-							/>
-							{/* Text overlay on heart - rotates with the heart */}
-							<div className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-								<p className="text-[#6b5739] font-hoangngan7 text-[9px] md:text-xs lg:text-sm xl:text-base leading-tight">
-									Phản hồi tham dự
-								</p>
-								<p className="text-[#6b5739] font-hoangngan7 text-[10px] md:text-sm lg:text-base xl:text-lg font-semibold mt-0.5">
-									RSVP
-								</p>
-							</div>
+					{/* Right Column: RSVP Form */}
+					<div className="w-full lg:w-2/5">
+						<div
+							className="mt-4 lg:mt-0 bg-white rounded-[5px] p-6 md:p-8 lg:p-10"
+							style={{
+								boxShadow:
+									'rgba(0, 0, 0, 0.1) 0px 2px 10px 0px',
+							}}
+						>
+							<RSVPForm />
 						</div>
-					</button>
+					</div>
 				</div>
 			</div>
 
