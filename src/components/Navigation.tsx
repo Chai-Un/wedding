@@ -8,7 +8,7 @@ import { GALLERY_CONCEPTS } from '@/constants/galleryData';
 
 const navItems = [
 	{ nameKey: 'nav.home', href: 'home' },
-	{ nameKey: 'nav.invitation', href: 'rsvp' },
+	{ nameKey: 'nav.invitation', href: 'rsvp_envelope' },
 	{ nameKey: 'nav.schedule', href: 'timeline' },
 	{ nameKey: 'nav.ourStory', href: 'our-journey' },
 	{ nameKey: 'nav.gallery', href: 'gallery' },
@@ -356,7 +356,7 @@ export default function Navigation({
 						),
 					)}
 					{/* Close button at the bottom of the menu */}
-					<div className="pt-2 border-t border-white/20">
+					{/* <div className="pt-2 border-t border-white/20">
 						<button
 							onClick={() => setIsOpen(false)}
 							aria-label="Close menu"
@@ -365,7 +365,7 @@ export default function Navigation({
 							<X className="h-4 w-4" />
 							<span className="font-hoangngan7 uppercase tracking-wider text-[0.75em]">{t('common.close')}</span>
 						</button>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		)}

@@ -23,7 +23,10 @@ const New_RSVP = () => {
 	};
 
 	return (
-		<section className="bg-[#fffcf7] px-4 md:px-8 lg:px-12 xl:px-16 py-12 md:py-16 lg:py-20">
+		<section
+			id="rsvp_envelope"
+			className="bg-[#fffcf7] px-4 md:px-8 lg:px-12 xl:px-16 py-12 md:py-16 lg:py-20"
+		>
 			{/* Title */}
 			<div className="text-[48px] lg:text-[64px] font-hoangngan8 text-[#412d1d] text-center">
 				{t('rsvp.invitedMessage')}

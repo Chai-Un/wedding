@@ -5,21 +5,11 @@ import { getOptimizedUrl } from '@/lib/responsive-image';
 import { StackedCarousel } from '@/components/ui/stacked-carousel';
 import { OverlapCarousel } from '@/components/ui/overlap-carousel';
 
-// Import journey photos - you'll need to add these images to your assets folder
-// import paris2023 from '@/assets/images/journey/paris-2023.jpg';
-// import madrid2023 from '@/assets/images/journey/madrid-2023.jpg';
-// import nice2023 from '@/assets/images/journey/nice-2023.jpg';
-// import london2024 from '@/assets/images/journey/london-2024.jpg';
-// import nottingham2024 from '@/assets/images/journey/nottingham-2024.jpg';
-// import edinburgh2024 from '@/assets/images/journey/edinburgh-2024.jpg';
-// import dreamland2025 from '@/assets/images/journey/dreamland-2025.jpg';
-// import bali2025 from '@/assets/images/journey/bali-2025.jpg';
-// import saigon2025 from '@/assets/images/journey/saigon-2025.jpg';
-
 // Paper texture for torn-paper background — use optimized variant
 const paperUrl = getOptimizedUrl('journey/paper_base.png', 'lg') || '';
 
 interface JourneyPhoto {
+	id: number;
 	image: string;
 	location: string;
 	year: string;
@@ -27,15 +17,90 @@ interface JourneyPhoto {
 }
 
 const journeyPhotos: JourneyPhoto[] = [
-	{ image: 'journey/demo.jpg', location: 'Paris', year: '2023', rotation: -10 },
-	{ image: 'journey/demo2.jpg', location: 'Madrid', year: '2023', rotation: 5 },
-	{ image: 'journey/demo.jpg', location: 'Nice', year: '2023', rotation: 12 },
-	{ image: 'journey/demo2.jpg', location: 'London', year: '2024', rotation: 5 },
-	{ image: 'journey/demo.jpg', location: 'Nottingham', year: '2024', rotation: 10 },
-	{ image: 'journey/demo2.jpg', location: 'Edinburgh', year: '2024', rotation: -4 },
-	{ image: 'journey/demo.jpg', location: 'Dreamland', year: '2025', rotation: -10 },
-	{ image: 'journey/demo.jpg', location: 'Bali', year: '2025', rotation: 2 },
-	{ image: 'journey/demo2.jpg', location: 'Sài Gòn', year: '2025', rotation: -4 },
+	{
+		id: 1,
+		image: 'journey/paris.png',
+		location: 'Paris',
+		year: '2023',
+		rotation: -10,
+	},
+	{
+		id: 2,
+		image: 'journey/france.png',
+		location: 'Paris',
+		year: '2023',
+		rotation: -10,
+	},
+	{
+		id: 3,
+		image: 'journey/madrid.png',
+		location: 'Madrid',
+		year: '2023',
+		rotation: 5,
+	},
+	{
+		id: 4,
+		image: 'journey/disneyland.png',
+		location: 'Disneyland',
+		year: '2023',
+		rotation: 5,
+	},
+	{
+		id: 5,
+		image: 'journey/nice.png',
+		location: 'Nice',
+		year: '2023',
+		rotation: 12,
+	},
+	{
+		id: 6,
+		image: 'journey/monaco.png',
+		location: 'Monaco',
+		year: '2023',
+		rotation: 12,
+	},
+	{
+		id: 7,
+		image: 'journey/london.png',
+		location: 'London',
+		year: '2024',
+		rotation: 5,
+	},
+	{
+		id: 8,
+		image: 'journey/nottingham.png',
+		location: 'Nottingham',
+		year: '2024',
+		rotation: 10,
+	},
+	{
+		id: 9,
+		image: 'journey/edinburgh.png',
+		location: 'Edinburgh',
+		year: '2024',
+		rotation: -4,
+	},
+	{
+		id: 10,
+		image: 'journey/dreamland.png',
+		location: 'Dreamland',
+		year: '2025',
+		rotation: -10,
+	},
+	{
+		id: 11,
+		image: 'journey/bali.png',
+		location: 'Bali',
+		year: '2025',
+		rotation: 2,
+	},
+	{
+		id: 12,
+		image: 'journey/saigon.png',
+		location: 'Sài Gòn',
+		year: '2025',
+		rotation: -4,
+	},
 ];
 
 export default function OurJourney() {
