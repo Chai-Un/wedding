@@ -4,6 +4,18 @@ import ResponsiveImage from '@/components/ResponsiveImage';
 import { getOptimizedUrl } from '@/lib/responsive-image';
 import { StackedCarousel } from '@/components/ui/stacked-carousel';
 import { OverlapCarousel } from '@/components/ui/overlap-carousel';
+import Paris from '@/assets/images/journey/paris.png';
+import France from '@/assets/images/journey/france.png';
+import Madrid from '@/assets/images/journey/madrid.png';
+import Disneyland from '@/assets/images/journey/disneyland.png';
+import Nice from '@/assets/images/journey/nice.png';
+import Monaco from '@/assets/images/journey/monaco.png';
+import London from '@/assets/images/journey/london.png';
+import Nottingham from '@/assets/images/journey/nottingham.png';
+import Edinburgh from '@/assets/images/journey/edinburgh.png';
+import Dreamland from '@/assets/images/journey/dreamland.png';
+import Bali from '@/assets/images/journey/bali.png';
+import Saigon from '@/assets/images/journey/saigon.png';
 
 // Paper texture for torn-paper background — use optimized variant
 const paperUrl = getOptimizedUrl('journey/paper_base.png', 'lg') || '';
@@ -19,84 +31,84 @@ interface JourneyPhoto {
 const journeyPhotos: JourneyPhoto[] = [
 	{
 		id: 1,
-		image: 'journey/paris.png',
+		image: Paris,
 		location: 'Paris',
 		year: '2023',
 		rotation: -10,
 	},
 	{
 		id: 2,
-		image: 'journey/france.png',
+		image: France,
 		location: 'Paris',
 		year: '2023',
 		rotation: -10,
 	},
 	{
 		id: 3,
-		image: 'journey/madrid.png',
+		image: Madrid,
 		location: 'Madrid',
 		year: '2023',
 		rotation: 5,
 	},
 	{
 		id: 4,
-		image: 'journey/disneyland.png',
+		image: Disneyland,
 		location: 'Disneyland',
 		year: '2023',
 		rotation: 5,
 	},
 	{
 		id: 5,
-		image: 'journey/nice.png',
+		image: Nice,
 		location: 'Nice',
 		year: '2023',
 		rotation: 12,
 	},
 	{
 		id: 6,
-		image: 'journey/monaco.png',
+		image: Monaco,
 		location: 'Monaco',
 		year: '2023',
 		rotation: 12,
 	},
 	{
 		id: 7,
-		image: 'journey/london.png',
+		image: London,
 		location: 'London',
 		year: '2024',
 		rotation: 5,
 	},
 	{
 		id: 8,
-		image: 'journey/nottingham.png',
+		image: Nottingham,
 		location: 'Nottingham',
 		year: '2024',
 		rotation: 10,
 	},
 	{
 		id: 9,
-		image: 'journey/edinburgh.png',
+		image: Edinburgh,
 		location: 'Edinburgh',
 		year: '2024',
 		rotation: -4,
 	},
 	{
 		id: 10,
-		image: 'journey/dreamland.png',
+		image: Dreamland,
 		location: 'Dreamland',
 		year: '2025',
 		rotation: -10,
 	},
 	{
 		id: 11,
-		image: 'journey/bali.png',
+		image: Bali,
 		location: 'Bali',
 		year: '2025',
 		rotation: 2,
 	},
 	{
 		id: 12,
-		image: 'journey/saigon.png',
+		image: Saigon,
 		location: 'Sài Gòn',
 		year: '2025',
 		rotation: -4,
