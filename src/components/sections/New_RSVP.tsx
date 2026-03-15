@@ -48,12 +48,11 @@ const New_RSVP = () => {
 						</div>
 
 						{/* View Map Button */}
-						<div className="flex justify-center mt-0 md:-mt-10">
+						<div className="flex justify-center mt-0 md:-mt-10 cursor-pointer" onClick={openMap}>
 							<Button
 								size="lg"
-								onClick={openMap}
 								variant={null}
-								className="font-hoangngan5 bg-[#d4c5ad] hover:bg-[#c4b59d] text-[#412d1d] px-8 py-3 md:px-12 md:py-6 text-base tracking-widest uppercase cursor-pointer rounded-full shadow-md hover:shadow-lg transition-colors"
+								className="font-hoangngan5 bg-[#d4c5ad] hover:bg-[#c4b59d] text-[#412d1d] px-8 py-3 md:px-12 md:py-6 text-base tracking-widest uppercase rounded-full shadow-md hover:shadow-lg transition-colors"
 							>
 								<MapPin className="w-5 h-5 md:w-6 md:h-6" />
 								{t('rsvp.viewMap')}
