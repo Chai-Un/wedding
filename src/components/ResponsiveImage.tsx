@@ -20,6 +20,8 @@ interface ResponsiveImageProps {
   /** Allow native img attributes like draggable, aria-hidden */
   draggable?: boolean;
   'aria-hidden'?: boolean | 'true' | 'false';
+  /** Called when the image finishes loading */
+  onLoad?: (e: React.SyntheticEvent<HTMLImageElement>) => void;
 }
 
 /**
@@ -40,6 +42,7 @@ export default function ResponsiveImage({
   alpha = false,
   draggable,
   'aria-hidden': ariaHidden,
+  onLoad,
 }: ResponsiveImageProps) {
   // Auto-detect alpha from .png extension, or use explicit prop
   const isAlpha = alpha || /\.png$/i.test(src);
@@ -54,6 +57,7 @@ export default function ResponsiveImage({
         className={className}
         loading={loading}
         onClick={onClick}
+        onLoad={onLoad}
         draggable={draggable}
         aria-hidden={ariaHidden}
         style={{ ...style, objectPosition }}
@@ -93,6 +97,7 @@ export default function ResponsiveImage({
         className={className}
         loading={loading}
         onClick={onClick}
+        onLoad={onLoad}
         draggable={draggable}
         aria-hidden={ariaHidden}
         style={imgStyle}
