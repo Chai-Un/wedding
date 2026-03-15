@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ResponsiveImage from '@/components/ResponsiveImage';
 
 type DescriptionPosition = 'left' | 'center' | 'right';
@@ -22,13 +22,10 @@ export default function PolaroidPhoto({
 }: PolaroidPhotoProps) {
 	const [isVertical, setIsVertical] = useState<boolean>(false);
 
-	useEffect(() => {
-		const img = new Image();
-		img.src = image;
-		img.onload = () => {
-			setIsVertical(img.height > img.width);
-		};
-	}, [image]);
+	const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+		const img = e.currentTarget;
+		setIsVertical(img.naturalHeight > img.naturalWidth);
+	};
 
 	return (
 		<div
@@ -59,6 +56,7 @@ export default function PolaroidPhoto({
 							: 'w-full aspect-4/3 md:w-72 md:h-56 lg:w-80 lg:h-64 xl:w-90 xl:h-72'
 					}`}
 					sizes="(max-width: 768px) 100vw, 400px"
+					onLoad={handleImageLoad}
 				/>
 			</div>
 			<div className={`mt-2 md:mt-3 lg:mt-4 font-hoangngan2 ${
