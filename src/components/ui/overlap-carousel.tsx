@@ -17,16 +17,44 @@ export function OverlapCarousel({
 	className = '',
 }: OverlapCarouselProps) {
 	const [activeIndex, setActiveIndex] = React.useState(0);
+	const [isVisible, setIsVisible] = React.useState(false);
 	const total = React.Children.count(children);
+	const containerRef = React.useRef<HTMLDivElement>(null);
 
 	const [emblaRef, emblaApi] = useEmblaCarousel(
 		{ loop: true },
-		autoPlay
+		autoPlay && isVisible
 			? [Autoplay({ delay: autoplayDelay, stopOnInteraction: false, stopOnMouseEnter: false })]
 			: [],
 	);
 
 	const resumeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+	/** Intersection Observer to detect when carousel is in view */
+	React.useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setIsVisible(true);
+					} else {
+						setIsVisible(false);
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+
+		if (containerRef.current) {
+			observer.observe(containerRef.current);
+		}
+
+		return () => {
+			if (containerRef.current) {
+				observer.unobserve(containerRef.current);
+			}
+		};
+	}, []);
 
 	/** Stop autoplay and restart it after 5 seconds of inactivity */
 	const pauseAndScheduleResume = React.useCallback(() => {
@@ -88,7 +116,7 @@ export function OverlapCarousel({
 	};
 
 	return (
-		<div className={className}>
+		<div ref={containerRef} className={className}>
 			{/* Hidden embla container to drive the autoplay / snap engine */}
 			<div
 				ref={emblaRef}

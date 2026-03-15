@@ -210,7 +210,7 @@ export default function BecomingOne() {
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors" />
 							</div>
 							<div
-								onClick={() => handlePhotoClick(15)}
+								onClick={() => handlePhotoClick(4)}
 								className="flex-2 bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
 							>
 								<ResponsiveImage

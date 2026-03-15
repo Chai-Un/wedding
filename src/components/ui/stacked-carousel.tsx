@@ -17,19 +17,47 @@ export function StackedCarousel({
 }: StackedCarouselProps) {
 	const [activeIndex, setActiveIndex] = React.useState(0);
 	const [isDragging, setIsDragging] = React.useState(false);
+	const [isVisible, setIsVisible] = React.useState(false);
 	const total = React.Children.count(children);
 	const touchStartX = React.useRef(0);
 	const touchEndX = React.useRef(0);
 	const isDraggingRef = React.useRef(false);
+	const containerRef = React.useRef<HTMLDivElement>(null);
 
 	const [emblaRef, emblaApi] = useEmblaCarousel(
 		{ loop: true },
-		autoPlay
+		autoPlay && isVisible
 			? [Autoplay({ delay: autoplayDelay, stopOnInteraction: false, stopOnMouseEnter: false })]
 			: []
 	);
 
 	const resumeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+	/** Intersection Observer to detect when carousel is in view */
+	React.useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setIsVisible(true);
+					} else {
+						setIsVisible(false);
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+
+		if (containerRef.current) {
+			observer.observe(containerRef.current);
+		}
+
+		return () => {
+			if (containerRef.current) {
+				observer.unobserve(containerRef.current);
+			}
+		};
+	}, []);
 
 	/** Stop autoplay and restart it after 5 seconds of inactivity */
 	const pauseAndScheduleResume = React.useCallback(() => {
@@ -148,7 +176,7 @@ export function StackedCarousel({
 	};
 
 	return (
-		<div className={className}>
+		<div ref={containerRef} className={className}>
 			{/* Hidden Embla container for autoplay engine */}
 			<div ref={emblaRef} className="overflow-hidden h-0 opacity-0 pointer-events-none" aria-hidden="true">
 				<div className="flex">
