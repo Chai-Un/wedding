@@ -202,6 +202,7 @@ export default function GalleryDialog({
 										? 'w-full h-auto md:max-w-full md:max-h-full'
 										: 'max-w-full max-h-full',
 								)}
+								pictureClassName={isPortrait === true ? 'w-full block md:w-auto md:max-w-full md:max-h-full' : undefined}
 								sizes="100vw"
 								loading="eager"
 								style={{ maxHeight: 'calc(100vh - 120px)' }}

@@ -22,6 +22,8 @@ interface ResponsiveImageProps {
   'aria-hidden'?: boolean | 'true' | 'false';
   /** Called when the image finishes loading */
   onLoad?: (e: React.SyntheticEvent<HTMLImageElement>) => void;
+  /** Class names applied to the outer <picture> element (ignored for the fallback <img>) */
+  pictureClassName?: string;
 }
 
 /**
@@ -43,6 +45,7 @@ export default function ResponsiveImage({
   draggable,
   'aria-hidden': ariaHidden,
   onLoad,
+  pictureClassName,
 }: ResponsiveImageProps) {
   // Auto-detect alpha from .png extension, or use explicit prop
   const isAlpha = alpha || /\.png$/i.test(src);
@@ -73,7 +76,7 @@ export default function ResponsiveImage({
   const fallbackMimeType = isAlpha ? 'image/png' : 'image/jpeg';
 
   return (
-    <picture>
+    <picture className={pictureClassName}>
       {/* WebP source — modern browsers (with alpha for transparent PNGs) */}
       {responsive.webpSrcSet && (
         <source
