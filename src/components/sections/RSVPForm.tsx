@@ -112,7 +112,7 @@ const RSVPForm = () => {
 		<div>
 			<form onSubmit={handleSubmit} className="space-y-4">
 				{/* Title */}
-				<div className="text-3xl md:text-4xl font-hoangngan7 text-[#6b5739] mb-4 text-center">
+				<div className="text-2xl md:text-4xl font-hoangngan7 text-[#6b5739] mb-4 text-center">
 					{t('rsvp.title')}
 				</div>
 
@@ -129,7 +129,7 @@ const RSVPForm = () => {
 						}
 						placeholder={t('rsvp.nameLabel')}
 						disabled={submissionState === 'loading'}
-						className="w-full border-b-[1.5px] border-[#412d1d] bg-transparent py-2 focus:outline-none focus:border-[#412d1d] text-[#6b5739] font-hoangngan4 disabled:opacity-50 placeholder-[#6b5739]"
+						className="w-full border-b-[1.5px] border-[#412d1d] bg-transparent py-2 focus:outline-none focus:border-[#412d1d] text-[#6b5739] font-hoangngan4 disabled:opacity-50 placeholder-[#6b5739] text-sm lg:text-base"
 						required
 						maxLength={100}
 					/>
@@ -161,7 +161,7 @@ const RSVPForm = () => {
 							/>
 							<Label
 								htmlFor="yes"
-								className="text-[#6b5739] text-base font-hoangngan4 cursor-pointer"
+								className="text-[#6b5739] text-sm lg:text-base font-hoangngan4 cursor-pointer"
 							>
 								{t('rsvp.attendYes')}
 							</Label>
@@ -174,7 +174,7 @@ const RSVPForm = () => {
 							/>
 							<Label
 								htmlFor="no"
-								className="text-[#6b5739] text-base font-hoangngan4 cursor-pointer"
+								className="text-[#6b5739] text-sm lg:text-base font-hoangngan4 cursor-pointer"
 							>
 								{t('rsvp.attendNo')}
 							</Label>
@@ -201,7 +201,7 @@ const RSVPForm = () => {
 							formData.attending !== 'yes' ||
 							submissionState === 'loading'
 						}
-						className="w-full border-b-[1.5px] border-[#412d1d] bg-transparent py-2 focus:outline-none focus:border-[#412d1d] font-hoangngan4 disabled:opacity-50 disabled:cursor-not-allowed"
+						className="w-full border-b-[1.5px] border-[#412d1d] bg-transparent py-2 focus:outline-none focus:border-[#412d1d] font-hoangngan4 disabled:opacity-50 disabled:cursor-not-allowed text-sm lg:text-base"
 					>
 						<option value="">Số lượng khách tham dự</option>
 						<option value="1">1 khách</option>
@@ -212,7 +212,7 @@ const RSVPForm = () => {
 
 				{/* Message Textarea */}
 				<div className="space-y-2">
-					<label className="block text-[#6b5739] text-base font-hoangngan4">
+					<label className="block text-[#6b5739] text-sm lg:text-base font-hoangngan4">
 						{t('rsvp.messageLabel')}
 					</label>
 					<textarea
@@ -226,7 +226,7 @@ const RSVPForm = () => {
 						placeholder={t('rsvp.messagePlaceholder')}
 						disabled={submissionState === 'loading'}
 						rows={4}
-						className="w-full bg-[#eee5d5] border-0 rounded-xl px-4 py-3 mb-0 focus:outline-none text-[#6b5739] placeholder-[#6b5739] placeholder-italic font-hoangngan3 disabled:opacity-50 resize-none"
+						className="w-full bg-[#eee5d5] border-0 rounded-xl px-4 py-3 mb-0 focus:outline-none text-[#6b5739] placeholder-[#6b5739] placeholder-italic font-hoangngan3 disabled:opacity-50 resize-none text-sm lg:text-base"
 						maxLength={500}
 					/>
 					<p className="text-[#6b5739] text-sm italic font-hoangngan4">
@@ -238,7 +238,7 @@ const RSVPForm = () => {
 				<button
 					type="submit"
 					disabled={submissionState === 'loading'}
-					className="w-auto bg-[#6b5739] text-white px-8 py-3 rounded-full font-semibold transition-colors uppercase tracking-wider font-hoangngan4 disabled:opacity-50 flex items-center gap-2 justify-center cursor-pointer m-auto md:m-0 w-full"
+					className="bg-[#6b5739] text-white px-8 py-3 rounded-full font-semibold transition-colors uppercase tracking-wider font-hoangngan4 disabled:opacity-50 flex items-center gap-2 justify-center cursor-pointer m-auto md:m-0 w-full text-sm lg:text-base"
 				>
 					{submissionState === 'loading' ? (
 						<>

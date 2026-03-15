@@ -60,11 +60,11 @@ const Timeline = () => {
 				</div>
 
 				{/* Grid of timeline items */}
-				<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-10 mt-10 md:mt-16">
+			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-10 mt-10 md:mt-16">
 					{timelineItems.slice(1).map((item, index) => (
 						<div
 							key={index}
-							className="flex flex-col items-center text-center space-y-3"
+							className="flex flex-col items-center text-center space-y-3 last:col-span-2 md:last:col-span-1 lg:last:col-span-1 last:justify-center"
 						>
 							{/* Icon */}
 							<div className="mb-3 md:mb-5">
