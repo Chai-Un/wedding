@@ -34,7 +34,7 @@ const Timeline = () => {
 		>
 			<div className="max-w-6xl mx-auto">
 				{/* Title */}
-				<h2 className="text-[56px] lg:text-[80px] font-custom-serif text-[#fffcf7] text-center mb-8 md:mb-12">
+				<h2 className="text-[48px] lg:text-[80px] font-custom-serif text-[#fffcf7] text-center mb-8 md:mb-12">
 					{t('timeline.title')}
 				</h2>
 

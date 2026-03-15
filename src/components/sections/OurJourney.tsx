@@ -49,7 +49,7 @@ export default function OurJourney() {
 			<div className="max-w-7xl mx-auto">
 				{/* Title */}
 				<div className="mb-12 md:mb-16 lg:mb-20 px-4 md:px-0">
-					<div className="text-[56px] lg:text-[80px] font-hoangngan8 text-[#412d1d] mb-4 text-center">
+					<div className="text-[48px] lg:text-[80px] font-hoangngan8 text-[#412d1d] mb-4 text-center">
 						{t('journey.title')}
 					</div>
 				</div>
