@@ -152,12 +152,9 @@ export default function Redamancy() {
 					{/* Row 1: 1fr | 2fr — left: 2 portraits stacked (0,1), right: 1 tall portrait (2) */}
 					<div className="flex gap-1 md:gap-2 mb-1 md:mb-2">
 						{/* Left 1fr: two portraits stacked */}
-						<div
-							className="flex-1 flex flex-col gap-1 md:gap-2"
-							style={{ aspectRatio: `${aspectRatios[0]}` }}
-						>
-							<div style={{ flex: 1 }}>{imgDiv(0, '25vw')}</div>
-							<div style={{ flex: 1 }}>{imgDiv(1, '25vw')}</div>
+						<div className="flex-1 flex flex-col gap-1 md:gap-2">
+							<div className="overflow-hidden" style={{ aspectRatio: `${aspectRatios[0]}` }}>{imgDiv(0, '25vw')}</div>
+							<div className="overflow-hidden" style={{ aspectRatio: `${aspectRatios[1]}` }}>{imgDiv(1, '25vw')}</div>
 						</div>
 						{/* Right 2fr: one tall portrait - ratio determines height */}
 						<div
@@ -202,12 +199,9 @@ export default function Redamancy() {
 							{imgDiv(6, '50vw')}
 						</div>
 						{/* Right 1fr: two portraits stacked */}
-						<div
-							className="flex-1 flex flex-col gap-1 md:gap-2"
-							style={{ aspectRatio: `${aspectRatios[7]}` }}
-						>
-							<div style={{ flex: 1 }}>{imgDiv(7, '25vw')}</div>
-							<div style={{ flex: 1 }}>{imgDiv(8, '25vw')}</div>
+						<div className="flex-1 flex flex-col gap-1 md:gap-2">
+							<div className="overflow-hidden" style={{ aspectRatio: `${aspectRatios[7]}` }}>{imgDiv(7, '25vw')}</div>
+							<div className="overflow-hidden" style={{ aspectRatio: `${aspectRatios[8]}` }}>{imgDiv(8, '25vw')}</div>
 						</div>
 					</div>
 
@@ -218,7 +212,7 @@ export default function Redamancy() {
 								key={i}
 								onClick={() => handlePhotoClick(i)}
 								className="bg-stone-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
-								style={{ aspectRatio: `${aspectRatios[i]}` }}
+								style={{ aspectRatio: `${aspectRatios[9]}` }}
 							>
 								<ResponsiveImage
 									src={photos[i].src}
