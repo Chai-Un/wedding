@@ -355,6 +355,17 @@ export default function Navigation({
 							</button>
 						),
 					)}
+					{/* Close button at the bottom of the menu */}
+					<div className="pt-2 border-t border-white/20">
+						<button
+							onClick={() => setIsOpen(false)}
+							aria-label="Close menu"
+							className="flex items-center justify-center gap-2 w-full py-2 text-white/70 hover:text-white hover:bg-white/10 rounded-md transition-colors text-sm"
+						>
+							<X className="h-4 w-4" />
+							<span className="font-hoangngan7 uppercase tracking-wider text-[0.75em]">{t('common.close')}</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		)}

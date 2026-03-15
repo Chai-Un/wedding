@@ -114,13 +114,13 @@ export default function GalleryDialog({
 		<RadixDialog.Root open={open} onOpenChange={onOpenChange}>
 			<RadixDialog.Portal>
 				{/* Immersive dark overlay with blur */}
-				<DialogOverlay className="bg-black/80 backdrop-blur" />
+				<DialogOverlay className="bg-black/80 backdrop-blur z-[60]" />
 
 				{/* Fullscreen viewer */}
 				<RadixDialog.Content
 					aria-describedby={undefined}
 					className={cn(
-						'fixed inset-0 z-50 flex flex-col bg-transparent outline-none',
+						'fixed inset-0 z-[60] flex flex-col bg-transparent outline-none',
 						'data-[state=open]:animate-in data-[state=closed]:animate-out',
 						'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
 						'data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
@@ -179,7 +179,7 @@ export default function GalleryDialog({
 						{/* Photo — keyed so React replaces it on navigation, triggering fade-in */}
 						<div
 							key={photo.id}
-							className="w-full h-full flex items-center justify-center px-14 md:px-20 animate-in fade-in-0 zoom-in-95 duration-300"
+							className="w-full h-full flex items-center justify-center animate-in fade-in-0 zoom-in-95 duration-300"
 						>
 							<ResponsiveImage
 								src={photo.src}
