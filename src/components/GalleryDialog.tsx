@@ -26,8 +26,9 @@ export default function GalleryDialog({
 }: GalleryDialogProps) {
 	const [selectedIndex, setSelectedIndex] = useState(initialIndex);
 	const [uiVisible, setUiVisible] = useState(true);
+	const [isPortrait, setIsPortrait] = useState<boolean | null>(null);
 	const hideTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-	const thumbsRef = useRef<HTMLDivElement>(null);
+	// const thumbsRef = useRef<HTMLDivElement>(null); // used by thumbnail carousel (commented out)
 	const touchStartX = useRef(0);
 	const touchStartY = useRef(0);
 
@@ -50,12 +51,22 @@ export default function GalleryDialog({
 		}
 	}, [open, initialIndex, resetHideTimer]);
 
-	// Scroll active thumbnail into view
+	// Reset portrait detection when navigating to a different photo
 	useEffect(() => {
-		if (!thumbsRef.current) return;
-		const thumb = thumbsRef.current.children[selectedIndex] as HTMLElement;
-		thumb?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+		setIsPortrait(null);
 	}, [selectedIndex]);
+
+	const handleImageLoad = useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
+		const img = e.currentTarget;
+		setIsPortrait(img.naturalHeight > img.naturalWidth);
+	}, []);
+
+	// Scroll active thumbnail into view (used by thumbnail carousel, commented out)
+	// useEffect(() => {
+	// 	if (!thumbsRef.current) return;
+	// 	const thumb = thumbsRef.current.children[selectedIndex] as HTMLElement;
+	// 	thumb?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+	// }, [selectedIndex]);
 
 	const scrollPrev = useCallback(() => {
 		setSelectedIndex((i) => (i - 1 + photos.length) % photos.length);
@@ -184,10 +195,18 @@ export default function GalleryDialog({
 							<ResponsiveImage
 								src={photo.src}
 								alt={photo.alt || `Photo ${selectedIndex + 1}`}
-								className="max-w-full max-h-full object-contain"
+								className={cn(
+									'object-contain',
+									// On mobile, portrait images fill the screen width; landscape keeps height-based fit
+									isPortrait === true
+										? 'w-full h-auto md:max-w-full md:max-h-full'
+										: 'max-w-full max-h-full',
+								)}
+								pictureClassName={isPortrait === true ? 'w-full block md:w-auto md:max-w-full md:max-h-full' : undefined}
 								sizes="100vw"
 								loading="eager"
 								style={{ maxHeight: 'calc(100vh - 120px)' }}
+								onLoad={handleImageLoad}
 							/>
 						</div>
 
@@ -210,7 +229,8 @@ export default function GalleryDialog({
 						</button>
 					</div>
 
-					{/* ── Bottom toolbar with thumbnail strip ──────────────────────── */}
+					{/* ── Bottom toolbar with thumbnail strip ──────────────────── */}
+					{/* Thumbnail carousel commented out
 					<div
 						className={cn(
 							'absolute bottom-0 left-0 right-0 z-20',
@@ -250,6 +270,7 @@ export default function GalleryDialog({
 							))}
 						</div>
 					</div>
+					*/}
 				</RadixDialog.Content>
 			</RadixDialog.Portal>
 		</RadixDialog.Root>
