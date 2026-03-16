@@ -55,7 +55,8 @@ const New_RSVP = () => {
 							<Button
 								size="lg"
 								variant={null}
-								className="font-hoangngan5 bg-[#d4c5ad] hover:bg-[#c4b59d] text-[#412d1d] px-8 py-3 md:px-12 md:py-6 text-base tracking-widest uppercase rounded-full shadow-md hover:shadow-lg transition-colors text-sm lg:text-base"
+								onClick={openMap}
+								className="font-hoangngan5 bg-[#d4c5ad] hover:bg-[#c4b59d] text-[#412d1d] px-8 py-3 md:px-12 md:py-6 tracking-widest uppercase rounded-full shadow-md hover:shadow-lg transition-colors text-sm lg:text-base z-20"
 							>
 								<MapPin className="w-5 h-5 md:w-6 md:h-6" />
 								{t('rsvp.viewMap')}
