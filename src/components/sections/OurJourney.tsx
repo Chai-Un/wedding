@@ -20,14 +20,14 @@ const journeyPhotos: JourneyPhoto[] = [
 	{
 		id: 1,
 		image: 'journey/paris.png',
-		location: 'France',
+		location: 'Paris',
 		year: '2023',
 		rotation: -3,
 	},
 	{
 		id: 2,
 		image: 'journey/france.png',
-		location: 'France',
+		location: 'Paris',
 		year: '2023',
 		rotation: 2,
 	},
