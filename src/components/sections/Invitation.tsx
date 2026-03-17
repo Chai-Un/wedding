@@ -1,7 +1,8 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ResponsiveImage from '@/components/ResponsiveImage';
-import videoBg from '@/assets/videos/demo.mp4';
+import videoBgWebm from '@/assets/videos/demo.webm';
+import videoBgMp4 from '@/assets/videos/demo.mp4';
 import logoEnvelope from '@/assets/images-optimized/logo_envelope.jpg';
 
 interface InvitationProps {
@@ -71,12 +72,14 @@ export default function Invitation({ onOpen }: InvitationProps) {
 			{/* Background video — fixed on desktop so it covers viewport while scrolling */}
 			<video
 				className="absolute max-md:inset-0 max-md:w-full max-md:h-full md:fixed md:inset-0 md:w-screen md:h-screen object-cover -z-10"
-				src={videoBg}
 				autoPlay
 				loop
 				muted
 				playsInline
-			/>
+			>
+				<source src={videoBgWebm} type="video/webm" />
+				<source src={videoBgMp4} type="video/mp4" />
+			</video>
 			{/* Overlay — same fixed behaviour on desktop */}
 			<div className="absolute max-md:inset-0 md:fixed md:inset-0 md:w-screen md:h-screen bg-white/60 -z-10" />
 
