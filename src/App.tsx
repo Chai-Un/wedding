@@ -14,6 +14,7 @@ import HeartOfHanoi from './pages/HeartOfHanoi';
 import { Toaster } from './components/ui/toaster';
 import './i18n/config';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 // Gallery Router component that conditionally renders based on galleryId
 function GalleryRouter() {
@@ -43,6 +44,7 @@ function App() {
 			</Routes>
 			<Toaster />
 			<SpeedInsights />
+			<Analytics />
 		</BrowserRouter>
 	);
 }
