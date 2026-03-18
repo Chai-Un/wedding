@@ -207,6 +207,8 @@ const RSVPForm = () => {
 						<option value="1">1 khách</option>
 						<option value="2">2 khách</option>
 						<option value="3">3 khách</option>
+						<option value="4">4 khách</option>
+						<option value="5">5 khách</option>
 					</select>
 				</div>
 
