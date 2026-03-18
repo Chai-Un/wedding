@@ -39,7 +39,7 @@ const Timeline = () => {
 				</h2>
 
 				{/* Header with decorative swans */}
-				<div className="flex flex-col items-center">
+				{/* <div className="flex flex-col items-center">
 					<div className="flex gap-4 mb-4">
 						<img src={swanWhite} alt="Swan" className="w-35 h-25" />
 					</div>
@@ -57,7 +57,7 @@ const Timeline = () => {
 							{timelineItems[0].description}
 						</p>
 					</div>
-				</div>
+				</div> */}
 
 				{/* Grid of timeline items */}
 			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-10 mt-10 md:mt-16">
